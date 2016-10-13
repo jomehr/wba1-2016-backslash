@@ -2,5 +2,6 @@
    "surname"		:  "seyfeli",
    "name"		:  "merve-ersa",
    "work_package"       :  "statische version quizuebersicht",
-   "motto"  		:  "Even if you know the way, ask one more time."
-}   
+   "motto"  		:  "Even if you know the way, ask one more time.",
+   "team" : "06"
+}
