@@ -1,9 +1,9 @@
 
-{ 
+{
 
   "surname"       : "Keskin",
   "name"          : "Betuel",
   "work_package"  : "Arbeitspaket",
-  "motto"         : "yay!"
+  "motto"         : "yay!",
+  "team"          : "T01"
 }
-

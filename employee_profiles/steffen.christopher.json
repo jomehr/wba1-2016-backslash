@@ -1,6 +1,6 @@
 {
-  "Steffen"            : "<Nachname>",
-  "Christopher"        : "<Vorname>",
-  "T04"                : "<Arbeitspaket>",
-  "motto"              : "<Motto>"
+  "surname"            : "Steffen",
+  "name"               : "Christopher",
+  "work_package"       : "Statische Version Quizrunde",
+  "team"               : "T04"
 }
