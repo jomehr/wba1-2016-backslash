@@ -1,11 +1,7 @@
-
-
-
-~
 {
-"surname"       :"Balzer",
-"name"          :"Marie-Christn",
-"work_package"  :"Css",
-"team"          :"T09
-"motto"		:"Ende"
-	}
+  "surname": "Balzer",
+  "name": "Marie-Christn",
+  "work_package": "Css",
+  "team": "T09",
+  "motto": "Ende"
+}
