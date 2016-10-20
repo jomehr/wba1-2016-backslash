@@ -28,6 +28,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+* {
+  font-family: "Noto Sans"; }
+
 .font-primary {
   font-family: "Noto Sans"; }
 
@@ -46,9 +49,6 @@ table {
 .font-bold-italic {
   font-style: italic;
   font-weight: 700; }
-
-* {
-  font-family: "Noto Sans"; }
 
 h1, h2, h3 {
   font-family: "Oswald";
