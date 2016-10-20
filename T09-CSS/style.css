@@ -33,22 +33,22 @@ button, input[type="button"], input[type="submit"] {
     background-color: #ed1335;
     outline: 0; }
 
-input {
+input, textarea {
   background-color: white;
   border: 1px solid white;
   color: #929292;
   font-family: "Noto Sans";
   font-size: 14px;
   height: 30px; }
-  input::-webkit-input-placeholder {
+  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     color: #929292; }
-  input:-moz-placeholder {
+  input:-moz-placeholder, textarea:-moz-placeholder {
     color: #929292; }
-  input::-moz-placeholder {
+  input::-moz-placeholder, textarea::-moz-placeholder {
     color: #929292; }
-  input:-ms-input-placeholder {
+  input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     color: #929292; }
-  input:focus {
+  input:focus, textarea:focus {
     border: 1px solid black;
     outline: 0; }
 
