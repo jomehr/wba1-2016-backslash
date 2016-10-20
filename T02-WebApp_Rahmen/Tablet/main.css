@@ -1,11 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i|Oswald:300,400,700");
-
 html, body{
     height: 100%;
     background-color: red;
 }
 
-.header {
+.wa_header {
     background-color: black;
     width: 100%;
     position: fixed;
@@ -13,27 +11,23 @@ html, body{
     top: 0;
 }
 
-.headercontainer {
-    text-align: center;
-    font-size: 0px;
+.wa_Button {
     color: white;
+    font-size: 30px;
+    cursor: pointer;
+    float: left;
+    width: auto;
+    margin-left: 20px;
 }
 
-.logo {
-    height: 40px;
-    display: auto;
+.wa_logo {
+    height: 30px;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
 }
 
-.Button {
-    color: white;
-    font-size: 30px;
-
-    cursor: pointer;
-}
-
-.sidenav {
+.wa_sidenav {
     height: 510px;
     width: 0;
     position: fixed;
@@ -46,8 +40,7 @@ html, body{
     padding-top: 60px;
 }
 
-.sidenav a {
-    font-family: "Noto Sans";
+.wa_sidenav a {
     padding: 8px 8px 8px 1px;
     text-decoration: none;
     font-size: 25px;
@@ -56,11 +49,7 @@ html, body{
     text-align: left;
 }
 
-/*.sidenav a:hover, .offcanvas a:focus{
-    color: white;
-}*/
-
-.sidenav .closebtn {
+.wa_sidenav .wa_closebtn {
     position: absolute;
     top: 0;
     right: 25px;
@@ -68,20 +57,20 @@ html, body{
     margin-left: 50px;
 }
 
-/*@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}*/
-
-.footer {
+.wa_footer {
     background-color: black;
+    color: white;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
 }
 
-.footercontainer {
-    font-family: "Noto Sans";
+/*.sidenav a:hover, .offcanvas a:focus{
     color: white;
-}
+}*/
+
+/*@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}*/

@@ -2,45 +2,38 @@
 <html>
 <head>
         <link href="main.css" type="text/css" rel="stylesheet">
+        <link href="../../T09-CSS/style.css" rel="stylesheet">
     </head>
     <body>
         <header>
-            <div class="header">
-            <table class="headercontainer">
-                <tr>
-                <td>
-                    <div id="mySidenav" class="sidenav">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="#">Übersicht</a>
-                    <a href="#">Highscoreliste</a>
-                    <a href="#">Teilen</a>
-                    <a href="#">Über Fubuizz</a>
-                    <a href="#">Einstellungen</a>
-                    <a href="#">Login|Registrierung</a>
+        <div class="wa_header">
+                    <div id="wa_Sidenav" class="wa_sidenav font-secondary font-light">
+                    <ul>
+                    <li><a href="javascript:void(0)" class="wa_closebtn" onclick="closeNav()">&times;</a></li>
+                    <li><a href="#">Übersicht</a></li>
+                    <li><a href="#">Highscoreliste</a></li>
+                    <li><a href="#">Teilen</a></li>
+                    <li><a href="#">Über Fubuizz</a></li>
+                    <li><a href="#">Einstellungen</a></li>
+                    <li><a href="#">Login | Registrierung</a></li>
+                    </ul>
                     </div>
-                    <span class="Button" onclick="openNav()">&#9776;</span>
+                    <span class="wa_Button" onclick="openNav()">&#9776;</span>
         
                     <script>
-                    function openNav() { document.getElementById("mySidenav").style.width = "250px";
+                    function openNav() { document.getElementById("wa_Sidenav").style.width = "250px";
                                }
-                    function closeNav() { document.getElementById("mySidenav").style.width = "0";
+                    function closeNav() { document.getElementById("wa_Sidenav").style.width = "0";
                                 }
                     </script>
-                </td>
-            <img src="img/Logo_Fubuizz.png" class="logo">
-            </tr>
-            </table>
+            <img src="img/Logo_Fubuizz.png" class="wa_logo">
             </div>
         </header>
         <!-- Hier Inhalte rein!-->
         <footer>
-        <div class="footer">
-            <table class="footercontainer">
-            <tr>
-                <td>2016-Fubuizz</td>
-                </tr>
-            </table>
-            </div>
+        <div class="wa_footer">
+                <p>2016-Fubuizz</p>
+        </div>
         </footer>
     </body>
 </html>
