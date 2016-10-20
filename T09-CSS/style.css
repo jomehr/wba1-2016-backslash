@@ -29,10 +29,29 @@ table {
   border-spacing: 0; }
 
 * {
-  font-family: "Noto Sans"; }
+  font-family: "Noto Sans", sans-serif; }
+
+.font-primary, .font-primary * {
+  font-family: "Noto Sans", sans-serif; }
+
+.font-secondary, .font-secondary * {
+  font-family: "Oswald", sans-serif; }
+
+.font-light, .font-light * {
+  font-weight: 300; }
+
+.font-italic, .font-italic * {
+  font-style: italic; }
+
+.font-bold, .font-bold * {
+  font-weight: 700; }
+
+.font-bold-italic, .font-bold-italic * {
+  font-style: italic;
+  font-weight: 700; }
 
 h1, h2, h3 {
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   margin-bottom: 8px;
   margin-top: 16px; }
 
@@ -43,18 +62,18 @@ h2 {
   font-size: 18px; }
 
 h3 {
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   font-size: 16px; }
 
 p {
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   font-size: 14px; }
 
 button, input[type="button"], input[type="submit"] {
   background-color: #cb0727;
   border: 0;
   color: #ffffff;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   font-size: 16px;
   height: 50px; }
   button:hover, input[type="button"]:hover, input[type="submit"]:hover {
@@ -68,7 +87,7 @@ input, textarea {
   background-color: #ffffff;
   border: 1px solid #ffffff;
   color: #929292;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   font-size: 14px;
   height: 30px; }
   input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
