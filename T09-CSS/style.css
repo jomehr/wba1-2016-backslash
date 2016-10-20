@@ -22,7 +22,7 @@ p {
 button, input[type="button"], input[type="submit"] {
   background-color: #cb0727;
   border: 0;
-  color: white;
+  color: #ffffff;
   font-family: "Noto Sans";
   font-size: 16px;
   height: 50px; }
@@ -34,8 +34,8 @@ button, input[type="button"], input[type="submit"] {
     outline: 0; }
 
 input, textarea {
-  background-color: white;
-  border: 1px solid white;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
   color: #929292;
   font-family: "Noto Sans";
   font-size: 14px;
@@ -49,7 +49,7 @@ input, textarea {
   input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     color: #929292; }
   input:focus, textarea:focus {
-    border: 1px solid black;
+    border: 1px solid #000000;
     outline: 0; }
 
 .fg-yellow {
@@ -89,15 +89,15 @@ input, textarea {
   background-color: #f8f5e4; }
 
 .fg-white {
-  color: white; }
+  color: #ffffff; }
 
 .bg-white {
-  background-color: white; }
+  background-color: #ffffff; }
 
 .fg-black {
-  color: black; }
+  color: #000000; }
 
 .bg-black {
-  background-color: black; }
+  background-color: #000000; }
 
 /*# sourceMappingURL=style.css.map */
