@@ -28,6 +28,25 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.font-primary {
+  font-family: "Noto Sans"; }
+
+.font-secondary {
+  font-family: "Oswald"; }
+
+.font-light {
+  font-weight: 300; }
+
+.font-italic {
+  font-style: italic; }
+
+.font-bold {
+  font-weight: 700; }
+
+.font-bold-italic {
+  font-style: italic;
+  font-weight: 700; }
+
 * {
   font-family: "Noto Sans"; }
 
