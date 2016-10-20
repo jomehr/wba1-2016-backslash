@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link href="main.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="header">
+            <table class="headercontainer">
+                <tr>
+                <td>
+                    <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#">Übersicht</a>
+                    <a href="#">Highscoreliste</a>
+                    <a href="#">Teilen</a>
+                    <a href="#">Über Fubuizz</a>
+                    <a href="#">Einstellungen</a>
+                    <a href="#">Login|Registrierung</a>
+                    </div>
+                    <span class="Button" onclick="openNav()">&#9776;</span>
+        
+                    <script>
+                    function openNav() { document.getElementById("mySidenav").style.width = "250px";
+                               }
+                    function closeNav() { document.getElementById("mySidenav").style.width = "0";
+                                }
+                    </script>
+                </td>
+            <img src="img/Logo_Fubuizz.png" class="logo">
+            </tr>
+            </table>
+            </div>
+        </header>
+        <!-- Hier Inhalte rein!-->
+        <footer>
+        <div class="footer">
+            <table class="footercontainer">
+            <tr>
+                <td>2016-Fubuizz</td>
+                </tr>
+            </table>
+            </div>
+        </footer>
+    </body>
+</html>
