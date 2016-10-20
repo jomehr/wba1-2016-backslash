@@ -1,32 +1,31 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i|Oswald:300,400,700");
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html:not(.no-reset) {
   margin: 0;
   padding: 0;
   border: 0;
   font: 100% inherit;
   vertical-align: baseline; }
-
-article, aside, details, figcaption, figure, footer, header, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after {
-  content: ""; }
-
-q:before, q:after {
-  content: ""; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
+  html:not(.no-reset) body, html:not(.no-reset) div, html:not(.no-reset) span, html:not(.no-reset) applet, html:not(.no-reset) object, html:not(.no-reset) iframe, html:not(.no-reset) h1, html:not(.no-reset) h2, html:not(.no-reset) h3, html:not(.no-reset) h4, html:not(.no-reset) h5, html:not(.no-reset) h6, html:not(.no-reset) p, html:not(.no-reset) blockquote, html:not(.no-reset) pre, html:not(.no-reset) a, html:not(.no-reset) abbr, html:not(.no-reset) acronym, html:not(.no-reset) address, html:not(.no-reset) big, html:not(.no-reset) cite, html:not(.no-reset) code, html:not(.no-reset) del, html:not(.no-reset) dfn, html:not(.no-reset) em, html:not(.no-reset) img, html:not(.no-reset) ins, html:not(.no-reset) kbd, html:not(.no-reset) q, html:not(.no-reset) s, html:not(.no-reset) samp, html:not(.no-reset) small, html:not(.no-reset) strike, html:not(.no-reset) strong, html:not(.no-reset) sub, html:not(.no-reset) sup, html:not(.no-reset) tt, html:not(.no-reset) var, html:not(.no-reset) b, html:not(.no-reset) u, html:not(.no-reset) i, html:not(.no-reset) center, html:not(.no-reset) dl, html:not(.no-reset) dt, html:not(.no-reset) dd, html:not(.no-reset) ol, html:not(.no-reset) ul, html:not(.no-reset) li, html:not(.no-reset) fieldset, html:not(.no-reset) form, html:not(.no-reset) label, html:not(.no-reset) legend, html:not(.no-reset) table, html:not(.no-reset) caption, html:not(.no-reset) tbody, html:not(.no-reset) tfoot, html:not(.no-reset) thead, html:not(.no-reset) tr, html:not(.no-reset) th, html:not(.no-reset) td, html:not(.no-reset) article, html:not(.no-reset) aside, html:not(.no-reset) canvas, html:not(.no-reset) details, html:not(.no-reset) embed, html:not(.no-reset) figure, html:not(.no-reset) figcaption, html:not(.no-reset) footer, html:not(.no-reset) header, html:not(.no-reset) menu, html:not(.no-reset) nav, html:not(.no-reset) output, html:not(.no-reset) ruby, html:not(.no-reset) section, html:not(.no-reset) summary, html:not(.no-reset) time, html:not(.no-reset) mark, html:not(.no-reset) audio, html:not(.no-reset) video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: 100% inherit;
+    vertical-align: baseline; }
+  html:not(.no-reset) article, html:not(.no-reset) aside, html:not(.no-reset) details, html:not(.no-reset) figcaption, html:not(.no-reset) figure, html:not(.no-reset) footer, html:not(.no-reset) header, html:not(.no-reset) menu, html:not(.no-reset) nav, html:not(.no-reset) section {
+    display: block; }
+  html:not(.no-reset) body {
+    line-height: 1; }
+  html:not(.no-reset) ol, html:not(.no-reset) ul {
+    list-style: none; }
+  html:not(.no-reset) blockquote, html:not(.no-reset) q {
+    quotes: none; }
+  html:not(.no-reset) blockquote:before, html:not(.no-reset) blockquote:after {
+    content: ""; }
+  html:not(.no-reset) q:before, html:not(.no-reset) q:after {
+    content: ""; }
+  html:not(.no-reset) table {
+    border-collapse: collapse;
+    border-spacing: 0; }
 
 * {
   font-family: "Noto Sans"; }
