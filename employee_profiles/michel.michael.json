@@ -1,8 +1,7 @@
-
-   {
-   "surname"	  : "Michel",
-   "name"	  : "Michael",
-   "work_package" : "Datenstruktur & Content",
-   "motto"	  : "Was?",
-   "team"     : "T13"
-   }
+{
+  "surname": "Michel",
+  "name": "Michael",
+  "work_package": "Datenstruktur & Content",
+  "motto": "Was?",
+  "team": "T13"
+}
