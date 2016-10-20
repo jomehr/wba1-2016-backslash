@@ -1,9 +1,7 @@
-
 {
-  "surname"	: "Nehmke",
-  "name"	: "Tim",
-  "work_pakage"	: "HTML",
-  "motto"	: "Wurstblinker? Son humbug!",
-  "team"  : "T08"
-
+  "surname": "Nehmke",
+  "name": "Tim",
+  "work_pakage": "HTML",
+  "motto": "Wurstblinker? Son humbug!",
+  "team": "T08"
 }
