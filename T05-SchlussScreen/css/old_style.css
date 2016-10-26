@@ -1,0 +1,24 @@
+#wrapper {
+	margin: 0 auto;
+	height: 430px;
+	width: 855px;
+	border: 1px solid #F8F5E4;
+	padding: 25px;
+}
+
+h2 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+	letter-spacing: 0.1px;
+    font-weight: 500;
+}
+
+.ss_left {
+	float: left;
+	background: #F8F5E4;
+}
+
+.ss_right {
+	float: left;
+	background: #F8F5E4;
+}

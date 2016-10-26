@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i|Oswald:300,400,700");
+body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: 100% inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: ""; }
+
+q:before, q:after {
+  content: ""; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  font-family: "Noto Sans", sans-serif; }
+
+.font-primary, .font-primary * {
+  font-family: "Noto Sans", sans-serif; }
+
+.font-secondary, .font-secondary * {
+  font-family: "Oswald", sans-serif; }
+
+.font-light, .font-light * {
+  font-weight: 300; }
+
+.font-italic, .font-italic * {
+  font-style: italic; }
+
+.font-bold, .font-bold * {
+  font-weight: 700; }
+
+.font-bold-italic, .font-bold-italic * {
+  font-style: italic;
+  font-weight: 700; }
+
+h1, h2, h3 {
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 8px;
+  margin-top: 16px; }
+
+h1 {
+  font-size: 22px; }
+
+h2 {
+  font-size: 18px; }
+
+h3 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px; }
+
+p {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px; }
+
+button, input[type="button"], input[type="submit"] {
+  background-color: #cb0727;
+  border: 0;
+  color: #ffffff;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  height: 50px; }
+  button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+    background-color: #ed1335;
+    cursor: pointer; }
+  button:focus, input[type="button"]:focus, input[type="submit"]:focus {
+    background-color: #ed1335;
+    outline: 0; }
+
+input, textarea {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  color: #929292;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  height: 30px; }
+  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #929292; }
+  input:-moz-placeholder, textarea:-moz-placeholder {
+    color: #929292; }
+  input::-moz-placeholder, textarea::-moz-placeholder {
+    color: #929292; }
+  input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: #929292; }
+  input:focus, textarea:focus {
+    border: 1px solid #000000;
+    outline: 0; }
+
+.fg-yellow {
+  color: #e9c20c; }
+
+.bg-yellow {
+  background-color: #e9c20c; }
+
+.fg-red {
+  color: #cb0727; }
+
+.bg-red {
+  background-color: #cb0727; }
+
+.fg-green {
+  color: #4ac725; }
+
+.bg-green {
+  background-color: #4ac725; }
+
+.fg-darkgrey {
+  color: #504f48; }
+
+.bg-darkgrey {
+  background-color: #504f48; }
+
+.fg-mediumgrey {
+  color: #929292; }
+
+.bg-mediumgrey {
+  background-color: #929292; }
+
+.fg-lightgrey {
+  color: #f8f5e4; }
+
+.bg-lightgrey {
+  background-color: #f8f5e4; }
+
+.fg-white {
+  color: #ffffff; }
+
+.bg-white {
+  background-color: #ffffff; }
+
+.fg-black {
+  color: #000000; }
+
+.bg-black {
+  background-color: #000000; }
+
+/*# sourceMappingURL=style.css.map */
+/*Unser Shit*/
+#ss_wrapper {
+	margin: 0 auto;
+	border: 1px solid #F8F5E4;
+	padding: 25px;
+	overflow: hidden;
+}
+
+.ss_left {
+	float: left;
+	margin-right: 20px;
+}
+
+.ss_right {
+	float: left;
+	
+}
+
+.ss_score_balken {
+	width: 495px;
+	height: 30px;
+	background: #ccc;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.ss_scale_score {
+	background: #E8C10B;
+	height: 30px;
+}
+
+.ss_score_points {
+	overflow: hidden;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.ss_score_points .ss_score_point {
+	width: 25px;
+	height: 25px;
+	border-radius: 25px;
+	float: left;
+	margin-right: 10px;
+}
+
+.ss_scoreboard {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.ss_scoreboard table {
+	width: 100%;
+}
+
+.ss_scoreboard table tr:nth-child(odd) {
+	background: #f8f5e4;
+	
+}.ss_scoreboard table tr.ss_sb_user {
+	background-color: #929292;
+}
+
+.ss_scoreboard table tr td {
+	padding: 5px;
+}
+.ss_scoreboard table tr td:nth-child(3) {
+	text-align: right;
+}
+.ss_scoreboard table tr td:nth-child(3) span {
+	margin-right: 15px;
+}
