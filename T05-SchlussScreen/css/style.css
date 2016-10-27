@@ -152,16 +152,38 @@ input, textarea {
 
 /*# sourceMappingURL=style.css.map */
 /*Unser Shit*/
-#ss_wrapper {
+.inline-block {
+	display: inline-block;
+}
+
+.ss_box {
+	margin-top: 10px;
 	margin: 0 auto;
-	border: 1px solid #F8F5E4;
-	padding: 25px;
+	max-width: 1000px;
+	min-width: 400px;
+}
+
+.ss_box header {
+	padding: 20px;
+}
+
+.ss_box header h1 {
+	margin: 0px;
+}
+
+.ss_box .ss_box_content {
+	padding: 20px;
+}
+
+.ss_erg {
 	overflow: hidden;
 }
 
 .ss_left {
 	float: left;
 	margin-right: 20px;
+	width:100%;
+	max-width: 570px;
 }
 
 .ss_right {
@@ -169,9 +191,34 @@ input, textarea {
 	
 }
 
+.ss_right figcaption {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.ss_score {
+	overflow:hidden;
+}
+
+.ss_score .ss_score_sp,
+.ss_score .ss_score_txt
+ {
+	float: left;
+}
+
+.ss_score .ss_score_sp {
+	width: 100%;
+	max-width: 300px;
+}
+
+.ss_score .ss_score_txt {
+	width: 100%;
+	max-width: 270px;
+}
+
 .ss_score_balken {
-	width: 495px;
-	height: 30px;
+	width: 300px;
+	height: 20px;
 	background: #ccc;
 	margin-top: 5px;
 	margin-bottom: 5px;
@@ -179,7 +226,7 @@ input, textarea {
 
 .ss_scale_score {
 	background: #E8C10B;
-	height: 30px;
+	height: 20px;
 }
 
 .ss_score_points {
@@ -189,8 +236,8 @@ input, textarea {
 }
 
 .ss_score_points .ss_score_point {
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	border-radius: 25px;
 	float: left;
 	margin-right: 10px;
@@ -220,4 +267,10 @@ input, textarea {
 }
 .ss_scoreboard table tr td:nth-child(3) span {
 	margin-right: 15px;
+}
+
+.ss_buttons input {
+	width: 283px;
+    margin-right: 15px;
+	margin-bottom: 10px;
 }
