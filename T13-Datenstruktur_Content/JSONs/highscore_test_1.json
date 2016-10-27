@@ -1,5 +1,8 @@
 //Array mit Highscorepositionen
-{"highscore": [
+
+{   
+    "quizID" : "0",
+    "highscore": [
 	{
         //Position eines Spielers
 		"position": "1",
