@@ -1,0 +1,39 @@
+{   
+    "quizID" : "0",
+    "highscore": [
+	{
+		"position": "1",
+		"name": "DerPlayerOne",
+		"punktzahl": "8989"
+	},
+	{
+		"position": "2",
+		"name": "Simmel",
+		"punktzahl": "8888"
+	},
+	{
+		"position": "3",
+		"name": "Wat_op",
+		"punktzahl": "856"
+	},
+	{
+		"position": "4",
+		"name": "XREktx",
+		"punktzahl": "8454"
+	},
+	{
+		"position": "5",
+		"name": "lelkeklullol",
+		"punktzahl": "8100"
+	},
+	{
+		"position": "6",
+		"name": "pferdetritt",
+		"punktzahl": "7800"
+	},
+	{
+		"position": "7",
+		"name": "Quallenmann",
+		"punktzahl": "7534"
+	}
+]}
