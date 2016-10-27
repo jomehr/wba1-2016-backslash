@@ -34,11 +34,10 @@ body {
     margin-top: 20px;
 }
 
-
 .wa_sidenav {
     position: fixed;
-    height: auto;
-    overflow-x: hidden;    
+    height: 100%;
+    overflow-x: hidden;
     background-color: rgba(0, 0, 0, 0.8);
     margin-top: 74px;
     margin-bottom: 20px;
@@ -55,7 +54,7 @@ body {
 }
 
 .wa_sidenav .wa_closebtn {
-    position:absolute;
+    position: absolute;
     top: -70px;
     right: 15px;
     font-size: 100px;
@@ -72,15 +71,14 @@ body {
     color: rgba(255, 255, 255, 1);
     text-align: center;
     line-height: 70px;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
-#wa_text{
+#wa_text {
     display: block;
     height: 800px;
-    
-    
 }
+
 
 /*Code zum testen*/
 
