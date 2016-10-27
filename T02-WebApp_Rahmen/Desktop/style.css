@@ -1,0 +1,100 @@
+html{
+    background-color: azure;
+}
+
+body{
+    width: 1000px;
+    margin: 0 auto;
+    max-width: 90%
+}
+footer{
+    float: left;
+    margin-left: -10px;
+    width: 130%;
+    background-color: black;
+    height: 120px;
+    margin-top:500px;
+    margin-left: -150px;
+}
+
+.logo{
+    margin-left: 15%; 
+    margin-top: 10px;
+}
+
+.NavigationsText{
+    
+    text-decoration: none;
+    color: white;
+    padding:2px;
+    font-size: 20px;
+    font-family: Oswald;
+}
+
+.NavigationsText3{
+    
+    text-decoration: none;
+    color: white;
+    padding:2px;
+    font-size: 20px;
+    font-family: Oswald;
+}
+
+
+
+.NavigationsText2{
+    
+    text-decoration: none;
+    color: white;
+    padding:10px;
+    font-size: 20px;
+    font-family: Oswald;
+}
+
+#Navigation{
+    width: 130%;
+    height: 65px;
+    margin-left: -150px;
+    background-color: black;
+}
+
+
+.Login{
+    margin-top: -50px;
+    margin-left: 70%;
+}
+
+#Navigation2{
+    margin-top: 20px; 
+    background-color:rgba(0,0,0,0.2);
+    width: 130%;
+    margin-left: -150px;
+    margin-top: 0px;
+    height: 40px;
+
+}
+
+.copyright{
+    color: white;
+    font-family: Oswald;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 40px;
+}
+
+
+.menue{
+    margin-left: 50px;
+    margin-top: -35px;
+}
+
+.NavigationsText:hover{
+    color: #db5757;
+}
+
+.NavigationsText2:hover{
+    color: #db5757;
+}
+
+
+    
