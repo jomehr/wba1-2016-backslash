@@ -5,9 +5,10 @@
 		<link rel="stylesheet" href="../T09-CSS/bootstrap.min.css">
 		<link rel="stylesheet" href="../T09-CSS/style.css">
 		<link rel="stylesheet" href="css/style.css"/>
-		<script type="text/javascript" src="js/script.js"></script>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
-	<body style="background: lightgrey;">
+	<body style="background: lightgrey; max-width: 1000px; margin: 0 auto;">
 		<div class="ss_box">
 			<header class="bg-yellow">
 				<h1>Effzeh - mer wesse alles üvver dich</h1>
@@ -17,10 +18,12 @@
 					<h2 style="margin-top: 0px;">Dein Ergebnis</h2>
 					<div class="ss_score row">
 						<div class="ss_score_sp col-md-7 col-xs-12">
+							<p class="ss_mobile_points_txt"></p>
 							<div class="ss_score_balken bg-mediumgrey">
 								<div class="ss_scale_score" style="width: 60%;">
 								</div>
 							</div>
+							<p class="ss_mobile_answer_txt"></p>
 							<div class="ss_score_points">
 								<div class="ss_score_point bg-red"></div>
 								<div class="ss_score_point bg-green"></div>
@@ -35,8 +38,8 @@
 							</div>
 						</div>
 						<div class="ss_score_txt col-md-5">
-							<p style="text-align: right; margin-top: 8px;">600 von 1000 Punkten</p>
-							<p style="text-align: right; margin-top: 8px;">6 von 10 Antworten richtig</p>
+							<p>600 von 1000 Punkten</p>
+							<p>6 von 10 Antworten richtig</p>
 						</div>
 					</div>
 					<p>Ich will mehr zu diesem Thema wissen</p>
@@ -127,5 +130,6 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript" src="js/script.js"></script>
 	</body>
 </html>
