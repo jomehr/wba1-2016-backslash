@@ -1,11 +1,7 @@
 /*# sourceMappingURL=style.css.map */
-/*Unser Shit*/
-.inline-block {
-	display: inline-block;
-}
 
 .ss_box {
-	margin: 20px auto;
+	margin: 20px auto 0px auto;
 	background: #fff;
 }
 
@@ -25,18 +21,6 @@
 	overflow: hidden;
 }
 
-/*.ss_left {
-	float: left;
-	margin-right: 20px;
-	width:100%;
-	max-width: 570px;
-}*/
-
-/*.ss_right {
-	float: left;
-	
-}*/
-
 .ss_right figcaption {
 	margin-top: 5px;
 	margin-bottom: 5px;
@@ -45,22 +29,6 @@
 .ss_score {
 	overflow:hidden;
 }
-
-/*.ss_score .ss_score_sp,
-.ss_score .ss_score_txt
- {
-	float: left;
-}
-
-.ss_score .ss_score_sp {
-	width: 100%;
-	max-width: 300px;
-}
-
-.ss_score .ss_score_txt {
-	width: 100%;
-	max-width: 270px;
-}*/
 
 .ss_score_balken {
 	width: 100%;
@@ -133,11 +101,6 @@
 	height: 100%;
 }
 
-.ss_slider_content .ss_slider_right {
-	text-align: right;
-	overflow: hidden;
-}
-
 .ss_slider_content .ss_slider_right .ss_slider_points {
 	padding: 10px;
 	margin-top: 5px;
@@ -149,4 +112,59 @@
 	float: right;
 	width: 100%;
 	margin-top: 5px;
+}
+
+.ss_slider_content .ss_slider_right {
+	text-align: right;
+	overflow: hidden;
+}
+
+.ss_slider_content .ss_slider_right p {
+	float: right;
+	width: 100%;
+}
+
+.ss_mobile_points_txt,
+.ss_mobile_answer_txt,
+.ss_score_txt p {
+	text-align: right;
+	margin-top: 8px;
+}
+
+/* MOBIL ANPASSUNGEN */
+@media only screen and (min-width: 992px) {
+    .ss_slider_content .ss_slider_text {
+		height: 170px;
+		position: relative;
+	}
+	
+	.ss_slider_content .ss_slider_text .ss_slider_author {
+		position: absolute;
+		bottom: 0px;
+	}
+	
+	.ss_slider_content .ss_slider_right {
+		height: 195px;
+		position: relative;
+	}
+	
+	.ss_slider_content .ss_slider_right input[type="button"] {
+		position: absolute;
+		bottom: 0px;
+		width: 120px !important;
+		right: 13px;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.ss_slider_content .ss_slider_right {
+		margin-top: -13px;
+	}
+}
+
+/* Internet Explorer und Edge anpassungen */
+@supports (-ms-accelerator:true) {
+    .ss_scoreboard table {
+		font-family: "Oswald", sans-serif;
+	}
 }
