@@ -124,6 +124,32 @@
 	width: 100%;
 }
 
+.ss_slider_menu {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 24px;
+}
+
+.ss_slider_menu .ss_slider_menu_elemente {
+	overflow: hidden;
+	display: table-cell;
+}
+
+.ss_slider_menu .ss_slider_bt,
+.ss_slider_menu .ss_slider_menu_left,
+.ss_slider_menu .ss_slider_menu_right {
+	float: left;
+	cursor: pointer;
+	margin-right: 30px;
+}
+.ss_slider_menu .ss_slider_bt {
+	background: #ccc;
+	width: 14px;
+	height: 14px;
+	border-radius: 20px;
+}
+
 .ss_mobile_points_txt,
 .ss_mobile_answer_txt,
 .ss_score_txt p {
