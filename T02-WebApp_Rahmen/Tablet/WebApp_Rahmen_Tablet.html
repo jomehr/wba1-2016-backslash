@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <link href="WebApp_Rahmen_TabletHeader.css" type="text/css" rel="stylesheet">
-    <link href="../../T09-CSS/style.css" rel="stylesheet"> </head>
+    <link href="WebApp_Rahmen_Tablet.css" type="text/css" rel="stylesheet">
+    <link href="../../T09-CSS/style.css" rel="stylesheet">
+    <script type="text/javascript" src="WebApp_Rahmen_Tablet.js"></script>
+</head>
 
 <body>
     <header>
@@ -23,27 +25,11 @@
                 </ul>
             </div> <span class="wa_Button" onclick="openNav()">&#9776;</span>
             <!--Button zum öffnen der Sidenav-->
-            <script>
-                var id = 0;
-
-                function openNav() {
-                    if (id == 0) {
-                        document.getElementById("wa_Sidenav").style.width = "264px";
-                        id = 1;
-                    }
-                    else closeNav();
-                }
-
-                function closeNav() {
-                    document.getElementById("wa_Sidenav").style.width = "0";
-                    id = 0;
-                }
-            </script>
             <!--Javascriptfunktion Open und Close Button--><img src="img/Logo_Fubuizz.png" class="wa_logo"> </div>
-    </header> !--
-    --<section id="text">
+    </header>
+    <section id="text">
         <p>Hello world</p>
-    </section>-->
+    </section>
     <footer>
         <div class="wa_footer">
             <div class="wa_footer_inhalt">
