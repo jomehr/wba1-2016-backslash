@@ -1,0 +1,21 @@
+.ico {
+  display: inline-block;
+  height: 32px;
+  width: 32px; }
+
+.ico-arrow, .ico-arrow\:regular {
+  background: url("ico/sprite.svg") no-repeat 0 0; }
+
+.ico-exit, .ico-exit\:regular {
+  background: url("ico/sprite.svg") no-repeat 0 -32px; }
+
+.ico-light_arrow, .ico-light_arrow\:regular {
+  background: url("ico/sprite.svg") no-repeat 0 -64px; }
+
+.ico-menu, .ico-menu\:regular {
+  background: url("ico/sprite.svg") no-repeat 0 -96px; }
+
+.ico-search, .ico-search\:regular {
+  background: url("ico/sprite.svg") no-repeat 0 -128px; }
+
+/*# sourceMappingURL=playground.css.map */
