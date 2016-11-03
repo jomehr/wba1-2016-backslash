@@ -2,7 +2,7 @@
 //Wichtig ist die beachtung der Parameter des "triggers"
 function loadJSON(){
     //Link zu der JSON mit den Daten
-    var highscoreData = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/TESTING/highscore_test_1.json";
+    var highscoreData = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/highscore.json";
     
     //Erstellung einer XMLHttpRequest
     var json_request = new XMLHttpRequest();
@@ -36,7 +36,7 @@ json_request.send();
 
 //Holt Daten mit der passenden ID
 function getQuizByID(quizID){
-    var highscoreData = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/TESTING/highscore_test_1.json";
+    var highscoreData = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/highscore.json";
     var json_request = new XMLHttpRequest();
 
     json_request.onreadystatechange = function(){
