@@ -2,14 +2,17 @@ html {
     background-color: azure;
 }
 
+/*            */
+
+
 body {
     width: 100%;
-    height:100%;
+    height: 100%;
 }
 
 .wa_footer {
     width: 100%;
-    position:relative;
+    position: relative;
     margin-bottom: auto;
     background-color: black;
     line-height: 120px;
@@ -19,7 +22,6 @@ body {
     margin-left: 15%;
     margin-top: 10px;
     height: 50px;
-    
 }
 
 .wa_NavigationsText {
@@ -29,6 +31,7 @@ body {
     font-size: 20px;
     font-family: Oswald;
 }
+
 .wa_NavigationsText3 {
     text-decoration: none;
     color: white;
@@ -67,7 +70,7 @@ body {
 .wa_copyright {
     color: white;
     font-family: Oswald;
-    text-align:center;
+    text-align: center;
     margin-top: 40px;
 }
 
@@ -75,4 +78,3 @@ body {
     margin-left: 15%;
     margin-top: -30px;
 }
-
