@@ -16,7 +16,7 @@ and open the template in the editor.
 html, body{
     height: 100%;
     width: 100%;
-    background  :url(../images/soccer.jpg);    
+    background  :url(../images/Fanmeile-Gro%C3%9F.jpg);    
 }
 
 /* ******************** LAYOUT ******************** 
@@ -58,7 +58,7 @@ header{
 }
 
 #search{
-    height              :   50px;
+    height              :   125px;
     background-color    :   #504F48;
     
 }
@@ -91,13 +91,12 @@ header{
 
 #option_button ul{
     list-style: none;
+    padding: 10px;
 }
 
 #option_button_list{
     display:inline;
     margin-right:  150px;
-    
-    
 }
 
 #option_button_list a{
