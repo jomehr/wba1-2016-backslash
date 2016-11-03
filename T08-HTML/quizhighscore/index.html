@@ -1,7 +1,5 @@
 ﻿<!DOCTYPE html>
 <html>
-<!-- AUFRUFPARAMETER BEACHTEN!! aufruf mit link ?quizId=1 oder 0 oder x-->
-
 	<head>
 		<title>Schlussscreen</title>
 		<link rel="stylesheet" href="./css/style.css">
@@ -152,7 +150,7 @@
 				$(document).on( "onHighscoreData", function( event, data ) {
 					console.log(data);
 					var HighscoreJson=JSON.parse(data);
-					console.log(HighscoreJson);
+				 	HighscoreJson.highscore=HighscoreJson.highscore.slice(0,5);
 					var source =$("#highscore-template").html();
 					var template = Handlebars.compile(source);
 					$('#highscore_handlebars').append(template(HighscoreJson));
