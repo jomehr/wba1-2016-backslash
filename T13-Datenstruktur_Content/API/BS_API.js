@@ -43,7 +43,22 @@ function getQuizByID(quizID){
         if(json_request.readyState == 4 && json_request.status === 200 ){
             var jsonData = JSON.parse(json_request.responseText);
             var jsonOut = {};
-                jsonOut = JSON.stringify(jsonData[quizID]);
+            var questionArray = [];
+            var checkArray = [];
+            
+            while (checkArray.length<=jsonData[quizID].quizFragen.length) {
+                checkArray.push({done: false});
+                }
+                while (questionArray.length<10) {
+                    var random = Math.floor((Math.random() * jsonData[quizID].quizFragen.length) ); 
+                    if (checkArray[random].done===false) {
+                        questionArray.push(jsonData[quizID].quizFragen[random]);
+                        checkArray[random].done=true;
+                        }               
+                }
+                jsonOut = JSON.stringify({quizID: jsonData[quizID].quizID,
+                                          quizFragen: questionArray
+                                         });
             $( document ).trigger( "onQuizData", [ jsonOut ] );
         }};
 json_request.open("GET", quizData,true );
