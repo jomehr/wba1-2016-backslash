@@ -638,47 +638,635 @@
       "quizID":"1",
       "quizFragen":[
          {
-            "frage":"Warum ist es hier ?",
+            "frage": "Wer trainiert in der Saison 16/17 den Rekordmeister FC Bayern München?",
             "antworten":[
                {
-                  "text":"Eigentlich nur weil man es gerne zum Spaß macht,s onst nicht!",
+                  "text":"Pep Guardiola",
+                  "check":false
+               },
+               {
+                  "text":"Jogi Löw",
+                  "check":false
+               },
+               {
+                  "text":"Carlo Ancelotti",
                   "check":true
                },
                {
-                  "text":"Weil Baume es so gerne haben",
-                  "check":false
-               },
-               {
-                  "text":"lel",
-                  "check":false
-               },
-               {
-                  "text":"warum hast du nicht schon das erste angeklickt, es ist das richtige!",
+                  "text":"Jürgen Klopp",
                   "check":false
                }
             ]
          },
          {
-            "frage":"WIEsoooooooooo?",
+            "frage":"Welche zwei Vereine sind aufgestiegen und sind nun Bundesligisten?",
             "antworten":[
                {
-                  "text":"Weil die von vorgestern nen harten kramp hatte und dann einfach so den Bauer von nebenan geklatscht hat.",
+                  "text":"Nürnberg und Kaiserslautern",
                   "check":false
                },
                {
-                  "text":"Lack mir doch einen Baum vom ajajajaj",
+                  "text":"RB Leipzig und SC Freiburg",
+                  "check":true
+               },
+               {
+                  "text":"RB Leipzig und Nürnberg",
                   "check":false
                },
                {
-                  "text":"Hooooooooooooolooooooo hey",
-                  "check":false
-               },
-               {
-                  "text":"Hello",
+                  "text":"SC Freiburg und Kaiserslautern",
                   "check":false
                }
             ]
-         }
+         },
+         {
+            "frage":"Welcher Traditionsclub stieg in der Saison 15/16 ab und spielt nun in der Saison 16/17 2. Bundesliga?",
+            "antworten":[
+               {
+                  "text":"VfB Stuttgart",
+                  "check":true
+               },
+               {
+                  "text":"SV Werder Bremen",
+                  "check":false
+               },
+               {
+                  "text":"1. FC Köln",
+                  "check":false
+               },
+               {
+                  "text":"Hamburger SV",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Wer trainiert die TSG 1899 Hoffenheim in der Saison 16/17?",
+            "antworten":[
+               {
+                  "text":"Huub Stevens",
+                  "check":false
+               },
+               {
+                  "text":"Markus Gisdol",
+                  "check":false
+               },
+               {
+                  "text":"Norbert Maier",
+                  "check":false
+               },
+               {
+                  "text":"Julian Nagelsmann ",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage":"Wer ist der einzige US-amerikanische Spieler im Kader des FC Bayern München? (Saison 16/17)",
+            "antworten":[
+               {
+                  "text":"Kingsley Coman",
+                  "check":false
+               },
+               {
+                  "text":"Niklas Dorsch",
+                  "check":false
+               },
+               {
+                  "text":"Fabian Benko",
+                  "check":false
+               },
+               {
+                  "text":"Julian Green ",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage":"Welches Mittelfeld Talent wechselte erst von Borussia Dortmund zum FC Bayern und dann vom FC Bayern zu Borussia Dortmund??",
+            "antworten":[
+               {
+                  "text":"Markus Götze",
+                  "check":false
+               },
+               {
+                  "text":"Fabian Götze",
+                  "check":false
+               },
+               {
+                  "text":"Mario Götze",
+                  "check":true
+               },
+               {
+                  "text":"Marcus Götze",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Wann wurde Bundesliga Neuling RB Leipzig gegründet??",
+            "antworten":[
+               {
+                  "text":"2007",
+                  "check":false
+               },
+               {
+                  "text":"2006",
+                  "check":false
+               },
+               {
+                  "text":"2009",
+                  "check":true
+               },
+               {
+                  "text":"2008",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Während Darmstadt 98 eine Mitglieder-Anzahl von knapp 7400 hat, hat RB Leipzig eine Mitglieder-Anzahl von...?",
+            "antworten":[
+               {
+                  "text":"650",
+                  "check":false
+               },
+               {
+                  "text":"5000",
+                  "check":false
+               },
+               {
+                  "text":"500",
+                  "check":false
+               },
+               {
+                  "text":"600",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage":"Wie lautet der Vorname des Stürmers von BVB, Aubameyang?",
+            "antworten":[
+               {
+                  "text":"Pierre-Emerick ",
+                  "check":true
+               },
+               {
+                  "text":"Pierre-Johnny",
+                  "check":false
+               },
+               {
+                  "text":"Pierre-Julian",
+                  "check":false
+               },
+               {
+                  "text":"Emerick-Pierre",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Welches große Unternehmen aus Darmstadt verzichtet freiwillig auf die Namensrechte am Stadion in Darmstadt, in Gedenken an den verstorbenen Fan Johnny Heimes?",
+            "antworten":[
+               {
+                  "text":"Samsung",
+                  "check":false
+               },
+               {
+                  "text":"Deutsche Telekom",
+                  "check":false
+               },
+               {
+                  "text":"Merck",
+                  "check":true
+               },
+               {
+                  "text":"Fraport",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Wie heißt der aktuelle top Torschütze des 1.FC Kölns?",
+            "antworten":[
+               {
+                  "text":"Robert Lewandowski",
+                  "check":false
+               },
+               {
+                  "text":"Yunus Malli",
+                  "check":false
+               },
+               {
+                  "text":"Anthony Modeste",
+                  "check":true
+               },
+               {
+                  "text":"Yussuf Poulsen",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Wer wurde deutscher Meister 2015/16?",
+            "antworten":[
+               {
+                  "text":"Leverkusen",
+                  "check":false
+               },
+               {
+                  "text":"FC Bayern München",
+                  "check":true
+               },
+               {
+                  "text":"Hannover 96",
+                  "check":false
+               },
+               {
+                  "text":"Mönchengladbach",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Wer wurde 2.?",
+            "antworten":[
+               {
+                  "text":"Dortmund",
+                  "check":true
+               },
+               {
+                  "text":"Wolfsburg",
+                  "check":false
+               },
+               {
+                  "text":"Gladbach",
+                  "check":false
+               },
+               {
+                  "text":"Leverkusen",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Wer trainiert die TSG 1899 Hoffenheim in der Saison 16/17?",
+            "antworten":[
+               {
+                  "text":"Gladbach",
+                  "check":false
+               },
+               {
+                  "text":"Wolfsburg",
+                  "check":false
+               },
+               {
+                  "text":"Mainz",
+                  "check":false
+               },
+               {
+                  "text":"Leverkusen",
+                  "check":true
+               }
+            ]
+         },
+         {
+          "frage":"Wer von diesen Vereinen kam nicht auf die Plätze 1-7?",
+            "antworten":[
+               {
+                  "text":"Mainz",
+                  "check":false
+               },
+               {
+                  "text":"Hertha Berlin",
+                  "check":false
+               },
+               {
+                  "text":"Gladbach",
+                  "check":false
+               },
+               {
+                  "text":"Wolfsburg",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage":"Torschützenkönig 2015/16 wurde ?",
+            "antworten":[
+               {
+                  "text":"Pierre-Emerick Aubameyang",
+                  "check":false
+               },
+               {
+                  "text":"Stefan Kießling",
+                  "check":false
+               },
+               {
+                  "text":"Robert Lewandowski",
+                  "check":true
+               },
+               {
+                  "text":"Sandro Wagner",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Welcher Trainer rettete Hoffenheim den Klassenerhalt?",
+            "antworten":[
+               {
+                  "text":"Ralf Ranick",
+                  "check":false
+               },
+               {
+                  "text":"Markus Gisdol",
+                  "check":false
+               },
+               {
+                  "text":"Julian Nagelsmann",
+                  "check":true
+               },
+               {
+                  "text":"Huub Stevens",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Trainer von Bayern war diese Saison 2015/16?",
+            "antworten":[
+               {
+                  "text":"Horst Seehofer",
+                  "check":false
+               },
+               {
+                  "text":"Thomas Tuchel",
+                  "check":false
+               },
+               {
+                  "text":"Carlo Ancelotti",
+                  "check":false
+               },
+               {
+                  "text":"Pep Guardiola",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage":"Kevin Kuranyi schoss in 14 Spielen unglaubliche... Tore?",
+            "antworten":[
+               {
+                  "text":"0",
+                  "check":true
+               },
+               {
+                  "text":"10",
+                  "check":false
+               },
+               {
+                  "text":"4",
+                  "check":false
+               },
+               {
+                  "text":"5",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Zweitbester Torschütze wurde?",
+            "antworten":[
+               {
+                  "text":"Kuranyi",
+                  "check":false
+               },
+               {
+                  "text":"Lewandowski",
+                  "check":false
+               },
+               {
+                  "text":"Aubameyang",
+                  "check":true
+               },
+               {
+                  "text":"Huntelaar",
+                  "check":false
+               }
+            ]
+         },
+	 {
+            "frage": "Die meisten Torvorlagen machte...?",
+            "antworten":[
+               {
+                  "text":"Lewandowski",
+                  "check":false
+               },
+               {
+                  "text":"Müller",
+                  "check":false
+               },
+               {
+                  "text":"Mkhitaryan",
+                  "check":true
+               },
+               {
+                  "text":"Ribery",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"KEINE gelb/rote Karte bekam?",
+            "antworten":[
+               {
+                  "text":"Meier",
+                  "check":false
+               },
+               {
+                  "text":"Bagfrede",
+                  "check":true
+               },
+               {
+                  "text":"Kramaric",
+                  "check":false
+               },
+               {
+                  "text":"Medojevic",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Zuerst etwas zur Gründung der Bundesliga: Wann war die erste Bundesliga Saison?",
+            "antworten":[
+               {
+                  "text":"1963/64",
+                  "check":true
+               },
+               {
+                  "text":"1949/50",
+                  "check":false
+               },
+               {
+                  "text":"1971/72",
+                  "check":false
+               },
+               {
+                  "text":"1968/69",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Welcher war, Stand 2016, der schlechteste Bundesligaverein aller Zeiten?",
+            "antworten":[
+               {
+                  "text":"Karlsruher SC",
+                  "check":false
+               },
+               {
+                  "text":"Arminia Bielefeld",
+                  "check":false
+               },
+               {
+                  "text":"MSV Duisburg",
+                  "check":false
+               },
+               {
+                  "text":"Tasmania 1900 Berlin",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage":"Welcher Verein stieg noch nie aus der Bundesliga ab UND war Gründungsmitglied?",
+            "antworten":[
+               {
+                  "text":"FC Bayern München",
+                  "check":false
+               },
+               {
+                  "text":"VfB Stuttgart",
+                  "check":false
+               },
+               {
+                  "text":"SV Werder Bremen",
+                  "check":false
+               },
+               {
+                  "text":"Hamburger SV",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage":"Was war der höchste Bundesligasieg aller Zeiten?",
+            "antworten":[
+               {
+                  "text":"9:0",
+                  "check":false
+               },
+               {
+                  "text":"14:1",
+                  "check":false
+               },
+               {
+                  "text":"12:0",
+                  "check":true
+               },
+               {
+                  "text":"15:3",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Wie viele Vereine beinhaltete die Bundesliga bei ihrer Gründung?",
+            "antworten":[
+               {
+                  "text":"20",
+                  "check":false
+               },
+               {
+                  "text":"18",
+                  "check":false
+               },
+               {
+                  "text":"16",
+                  "check":true
+               },
+               {
+                  "text":"12",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Wie lautet das Kürzel für die Bundesliga?",
+            "antworten":[
+               {
+                  "text":"BS",
+                  "check":false
+               },
+               {
+                  "text":"BA",
+                  "check":false
+               },
+               {
+                  "text":"BD",
+                  "check":false
+               },
+               {
+                  "text":"BL",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage":"Wer ist Rekordtorschütze der BL",
+            "antworten":[
+               {
+                  "text":"Gerd Müller",
+                  "check":true
+               },
+               {
+                  "text":"Thomas Müller",
+                  "check":false
+               },
+               {
+                  "text":"Pele",
+                  "check":false
+               },
+               {
+                  "text":"Claudio Pizarro",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Wann begann die aktuelle Saison?",
+            "antworten":[
+               {
+                  "text":"27. August 2016",
+                  "check":false
+               },
+               {
+                  "text":"2. September 2016",
+                  "check":false
+               },
+               {
+                  "text":"26. August 2016",
+                  "check":true
+               },
+               {
+                  "text":"22. August 2016",
+                  "check":false
+               }
+            ]
+           }
       ]
    },
    {
