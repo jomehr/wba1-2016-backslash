@@ -1,11 +1,9 @@
 .content {
-    width: 75%;
+    width: 1000px;
     margin: 0 auto;
     margin-top: 20px;
     border: #929292 solid;
     border-width: 0px 1px 1px 1px;
-    padding: 0px 0px 30px 0px;
-    
 }
 
 body {
@@ -19,12 +17,12 @@ body {
 
 .head {
     background-color: #e9c20c;
-    padding: 1px 0px 1px 20px;
+    padding: 10px 0px 10px 10px;
 }
 
 .question {
     text-align: center;
-    padding: 90px 0px 0px 0px;
+    padding: 100px 0px 20px 0px;
     font-size: 22px;
 }
 
@@ -206,22 +204,45 @@ body {
     width: 385px;
     height: 25px;
     margin: 0 auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
-button {
-    width: 300px;
-    height: 50px;
-    margin: 0 auto;
-    background-color: #CB0727;
-    color: white;
-    border: none;
-    display: block;
-    font-size: 18px;
-    margin-top: 25px;
+.answers button {
+    padding: 0px 0px 0px 0px;
+    width: 100%;
+}
+            
+.answers button div {
+    float: left;
+    height: 100%;
+}
+            
+.answers button .short {
+    width: 5%;
+    line-height: 3;
+}
+            
+.answers button .long {
+    width: 95%;
+    line-height: 3;
 }
 
-h1 {
-    font-size: 25px;
+.fg-black {
+    margin-bottom: 10px;
+}
+
+.inner_box {
+    padding: 24px;
+}
+
+.button1 {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+}
+
+.button1 button {
+        display: table-cell;
 }
