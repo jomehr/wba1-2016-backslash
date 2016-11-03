@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Unbenanntes Dokument</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #4E5869;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* ~~ Element-/Tag-Selektoren ~~ */
+ul, ol, dl { /* Aufgrund von Abweichungen zwischen verschiedenen Browsern empfiehlt es sich, die Auffüllung und den Rand in Listen auf 0 einzustellen. Zu Konsistenzzwecken können Sie die gewünschten Werte entweder hier oder in den enthaltenen Listenelementen (LI, DT, DD) eingeben. Beachten Sie, dass die hier eingegebenen Werte hierarchisch auf die .nav-Liste angewendet werden, sofern Sie keinen spezifischeren Selektor festlegen. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* Durch Verschieben des oberen Rands wird das Problem behoben, dass Ränder aus dem zugehörigen div-Tag geraten können. Der übrig gebliebene untere Rand hält ihn getrennt von allen folgenden Elementen. */
+	padding-right: 15px;
+	padding-left: 15px; /* Durch Hinzufügen der Auffüllung zu den Seiten der Elemente innerhalb der div-Tags anstelle der div-Tags selbst entfallen jegliche Box-Modell-Berechnungen. Alternativ kann auch ein verschachteltes div-Tag mit seitlicher Auffüllung verwendet werden. */
+}
+a img { /* Dieser Selektor entfernt den standardmäßigen blauen Rahmen, der in einigen Browsern um ein Bild angezeigt wird, wenn es von einem Hyperlink umschlossen ist. */
+	border: none;
+}
+
+/* ~~ Die Reihenfolge der Stildefinitionen für die Hyperlinks der Site, einschließlich der Gruppe der Selektoren zum Erzeugen des Hover-Effekts, muss erhalten bleiben. ~~ */
+a:link {
+	color:#414958;
+	text-decoration: underline; /* Sofern Ihre Hyperlinks nicht besonders hervorgehoben werden sollen, empfiehlt es sich, zur schnellen visuellen Erkennung Unterstreichungen zu verwenden. */
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* Durch diese Gruppe von Selektoren wird bei Verwendung der Tastatur der gleiche Hover-Effekt wie beim Verwenden der Maus erzielt. */
+	text-decoration: none;
+}
+
+/* ~~ Dieser Container umschließt alle anderen div-Tags und weist ihnen ihre als Prozentwert definierte Breite zu. ~~ */
+.container {
+	width: 80%;
+	max-width: 1260px;/* Es empfiehlt sich die Eingabe einer maximalen Breite (Eigenschaft max-width), damit dieses Layout auf einem großen Bildschirm nicht zu breit angezeigt wird. Dadurch bleibt die Zeilenlänge besser lesbar. IE6 berücksichtigt diese Deklaration nicht. */
+	min-width: 780px;/* Es empfiehlt sich die Eingabe einer minimalen Breite (Eigenschaft min-width), damit dieses Layout nicht zu schmal angezeigt wird. Dadurch bleibt die Zeilenlänge in den seitlichen Spalten besser lesbar. IE6 berücksichtigt diese Deklaration nicht. */
+	background-color: #FFF;
+	margin: 0 auto; /* Der mit der Breite gekoppelte automatische Wert an den Seiten zentriert das Layout. Er ist nicht erforderlich, wenn Sie die Breite von .container auf 100 Prozent setzen. */
+}
+
+/* ~~ Dies sind die Layoutinformationen. ~~ 
+
+1) Eine Auffüllung wird nur oben und/oder unten im div-Tag positioniert. Die Elemente innerhalb dieses div-Tags verfügen über eine seitliche Auffüllung. Dadurch müssen Sie keine Box-Modell-Berechnungen durchführen. Zu beachten: Wenn Sie dem div-Tag eine seitliche Auffüllung oder einen Rahmen hinzufügen, werden diese zu der festgelegten Breite addiert und ergeben die *gesamte* Breite. Sie können auch die Auffüllung für das Element im div-Tag entfernen und ein zweites div-Tag ohne Breite und mit der gewünschten Auffüllung im ersten div-Tag einfügen.
+
+*/
+.content {
+	padding: 10px 0;
+}
+
+/* ~~ Dieser gruppierte Selektor gibt die Listen im .content-Bereich an. ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* Diese Auffüllung setzt die rechte Auffüllung in der obigen Regel für Überschriften und Absätze fort. Die Auffüllung wurde unten für den Abstand zwischen anderen Elementen in den Listen und links für den Einzug platziert. Sie können die Werte nach Bedarf ändern. */
+}
+
+/* ~~ Verschiedene float/clear-Klassen ~~ */
+.fltrt {  /* Mit dieser Klasse können Sie ein Element auf der Seite nach rechts fließen lassen. Das fließende Element muss vor dem Element stehen, neben dem es auf der Seite erscheinen soll. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* Mit dieser Klasse können Sie ein Element auf der Seite nach links fließen lassen. Das fließende Element muss vor dem Element stehen, neben dem es auf der Seite erscheinen soll. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* Diese Klasse kann in einem <br />-Tag oder leeren div-Tag als letztes Element nach dem letzten fließenden div-Tag (im #container) platziert werden, wenn overflow:hidden im .container entfernt wird. */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+-->
+</style></head>
+
+<body>
+
+<div class="container">
+  <div class="content">
+    <h1>Datenschutz</h1>
+    <h2> Definition </h2>
+    <p>Das Grundgesetz gewährleistet jeder Bürgerin und jedem Bürger das Recht, über Verwendung und Preisgabe seiner persönlichen Daten zu bestimmen (Grundrecht auf informationelle Selbstbestimmung). 
+Geschützt werden also nicht Daten, sondern die Freiheit der Menschen, selbst zu entscheiden, wer was wann und bei welcher Gelegenheit über sie weiß.</p>
+    <h1>Datenschutz in der Bundesliga?</h1>
+    <p>Da detaillierte Leistungsdaten veröffentlicht werden z.B. welche Strecke jeder Bundesliga-Profi pro Spiel läuft, wie schnell er sprintet und wie viel Regenerationszeit er benötigt usw. , daher
+fragt man sich, wie es mit dem Datenschutz in der Bundesliga aussieht, denn Zeitungen kaufen diese Daten ein und können dann über den faulsten und fleißigsten Profi berichten.
+Geht es hier überhaupt um Datenschutz? Und verstoßen diese Veröffentlichungen wirklich gegen das Datenschutzrecht?</p>
+    <p>Um dies zu überprüfen, liegt der erste Schritt darin zu schauen, ob das Datenschutzgesetz hier überhaupt anwendbar ist. 
+      Dies ist nur der Fall wenn personenbezogene Daten verarbeitet werden. Da hier Daten veröffentlicht werden die genaue Leistungsnachweise von Fussballprofis liefern, haben wir es mit einer <span style="color:#FF0000"><em> Übermittlung personenbezogener Daten </em></span>zu tun, d.h. das Bundesdatenschutzgesetz <span style="color:#FF0000"><strong>muss</strong></span>beachtet werden.
+    </p>
+    </p>
+    <p>Nach dem Verbot mit Erlaubnisvorbehalt (§ 4 Abs. 1 BDSG) muss eine Rechtfertigung für die Veröffentlichung gefunden werden
+Diese Rechtfertigung und damit die <span style="color:#FF0000"><strong> rechtliche Erlaubnis </strong></span>ergeben sich hier aus einer allg. Interessenabwägung. Die Produzenten dieser Daten haben ein <span style="color:#FF0000"><strong> berechtigtes wirtschaftliches Interesse </strong></span>an der Erfassung und Vermarktung(§28 Abs. 1 S.1 Nr.2 BDSG)
+Die Fußball-Bundesliga wird mit großem öffentlichen Interesse verfolgt, sodass ein <span style="color:#FF0000"><em> berechtigtes Interesse der Öffentlichkeit</em></span></p> an der Veröffentlichung besteht (§ 28 Abs. 2 Nr. 2a BDSG)
+Ebenfalls müssen die schutzwürdigen Interessen der betroffenen Bundesliga-Profis demgegenüber zurücktreten, da sie während der Spiele ohnehin im Rampenlicht stehen und ihr Privatbereich nicht tangiert wird.</p>
+    </p>
+    <p>Vor allem profitieren sie auch selbst wirtschaftlich von der Vermarktungsmaschine Fußball und müssen damit einen gewissen Preis für ihre Selbstvermarktung zahlen.      </p>
+    <p><span style="color:#FF0000"> <strong> Fazit: kein Datenschutzskandal</strong></span></p>
+      <p>&nbsp;</p>
+      <p><strong>&#167; 4a Einwilligung</strong><strong> </strong></p>
+      <ol>
+        <li>Die Einwilligung ist nur wirksam, wenn sie auf der freien Entscheidung des Betroffenen beruht. Er ist auf den vorgesehenen Zweck der Erhebung, Verarbeitung oder Nutzung sowie, soweit nach den Umst&#228;nden des Einzelfalles erforderlich oder auf Verlangen, auf die Folgen der Verweigerung der Einwilligung hinzuweisen. Die Einwilligung bedarf der Schriftform, soweit nicht wegen besonderer Umst&#228;nde eine andere Form angemessen ist. Soll die Einwilligung zusammen mit anderen Erkl&#228;rungen schriftlich erteilt werden, ist sie besonders hervorzuheben. </li>
+        <li>Im Bereich der wissenschaftlichen Forschung liegt ein besonderer Umstand im Sinne von Absatz 1 Satz 3 auch dann vor, wenn durch die Schriftform der bestimmte Forschungszweck erheblich beeintr&#228;chtigt w&#252;rde. In diesem Fall sind der Hinweis nach Absatz 1 Satz 2 und die Gr&#252;nde, aus denen sich die erhebliche Beeintr&#228;chtigung des bestimmten Forschungszwecks ergibt, schriftlich festzuhalten. </li>
+        <li>
+          <p >Soweit besondere Arten personenbezogener Daten (&#167; 3 Abs. 9) erhoben, verarbeitet oder genutzt werden, muss sich die Einwilligung dar&#252;ber hinaus ausdr&#252;cklich auf diese Daten beziehen. </p>
+        </li>
+      </ol>
+      <p>&nbsp;</p>
+      <!-- end .content -->
+  </div>
+  <!-- end .container --></div>
+</body>
+</html>
