@@ -50,6 +50,22 @@ json_request.open("GET", quizData,true );
 json_request.send();
 }
 
+//Holt Highscore mit der passenden ID
+function getHighscoreByID(quizID){
+    var highscoreData = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/highscore.json";
+    var json_request = new XMLHttpRequest();
+
+    json_request.onreadystatechange = function(){
+        if(json_request.readyState == 4 && json_request.status === 200 ){
+            var jsonData = JSON.parse(json_request.responseText);
+            var jsonOut = {};
+                jsonOut = JSON.stringify(jsonData[quizID]);
+            $( document ).trigger( "onHighscoreData", [ jsonOut ] );
+        }};
+json_request.open("GET", highscoreData,true );
+json_request.send();
+}
+
 //Holt QuizUebersicht
 function getQuizView(){
     var quizView = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/uebersichtQuiz.json";
