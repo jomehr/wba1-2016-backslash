@@ -43,7 +43,7 @@ function getQuizByID(quizID){
         if(json_request.readyState == 4 && json_request.status === 200 ){
             var jsonData = JSON.parse(json_request.responseText);
             var jsonOut = {};
-                jsonOut = JSON.stringify({jsonData[quizID]);
+                jsonOut = JSON.stringify(jsonData[quizID]);
             $( document ).trigger( "onQuizData", [ jsonOut ] );
         }};
 json_request.open("GET", quizData,true );
