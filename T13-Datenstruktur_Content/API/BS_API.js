@@ -67,7 +67,7 @@ json_request.send();
 }
 
 //Holt QuizUebersicht
-function getQuizView(){
+function getQuizView(anzahl){
     var quizView = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/uebersichtQuiz.json";
     var json_request = new XMLHttpRequest();
 
@@ -77,7 +77,7 @@ function getQuizView(){
             var jsonOut = {};
             var quizArray = [];
             
-            for(var i=0;i<3;i++){
+            for(var i=0;i<anzahl;i++){
                 quizArray.push({quizID: jsonData[i].quizID,
                                 titel: jsonData[i].titel,
                                 autor: jsonData[i].autor,
