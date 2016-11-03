@@ -9,48 +9,49 @@
         <meta name="creator" content="Highscore_Group">
         <meta name="publisher" content="Backslash AG">
         <!--Optimierung für Suchmaschinen. Zeile 6 bis 9 -->
-        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css" media="screen">
+        <link rel="stylesheet" href="../T09-CSS/style.css">
+        <link rel="stylesheet" href="../T02-WebApp_Rahmen/Desktop/style.css">
+        
         <!-- Einbindung der CCS Datei. -->
     </head>
     
-    <body>       
-        <header id="login">
-            Login area
-        </header>
-
-        <nav id="overview">
-            <ul class="menu">
-                <li id="overview_list">
-                    <a  href="linktziel.html"> Übersicht
-                    </a>
-                </li>
-                <li id="overview_list"> 
-                    <a  href="linktziel.html"> Highscoreliste  
-                    </a>
-                </li>
-                <li id="overview_list"> 
-                    <a  href="linktziel.html"> Teilen         
-                    </a>
-                </li>
-                <li id="overview_list"> 
-                    <a  href="linktziel.html"> über Fubuizz    
-                    </a>
-                </li>
-                <li id="overview_list"> 
-                    <a  href="linktziel.html"> Einstellungen   
-                    </a>
-                </li>
-            </ul>
-        </nav>
+    <body>        
+        <header>
+        
+        <!--Dieser Div stellt den schwarzen Balken da-->
+        <div id="wa_Navigation">
+            <!-- Dieses Div beeinhaltet das Logo -->
+            <div> <img class="wa_logo" src="../T02-WebApp_Rahmen/Desktop/logo.png"> </div>
+            
+            <!-- Dieses Div enthält das Login oben rechts-->
+            <div>
+                <ul class="wa_Login"> <a class="wa_NavigationsText">Login</a> <a class="wa_NavigationsText3">|</a> <a class="wa_NavigationsText">Registrierung</a> </ul>
+            </div>
+        </div>
+        <!-- Dieses Div stellt den durchsichtigen Balken da-->
+        <div id="wa_Navigation2"> </div>
+        
+        <!-- Dieses Div enthält das Menü mit den einzelnen Punkten-->
+        <nav class="wa_menue"> <a class="wa_NavigationsText2">Übersicht</a> <a class="wa_NavigationsText2">Highscoreliste</a> <a class="wa_NavigationsText2">Teilen</a> <a class="wa_NavigationsText2">Über Fubuizz</a> <a class="wa_NavigationsText2">Einstellungen</a> </nav>
+   
+    
+</header>
 
         <div id="highscore">
             <header id="title">
-                quiz title
+                Effzeh - mer wesse alles üvver dich
 
             </header>
 
             <section id="search">
-                search for other players
+                Highscore<br><br>
+        <select name="Zeitraum" style="width: 200px">
+  <option>Zeitraum</option>
+  <option>Zeitraum</option>
+            </select>
+            <br><br>
+            <label for="text"><input id="suche" name="suche"></label>
 
             </section>
 
@@ -192,9 +193,10 @@
                     
             </section>
         </div>
-
-        <footer>
-            fuck my life
-        </footer>        
+ <footer class="wa_footer"> 
+        <!-- Das footer Element wird in der Klasse definiert -->
+        <!-- Der mittige Copyrighttext-->
+         <ul class="wa_copyright"> © 2016 - Fubuizz </ul>
+</footer>
     </body>
 </html>
