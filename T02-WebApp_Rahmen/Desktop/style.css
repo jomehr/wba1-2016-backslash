@@ -1,100 +1,85 @@
-html{
-    background-color: azure;
+html {
+    background-color: white;
 }
 
-body{
-    width: 1000px;
-    margin: 0 auto;
-    max-width: 90%
+/*            */
+
+
+body { /*Grundsätzlich erstmal auf 100%*/
+    width: 100%;
+    height: 100%;
 }
-footer{
-    float: left;
-    margin-left: -10px;
-    width: 130%;
+
+.wa_footer { /* Footer Design*/
+    width: 100%;
+    position: relative;
+    margin-bottom: auto;
     background-color: black;
-    height: 120px;
-    margin-top:500px;
-    margin-left: -150px;
+    line-height: 120px;
 }
 
-.logo{
-    margin-left: 15%; 
+.wa_logo { /*Das Logo oben links*/
+    margin-left: 15%;
     margin-top: 10px;
+    height: 50px;
 }
 
-.NavigationsText{
-    
+.wa_NavigationsText { /* Login/Registreirung */
     text-decoration: none;
     color: white;
-    padding:2px;
+    padding: 2px;
     font-size: 20px;
     font-family: Oswald;
 }
 
-.NavigationsText3{
-    
+.wa_NavigationsText3 { /* Der Trennstrich */
     text-decoration: none;
     color: white;
-    padding:2px;
+    padding: 2px;
     font-size: 20px;
     font-family: Oswald;
 }
 
-
-
-.NavigationsText2{
+.wa_NavigationsText2 { 
+    
+    /*Navigationstext für Übersicht , Highscoreliste,Teilen usw...*/
     
     text-decoration: none;
     color: white;
-    padding:10px;
+    padding: 10px;
     font-size: 20px;
     font-family: Oswald;
 }
 
-#Navigation{
-    width: 130%;
-    height: 65px;
-    margin-left: -150px;
+#wa_Navigation { /*Oberer schwarzer Balken*/
+    width: 100%;
+    height: 64px;
     background-color: black;
 }
 
-
-.Login{
-    margin-top: -50px;
+.wa_Login { /* Position von dem Login/der Regis..*/
+    margin-top: -40px;
     margin-left: 70%;
 }
 
-#Navigation2{
-    margin-top: 20px; 
-    background-color:rgba(0,0,0,0.2);
-    width: 130%;
-    margin-left: -150px;
+#wa_Navigation2 { 
+    /*Durchsichtiger Hintergrund, also der Untere Teil des Footers */
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
     margin-top: 0px;
     height: 40px;
-
 }
 
-.copyright{
+.wa_copyright { /* Copyright Text im Footer*/
     color: white;
     font-family: Oswald;
-    margin-left: 40%;
-    margin-right: 40%;
+    text-align: center;
     margin-top: 40px;
 }
 
-
-.menue{
-    margin-left: 50px;
-    margin-top: -35px;
+.wa_menue { 
+    /* Position des Menüs, also von Übersicht,Highscoreliste,Teilen usw..*/
+    margin-left: 15%;
+    margin-top: -30px;
 }
-
-.NavigationsText:hover{
-    color: #db5757;
-}
-
-.NavigationsText2:hover{
-    color: #db5757;
-}
-
-
-    

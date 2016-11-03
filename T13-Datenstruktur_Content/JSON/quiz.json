@@ -1,0 +1,731 @@
+[
+   {
+      "quizID":"0",
+      "quizFragen":[
+         {
+            "frage": "Wen bezeichnet man beim Fußball auch als Goalie ?",
+            "antworten":[
+               {
+                  "text":"Mittelstürmer",
+                  "check":false
+               },
+               {
+                  "text":"Platzwart",
+                  "check":false
+               },
+               {
+                  "text":"Torwart",
+                  "check":true
+               },
+               {
+                  "text":"Schiedsrichter",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Warum ist Grönland kein Mitglied der FIFA ?",
+            "antworten":[
+               {
+                  "text":"Weil es zu wenige Spieler hat",
+                  "check":false
+               },
+               {
+                  "text":"Weil es keinen Rasenplatz hat",
+                  "check":true
+               },
+               {
+                  "text":"Weil es ein Teil von Dänemark ist",
+                  "check":false
+               },
+               {
+                  "text":"Weil es keinen internationalen Flugplatz hat",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Welchen Preis vergibt die Sportschau regelmäßig?",
+            "antworten":[
+               {
+                  "text":"Tor des Monats",
+                  "check":true
+               },
+               {
+                  "text":"Tor der Stunde",
+                  "check":false
+               },
+               {
+                  "text":"Tor des Spieltags",
+                  "check":false
+               },
+               {
+                  "text":"Tor des Tages",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Welche Mannschaft wurde 1978 im eigenen Land Fußball-Weltmeister ?",
+            "antworten":[
+               {
+                  "text":"Uruguay",
+                  "check":false
+               },
+               {
+                  "text":"Brasilien",
+                  "check":false
+               },
+               {
+                  "text":"Kolumbien",
+                  "check":false
+               },
+               {
+                  "text":"Argentinien",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage":"In welchen Stadion fand das sogenannte Jahrhundertspiel statt ?",
+            "antworten":[
+               {
+                  "text":"Aztekenstadion, Mexiko",
+                  "check":false
+               },
+               {
+                  "text":"Wembley Stadion, London",
+                  "check":false
+               },
+               {
+                  "text":"San Siro, Mailand",
+                  "check":false
+               },
+               {
+                  "text":"Bernabeustadion, Madrid",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage":"Wie lange geht eine Halbzeitpause ?",
+            "antworten":[
+               {
+                  "text":"90 Minuten",
+                  "check":false
+               },
+               {
+                  "text":"15 Minuten",
+                  "check":false
+               },
+               {
+                  "text":"45 Minuten",
+                  "check":true
+               },
+               {
+                  "text":"30 Minuten",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Wie viele Spieler befinden sich auf dem Feld ?",
+            "antworten":[
+               {
+                  "text":"10",
+                  "check":false
+               },
+               {
+                  "text":"15",
+                  "check":false
+               },
+               {
+                  "text":"22",
+                  "check":true
+               },
+               {
+                  "text":"20",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Wie hoch und wie breit muss ein Tor laut den Spielregeln der FIFA sein ?",
+            "antworten":[
+               {
+                  "text":"7,32 m breit | 2,54 m hoch",
+                  "check":false
+               },
+               {
+                  "text":"7,42 m breit | 2,54 m hoch",
+                  "check":false
+               },
+               {
+                  "text":"7,42 m breit | 2,44 m hoch",
+                  "check":false
+               },
+               {
+                  "text":"7,32 m breit | 2,44 m hoch",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage":"Bei welcher Situation ist ein Pfiff des Schiedsrichters nicht notwendig ?",
+            "antworten":[
+               {
+                  "text":"Zur Wiederaufnahme des Spiels nach/bei einem Eckstoß",
+                  "check":true
+               },
+               {
+                  "text":"Zur Wiederaufnahme des Spiels nach einer Unterbrechung wegen einer Auswechslung",
+                  "check":false
+               },
+               {
+                  "text":"Zur Wiederaufnahme des Spiels nach einer Unterbrechung wegen einer Verletzung",
+                  "check":false
+               },
+               {
+                  "text":"Zur Wiederaufnahme des Spiels bei Strafstößen",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Welche Entscheidung trifft der Schiedsrichter, wenn ein indirekter Freistoß direkt im gegnerischen Tor einschlägt ?",
+            "antworten":[
+               {
+                  "text":"Direkter Freistoß für den Gegner",
+                  "check":false
+               },
+               {
+                  "text":"Wiederholung",
+                  "check":false
+               },
+               {
+                  "text":"Indirekter Freistoß für den Gegner Abstoß",
+                  "check":true
+               },
+               {
+                  "text":"Abstoß",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Wie viel muss ein Ball laut offiziellem Regelwerk VOR dem Beginn eines Spiels MINDESTENS wiegen ?",
+            "antworten":[
+               {
+                  "text":"390 g",
+                  "check":false
+               },
+               {
+                  "text":"430 g",
+                  "check":false
+               },
+               {
+                  "text":"410 g",
+                  "check":true
+               },
+               {
+                  "text":"450 g",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Welche Mannschaft gewann zum letzten Mal den Weltpokal vor dessen Abschaffung und der Einführung der FIFA Klub-Weltmeisterschaft ?",
+            "antworten":[
+               {
+                  "text":"AC Mailand",
+                  "check":false
+               },
+               {
+                  "text":"Real Madrid",
+                  "check":false
+               },
+               {
+                  "text":"FC Porto",
+                  "check":true
+               },
+               {
+                  "text":"FC Bayern München",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Welche Nation musste die meisten Finalniederlagen bei einer WM-Endrunde einzustecken ? (Stand 08/2016)",
+            "antworten":[
+               {
+                  "text":"Niederlande",
+                  "check":false
+               },
+               {
+                  "text":"Italien",
+                  "check":false
+               },
+               {
+                  "text":"Deutschland",
+                  "check":true
+               },
+               {
+                  "text":"Argentinien",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Wie viele Vereine aus dem gleichen Land können in der Champions League maximal an den Start gehen ?",
+            "antworten":[
+               {
+                  "text":"4",
+                  "check":false
+               },
+               {
+                  "text":"5",
+                  "check":true
+               },
+               {
+                  "text":"7",
+                  "check":false
+               },
+               {
+                  "text":"6",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Der Doppelpass auf Sport1 ist eine berühmte Diskussionsrunde von Fussball-Experten. In welchem Jahr wurde die erste Sendung (damals noch auf DSF) ausgestrahlt?",
+            "antworten":[
+               {
+                  "text":"1997",
+                  "check":false
+               },
+               {
+                  "text":"1995",
+                  "check":true
+               },
+               {
+                  "text":"1994",
+                  "check":false
+               },
+               {
+                  "text":"1996",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Welches dieser Stadien gehört NICHT zu den 10 größten Fussball-Stadien Europas ?",
+            "antworten":[
+               {
+                  "text":"Estádio da Luz | Lissabon",
+                  "check":true
+               },
+               {
+                  "text":"Stadio San Paolo | Neapel",
+                  "check":false
+               },
+               {
+                  "text":"Olympiastadion Luschniki | Moskau",
+                  "check":false
+               },
+               {
+                  "text":"Croke Park | Dublin",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Welches Muster ist auf dem Fußball ?",
+            "antworten":[
+               {
+                  "text":"Sechseck",
+                  "check":true
+               },
+               {
+                  "text":"Dreieck",
+                  "check":false
+               },
+               {
+                  "text":"Viereck",
+                  "check":false
+               },
+               {
+                  "text":"Fünfeck",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Wie nennt man den Spieler der ganz vorne im Angriff spielt ?",
+            "antworten":[
+               {
+                  "text":"Abwehrspieler",
+                  "check":false
+               },
+               {
+                  "text":"Mittelfeldspieler",
+                  "check":false
+               },
+               {
+                  "text":"Torwart",
+                  "check":false
+               },
+               {
+                  "text":"Stürmer",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage": "Wie nennt man die Klamotten der Spieler ?",
+            "antworten":[
+               {
+                  "text":"Strampler",
+                  "check":false
+               },
+               {
+                  "text":"Trikot",
+                  "check":true
+               },
+               {
+                  "text":"Pulli und Jogginghose",
+                  "check":false
+               },
+               {
+                  "text":"Anzug",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Was ist eine Flanke ?",
+            "antworten":[
+               {
+                  "text":"Ein anderes Wort für Anstoß",
+                  "check":false
+               },
+               {
+                  "text":"Ein anderes Wort für Schuss",
+                  "check":false
+               },
+               {
+                  "text":"Ein Eckstoß mit verfehltem Torschuss",
+                  "check":false
+               },
+               {
+                  "text":"Ein Eckstoß mit Torschuss in Folge",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage": "Wie nennt man den Raum wo der Torwart drinnen sein darf außer Dem Tor ?",
+            "antworten":[
+               {
+                  "text":"Strafraum",
+                  "check":true
+               },
+               {
+                  "text":"Ballraum",
+                  "check":false
+               },
+               {
+                  "text":"Vorraum",
+                  "check":false
+               },
+               {
+                  "text":"Torraum",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Wie lange dauert ein normales Spiel ohne Pause ?",
+            "antworten":[
+               {
+                  "text":"100 Minuten",
+                  "check":false
+               },
+               {
+                  "text":"90 Minuten",
+                  "check":true
+               },
+               {
+                  "text":"80 Minuten",
+                  "check":false
+               },
+               {
+                  "text":"60 Minuten",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Welches ist das Entstehungsland des Fußballs ?",
+            "antworten":[
+               {
+                  "text":"Brasilien",
+                  "check":false
+               },
+               {
+                  "text":"Spanien",
+                  "check":false
+               },
+               {
+                  "text":"England",
+                  "check":true
+               },
+               {
+                  "text":"Italien",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Wie nennt man im Fußball den Versuch eines Spielers, ein Foul vorzutäuschen ?",
+            "antworten":[
+               {
+                  "text":"Ente",
+                  "check":false
+               },
+               {
+                  "text":"Schwalbe",
+                  "check":true
+               },
+               {
+                  "text":"Sperling",
+                  "check":false
+               },
+               {
+                  "text":"Taube",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Welches Fußballteam stürzte 1993 mit dem Flugzeug bei Libreville ab ?",
+            "antworten":[
+               {
+                  "text":"Sambia",
+                  "check":true
+               },
+               {
+                  "text":"Togo",
+                  "check":false
+               },
+               {
+                  "text":"Gabun",
+                  "check":false
+               },
+               {
+                  "text":"Republik Kongo",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Wo wird die Fußball-WM 2018 stattfinden ?",
+            "antworten":[
+               {
+                  "text":"Russland",
+                  "check":true
+               },
+               {
+                  "text":"Katar",
+                  "check":false
+               },
+               {
+                  "text":"Südafrika",
+                  "check":false
+               },
+               {
+                  "text":"Brasilien",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Wie nennt man Fans, die während eines Fußballspiels nackt über den Platz rennen ?",
+            "antworten":[
+               {
+                  "text":"Störer",
+                  "check":false
+               },
+               {
+                  "text":"Läufer",
+                  "check":false
+               },
+               {
+                  "text":"Flitzer",
+                  "check":true
+               },
+               {
+                  "text":"Sauser",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Was ist Futsal ?",
+            "antworten":[
+               {
+                  "text":"Fußball mit Softbällen",
+                  "check":false
+               },
+               {
+                  "text":"Fußball ohne Torwart",
+                  "check":false
+               },
+               {
+                  "text":"Fußballtennis",
+                  "check":false
+               },
+               {
+                  "text":"Hallenfußball",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage": "Was zeigt der 4. Offizielle bei einem Fußballspiel ab der 90. Minute an ?",
+            "antworten":[
+               {
+                  "text":"Torschützen",
+                  "check":false
+               },
+               {
+                  "text":"Zuschauerzahl",
+                  "check":false
+               },
+               {
+                  "text":"Trikotsponsoren",
+                  "check":false
+               },
+               {
+                  "text":"Nachspielzeit",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage": "Wer wurde 1999 von der FIFA zum besten Spieler des Jahres gewählt ?",
+            "antworten":[
+               {
+                  "text":"Rivaldo",
+                  "check":true
+               },
+               {
+                  "text":"Ronaldo",
+                  "check":false
+               },
+               {
+                  "text":"Zidane",
+                  "check":false
+               },
+               {
+                  "text":"Matthäus",
+                  "check":false
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "quizID":"1",
+      "quizFragen":[
+         {
+            "frage":"Warum ist es hier ?",
+            "antworten":[
+               {
+                  "text":"Eigentlich nur weil man es gerne zum Spaß macht,s onst nicht!",
+                  "check":true
+               },
+               {
+                  "text":"Weil Baume es so gerne haben",
+                  "check":false
+               },
+               {
+                  "text":"lel",
+                  "check":false
+               },
+               {
+                  "text":"warum hast du nicht schon das erste angeklickt, es ist das richtige!",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"WIEsoooooooooo?",
+            "antworten":[
+               {
+                  "text":"Weil die von vorgestern nen harten kramp hatte und dann einfach so den Bauer von nebenan geklatscht hat.",
+                  "check":false
+               },
+               {
+                  "text":"Lack mir doch einen Baum vom ajajajaj",
+                  "check":false
+               },
+               {
+                  "text":"Hooooooooooooolooooooo hey",
+                  "check":false
+               },
+               {
+                  "text":"Hello",
+                  "check":false
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "quizID":"2",
+      "quizFragen":[
+         {
+            "frage":"Warum ist es hier ?",
+            "antworten":[
+               {
+                  "text":"Eigentlich nur weil man es gerne zum Spaß macht,s onst nicht!",
+                  "check":true
+               },
+               {
+                  "text":"Weil Baume es so gerne haben",
+                  "check":false
+               },
+               {
+                  "text":"lel",
+                  "check":false
+               },
+               {
+                  "text":"warum hast du nicht schon das erste angeklickt, es ist das richtige!",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"WIEsoooooooooo?",
+            "antworten":[
+               {
+                  "text":"Weil die von vorgestern nen harten kramp hatte und dann einfach so den Bauer von nebenan geklatscht hat.",
+                  "check":false
+               },
+               {
+                  "text":"Lack mir doch einen Baum vom ajajajaj",
+                  "check":false
+               },
+               {
+                  "text":"Hooooooooooooolooooooo hey",
+                  "check":false
+               },
+               {
+                  "text":"Hello",
+                  "check":false
+               }
+            ]
+         }
+      ]
+   }
+]
