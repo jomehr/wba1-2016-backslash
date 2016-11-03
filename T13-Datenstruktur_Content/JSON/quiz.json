@@ -3,43 +3,211 @@
       "quizID":"0",
       "quizFragen":[
          {
-            "frage":"Warum ist es hier ?",
+            "frage": "Wen bezeichnet man beim Fußball auch als Goalie ?",
             "antworten":[
                {
-                  "text":"Eigentlich nur weil man es gerne zum Spaß macht,s onst nicht!",
+                  "text":"Mittelstürmer",
+                  "check":false
+               },
+               {
+                  "text":"Platzwart",
+                  "check":false
+               },
+               {
+                  "text":"Torwart",
                   "check":true
                },
                {
-                  "text":"Weil Baume es so gerne haben",
-                  "check":false
-               },
-               {
-                  "text":"lel",
-                  "check":false
-               },
-               {
-                  "text":"warum hast du nicht schon das erste angeklickt, es ist das richtige!",
+                  "text":"Schiedsrichter",
                   "check":false
                }
             ]
          },
          {
-            "frage":"WIEsoooooooooo?",
+            "frage":"Warum ist Grönland kein Mitglied der FIFA ?",
             "antworten":[
                {
-                  "text":"Weil die von vorgestern nen harten kramp hatte und dann einfach so den Bauer von nebenan geklatscht hat.",
+                  "text":"Weil es zu wenige Spieler hat",
                   "check":false
                },
                {
-                  "text":"Lack mir doch einen Baum vom ajajajaj",
+                  "text":"Weil es keinen Rasenplatz hat",
+                  "check":true
+               },
+               {
+                  "text":"Weil es ein Teil von Dänemark ist",
                   "check":false
                },
                {
-                  "text":"Hooooooooooooolooooooo hey",
+                  "text":"Weil es keinen internationalen Flugplatz hat",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Welchen Preis vergibt die Sportschau regelmäßig?",
+            "antworten":[
+               {
+                  "text":"Tor des Monats",
+                  "check":true
+               },
+               {
+                  "text":"Tor der Stunde",
                   "check":false
                },
                {
-                  "text":"Hello",
+                  "text":"Tor des Spieltags",
+                  "check":false
+               },
+               {
+                  "text":"Tor des Tages",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Welche Mannschaft wurde 1978 im eigenen Land Fußball-Weltmeister ?",
+            "antworten":[
+               {
+                  "text":"Uruguay",
+                  "check":false
+               },
+               {
+                  "text":"Brasilien",
+                  "check":false
+               },
+               {
+                  "text":"Kolumbien",
+                  "check":false
+               },
+               {
+                  "text":"Argentinien",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage":"In welchen Stadion fand das sogenannte Jahrhundertspiel statt ?",
+            "antworten":[
+               {
+                  "text":"Aztekenstadion, Mexiko",
+                  "check":false
+               },
+               {
+                  "text":"Wembley Stadion, London",
+                  "check":false
+               },
+               {
+                  "text":"San Siro, Mailand",
+                  "check":false
+               },
+               {
+                  "text":"Bernabeustadion, Madrid",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage":"Wie lange geht eine Halbzeitpause ?",
+            "antworten":[
+               {
+                  "text":"90 Minuten",
+                  "check":false
+               },
+               {
+                  "text":"15 Minuten",
+                  "check":false
+               },
+               {
+                  "text":"45 Minuten",
+                  "check":true
+               },
+               {
+                  "text":"30 Minuten",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Wie viele Spieler befinden sich auf dem Feld ?",
+            "antworten":[
+               {
+                  "text":"10",
+                  "check":false
+               },
+               {
+                  "text":"15",
+                  "check":false
+               },
+               {
+                  "text":"22",
+                  "check":true
+               },
+               {
+                  "text":"20",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Wie hoch und wie breit muss ein Tor laut den Spielregeln der FIFA sein ?",
+            "antworten":[
+               {
+                  "text":"7,32 m breit | 2,54 m hoch",
+                  "check":false
+               },
+               {
+                  "text":"7,42 m breit | 2,54 m hoch",
+                  "check":false
+               },
+               {
+                  "text":"7,42 m breit | 2,44 m hoch",
+                  "check":false
+               },
+               {
+                  "text":"7,32 m breit | 2,44 m hoch",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage":"Bei welcher Situation ist ein Pfiff des Schiedsrichters nicht notwendig ?",
+            "antworten":[
+               {
+                  "text":"Zur Wiederaufnahme des Spiels nach/bei einem Eckstoß",
+                  "check":true
+               },
+               {
+                  "text":"Zur Wiederaufnahme des Spiels nach einer Unterbrechung wegen einer Auswechslung",
+                  "check":false
+               },
+               {
+                  "text":"Zur Wiederaufnahme des Spiels nach einer Unterbrechung wegen einer Verletzung",
+                  "check":false
+               },
+               {
+                  "text":"Zur Wiederaufnahme des Spiels bei Strafstößen",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Welche Entscheidung trifft der Schiedsrichter, wenn ein indirekter Freistoß direkt im gegnerischen Tor einschlägt ?",
+            "antworten":[
+               {
+                  "text":"Direkter Freistoß für den Gegner",
+                  "check":false
+               },
+               {
+                  "text":"Wiederholung",
+                  "check":false
+               },
+               {
+                  "text":"Indirekter Freistoß für den Gegner Abstoß",
+                  "check":true
+               },
+               {
+                  "text":"Abstoß",
                   "check":false
                }
             ]
