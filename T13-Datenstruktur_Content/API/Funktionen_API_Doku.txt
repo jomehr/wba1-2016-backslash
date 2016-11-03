@@ -10,7 +10,7 @@ $(document).on( "onQuizView", function( event, data ) {
 });
 
 getQuizByID(quizID);
-Besorgt das Quiz mit der passenden ID
+Besorgt 10 Fragen von dem Quiz mit der passenden ID
 $(document).on( "onQuizData", function( event, data ) { 
 // Hier kommt die Berarbeitung der erhaltenen Daten
 // “data“ ist die JSON
