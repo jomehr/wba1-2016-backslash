@@ -1,74 +1,90 @@
 <!DOCTYPE html>
 <html lang="de">
+    
     <head>
         <meta charset = "utf-8">
         <title>Quizrunde</title>
+        <!-- Einbinden der CSS von Team 09 -->
         <link rel="stylesheet" type="text/css" href="../../T09-CSS/style.css">
+        <!-- Einbinden der eigenen CSS -->
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     
     <body>
+        <!-- Erstellung der Content-Box mit weißem Hintergrund -->
         <div class="content bg-white">
+        <!-- Erstellung der kopfzeile mit entsprechendem Thema -->
             <div class="head">
                 <h1>Effzeh - mer wisse alles üvver dich</h1>
             </div>
-            <script>"#"</script>
+        <!-- Platzhalter für den Timer -->
+            <div class="timer">
+                <p>!Platzhalter Timer!</p>
+            </div>
+        <!-- Hier wird die Frage abgebildet -->
             <div class="question">
                 <p>"Welches dieser Zitate wird nicht Werders "Ostfriesen-Alemao" Dieter Eilts zugeschrieben?</p>
             </div>
-            
+        <!-- Erstellung der Antworten-Box -->
             <div class="inner_box">
+        <!-- Button-Eigenschaften werden erstellt -->
+        <!-- Farben für kleinen Button werden übergeben -->
+        <!-- Farben für großen Button werden übergeben -->
+        <!-- Schriften werden übergeben -->
             <div class="answers font-secondary">
-                <button class="fg-black">
+                <button class="fg-black bg-lightgrey">
+        <!-- kleine Box mit Answer-Key wird erstellt -->
                     <div class="short bg-yellow">
                         A
                     </div>
+        <!-- große Box mit Antwort wird erstellt -->
                     <div class="long bg-lightgrey">
-                        Text
+                        "Das interessiert mich jetzt wie eine geplatzte Currywust im ostfriesischen Wattenmeer."
                     </div>
                 </button>
                 
-                <button class="fg-black">
+                <button class="fg-black bg-lightgrey">
                     <div class="short bg-yellow">
                         B
                     </div>
                     <div class="long bg-lightgrey">
-                        Text
+                        "Wir dürfen jetzt nicht den Sand in den Kopf stecken."
                     </div>
                 </button>
            
-                <button class="fg-black">
+                <button class="fg-black bg-lightgrey">
                     <div class="short bg-yellow">
                         C
                     </div>
                     <div class="long bg-lightgrey">
-                        Text
+                        "Wenn meine Oma ein Bus wäre, dann könnte sie hupen."
                     </div>
                 </button>
             
-                <button class="fg-black">
+                <button class="fg-black bg-lightgrey">
                     <div class="short bg-yellow">
                         D
                     </div>
                     <div class="long bg-lightgrey">
-                        Text
+                        "Moin moin, Gascoigne."
                     </div>
                 </button>
             </div>
-
+                
+        <!-- Feedback-Icons werden erstellt -->
             <div class="answer_icons">
-            <div class="answer_icon1"></div>
-            <div class="answer_icon2"></div>
-            <div class="answer_icon3"></div>
-            <div class="answer_icon4"></div>
-            <div class="answer_icon5"></div>
-            <div class="answer_icon6"></div>
-            <div class="answer_icon7"></div>
-            <div class="answer_icon8"></div>
-            <div class="answer_icon9"></div>
-            <div class="answer_icon10"></div>
+                <div class="answer_icon bg-red"></div>
+                <div class="answer_icon bg-red"></div>
+                <div class="answer_icon bg-green"></div>
+                <div class="answer_icon bg-red"></div>
+                <div class="answer_icon bg-green"></div>
+                <div class="answer_icon bg-green"></div>
+                <div class="answer_icon bg-red"></div>
+                <div class="answer_icon bg-mediumgrey"></div>
+                <div class="answer_icon bg-mediumgrey"></div>
+                <div class="answer_icon bg-mediumgrey"></div>
             </div>
-    
+        <!-- Button für das Beenden des Quizzes wird erstellt -->
             <div class="button1">
                 <button type="button" id="quiz_beenden">Quizrunde beenden</button>
             </div>
