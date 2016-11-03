@@ -211,7 +211,217 @@
                   "check":false
                }
             ]
-         }
+         },
+         {
+            "frage": "Wie viel muss ein Ball laut offiziellem Regelwerk VOR dem Beginn eines Spiels MINDESTENS wiegen ?",
+            "antworten":[
+               {
+                  "text":"390 g",
+                  "check":false
+               },
+               {
+                  "text":"430 g",
+                  "check":false
+               },
+               {
+                  "text":"410 g",
+                  "check":true
+               },
+               {
+                  "text":"450 g",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Welche Mannschaft gewann zum letzten Mal den Weltpokal vor dessen Abschaffung und der Einführung der FIFA Klub-Weltmeisterschaft ?",
+            "antworten":[
+               {
+                  "text":"AC Mailand",
+                  "check":false
+               },
+               {
+                  "text":"Real Madrid",
+                  "check":false
+               },
+               {
+                  "text":"FC Porto",
+                  "check":true
+               },
+               {
+                  "text":"FC Bayern München",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Welche Nation musste die meisten Finalniederlagen bei einer WM-Endrunde einzustecken ? (Stand 08/2016)",
+            "antworten":[
+               {
+                  "text":"Niederlande",
+                  "check":false
+               },
+               {
+                  "text":"Italien",
+                  "check":false
+               },
+               {
+                  "text":"Deutschland",
+                  "check":true
+               },
+               {
+                  "text":"Argentinien",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Wie viele Vereine aus dem gleichen Land können in der Champions League maximal an den Start gehen ?",
+            "antworten":[
+               {
+                  "text":"4",
+                  "check":false
+               },
+               {
+                  "text":"5",
+                  "check":true
+               },
+               {
+                  "text":"7",
+                  "check":false
+               },
+               {
+                  "text":"6",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Der Doppelpass auf Sport1 ist eine berühmte Diskussionsrunde von Fussball-Experten. In welchem Jahr wurde die erste Sendung (damals noch auf DSF) ausgestrahlt?",
+            "antworten":[
+               {
+                  "text":"1997",
+                  "check":false
+               },
+               {
+                  "text":"1995",
+                  "check":true
+               },
+               {
+                  "text":"1994",
+                  "check":false
+               },
+               {
+                  "text":"1996",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Welches dieser Stadien gehört NICHT zu den 10 größten Fussball-Stadien Europas ?",
+            "antworten":[
+               {
+                  "text":"Estádio da Luz | Lissabon",
+                  "check":true
+               },
+               {
+                  "text":"Stadio San Paolo | Neapel",
+                  "check":false
+               },
+               {
+                  "text":"Olympiastadion Luschniki | Moskau",
+                  "check":false
+               },
+               {
+                  "text":"Croke Park | Dublin",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Welches Muster ist auf dem Fußball ?",
+            "antworten":[
+               {
+                  "text":"Sechseck",
+                  "check":true
+               },
+               {
+                  "text":"Dreieck",
+                  "check":false
+               },
+               {
+                  "text":"Viereck",
+                  "check":false
+               },
+               {
+                  "text":"Fünfeck",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Wie nennt man den Spieler der ganz vorne im Angriff spielt ?",
+            "antworten":[
+               {
+                  "text":"Abwehrspieler",
+                  "check":false
+               },
+               {
+                  "text":"Mittelfeldspieler",
+                  "check":false
+               },
+               {
+                  "text":"Torwart",
+                  "check":false
+               },
+               {
+                  "text":"Stürmer",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage": "Wie nennt man die Klamotten der Spieler ?",
+            "antworten":[
+               {
+                  "text":"Strampler",
+                  "check":false
+               },
+               {
+                  "text":"Trikot",
+                  "check":true
+               },
+               {
+                  "text":"Pulli und Jogginghose",
+                  "check":false
+               },
+               {
+                  "text":"Anzug",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Was ist eine Flanke ?",
+            "antworten":[
+               {
+                  "text":"Ein anderes Wort für Anstoß",
+                  "check":false
+               },
+               {
+                  "text":"Ein anderes Wort für Schuss",
+                  "check":false
+               },
+               {
+                  "text":"Ein Eckstoß mit verfehltem Torschuss",
+                  "check":false
+               },
+               {
+                  "text":"Ein Eckstoß mit Torschuss in Folge",
+                  "check":true
+               }
+            ]
+         },
       ]
    },
    {
