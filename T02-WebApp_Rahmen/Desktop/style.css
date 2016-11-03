@@ -18,7 +18,7 @@ body {
     background-color: black;
 }
 
-#wa_Navigation {
+.wa_Navigation {
     /*Oberer schwarzer Balken*/
     width: 100%;
     max-width: 768px;
@@ -31,11 +31,34 @@ body {
     /*Das Logo oben links*/
     margin-top: 10px;
     height: 50px;
+    padding-right: 40%;
 }
 
 .wa_header a {
+    font-family: Oswald;
     text-decoration: none;
     color: rgba(255, 255, 255, 1);
+}
+
+.wa_header a:hover{
+    text-decoration:none;
+    color: rgba(255,255,255,1)
+}
+
+.wa_login {
+    display: inline-block;
+    float: right;
+    margin-top: 20px;
+}
+
+.wa_login li {
+    float: left;
+    list-style: none;
+}
+
+.wa_login a {
+    font-size: 20px;
+    padding: 2px;
 }
 
 #wa_Navigation2 {
@@ -69,13 +92,6 @@ body {
 .wa_menue a:hover{
     text-decoration:none;
     color: rgba(255, 255, 255, 1);
-}
-.wa_menue a:visted{
-    text-decoration:none;
-}
-
-.wa_menue a:active{
-    text-decoration:none;
 }
 
 .wa_NavigationsText2 {
