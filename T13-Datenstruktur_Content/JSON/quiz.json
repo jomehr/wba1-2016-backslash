@@ -422,6 +422,216 @@
                }
             ]
          },
+         {
+            "frage": "Wie nennt man den Raum wo der Torwart drinnen sein darf außer Dem Tor ?",
+            "antworten":[
+               {
+                  "text":"Strafraum",
+                  "check":true
+               },
+               {
+                  "text":"Ballraum",
+                  "check":false
+               },
+               {
+                  "text":"Vorraum",
+                  "check":false
+               },
+               {
+                  "text":"Torraum",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Wie lange dauert ein normales Spiel ohne Pause ?",
+            "antworten":[
+               {
+                  "text":"100 Minuten",
+                  "check":false
+               },
+               {
+                  "text":"90 Minuten",
+                  "check":true
+               },
+               {
+                  "text":"80 Minuten",
+                  "check":false
+               },
+               {
+                  "text":"60 Minuten",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Welches ist das Entstehungsland des Fußballs ?",
+            "antworten":[
+               {
+                  "text":"Brasilien",
+                  "check":false
+               },
+               {
+                  "text":"Spanien",
+                  "check":false
+               },
+               {
+                  "text":"England",
+                  "check":true
+               },
+               {
+                  "text":"Italien",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Wie nennt man im Fußball den Versuch eines Spielers, ein Foul vorzutäuschen ?",
+            "antworten":[
+               {
+                  "text":"Ente",
+                  "check":false
+               },
+               {
+                  "text":"Schwalbe",
+                  "check":true
+               },
+               {
+                  "text":"Sperling",
+                  "check":false
+               },
+               {
+                  "text":"Taube",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Welches Fußballteam stürzte 1993 mit dem Flugzeug bei Libreville ab ?",
+            "antworten":[
+               {
+                  "text":"Sambia",
+                  "check":true
+               },
+               {
+                  "text":"Togo",
+                  "check":false
+               },
+               {
+                  "text":"Gabun",
+                  "check":false
+               },
+               {
+                  "text":"Republik Kongo",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Wo wird die Fußball-WM 2018 stattfinden ?",
+            "antworten":[
+               {
+                  "text":"Russland",
+                  "check":true
+               },
+               {
+                  "text":"Katar",
+                  "check":false
+               },
+               {
+                  "text":"Südafrika",
+                  "check":false
+               },
+               {
+                  "text":"Brasilien",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Wie nennt man Fans, die während eines Fußballspiels nackt über den Platz rennen ?",
+            "antworten":[
+               {
+                  "text":"Störer",
+                  "check":false
+               },
+               {
+                  "text":"Läufer",
+                  "check":false
+               },
+               {
+                  "text":"Flitzer",
+                  "check":true
+               },
+               {
+                  "text":"Sauser",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage": "Was ist Futsal ?",
+            "antworten":[
+               {
+                  "text":"Fußball mit Softbällen",
+                  "check":false
+               },
+               {
+                  "text":"Fußball ohne Torwart",
+                  "check":false
+               },
+               {
+                  "text":"Fußballtennis",
+                  "check":false
+               },
+               {
+                  "text":"Hallenfußball",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage": "Was zeigt der 4. Offizielle bei einem Fußballspiel ab der 90. Minute an ?",
+            "antworten":[
+               {
+                  "text":"Torschützen",
+                  "check":false
+               },
+               {
+                  "text":"Zuschauerzahl",
+                  "check":false
+               },
+               {
+                  "text":"Trikotsponsoren",
+                  "check":false
+               },
+               {
+                  "text":"Nachspielzeit",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage": "Wer wurde 1999 von der FIFA zum besten Spieler des Jahres gewählt ?",
+            "antworten":[
+               {
+                  "text":"Rivaldo",
+                  "check":true
+               },
+               {
+                  "text":"Ronaldo",
+                  "check":false
+               },
+               {
+                  "text":"Zidane",
+                  "check":false
+               },
+               {
+                  "text":"Matthäus",
+                  "check":false
+               }
+            ]
+         }
       ]
    },
    {
