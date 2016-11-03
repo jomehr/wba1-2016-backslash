@@ -64,7 +64,7 @@ function getQuizView(){
         if(json_request.readyState == 4 && json_request.status === 200 ){
             var jsonData = JSON.parse(json_request.responseText);
             var jsonOut = {};
-            var quizArray = new array();
+            var quizArray = [];
             
             for(var i=0;i<3;i++){
                 quizArray.push({quizID: jsonData[i].quizID,
