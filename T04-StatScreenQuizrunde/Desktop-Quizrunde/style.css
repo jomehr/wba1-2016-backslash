@@ -210,18 +210,30 @@ body {
     padding-bottom: 30px;
 }
 
-button {
-    width: 300px;
-    height: 50px;
-    margin: 0 auto;
-    background-color: #CB0727;
-    color: white;
-    border: none;
-    display: block;
-    font-size: 18px;
-    margin-top: 25px;
+.answers button {
+    padding: 0px 0px 0px 0px;
+    width: 90%;
+}
+            
+.answers button div {
+    float: left;
+    height: 100%;
+}
+            
+.answers button .short {
+    width: 5%;
+    line-height: 3;
+}
+            
+.answers button .long {
+    width: 95%;
+    line-height: 3;
 }
 
-h1 {
-    font-size: 25px;
+.fg-black {
+    margin: 20px 0px 0px 50px;
+}
+
+button {
+    display: block;
 }
