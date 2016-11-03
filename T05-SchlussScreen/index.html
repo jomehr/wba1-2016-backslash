@@ -2,26 +2,35 @@
 <html>
 	<head>
 		<title>Schlussscreen</title>
-		<link rel="stylesheet" href="../T09-CSS/style.css">
-		<link rel="stylesheet" href="css/style.css"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--  Einbindung Allgemein CSS/style  -->
+		<link rel="stylesheet" href="../T09-CSS/style.css">	
+		<!--  Einbindung unser Style  -->		
+		<link rel="stylesheet" href="css/style.css"/>	
+		<!-- Zoom für mobile Geräte  -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">	
 	</head>
 	<body style="background: lightgrey; max-width: 1000px; margin: 0 auto;">
+		<!-- allgemeine Box-->
 		<div class="ss_box">
 			<header class="bg-yellow">
 				<h1>Effzeh - mer wesse alles üvver dich</h1>
 			</header>
 			<div class="ss_erg ss_box_content row">
+				<!--  Box für Linke Seite (Ereignisse) -->
 				<div class="ss_left col-md-8 col-xs-12">
 					<h2 style="margin-top: 0px;">Dein Ergebnis</h2>
 					<div class="ss_score row">
 						<div class="ss_score_sp col-md-7 col-xs-12">
+							<!-- Wird automatisch gefüllt sobald die Breite weniger als 992px. Siehe script.js funktion moveScoreText()  -->
 							<p class="ss_mobile_points_txt"></p>
+							<!--  Punktebalken  -->
 							<div class="ss_score_balken bg-mediumgrey">
 								<div class="ss_scale_score" style="width: 60%;">
 								</div>
 							</div>
+							<!-- Wird automatisch gefüllt sobald die Breite weniger als 992px. Siehe script.js funktion moveScoreText()  -->
 							<p class="ss_mobile_answer_txt"></p>
+							<!--  Richtig beantwortete Fragen (Punkte rot/grün)  -->
 							<div class="ss_score_points">
 								<div class="ss_score_point bg-red"></div>
 								<div class="ss_score_point bg-green"></div>
@@ -41,6 +50,7 @@
 						</div>
 					</div>
 					<p>Ich will mehr zu diesem Thema wissen</p>
+					<!--  Highscoreliste  -->
 					<div class="ss_scoreboard">
 						<p>Neue Position</p>
 						<table class="font-bold table">
@@ -72,6 +82,7 @@
 						</table>
 					</div>
 				</div>
+				<!--  Quizinfo und Detailtext  -->
 				<div class="ss_right col-md-4 col-xs-12">
 					<figure>
 						<img src="img/Fan1-Groß.jpg" alt="Fan1-Groß.jpg" class="img-responsive" />
@@ -88,6 +99,7 @@
 					</figure>
 				</div>
 			</div>
+			<!--  Buttons  -->
 			<div class="ss_buttons ss_box_content row">
 				<div class="col-md-4">
 					<input type="button" value="Übersicht" />
@@ -100,13 +112,17 @@
 				</div>
 			</div>
 		</div>
+		<!--  allgemeine mit Inhalt des Sliders  -->
 		<div class="ss_box">
 			<h2 style="text-align: center; padding-top: 24px;">Das könnte dir auch gefallen</h2>
+			<!--  Sliderelement  -->
 			<div class="ss_slider_content row">
+				<!--  linke Seite vom Slider  -->
 				<div class="col-md-4">
 					<h2>Das Stadion Quizz</h2>
 					<img class="img-responsive" src="img/Stadion10-Groß.jpg" alt="Stadion10-Groß.jpg" />
 				</div>
+				<!--  Mitte vom Slider  -->
 				<div class="col-md-6 ss_slider_text">
 					<p>Die größten, bedeutendsten, modernsten und
 					wichtigsten Stadien der Welt. Kaum etwas ist
@@ -121,12 +137,14 @@
 						Hennes48
 					</div>
 				</div>
+				<!--  rechte Seite vom Slider  -->
 				<div class="col-md-2 ss_slider_right">
 					<p><span class="font-bold">67</span> mal gespielt</p>
 					<div class="ss_slider_points fg-white bg-darkgrey font-bold">8 / 10 Punkten</div>
 					<input type="button" value="Jetzt spielen!" />
 				</div>
 			</div>
+			<!--  Slider Menüpunkte  -->
 			<div class="ss_slider_menu">
 				<div class="ss_slider_menu_elemente">
 					<div class="ss_slider_menu_left font-bold">&lt;</div>
