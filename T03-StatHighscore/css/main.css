@@ -30,7 +30,7 @@ header{
     
 }
 
-#overview{
+#hs-overview{
     height              :   50px;
     width               :   100%;
     color               :   white; 
@@ -40,7 +40,7 @@ header{
     
 }
 
-#highscore{
+#hs-highscore{
     
     background-color:   white;
     align-content   :   center;    
@@ -51,35 +51,35 @@ header{
     margin-bottom   :   100px; 
 }
 
-#title{
+#hs-title{
     color: black;
     background-color    :   #E8C10B; 
     
 }
 
-#search{
+#hs-search{
     height              :   125px;
     background-color    :   #504F48;
     
 }
 
-#list{
+#hs-list{
     width:      100%;
     height  :   400px;
     overflow: auto;       
 }
 
-#scoretable{
+#hs-scoretable{
     width: 100%;
     height: 600px;
     text-align: justify;
 }
 
-#scoretable tr:nth-child(2n) {
+#hs-scoretable tr:nth-child(2n) {
     background-color:#f7f4e4;
 }
 
-#option {
+#hs-option {
     background-color:   rgba(255,255,255,0.5);
     height          :   100px;
     margin-bottom:10px;
@@ -89,17 +89,17 @@ header{
     text-align: right;
 }
 
-#option_button ul{
+#hs-option_button ul{
     list-style: none;
     padding: 10px;
 }
 
-#option_button_list{
+#hs-option_button_list{
     display:inline;
     margin-right:  150px;
 }
 
-#option_button_list a{
+#hs-option_button_list a{
     width: 25%;
     height: 100px;
     background: #CA0726;    
@@ -121,14 +121,14 @@ footer{
 /* ****************** NAVIGATION ****************** 
 ***************************************************/
 
-#overview .menu{
+#hs-overview .menu{
     width: 100%;
     list-style-type: none;
      margin-left     :   225px;
      
 }
 
-#overview .menu li a{
+#hs-overview .menu li a{
     width: 12%;
     height: 50px;
     display: block;
