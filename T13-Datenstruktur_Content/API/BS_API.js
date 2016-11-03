@@ -34,24 +34,19 @@ json_request.open("GET", highscoreData,true );
 json_request.send();
 }
 
-//Holt Daten mit der passenden ID
+//Holt Quiz mit der passenden ID
 function getQuizByID(quizID){
-    var highscoreData = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/highscore.json";
+    var quizData = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/quiz.json";
     var json_request = new XMLHttpRequest();
 
     json_request.onreadystatechange = function(){
         if(json_request.readyState == 4 && json_request.status === 200 ){
             var jsonData = JSON.parse(json_request.responseText);
             var jsonOut = {};
-
-            //for(var i=0;i<jsonData.highscore.length-1;i++){
-                jsonOut = JSON.stringify({position: jsonData[quizID].highscore[quizID].position,
-                                          name: jsonData[quizID].highscore[quizID].name,
-                                          punktzahl: jsonData[quizID].highscore[quizID].punktzahl});
-            //}
+                jsonOut = JSON.stringify({jsonData[quizID]);
             $( document ).trigger( "onQuizData", [ jsonOut ] );
         }};
-json_request.open("GET", highscoreData,true );
+json_request.open("GET", quizData,true );
 json_request.send();
 }
 
