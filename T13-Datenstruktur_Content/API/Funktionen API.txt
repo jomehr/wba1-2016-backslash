@@ -1,0 +1,24 @@
+Benötigte Scripts
+jQuery Library: https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
+API: https://rawgit.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/API/BS_API.js
+
+getQuizView();
+Besorgt eine Quiz-Übersicht
+$(document).on( "onQuizView", function( event, data ) { 
+// Hier kommt die Berarbeitung der erhaltenen Daten
+// “data“ ist die JSON
+});
+
+getQuizByID(quizID);
+Besorgt das Quiz mit der passenden ID
+$(document).on( "onQuizData", function( event, data ) { 
+// Hier kommt die Berarbeitung der erhaltenen Daten
+// “data“ ist die JSON
+});
+
+getHighscoreByID(quizID);
+Besorgt das Highscore mit der passenden ID
+$(document).on( "onHighscoreData", function( event, data ) { 
+// Hier kommt die Berarbeitung der erhaltenen Daten
+// “data“ ist die JSON
+});
