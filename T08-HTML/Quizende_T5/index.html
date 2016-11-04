@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Schlussscreen</title>
@@ -40,7 +40,7 @@
 				</div>
 				<div class="ss_right col-md-4 col-xs-12">
 					<figure>
-						<img src="img/Fan1-Groß.jpg" alt="Fan1-Groß.jpg" class="img-responsive" id="JS_Bild"/>
+						<img src="img/Fan1.jpg" alt="Fan1.jpg" class="img-responsive" id="JS_Bild"/>
 						<figcaption>
 							<p id="JS_Text">Das FC-Quizz schlecht hin. Der wahre FC Fan
 							beantwortet diese Fragen im Schlaf. Dabei
@@ -71,7 +71,7 @@
 			<div class="ss_slider_content row">
 				<div class="col-md-4">
 					<h2 id="JS_Vorschlag1_Titel">Das Stadion Quizz</h2>
-					<img class="img-responsive" src="img/Stadion10-Groß.jpg" alt="Stadion10-Groß.jpg" id="JS_Vorschlag1_Bild" />
+					<img class="img-responsive" src="img/Stadion10.jpg" alt="Stadion10.jpg" id="JS_Vorschlag1_Bild" />
 				</div>
 				<div class="col-md-6 ss_slider_text">
 					<p id="JS_Vorschlag1_Text">Die größten, bedeutendsten, modernsten und
@@ -170,7 +170,6 @@
 							iRand--;
 						}
 						if(quizInfo[iRand].quizID!==quizID) { // <- Abfrage ob QuizID == Random ID ist wenn true neu generieren
-							console.log(quizInfo[iRand]);
 							icount++;
 							document.getElementById("JS_Vorschlag"+icount+"_Bild").src=quizInfo[iRand].bild;
 							document.getElementById("JS_Vorschlag"+icount+"_Text").innerHTML=quizInfo[iRand].text;
