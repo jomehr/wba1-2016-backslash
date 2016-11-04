@@ -151,3 +151,60 @@ input, textarea
 
 .bg-black
   background-color: $color-black
+
+//icon classes
+@font-face
+  font-family: "icomoon"
+  src: url("fonts/icomoon.eot?dz3ucl")
+  src: url("fonts/icomoon.eot?dz3ucl#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?dz3ucl") format("truetype"), url("fonts/icomoon.woff?dz3ucl") format("woff"), url("fonts/icomoon.svg?dz3ucl#icomoon") format("svg")
+  font-weight: normal
+  font-style: normal
+
+[class^="ico-"], [class*=" ico-"]
+  display: inline-block
+
+  //use !important to prevent issues with browser extensions that change fonts
+  font-family: "icomoon", "sans-serif" !important
+  speak: none
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  line-height: 1
+
+  //Better Font Rendering
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+.ico-arrow-top:before, .ico-arrow-right:before, .ico-arrow-bottom:before, .ico-arrow-left:before
+  content: "\e904"
+
+.ico-arrow-top
+  transform: rotate(180deg)
+
+.ico-arrow-right
+  transform: rotate(-90deg)
+
+.ico-arrow-left
+  transform: rotate(90deg)
+
+.ico-light-arrow-top:before, .ico-light-arrow-right:before, .ico-light-arrow-bottom:before, .ico-light-arrow-left:before
+  content: "\e902"
+
+.ico-light-arrow-top
+  transform: rotate(90deg)
+
+.ico-light-arrow-right
+  transform: rotate(180deg)
+
+.ico-light-arrow-bottom
+  transform: rotate(-90deg)
+
+.ico-menu:before
+  content: "\e901"
+
+.ico-search:before
+  content: "\e900"
+
+.ico-exit:before
+  content: "\e903"
