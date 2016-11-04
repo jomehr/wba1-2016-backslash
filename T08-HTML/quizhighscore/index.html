@@ -145,12 +145,6 @@
 					$('#highscore_handlebars').append(template(HighscoreJson));
 				});
 			});
-			//Hier kommen die User Quiz Data
-			var points = sessionStorage.getItem('points');
-			var maxpoints = sessionStorage.getItem('maxpoints');
-			var countright = sessionStorage.getItem('correctanswers');
-			var countquestions = sessionStorage.getItem('amountquestions');
-			// DEBUG
 			/*
 					BITTE BEACHTEN!
 					SOLANG DAS QUIZ nicht fertig ist bitte die Variablen Selbst setzen!
@@ -159,6 +153,33 @@
 					sessionStorage.setItem('correctanswers', '5');
 					sessionStorage.setItem('points', '500');
 			*/
+
+			//Userdaten rand generieren solange keine bestehen!!!
+			var rand1=Math.random(); //Punkte
+			var rand2=0; //maxPunkte
+			var rand3=Math.random(); //richtige antworten
+			var rand4=0; //anzahl Fragen
+			rand1=Math.round(1000*rand1);
+			while(rand2<rand1) {
+				rand2=Math.random();
+				rand2=Math.round(1000*rand2);
+			}
+			rand3=Math.round(30*rand3);
+			while(rand4<rand3) {
+				rand4=Math.random();
+				rand4=Math.round(30*rand4);
+			}
+			sessionStorage.setItem('points', rand1);
+			sessionStorage.setItem('maxpoints', rand2);
+			sessionStorage.setItem('correctanswers', rand3);
+			sessionStorage.setItem('amountquestions', rand4);
+
+			//Hier kommen die User Quiz Data
+			var points = sessionStorage.getItem('points');
+			var maxpoints = sessionStorage.getItem('maxpoints');
+			var countright = sessionStorage.getItem('correctanswers');
+			var countquestions = sessionStorage.getItem('amountquestions');
+			// DEBUG
 			console.log(points);
 			console.log(maxpoints);
 			console.log(countright);
