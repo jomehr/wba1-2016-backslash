@@ -9,7 +9,7 @@
 	<body style="background: lightgrey; max-width: 1000px; margin: 0 auto;">
 		<div class="ss_box">
 			<header class="bg-yellow">
-				<h1>Effzeh - mer wesse alles üvver dich</h1>
+				<h1 id="JS_Titel">Effzeh - mer wesse alles üvver dich</h1>
 			</header>
 			<div class="ss_erg ss_box_content row">
 				<div class="ss_left col-md-8 col-xs-12">
@@ -40,9 +40,9 @@
 				</div>
 				<div class="ss_right col-md-4 col-xs-12">
 					<figure>
-						<img src="img/Fan1-Groß.jpg" alt="Fan1-Groß.jpg" class="img-responsive" />
+						<img src="img/Fan1-Groß.jpg" alt="Fan1-Groß.jpg" class="img-responsive" id="JS_Bild"/>
 						<figcaption>
-							<p>Das FC-Quizz schlecht hin. Der wahre FC Fan
+							<p id="JS_Text">Das FC-Quizz schlecht hin. Der wahre FC Fan
 							beantwortet diese Fragen im Schlaf. Dabei
 							handelt es sich nicht nur um Fragen zur
 							Fußballerischen Geschichte des Vereins,
@@ -70,11 +70,11 @@
 			<h2 style="text-align: center; padding-top: 24px;">Das könnte dir auch gefallen</h2>
 			<div class="ss_slider_content row">
 				<div class="col-md-4">
-					<h2>Das Stadion Quizz</h2>
-					<img class="img-responsive" src="img/Stadion10-Groß.jpg" alt="Stadion10-Groß.jpg" />
+					<h2 id="JS_Vorschlag1_Titel">Das Stadion Quizz</h2>
+					<img class="img-responsive" src="img/Stadion10-Groß.jpg" alt="Stadion10-Groß.jpg" id="JS_Vorschlag1_Bild" />
 				</div>
 				<div class="col-md-6 ss_slider_text">
-					<p>Die größten, bedeutendsten, modernsten und
+					<p id="JS_Vorschlag1_Text">Die größten, bedeutendsten, modernsten und
 					wichtigsten Stadien der Welt. Kaum etwas ist
 					bei großen Vereinen so bedeutend wie das
 					Stadion. Es ist nicht nur ein Statussymbol für
@@ -82,13 +82,13 @@
 					ein Denkmal für große Ereignisse in der
 					Historie eines Vereins. Hier findest Fragen
 					zu den Stadien der Welt. Auf geht's!</p>
-					<div class="ss_slider_author font-bold">
+					<div class="ss_slider_author font-bold" id="JS_Vorschlag1_DateUser">
 						17.06.2016<br />
 						Hennes48
 					</div>
 				</div>
 				<div class="col-md-2 ss_slider_right">
-					<p><span class="font-bold">67</span> mal gespielt</p>
+					<p><span class="font-bold" id="JS_Vorschlag1_Played">67</span> mal gespielt</p>
 					<div class="ss_slider_points fg-white bg-darkgrey font-bold">8 / 10 Punkten</div>
 					<input type="button" value="Jetzt spielen!" />
 				</div>
@@ -145,6 +145,41 @@
 					$('#highscore_handlebars').append(template(HighscoreJson));
 				});
 			});
+			//QUIZ info
+			$(function() {
+				getQuizViewByID(quizID);
+				$(document).on( "onQuizViewByID", function( event, data ) {
+					var quizInfo=JSON.parse(data);
+					document.getElementById("JS_Bild").src=quizInfo.bild;
+					document.getElementById("JS_Text").innerHTML=quizInfo.text;
+					document.getElementById("JS_Titel").innerHTML=quizInfo.titel;
+				});
+			});
+
+			//Random Quiz Vorschlag
+			$(function() {
+				getQuizView(5);
+				$(document).on( "onQuizView", function( event, data ) {
+					var quizInfo=JSON.parse(data);
+					console.log(quizInfo.length);
+					var icount=0;
+					//RAND Quiz außer aufgerufene Quiz.
+					for(var i=0;icount<1;i++) {
+						var iRand=Math.random();
+						var iRand=Math.round(iRand*quizInfo.length);
+						if(quizInfo[iRand].quizID!==quizID) { // <- Abfrage ob QuizID == Random ID ist wenn true neu generieren
+							console.log(quizInfo[iRand]);
+							icount++;
+							document.getElementById("JS_Vorschlag"+icount+"_Bild").src=quizInfo[iRand].bild;
+							document.getElementById("JS_Vorschlag"+icount+"_Text").innerHTML=quizInfo[iRand].text;
+							document.getElementById("JS_Vorschlag"+icount+"_Titel").innerHTML=quizInfo[iRand].titel;
+							document.getElementById("JS_Vorschlag"+icount+"_DateUser").innerHTML=quizInfo[iRand].datum+" <br />"+quizInfo[i].autor;
+							document.getElementById("JS_Vorschlag"+icount+"_Played").innerHTML=quizInfo[iRand].spielzahl;
+						}
+					}
+
+				});
+			});
 			/*
 					BITTE BEACHTEN!
 					SOLANG DAS QUIZ nicht fertig ist bitte die Variablen Selbst setzen!
@@ -158,17 +193,13 @@
 			var rand1=Math.random(); //Punkte
 			var rand2=0; //maxPunkte
 			var rand3=Math.random(); //richtige antworten
-			var rand4=0; //anzahl Fragen
+			var rand4=10; //anzahl Fragen
 			rand1=Math.round(1000*rand1);
-			while(rand2<rand1) {
+			while(rand2<=rand1) {
 				rand2=Math.random();
 				rand2=Math.round(1000*rand2);
 			}
-			rand3=Math.round(30*rand3);
-			while(rand4<rand3) {
-				rand4=Math.random();
-				rand4=Math.round(30*rand4);
-			}
+			rand3=Math.round(10*rand3);
 			sessionStorage.setItem('points', rand1);
 			sessionStorage.setItem('maxpoints', rand2);
 			sessionStorage.setItem('correctanswers', rand3);
@@ -179,11 +210,7 @@
 			var maxpoints = sessionStorage.getItem('maxpoints');
 			var countright = sessionStorage.getItem('correctanswers');
 			var countquestions = sessionStorage.getItem('amountquestions');
-			// DEBUG
-			console.log(points);
-			console.log(maxpoints);
-			console.log(countright);
-			console.log(countquestions);
+
 			// Fill Highscore User Data
 			var item = document.getElementById('JS_richtig');
 			item.innerHTML = countright+" von "+countquestions+" Fragen Richtig";
@@ -206,11 +233,7 @@
 				} else {
 					item.innerHTML += greenicon;
 				}
-
 			}
 		</script>
-
-
-
 	</body>
 </html>
