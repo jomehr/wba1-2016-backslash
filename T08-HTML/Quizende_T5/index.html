@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Schlussscreen</title>
@@ -40,7 +40,7 @@
 				</div>
 				<div class="ss_right col-md-4 col-xs-12">
 					<figure>
-						<img src="img/Fan1-Groß.jpg" alt="Fan1-Groß.jpg" class="img-responsive" id="JS_Bild"/>
+						<img src="img/Fan1.jpg" alt="Fan1.jpg" class="img-responsive" id="JS_Bild"/>
 						<figcaption>
 							<p id="JS_Text">Das FC-Quizz schlecht hin. Der wahre FC Fan
 							beantwortet diese Fragen im Schlaf. Dabei
@@ -71,7 +71,7 @@
 			<div class="ss_slider_content row">
 				<div class="col-md-4">
 					<h2 id="JS_Vorschlag1_Titel">Das Stadion Quizz</h2>
-					<img class="img-responsive" src="img/Stadion10-Groß.jpg" alt="Stadion10-Groß.jpg" id="JS_Vorschlag1_Bild" />
+					<img class="img-responsive" src="img/Stadion10.jpg" alt="Stadion10.jpg" id="JS_Vorschlag1_Bild" />
 				</div>
 				<div class="col-md-6 ss_slider_text">
 					<p id="JS_Vorschlag1_Text">Die größten, bedeutendsten, modernsten und
@@ -127,13 +127,9 @@
 		Highscore fill Funktion & Quiz Info
 		-->
 		<script type="text/javascript">
-			var getQueryString = function (field, url) {
-			var href = url ? url : window.location.href;
-			var reg = new RegExp('[?&]' + field + '=([^&#]*)', 'i');
-			var string = reg.exec(href);
-			return string ? string[1] : null;
-			};
-			var quizID = getQueryString('quizId', window.location.href);
+			sessionStorage.setItem('quizid', 1);
+			var quizID = sessionStorage.getItem('quizid');
+
 			$(function() {
 				getHighscoreByID(quizID);
 				$(document).on( "onHighscoreData", function( event, data ) {
@@ -144,9 +140,9 @@
 					var template = Handlebars.compile(source);
 					$('#highscore_handlebars').append(template(HighscoreJson));
 				});
-			});
+
 			//QUIZ info
-			$(function() {
+
 				getQuizViewByID(quizID);
 				$(document).on( "onQuizViewByID", function( event, data ) {
 					var quizInfo=JSON.parse(data);
@@ -154,10 +150,9 @@
 					document.getElementById("JS_Text").innerHTML=quizInfo.text;
 					document.getElementById("JS_Titel").innerHTML=quizInfo.titel;
 				});
-			});
+
 
 			//Random Quiz Vorschlag
-			$(function() {
 				getQuizView(5);
 				$(document).on( "onQuizView", function( event, data ) {
 					var quizInfo=JSON.parse(data);
@@ -171,18 +166,17 @@
 							iRand--;
 						}
 						if(quizInfo[iRand].quizID!==quizID) { // <- Abfrage ob QuizID == Random ID ist wenn true neu generieren
-							console.log(quizInfo[iRand]);
 							icount++;
 							document.getElementById("JS_Vorschlag"+icount+"_Bild").src=quizInfo[iRand].bild;
 							document.getElementById("JS_Vorschlag"+icount+"_Text").innerHTML=quizInfo[iRand].text;
 							document.getElementById("JS_Vorschlag"+icount+"_Titel").innerHTML=quizInfo[iRand].titel;
-							document.getElementById("JS_Vorschlag"+icount+"_DateUser").innerHTML=quizInfo[iRand].datum+" <br />"+quizInfo[i].autor;
+							document.getElementById("JS_Vorschlag"+icount+"_DateUser").innerHTML=quizInfo[iRand].datum+" <br />"+quizInfo[icount].autor;
 							document.getElementById("JS_Vorschlag"+icount+"_Played").innerHTML=quizInfo[iRand].spielzahl;
 						}
 					}
 
 				});
-			});
+
 			/*
 					BITTE BEACHTEN!
 					SOLANG DAS QUIZ nicht fertig ist bitte die Variablen Selbst setzen!
@@ -237,6 +231,7 @@
 					item.innerHTML += greenicon;
 				}
 			}
+		});
 		</script>
 	</body>
 </html>
