@@ -144,9 +144,9 @@
 					var template = Handlebars.compile(source);
 					$('#highscore_handlebars').append(template(HighscoreJson));
 				});
-			});
+
 			//QUIZ info
-			$(function() {
+
 				getQuizViewByID(quizID);
 				$(document).on( "onQuizViewByID", function( event, data ) {
 					var quizInfo=JSON.parse(data);
@@ -154,10 +154,9 @@
 					document.getElementById("JS_Text").innerHTML=quizInfo.text;
 					document.getElementById("JS_Titel").innerHTML=quizInfo.titel;
 				});
-			});
+
 
 			//Random Quiz Vorschlag
-			$(function() {
 				getQuizView(5);
 				$(document).on( "onQuizView", function( event, data ) {
 					var quizInfo=JSON.parse(data);
@@ -176,13 +175,13 @@
 							document.getElementById("JS_Vorschlag"+icount+"_Bild").src=quizInfo[iRand].bild;
 							document.getElementById("JS_Vorschlag"+icount+"_Text").innerHTML=quizInfo[iRand].text;
 							document.getElementById("JS_Vorschlag"+icount+"_Titel").innerHTML=quizInfo[iRand].titel;
-							document.getElementById("JS_Vorschlag"+icount+"_DateUser").innerHTML=quizInfo[iRand].datum+" <br />"+quizInfo[i].autor;
+							document.getElementById("JS_Vorschlag"+icount+"_DateUser").innerHTML=quizInfo[iRand].datum+" <br />"+quizInfo[icount].autor;
 							document.getElementById("JS_Vorschlag"+icount+"_Played").innerHTML=quizInfo[iRand].spielzahl;
 						}
 					}
 
 				});
-			});
+
 			/*
 					BITTE BEACHTEN!
 					SOLANG DAS QUIZ nicht fertig ist bitte die Variablen Selbst setzen!
@@ -237,6 +236,7 @@
 					item.innerHTML += greenicon;
 				}
 			}
+		});
 		</script>
 	</body>
 </html>
