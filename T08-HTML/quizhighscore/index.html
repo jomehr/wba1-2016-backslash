@@ -18,7 +18,7 @@
 						<div class="ss_score_sp col-md-7 col-xs-12">
 							<p class="ss_mobile_points_txt"></p>
 							<div class="ss_score_balken bg-mediumgrey">
-								<div class="ss_scale_score" style="width: 60%;">
+								<div class="ss_scale_score" id="JS_ScaleScore" style="width: 10%;">
 								</div>
 							</div>
 							<p class="ss_mobile_answer_txt"></p>
@@ -168,6 +168,10 @@
 			item.innerHTML = countright+" von "+countquestions+" Fragen Richtig";
 			item = document.getElementById('JS_punkte');
 			item.innerHTML = points+" von "+maxpoints+" Punkten";
+
+			//Scalebar aktualisieren
+			var percent=Math.round((points/maxpoints)*100);
+    	document.getElementById("JS_ScaleScore").style.width=percent+"%";
 
 			//Red/Green Icons füllen
 			item = document.getElementById('JS_Score');
