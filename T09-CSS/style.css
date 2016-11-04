@@ -1,60 +1,207 @@
-/*
-Error: File to import not found or unreadable: _reset.sass.
-        on line 5 of style.sass
+@charset "UTF-8";
+@import url(bootstrap.min.css);
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i|Oswald:300,400,700");
+body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: 100% inherit;
+  vertical-align: baseline; }
 
-1: //bootstrap normalizer and grid system
-2: @import "bootstrap.min.css"
-3: 
-4: //reset css
-5: @import _reset.sass
-6: 
-7: $font-primary: "Noto Sans", sans-serif
-8: $font-secondary: "Oswald", sans-serif
-9: 
-10: $color-yellow: #e9c20c
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block; }
 
-Backtrace:
-style.sass:5
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:45:in `import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin.rb:82:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:23:in `load'
-/usr/local/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: _reset.sass.\A         on line 5 of style.sass\A \A 1: //bootstrap normalizer and grid system\A 2: @import \"bootstrap.min.css\"\A 3: \A 4: //reset css\A 5: @import _reset.sass\A 6: \A 7: $font-primary: \"Noto Sans\", sans-serif\A 8: $font-secondary: \"Oswald\", sans-serif\A 9: \A 10: $color-yellow: #e9c20c"; }
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: ""; }
+
+q:before, q:after {
+  content: ""; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html * {
+  font-family: "Noto Sans", sans-serif; }
+
+.font-primary, .font-primary * {
+  font-family: "Noto Sans", sans-serif; }
+
+.font-secondary, .font-secondary * {
+  font-family: "Oswald", sans-serif; }
+
+.font-light, .font-light * {
+  font-weight: 300; }
+
+.font-italic, .font-italic * {
+  font-style: italic; }
+
+.font-bold, .font-bold * {
+  font-weight: 700; }
+
+.font-bold-italic, .font-bold-italic * {
+  font-style: italic;
+  font-weight: 700; }
+
+h1, h2, h3 {
+  font-family: "Oswald", sans-serif; }
+
+h1 {
+  font-size: 22px;
+  margin: 0 20px; }
+
+h2 {
+  font-size: 18px;
+  margin: 16px 0 10px 0; }
+
+h3 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  margin: 16px 0 8px 0; }
+
+p {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px; }
+
+button, input[type="button"], input[type="submit"] {
+  background-color: #cb0727;
+  border: 0;
+  color: #ffffff;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  height: 50px; }
+  button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+    background-color: #ed1335;
+    cursor: pointer; }
+  button:focus, input[type="button"]:focus, input[type="submit"]:focus {
+    background-color: #ed1335;
+    outline: 0; }
+
+input, textarea {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  color: #929292;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  height: 30px; }
+  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #929292; }
+  input:-moz-placeholder, textarea:-moz-placeholder {
+    color: #929292; }
+  input::-moz-placeholder, textarea::-moz-placeholder {
+    color: #929292; }
+  input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: #929292; }
+  input:focus, textarea:focus {
+    border: 1px solid #000000;
+    outline: 0; }
+
+.fg-yellow {
+  color: #e9c20c; }
+
+.bg-yellow {
+  background-color: #e9c20c; }
+
+.fg-red {
+  color: #cb0727; }
+
+.bg-red {
+  background-color: #cb0727; }
+
+.fg-green {
+  color: #4ac725; }
+
+.bg-green {
+  background-color: #4ac725; }
+
+.fg-darkgrey {
+  color: #504f48; }
+
+.bg-darkgrey {
+  background-color: #504f48; }
+
+.fg-mediumgrey {
+  color: #929292; }
+
+.bg-mediumgrey {
+  background-color: #929292; }
+
+.fg-lightgrey {
+  color: #f8f5e4; }
+
+.bg-lightgrey {
+  background-color: #f8f5e4; }
+
+.fg-white {
+  color: #ffffff; }
+
+.bg-white {
+  background-color: #ffffff; }
+
+.fg-black {
+  color: #000000; }
+
+.bg-black {
+  background-color: #000000; }
+
+@font-face {
+  font-family: "icomoon";
+  src: url("fonts/icomoon.eot?dz3ucl");
+  src: url("fonts/icomoon.eot?dz3ucl#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?dz3ucl") format("truetype"), url("fonts/icomoon.woff?dz3ucl") format("woff"), url("fonts/icomoon.svg?dz3ucl#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class^="ico-"], [class*=" ico-"] {
+  display: inline-block;
+  font-family: "icomoon", "sans-serif" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.ico-arrow-top:before, .ico-arrow-right:before, .ico-arrow-bottom:before, .ico-arrow-left:before {
+  content: ""; }
+
+.ico-arrow-top {
+  transform: rotate(180deg); }
+
+.ico-arrow-right {
+  transform: rotate(-90deg); }
+
+.ico-arrow-left {
+  transform: rotate(90deg); }
+
+.ico-light-arrow-top:before, .ico-light-arrow-right:before, .ico-light-arrow-bottom:before, .ico-light-arrow-left:before {
+  content: ""; }
+
+.ico-light-arrow-top {
+  transform: rotate(90deg); }
+
+.ico-light-arrow-right {
+  transform: rotate(180deg); }
+
+.ico-light-arrow-bottom {
+  transform: rotate(-90deg); }
+
+.ico-menu:before {
+  content: ""; }
+
+.ico-search:before {
+  content: ""; }
+
+.ico-exit:before {
+  content: ""; }
+
+/*# sourceMappingURL=style.css.map */
