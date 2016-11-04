@@ -28,12 +28,14 @@ body {
 .question {
     text-align: center;
     padding: 50px 0px 0px 0px;
-    font-size: 22px;
 }
 
-
+p {
+    font-size: 20px;
+}
 
 .answer_icons {
+    
     width: auto;
     height: 25px;
     margin: 0 auto;
@@ -45,7 +47,7 @@ body {
 .answer_icon {
     width: 25px;
     height: 25px;
-    float: left;
+    display: inline-block;
     margin-right: 15px;
     border-radius: 25px;
 }
@@ -62,12 +64,15 @@ body {
             
 .answers button .short {
     width: 5%;
-    line-height: 3;
+    line-height: 1.7;
+    font-size: 30px;
 }
-            
+ 
+
 .answers button .long {
     width: 95%;
-    line-height: 3;
+    line-height: 2.7;
+    font-size: 18px;
 }
 
 .fg-black {
