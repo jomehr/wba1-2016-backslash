@@ -34,6 +34,7 @@ body {
 
 
 .answer_icons {
+    
     width: auto;
     height: 25px;
     margin: 0 auto;
@@ -45,7 +46,7 @@ body {
 .answer_icon {
     width: 25px;
     height: 25px;
-    float: left;
+    display: inline-block;
     margin-right: 15px;
     border-radius: 25px;
 }
