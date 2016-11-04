@@ -93,18 +93,27 @@ function getQuizView(anzahl){
             var quizArray = [];
             
             for(var i=0;i<anzahl;i++){
-                quizArray.push({quizID: jsonData[i].quizID,
-                                titel: jsonData[i].titel,
-                                autor: jsonData[i].autor,
-                                datum: jsonData[i].datum,
-                                spielzahl: jsonData[i].spielzahl,
-                                bild: jsonData[i].bild,
-                                text: jsonData[i].text
-                });
-                jsonOut = JSON.stringify(quizArray);
+                quizArray.push(jsonData[i]);
             }
-            
+            jsonOut = JSON.stringify(quizArray);
             $( document ).trigger( "onQuizView", [ jsonOut ] );
+        }};
+json_request.open("GET", quizView,true );
+json_request.send();
+}
+
+//Holt ein bestimmtes Quiz aus der Uebersicht
+function getQuizViewByID(quizID){
+    var quizView = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/uebersichtQuiz.json";
+    var json_request = new XMLHttpRequest();
+
+    json_request.onreadystatechange = function(){
+        if(json_request.readyState == 4 && json_request.status === 200 ){
+            var jsonData = JSON.parse(json_request.responseText);
+            var jsonOut = {};
+   
+            jsonOut = JSON.stringify(jsonData[quizID]);
+            $( document ).trigger( "onQuizViewByID", [ jsonOut ] );
         }};
 json_request.open("GET", quizView,true );
 json_request.send();

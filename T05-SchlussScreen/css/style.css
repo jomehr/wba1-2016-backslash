@@ -90,6 +90,7 @@
 
 .ss_slider_content {
 	padding: 24px;
+	display: none;
 }
 
 .ss_slider_content h2 {

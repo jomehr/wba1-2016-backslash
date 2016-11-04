@@ -9,6 +9,13 @@ $(document).on( "onQuizView", function( event, data ) {
 // “data“ ist die JSON
 });
 
+getQuizViewByID(quizID);
+Besorgt das jeweilige Quiz aus der Übersicht mit der passenden ID
+$(document).on( "onQuizViewByID", function( event, data ) { 
+// Hier werden die erhaltenen Daten bearbeitet
+// in “data“ ist die JSON
+});
+
 getQuizByID(quizID);
 Besorgt 10 Fragen von dem Quiz mit der passenden ID
 $(document).on( "onQuizData", function( event, data ) { 

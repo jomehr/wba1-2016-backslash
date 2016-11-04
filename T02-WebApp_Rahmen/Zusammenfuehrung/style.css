@@ -1,0 +1,170 @@
+html {
+    background-color: white;
+}
+
+
+
+body {
+    /*Grundsätzlich erstmal auf 100%*/
+    width: 100%;
+    height: 100%;
+}
+
+.wa_header {
+    display: none;
+}
+
+.wa_footer {
+    /* Footer Design*/
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    line-height: 120px;
+}
+
+.wa_logo {
+    /*Das Logo oben links*/
+    margin-left: 1%;
+    margin-top: 10px;
+    height: 50px;
+}
+
+.wa_NavigationsText {
+    /* Login/Registreirung */
+    text-decoration: none;
+    color: white;
+    padding: 2px;
+    font-size: 20px;
+    font-family: Oswald;
+}
+
+.wa_NavigationsText3 {
+    /* Der Trennstrich */
+    text-decoration: none;
+    color: white;
+    padding: 2px;
+    font-size: 20px;
+    font-family: Oswald;
+}
+
+.wa_NavigationsText2 {
+    /*Navigationstext für Übersicht , Highscoreliste,Teilen usw...*/
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Oswald;
+}
+
+.wb_header {
+    width: 100%;
+    background-color: black;
+    height: 64px;
+}
+
+#wa_Navigation {
+    /*Oberer schwarzer Balken*/
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    height: 64px;
+    background-color: black;
+}
+
+.wa_Login {
+    /* Position von dem Login/der Regis..*/
+    margin-top: -40px;
+    margin-left: 70%;
+}
+
+#wa_Navigation2 {
+    /*Durchsichtiger Hintergrund, also der Untere Teil des Footers */
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin-top: 0px;
+    height: 40px;
+}
+
+.wa_copyright {
+    /* Copyright Text im Footer*/
+    color: white;
+    font-family: Oswald;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.wa_menue {
+    /* Position des Menüs, also von Übersicht,Highscoreliste,Teilen usw..*/
+    max-width: 768px;
+    margin: 0 auto;
+    margin-top: -30px;
+}
+
+@media screen and (max-width:768px) {
+    
+    #wa_desktop {
+        display: none;
+    }
+    
+    
+    .wa_header {
+        display: block;
+        background-color: rgba(0, 0, 0, 1);
+        width: 100%;
+        height: 64px;
+        position: fixed;
+        margin-top: auto;
+    }
+    .wa_Button {
+        color: rgba(255, 255, 255, 1);
+        font-size: 35px;
+        cursor: pointer;
+        float: left;
+        margin-left: 20px;
+        margin-top: 14px;
+    }
+    .wa_logo {
+        height: 50px;
+        display: block;
+        margin-left: 50%;
+        padding-top: 17px;
+    }
+    .wa_sidenav {
+        position: fixed;
+        overflow-x: hidden;
+        z-index: 1;
+        padding-top: 60px;
+        background-color: rgba(0, 0, 0, 0.8);
+        margin-top: 64px;
+        line-height: 1.7;
+        width: 0;
+        height: 100%;
+    }
+    .wa_sidenav a {
+        padding: 8px 8px 8px 32px;
+        color: rgba(255, 255, 255, 1);
+        margin-top: 80px;
+        font-size: 25px;
+        text-align: left;
+        margin-left: -10px;
+    }
+    .wa_sidenav .wa_closebtn {
+        text-decoration: none;
+        position: absolute;
+        top: -90px;
+        right: 10px;
+        line-height: 50px;
+        font-size: 100px;
+    }
+
+    #text {
+        padding-top: 1000px;
+        margin-left: 0px;
+    }
+    .wa_sidenav a:hover {
+        color: white;
+        text-decoration: none;
+    }
+}
