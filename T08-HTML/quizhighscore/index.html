@@ -22,23 +22,13 @@
 								</div>
 							</div>
 							<p class="ss_mobile_answer_txt"></p>
-							<div class="ss_score_points">
-								<div class="ss_score_point bg-red"></div>
-								<div class="ss_score_point bg-green"></div>
-								<div class="ss_score_point bg-green"></div>
-								<div class="ss_score_point bg-red"></div>
-								<div class="ss_score_point bg-green"></div>
-								<div class="ss_score_point bg-green"></div>
-								<div class="ss_score_point bg-red"></div>
-								<div class="ss_score_point bg-red"></div>
-								<div class="ss_score_point bg-green"></div>
-								<div class="ss_score_point bg-green"></div>
+							<div class="ss_score_points" id="JS_Score">
 							</div>
 						</div>
 
 						<div class="ss_score_txt col-md-5">
-							<p>600 von 1000 Punkten</p>
-							<p>6 von 10 Antworten richtig</p>
+							<p id=JS_punkte> </p>
+							<p id=JS_richtig> </p>
 						</div>
 					</div>
 					<p>Ich will mehr zu diesem Thema wissen</p>
@@ -134,7 +124,7 @@
 		</script>
 
 		<!--
-		Highscore fill Funktion
+		Highscore fill Funktion & Quiz Info
 		-->
 		<script type="text/javascript">
 			var getQueryString = function (field, url) {
@@ -143,20 +133,59 @@
 			var string = reg.exec(href);
 			return string ? string[1] : null;
 			};
-
+			var quizID = getQueryString('quizId', window.location.href);
 			$(function() {
-				var quizID = getQueryString('quizId', window.location.href);
 				getHighscoreByID(quizID);
 				$(document).on( "onHighscoreData", function( event, data ) {
-					console.log(data);
 					var HighscoreJson=JSON.parse(data);
+					//Slice für top5
 				 	HighscoreJson.highscore=HighscoreJson.highscore.slice(0,5);
 					var source =$("#highscore-template").html();
 					var template = Handlebars.compile(source);
 					$('#highscore_handlebars').append(template(HighscoreJson));
 				});
 			});
+			//Hier kommen die User Quiz Data
+			var points = sessionStorage.getItem('points');
+			var maxpoints = sessionStorage.getItem('maxpoints');
+			var countright = sessionStorage.getItem('correctanswers');
+			var countquestions = sessionStorage.getItem('amountquestions');
+			// DEBUG
+			/*
+					BITTE BEACHTEN!
+					SOLANG DAS QUIZ nicht fertig ist bitte die Variablen Selbst setzen!
+					sessionStorage.setItem('maxpoints', '1000');
+					sessionStorage.setItem('amountquestions', '10');
+					sessionStorage.setItem('correctanswers', '5');
+					sessionStorage.setItem('points', '500');
+			*/
+			console.log(points);
+			console.log(maxpoints);
+			console.log(countright);
+			console.log(countquestions);
+			// Fill Highscore User Data
+			var item = document.getElementById('JS_richtig');
+			item.innerHTML = countright+" von "+countquestions+" Fragen Richtig";
+			item = document.getElementById('JS_punkte');
+			item.innerHTML = points+" von "+maxpoints+" Punkten";
+
+			//Red/Green Icons füllen
+			item = document.getElementById('JS_Score');
+			var redicon = '<div class="ss_score_point bg-red" ></div>';
+			var greenicon = '<div class="ss_score_point bg-green" ></div>';
+			var length=countquestions;
+			for(var i=0;i<length;i++) {
+				var random=Math.random();
+				if(random >=0.5) {
+					item.innerHTML += redicon;
+				} else {
+					item.innerHTML += greenicon;
+				}
+
+			}
 		</script>
+
+
 
 	</body>
 </html>
