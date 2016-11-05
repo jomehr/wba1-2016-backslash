@@ -1,5 +1,8 @@
+@media (max-width: 600px) {
+}
+
 .content {
-    width: 1000px;
+    width: 90%;
     margin: 0 auto;
     margin-top: 20px;
     border: #929292 solid;
@@ -53,6 +56,13 @@ p {
     border-radius: 25px;
 }
 
+.answer_icon_last {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    border-radius: 25px;
+}
+
 .answers button {
     padding: 0px 0px 0px 0px;
     width: 100%;
@@ -92,5 +102,6 @@ p {
 }
 
 .button1 button {
-        display: table-cell;
+    display: table-cell;
+    width: 400px;
 }
