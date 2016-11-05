@@ -1,237 +1,348 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Schlussscreen</title>
-		<link rel="stylesheet" href="./css/style.css">
-		<link rel="stylesheet" href="./T09-CSS/style.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-	</head>
-	<body style="background: lightgrey; max-width: 1000px; margin: 0 auto;">
-		<div class="ss_box">
-			<header class="bg-yellow">
-				<h1 id="JS_Titel">Effzeh - mer wesse alles üvver dich</h1>
-			</header>
-			<div class="ss_erg ss_box_content row">
-				<div class="ss_left col-md-8 col-xs-12">
-					<h2 style="margin-top: 0px;">Dein Ergebnis</h2>
-					<div class="ss_score row">
-						<div class="ss_score_sp col-md-7 col-xs-12">
-							<p class="ss_mobile_points_txt"></p>
-							<div class="ss_score_balken bg-mediumgrey">
-								<div class="ss_scale_score" id="JS_ScaleScore" style="width: 10%;">
-								</div>
-							</div>
-							<p class="ss_mobile_answer_txt"></p>
-							<div class="ss_score_points" id="JS_Score">
-							</div>
-						</div>
+<html lang="de">
+<head>
+    <title>Schlussscreen</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./T09-CSS/style.css">
 
-						<div class="ss_score_txt col-md-5">
-							<p id=JS_punkte> </p>
-							<p id=JS_richtig> </p>
-						</div>
-					</div>
-					<p>Ich will mehr zu diesem Thema wissen</p>
-					<div class="ss_scoreboard">
-						<p>Neue Position</p>
-						<div id=highscore_handlebars>
-						</div>
-					</div>
-				</div>
-				<div class="ss_right col-md-4 col-xs-12">
-					<figure>
-						<img src="img/Fan1.jpg" alt="Fan1.jpg" class="img-responsive" id="JS_Bild"/>
-						<figcaption>
-							<p id="JS_Text">Das FC-Quizz schlecht hin. Der wahre FC Fan
-							beantwortet diese Fragen im Schlaf. Dabei
-							handelt es sich nicht nur um Fragen zur
-							Fußballerischen Geschichte des Vereins,
-							denn der FC hat auch außerhalb des Platzes
-							eine große Geschichte. Mit diesem Quizz
-							kannst du dein Wissen über den besten
-							Verein der Welt testen. Los  geht's!</p>
-						</figcaption>
-					</figure>
-				</div>
-			</div>
-			<div class="ss_buttons ss_box_content row">
-				<div class="col-md-4">
-					<input type="button" value="Übersicht" />
-				</div>
-				<div class="col-md-4">
-					<input type="button" value="Highscoreliste" />
-				</div>
-				<div class="col-md-4">
-					<input type="button" value="Jetzt spielen!" />
-				</div>
-			</div>
-		</div>
-		<div class="ss_box">
-			<h2 style="text-align: center; padding-top: 24px;">Das könnte dir auch gefallen</h2>
-			<div class="ss_slider_content row">
-				<div class="col-md-4">
-					<h2 id="JS_Vorschlag1_Titel">Das Stadion Quizz</h2>
-					<img class="img-responsive" src="img/Stadion10.jpg" alt="Stadion10.jpg" id="JS_Vorschlag1_Bild" />
-				</div>
-				<div class="col-md-6 ss_slider_text">
-					<p id="JS_Vorschlag1_Text">Die größten, bedeutendsten, modernsten und
-					wichtigsten Stadien der Welt. Kaum etwas ist
-					bei großen Vereinen so bedeutend wie das
-					Stadion. Es ist nicht nur ein Statussymbol für
-					jeden erfolgreichen Verein, sondern oft auch
-					ein Denkmal für große Ereignisse in der
-					Historie eines Vereins. Hier findest Fragen
-					zu den Stadien der Welt. Auf geht's!</p>
-					<div class="ss_slider_author font-bold" id="JS_Vorschlag1_DateUser">
-						17.06.2016<br />
-						Hennes48
-					</div>
-				</div>
-				<div class="col-md-2 ss_slider_right">
-					<p><span class="font-bold" id="JS_Vorschlag1_Played">67</span> mal gespielt</p>
-					<div class="ss_slider_points fg-white bg-darkgrey font-bold">8 / 10 Punkten</div>
-					<input type="button" value="Jetzt spielen!" />
-				</div>
-			</div>
-			<div class="ss_slider_menu">
-				<div class="ss_slider_menu_elemente">
-					<div class="ss_slider_menu_left font-bold">&lt;</div>
-					<div class="ss_slider_bt "></div>
-					<div class="ss_slider_bt"></div>
-					<div class="ss_slider_bt"></div>
-					<div class="ss_slider_menu_right font-bold">&gt;</div>
-				</div>
-			</div>
-		</div>
-		<script type="text/javascript" src="js/script.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.2/handlebars.min.js"></script><!-- online handlebars.js-->
-		<script src="https://rawgit.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/API/BS_API.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background: lightgrey; max-width: 1000px; margin: 0 auto;">
+<div class="ss_box">
+    <header class="bg-yellow">
+        <h1 id="JS_Titel">Effzeh - mer wesse alles üvver dich</h1>
+    </header>
+    <div class="ss_erg ss_box_content row">
+        <div class="ss_left col-md-8 col-xs-12">
+            <h2 style="margin-top: 0px;">Dein Ergebnis</h2>
+            <div class="ss_score row">
+                <div class="ss_score_sp col-md-7 col-xs-12">
+                    <p class="ss_mobile_points_txt"></p>
+                    <div class="ss_score_balken bg-mediumgrey">
+                        <div class="ss_scale_score" id="JS_ScaleScore" style="width: 10%;">
+                        </div>
+                    </div>
+                    <p class="ss_mobile_answer_txt"></p>
+                    <div class="ss_score_points" id="JS_Score">
+                    </div>
+                </div>
 
-		<!-- highscore template
-		-->
+                <div class="ss_score_txt col-md-5">
+                    <p id=JS_punkte></p>
+                    <p id=JS_richtig></p>
+                </div>
+            </div>
+            <p>Ich will mehr zu diesem Thema wissen</p>
+            <div class="ss_scoreboard">
+                <p>Neue Position</p>
+                <div id=highscore_handlebars>
+                </div>
+            </div>
+        </div>
+        <div class="ss_right col-md-4 col-xs-12">
+            <figure>
+                <img src="img/Fan1.jpg" alt="Fan1.jpg" class="img-responsive" id="JS_Bild" />
+                <figcaption>
+                    <p id="JS_Text">Das FC-Quizz schlecht hin. Der wahre FC Fan
+                        beantwortet diese Fragen im Schlaf. Dabei
+                        handelt es sich nicht nur um Fragen zur
+                        Fußballerischen Geschichte des Vereins,
+                        denn der FC hat auch außerhalb des Platzes
+                        eine große Geschichte. Mit diesem Quizz
+                        kannst du dein Wissen über den besten
+                        Verein der Welt testen. Los geht's!</p>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+    <div class="ss_buttons ss_box_content row">
+        <div class="col-md-4">
+            <input type="button" value="Übersicht"/>
+        </div>
+        <div class="col-md-4">
+            <input type="button" value="Highscoreliste"/>
+        </div>
+        <div class="col-md-4">
+            <input type="button" value="Jetzt spielen!"/>
+        </div>
+    </div>
+</div>
+<!--  allgemeine mit Inhalt des Sliders  -->
+<div class="ss_box">
+  <h2 style="text-align: center; padding-top: 24px;">Das könnte dir auch gefallen</h2>
+  <!--  Sliderelement  -->
+  <div class="ss_slider_content row">
+    <!--  linke Seite vom Slider  -->
+    <div class="col-md-4">
+      <h2 id="JS_SliderTitel1">Das Stadion Quizz</h2>
+      <img class="img-responsive" src="img/Stadion10.jpg" alt="Stadion10.jpg" id="JS_SliderBild1" />
+    </div>
+    <!--  Mitte vom Slider  -->
+    <div class="col-md-6 ss_slider_text">
+      <p id="JS_SliderText1">Die größten, bedeutendsten, modernsten und
+      wichtigsten Stadien der Welt. Kaum etwas ist
+      bei großen Vereinen so bedeutend wie das
+      Stadion. Es ist nicht nur ein Statussymbol für
+      jeden erfolgreichen Verein, sondern oft auch
+      ein Denkmal für große Ereignisse in der
+      Historie eines Vereins. Hier findest Fragen
+      zu den Stadien der Welt. Auf geht's!</p>
+      <div class="ss_slider_author font-bold" id="JS_SliderDU1">
+        17.06.2016<br />
+        Hennes48
+      </div>
+    </div>
+    <!--  rechte Seite vom Slider  -->
+    <div class="col-md-2 ss_slider_right">
+      <p><span class="font-bold" id="JS_SliderPlayed1">67</span> mal gespielt</p>
+      <div class="ss_slider_points fg-white bg-darkgrey font-bold">8 / 10 Punkten</div>
+      <input type="button" value="Jetzt spielen!" />
+    </div>
+  </div>
+  <div class="ss_slider_content row">
+    <!--  linke Seite vom Slider  -->
+    <div class="col-md-4">
+      <h2 id="JS_SliderTitel2">Das Stadion Quizz</h2>
+      <img class="img-responsive" src="img/Stadion10.jpg" alt="Stadion10.jpg" id="JS_SliderBild2" />
+    </div>
+    <!--  Mitte vom Slider  -->
+    <div class="col-md-6 ss_slider_text">
+      <p id="JS_SliderText2">Die größten, bedeutendsten, modernsten und
+      wichtigsten Stadien der Welt. Kaum etwas ist
+      bei großen Vereinen so bedeutend wie das
+      Stadion. Es ist nicht nur ein Statussymbol für
+      jeden erfolgreichen Verein, sondern oft auch
+      ein Denkmal für große Ereignisse in der
+      Historie eines Vereins. Hier findest Fragen
+      zu den Stadien der Welt. Auf geht's!</p>
+      <div class="ss_slider_author font-bold" id="JS_SliderDU2">
+        17.06.2016<br />
+        Hennes48
+      </div>
+    </div>
+    <!--  rechte Seite vom Slider  -->
+    <div class="col-md-2 ss_slider_right">
+      <p><span class="font-bold" id="JS_SliderPlayed2">67</span> mal gespielt</p>
+      <div class="ss_slider_points fg-white bg-darkgrey font-bold">8 / 10 Punkten</div>
+      <input type="button" value="Jetzt spielen!" />
+    </div>
+  </div>
+  <div class="ss_slider_content row">
+    <!--  linke Seite vom Slider  -->
+    <div class="col-md-4">
+      <h2 id="JS_SliderTitel3">Das Stadion Quizz</h2>
+      <img class="img-responsive" src="img/Stadion10.jpg" alt="Stadion10.jpg" id="JS_SliderBild3" />
+    </div>
+    <!--  Mitte vom Slider  -->
+    <div class="col-md-6 ss_slider_text">
+      <p id="JS_SliderText3">Die größten, bedeutendsten, modernsten und
+      wichtigsten Stadien der Welt. Kaum etwas ist
+      bei großen Vereinen so bedeutend wie das
+      Stadion. Es ist nicht nur ein Statussymbol für
+      jeden erfolgreichen Verein, sondern oft auch
+      ein Denkmal für große Ereignisse in der
+      Historie eines Vereins. Hier findest Fragen
+      zu den Stadien der Welt. Auf geht's!</p>
+      <div class="ss_slider_author font-bold" id="JS_SliderDU3">
+        17.06.2016<br />
+        Hennes48
+      </div>
+    </div>
+    <!--  rechte Seite vom Slider  -->
+    <div class="col-md-2 ss_slider_right">
+      <p><span class="font-bold" id="JS_SliderPlayed3">67</span> mal gespielt</p>
+      <div class="ss_slider_points fg-white bg-darkgrey font-bold">8 / 10 Punkten</div>
+      <input type="button" value="Jetzt spielen!" />
+    </div>
+  </div>
+  <div class="ss_slider_content row">
+    <!--  linke Seite vom Slider  -->
+    <div class="col-md-4">
+      <h2 id="JS_SliderTitel4">Das Stadion Quizz</h2>
+      <img class="img-responsive" src="img/Stadion10.jpg" alt="Stadion10.jpg" id="JS_SliderBild4" />
+    </div>
+    <!--  Mitte vom Slider  -->
+    <div class="col-md-6 ss_slider_text">
+      <p id="JS_SliderText4">Die größten, bedeutendsten, modernsten und
+      wichtigsten Stadien der Welt. Kaum etwas ist
+      bei großen Vereinen so bedeutend wie das
+      Stadion. Es ist nicht nur ein Statussymbol für
+      jeden erfolgreichen Verein, sondern oft auch
+      ein Denkmal für große Ereignisse in der
+      Historie eines Vereins. Hier findest Fragen
+      zu den Stadien der Welt. Auf geht's!</p>
+      <div class="ss_slider_author font-bold" id="JS_SliderDU4">
+        17.06.2016<br />
+        Hennes48
+      </div>
+    </div>
+    <!--  rechte Seite vom Slider  -->
+    <div class="col-md-2 ss_slider_right">
+      <p><span class="font-bold" id="JS_SliderPlayed4">67</span> mal gespielt</p>
+      <div class="ss_slider_points fg-white bg-darkgrey font-bold">8 / 10 Punkten</div>
+      <input type="button" value="Jetzt spielen!" />
+    </div>
+  </div>
+  <!--  Slider Menüpunkte  -->
+  <div class="ss_slider_menu">
+    <div class="ss_slider_menu_elemente">
+      <div class="ss_slider_menu_left font-bold">&lt;</div>
+      <!--<div class="ss_slider_bt "></div>-->
+      <div class="ss_slider_menu_right font-bold">&gt;</div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="js/script.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.2/handlebars.min.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
+<!-- online handlebars.js-->
+<script src="https://rawgit.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/API/BS_API.js"></script>
 
-		<script id="highscore-template" type="text/x-handlebars-template">
-			<table class="font-bold table">
-					{{#each highscore}}
-						<tr>
-							<td>{{this.position}}</td>
-							<td>{{this.name}}</td>
-							<td>{{this.punktzahl}} Punkte</td>
-						</tr>
-					{{/each}}
-			</table>
-		</script>
+<!-- highscore template
+-->
 
-		<!--
-		Highscore fill Funktion & Quiz Info
-		-->
-		<script type="text/javascript">
-			sessionStorage.setItem('quizid', 1);
-			var quizID = sessionStorage.getItem('quizid');
+<script id="highscore-template" type="text/x-handlebars-template">
+    <table class="font-bold table">
+        {{#each highscore}}
+        <tr>
+            <td>{{this.position}}</td>
+            <td>{{this.name}}</td>
+            <td>{{this.punktzahl}} Punkte</td>
+        </tr>
+        {{/each}}
+    </table>
+</script>
 
-			$(function() {
-				getHighscoreByID(quizID);
-				$(document).on( "onHighscoreData", function( event, data ) {
-					var HighscoreJson=JSON.parse(data);
-					//Slice für top5
-				 	HighscoreJson.highscore=HighscoreJson.highscore.slice(0,5);
-					var source =$("#highscore-template").html();
-					var template = Handlebars.compile(source);
-					$('#highscore_handlebars').append(template(HighscoreJson));
-				});
-
-			//QUIZ info
-
-				getQuizViewByID(quizID);
-				$(document).on( "onQuizViewByID", function( event, data ) {
-					var quizInfo=JSON.parse(data);
-					document.getElementById("JS_Bild").src=quizInfo.bild;
-					document.getElementById("JS_Text").innerHTML=quizInfo.text;
-					document.getElementById("JS_Titel").innerHTML=quizInfo.titel;
-				});
+<!--
+Highscore fill Funktion & Quiz Info
+-->
+<script type="text/javascript">
+    sessionStorage.setItem('quizid', 0);
+    var quizID = sessionStorage.getItem('quizid');
 
 
-			//Random Quiz Vorschlag
-				getQuizView(5);
-				$(document).on( "onQuizView", function( event, data ) {
-					var quizInfo=JSON.parse(data);
-					console.log(quizInfo.length);
-					var icount=0;
-					//RAND Quiz außer aufgerufene Quiz.
-					for(var i=0;icount<1;i++) {
-						var iRand=Math.random();
-						var iRand=Math.round(iRand*quizInfo.length);
-						if(iRand!==0){
-							iRand--;
-						}
-						if(quizInfo[iRand].quizID!==quizID) { // <- Abfrage ob QuizID == Random ID ist wenn true neu generieren
-							icount++;
-							document.getElementById("JS_Vorschlag"+icount+"_Bild").src=quizInfo[iRand].bild;
-							document.getElementById("JS_Vorschlag"+icount+"_Text").innerHTML=quizInfo[iRand].text;
-							document.getElementById("JS_Vorschlag"+icount+"_Titel").innerHTML=quizInfo[iRand].titel;
-							document.getElementById("JS_Vorschlag"+icount+"_DateUser").innerHTML=quizInfo[iRand].datum+" <br />"+quizInfo[icount].autor;
-							document.getElementById("JS_Vorschlag"+icount+"_Played").innerHTML=quizInfo[iRand].spielzahl;
-						}
-					}
+        getHighscoreByID(quizID);
+        $(document).on("onHighscoreData", function (event, data) {
+            var HighscoreJson = JSON.parse(data);
+            //Slice für top5
+            HighscoreJson.highscore = HighscoreJson.highscore.slice(0, 5);
+            var source = $("#highscore-template").html();
+            var template = Handlebars.compile(source);
+            $('#highscore_handlebars').append(template(HighscoreJson));
+        });
 
-				});
+        //QUIZ info
 
-			/*
-					BITTE BEACHTEN!
-					SOLANG DAS QUIZ nicht fertig ist bitte die Variablen Selbst setzen!
-					sessionStorage.setItem('maxpoints', '1000');
-					sessionStorage.setItem('amountquestions', '10');
-					sessionStorage.setItem('correctanswers', '5');
-					sessionStorage.setItem('points', '500');
-			*/
+        getQuizViewByID(quizID);
+        $(document).on("onQuizViewByID", function (event, data) {
+            var quizInfo = JSON.parse(data);
+            if(quizInfo.bild==="/URL") {
+              quizInfo.bild="https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Stadion3-Klein.jpg";
+            }
+            document.getElementById("JS_Bild").src = quizInfo.bild;
+            document.getElementById("JS_Text").innerHTML = quizInfo.text;
+            document.getElementById("JS_Titel").innerHTML = quizInfo.titel;
+        });
 
-			//Userdaten rand generieren solange keine bestehen!!!
-			var rand1=Math.random(); //Punkte
-			var rand2=0; //maxPunkte
-			var rand3=Math.random(); //richtige antworten
-			var rand4=10; //anzahl Fragen
-			rand1=Math.round(1000*rand1);
-			while(rand2<=rand1) {
-				rand2=Math.random();
-				rand2=Math.round(1000*rand2);
-			}
-			rand3=Math.round(10*rand3);
-			sessionStorage.setItem('points', rand1);
-			sessionStorage.setItem('maxpoints', rand2);
-			sessionStorage.setItem('correctanswers', rand3);
-			sessionStorage.setItem('amountquestions', rand4);
 
-			//Hier kommen die User Quiz Data
-			var points = sessionStorage.getItem('points');
-			var maxpoints = sessionStorage.getItem('maxpoints');
-			var countright = sessionStorage.getItem('correctanswers');
-			var countquestions = sessionStorage.getItem('amountquestions');
+        //Random Quiz Vorschlag
+        getQuizView(7);
+        $(document).on("onQuizView", function (event, data) {
+            var quizInfo = JSON.parse(data);
+            var icount = 0;
+            var ARQused=[];
+            ARQused[0]=quizID;
+            var iRand = Math.random();
+            Slider.slide();
+            //RAND Quiz außer aufgerufene Quiz.
+            for (var i = 0; icount < 4; i++) {
 
-			// Fill Highscore User Data
-			var item = document.getElementById('JS_richtig');
-			item.innerHTML = countright+" von "+countquestions+" Fragen Richtig";
-			item = document.getElementById('JS_punkte');
-			item.innerHTML = points+" von "+maxpoints+" Punkten";
+              var iRand = Math.round(Math.random() * ( quizInfo.length - 0 ));
+              if(iRand!==0){
+                iRand--;
+              }
+              while((ARQused.indexOf(""+iRand) >-1)) {
+                iRand = Math.round(Math.random() * ( quizInfo.length - 0 ));
+                if(iRand!==0){
+                  iRand--;
+                }
+              }
 
-			//Scalebar aktualisieren
-			var percent=Math.round((points/maxpoints)*100);
-    	document.getElementById("JS_ScaleScore").style.width=percent+"%";
+              if (quizInfo[iRand].quizID !== quizID) { // <- Abfrage ob QuizID == Random ID ist wenn true neu generieren
+                  icount++;
+                  ARQused[icount]=quizInfo[iRand].quizID;
+                  if(quizInfo[iRand].bild==="/URL") {
+                    quizInfo[iRand].bild="https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Stadion3-Klein.jpg";
+                  }
+                  console.log(quizInfo[iRand].quizID);
+                  document.getElementById("JS_SliderBild" + icount).src = quizInfo[iRand].bild;
+                  document.getElementById("JS_SliderText" + icount).innerHTML = quizInfo[iRand].text;
+                  document.getElementById("JS_SliderTitel" + icount).innerHTML = quizInfo[iRand].titel;
+                  document.getElementById("JS_SliderDU" + icount).innerHTML = quizInfo[iRand].datum+ " <br />" + quizInfo[iRand].autor ;
+                  document.getElementById("JS_SliderPlayed" + icount).innerHTML = quizInfo[iRand].spielzahl;
+                  Slider.previous();
+                }
+                Slider.start();
+            }
 
-			//Red/Green Icons füllen
-			item = document.getElementById('JS_Score');
-			var redicon = '<div class="ss_score_point bg-red" ></div>';
-			var greenicon = '<div class="ss_score_point bg-green" ></div>';
-			var length=countquestions;
-			for(var i=0;i<length;i++) {
-				var random=Math.random();
-				if(random >=0.5) {
-					item.innerHTML += redicon;
-				} else {
-					item.innerHTML += greenicon;
-				}
-			}
-		});
-		</script>
-	</body>
+        });
+
+        /*
+         BITTE BEACHTEN!
+         SOLANG DAS QUIZ nicht fertig ist bitte die Variablen Selbst setzen!
+         sessionStorage.setItem('maxpoints', '1000');
+         sessionStorage.setItem('amountquestions', '10');
+         sessionStorage.setItem('correctanswers', '5');
+         sessionStorage.setItem('points', '500');
+         */
+
+        //Userdaten rand generieren solange keine bestehen!!!
+        var rand1 = Math.random(); //Punkte
+        var rand2 = 0; //maxPunkte
+        var rand3 = Math.random(); //richtige antworten
+        var rand4 = 10; //anzahl Fragen
+        rand1 = Math.round(1000 * rand1);
+        while (rand2 <= rand1) {
+            rand2 = Math.random();
+            rand2 = Math.round(1000 * rand2);
+        }
+        rand3 = Math.round(10 * rand3);
+        sessionStorage.setItem('points', rand1);
+        sessionStorage.setItem('maxpoints', rand2);
+        sessionStorage.setItem('correctanswers', rand3);
+        sessionStorage.setItem('amountquestions', rand4);
+
+        //Hier kommen die User Quiz Data
+        var points = sessionStorage.getItem('points');
+        var maxpoints = sessionStorage.getItem('maxpoints');
+        var countright = sessionStorage.getItem('correctanswers');
+        var countquestions = sessionStorage.getItem('amountquestions');
+
+        // Fill Highscore User Data
+        var item = document.getElementById('JS_richtig');
+        item.innerHTML = countright + " von " + countquestions + " Fragen Richtig";
+        item = document.getElementById('JS_punkte');
+        item.innerHTML = points + " von " + maxpoints + " Punkten";
+
+        //Scalebar aktualisieren
+        var percent = Math.round((points / maxpoints) * 100);
+        document.getElementById("JS_ScaleScore").style.width = percent + "%";
+
+        //Red/Green Icons füllen
+        item = document.getElementById('JS_Score');
+        var redicon = '<div class="ss_score_point bg-red" ></div>';
+        var greenicon = '<div class="ss_score_point bg-green" ></div>';
+        var length = countquestions;
+        for (var i = 0; i < length; i++) {
+            var random = Math.random();
+            if (random >= 0.5) {
+                item.innerHTML += redicon;
+            } else {
+                item.innerHTML += greenicon;
+            }
+        }
+
+</script>
+</body>
 </html>
