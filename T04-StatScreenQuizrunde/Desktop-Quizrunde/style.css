@@ -1,3 +1,8 @@
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
 .content {
     width: 90%;
     margin: 0 auto;
@@ -102,4 +107,12 @@ p {
 .button1 button {
     display: table-cell;
     width: 400px;
+}
+
+@media screen and (max-width: 799px) {
+    .answers button .long {
+    width: 95%;
+    font-size: 18px;
+    line-height: normal;
+    }
 }
