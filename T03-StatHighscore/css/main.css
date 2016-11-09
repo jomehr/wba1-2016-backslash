@@ -13,7 +13,7 @@ and open the template in the editor.
     margin  :   0px;
     padding :   0px;
 }
-html, body{
+html{
     height: 100%;
     width: 100%;
     background  :url(../images/Fanmeile-Gro%C3%9F.jpg);    
@@ -47,16 +47,28 @@ header{
 }
 
 #hs-title{
-    color: black;
-    background-color    :   #E8C10B; 
-    
+    color				:	black;
+    background-color    :   #E8C10B;
+	height				:	auto;
+	margin-top			:	75px;
+}
+
+.hs-ueberschriften{
+	padding-top 		:	10px;
+	padding-bottom		:	10px;
 }
 
 #hs-search{
     background-color    :   #504F48;
-	padding-top	: 10px;
-	padding-bottom	: 10px;
-	min-height: 50px;
+	overflow:auto; 
+}
+
+.hs-search-element{
+	margin-top 			:	10px;
+	margin-bottom		:	10px;
+	color				:	white;
+	width :100%;
+	height : 35px;
 }
 
 #hs-list{
@@ -100,10 +112,12 @@ footer{
     height: auto;
     background: #CA0726;    
     color:white;
+	margin-top 			:	10px;
+	margin-bottom		:	10px;
     text-decoration: none;
 	padding: 5px;
-	margin: 10px;
-	float : right;
+	/*
+	float : right; */
 }
 
 /* ****************** NAVIGATION ****************** 

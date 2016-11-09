@@ -10,23 +10,28 @@
 		<script src="js/main.js"></script>
 	</head>
     
-    <body style="background: lightgrey; max-width: 1000px; margin: 0 auto;">
+    <body style="max-width: 1000px;	margin: 0 auto; background-color:rgba(0,0,0,0);">
         <header>
 					
-			
 		</header>
         <div id="hs-highscore">
             <header id="hs-title">
-				Effzeh - mer wesse alles üvver dich
+				<div class=hs-ueberschriften>Effzeh - mer wesse alles üvver dich</div>
             </header>
 
             <section id="hs-search" class"row">
-                <span class="col-md-4 col-xs-12">Highscore</span>
-				<select id=hs-sort-function name="Zeitraum" class="col-md-4 col-xs-12">
-					<option>Zeitraum</option>
-					<option>Zeitraum</option>
-				</select>
-					<input id="suche" name="suche" placeholder="Type some text" class="col-md-2 col-md-offset-1 col-xs-12" />
+                <div class="col-sm-4 col-xs-12">
+					<div class="hs-search-element">Highscore</div>
+				</div>
+				<div class="col-sm-4 col-xs-12">
+					<select name="Zeitraum" class="hs-search-element"> 
+						<option>Zeitraum</option>
+						<option>Zeitraum</option>
+					</select>
+				</div>
+				<div class="col-sm-4 col-xs-12" />
+					<input class="hs-search-element" id="suche" name="suche" placeholder="Type some text" />
+				</div>
 			</section>
             <div id="hs-list">                
 				<table id="hs-scoretable">
@@ -43,10 +48,10 @@
             </div>
             <section id="hs-option">
                 <div id ="hs-option_buttons"> 
-					<div class="hs-option_button">
+					<div class="hs-option_button col-sm-4 col-xs-offset-2 col-xs-8">
 						<a href="link_titel.html"> Übersicht</a>
 					</div>
-                    <div class="hs-option_button">
+                    <div class="hs-option_button col-sm-4 col-xs-offset-1 col-xs-10">
 						<a href ="link_titel.html"> Dieses Quiz spielen !</a>
 					</div>
 					<div style="clear:both;" />
