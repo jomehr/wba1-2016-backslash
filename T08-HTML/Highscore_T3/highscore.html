@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+    <head>
+        <!--Optimierung für Suchmaschinen. Zeile 6 bis 9 -->
+        <link rel="stylesheet" type="text/css" href="css/main.css" media="screen">
+        <link rel="stylesheet" href="./T09-CSS/style.css">
+        <link rel="stylesheet" href="./T02-WebApp_Rahmen/Final/style.css">
+		<!-- Einbindung der CCS Datei. -->
+
+		<script src="js/main.js"></script>
+	</head>
+  <!--Beginn des Headers -->
+   <header id ="wa_desktop">
+       <!--Dieser Div stellt den schwarzen Balken da-->
+       <div class="wa_header">
+           <!--Dieser Div stellt den schwarzen Balken da-->
+           <div class="wa_Navigation">
+               <!-- Dieses Div beeinhaltet das Logo --><img class="wa_logo" src="T02-WebApp_Rahmen/Final/logo.png">
+               <!-- Dieses Div enthält das Login oben rechts-->
+               <nav class="wa_login">
+                   <li><a href="#">Login</a></li>
+                   <li><a>|</a></li>
+                   <li><a href="#">Registrierung</a></li>
+               </nav>
+           </div>
+       </div>
+       <!-- Dieses Div stellt den durchsichtigen Balken da-->
+       <div id="wa_Navigation2">
+           <nav class="wa_menue">
+               <li><a href="#">Übersicht</a></li>
+               <li><a href="#">Highscoreliste</a></li>
+               <li><a href="#">Teilen</a></li>
+               <li><a href="#">Über Fubuizz</a></li>
+               <li><a href="#">Einstellungen</a></li>
+           </nav>
+       </div>
+       <!-- Dieses Div enthält das Menü mit den einzelnen Punkten-->
+   </header>
+   <header_mobile>
+       <div class="wa_header_mobil">
+           <div id="wa_Sidenav_mobil" class="wa_sidenav_mobil font-secondary font-light">
+               <!--Inhalt vom Sidenav-->
+               <ul>
+                   <li><a href="javascript:void(0)" class="wa_closebtn_mobil" onclick="closeNav()">&times;</a></li>
+                   <!--Einbindung des Close Buttons mit Funktion-->
+                   <li><a href="#">Übersicht</a></li>
+                   <li><a href="#">Highscoreliste</a></li>
+                   <li><a href="#">Teilen</a></li>
+                   <li><a href="#">Über Fubuizz</a></li>
+                   <li><a href="#">Einstellungen</a></li>
+                   <li><a href="#">Login | Registrierung</a></li>
+               </ul>
+           </div> <span class="wa_Button_mobil" onclick="openNav()">&#9776;</span>
+           <!--Button zum öffnen der Sidenav-->
+           <!--Javascriptfunktion Open und Close Button--><img src="T02-WebApp_Rahmen/Final/img/Logo_Fubuizz.png" class="wa_logo"> </div>
+   </header_mobile>
+
+
+    <body style="max-width: 1000px;	margin: 0 auto; background-color:rgba(0,0,0,0);">
+
+        <div id="hs-highscore">
+            <header id="hs-title">
+				<div class=hs-ueberschriften>Effzeh - mer wesse alles üvver dich</div>
+            </header>
+
+            <section id="hs-search" class"row">
+                <div class="col-sm-4 col-xs-12">
+					<div class="hs-search-element">Highscore</div>
+				</div>
+				<div class="col-sm-4 col-xs-12">
+					<select name="Zeitraum" class="hs-search-element">
+						<option>Zeitraum</option>
+						<option>Zeitraum</option>
+					</select>
+				</div>
+				<div class="col-sm-4 col-xs-12" />
+					<input class="hs-search-element" id="suche" name="suche" placeholder="Type some text" />
+				</div>
+			</section>
+            <div id="hs-list">
+				<table id="hs-scoretable">
+					<thead>
+						<tr>
+							<th>Position</th>
+                            <th> Spieler</th>
+                            <th> Punkt</th>
+						</tr>
+					</thead>
+					<thead id="player_table">
+					</thead>
+                </table>
+            </div>
+            <section id="hs-option">
+                <div id ="hs-option_buttons">
+					<div class="hs-option_button col-sm-4 col-xs-offset-2 col-xs-8">
+						<a href="link_titel.html"> Übersicht</a>
+					</div>
+                    <div class="hs-option_button col-sm-4 col-xs-offset-1 col-xs-10">
+						<a href ="link_titel.html"> Dieses Quiz spielen !</a>
+					</div>
+					<div style="clear:both;" />
+                </div>
+            </section>
+        </div>
+
+        <!-- Beginn des Foooters -->
+        <footer class="wa_footer">
+          <!-- Das footer Element wird in der Klasse definiert -->
+          <!-- Der mittige Copyrighttext-->
+          <ul class="wa_copyright"> © 2016 - Fubuizz </ul>
+        </footer>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://rawgit.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/API/BS_API.js"></script>
+	</body>
+
+	<script type="text/javascript">
+    var quizID = sessionStorage.getItem('quizid');
+    getHighscoreByID(quizID);
+    $(document).on( "onHighscoreData", function( event, data ) {
+      // Hier kommt die Berarbeitung der erhaltenen Daten
+      // “data“ ist die JSON
+      console.log(data);
+      var highscoredata=JSON.parse(data);
+      for(var i = 0; i < highscoredata.highscore.length; i++){
+        addPlayer(highscoredata.highscore[i].position, highscoredata.highscore[i].name, highscoredata.highscore[i].punktzahl);
+      }
+
+
+    /*
+     * adds a single element to the table
+     */
+    function addPlayer(position, player, points)
+    {
+      var tableDiv = document.getElementById("player_table");
+
+      var div = document.createElement('tr');
+      div.className = 'table_element';
+      div.innerHTML = '<th>'+position+'</th><th>'+player+'</th><th>'+points+'</th>';
+
+      tableDiv.appendChild(div);
+    }
+  });
+	</script>
+</html>
