@@ -1,5 +1,5 @@
 .ss_box {
-  margin: 20px auto 0px auto;
+  margin: 20px auto 0 auto;
   background: #fff;
 }
 
@@ -8,7 +8,7 @@
 }
 
 .ss_box header h1 {
-  margin: 0px;
+  margin: 0;
 }
 
 .ss_box .ss_box_content {
@@ -25,7 +25,7 @@
 }
 
 .ss_score {
-  overflow: hidden;
+  overflow:hidden;
 }
 
 .ss_score_balken {
@@ -53,6 +53,7 @@
   border-radius: 25px;
   float: left;
   margin-right: 10px;
+  margin-bottom: 5px;
 }
 
 .ss_scoreboard {
@@ -67,35 +68,32 @@
 .ss_scoreboard table tr:nth-child(odd) {
   background: #f8f5e4;
 
-}
-
-.ss_scoreboard table tr.ss_sb_user {
-  background-color: #929292;
-}
+}.ss_scoreboard table tr.ss_sb_user {
+   background-color: #929292;
+ }
 
 .ss_scoreboard table tr td {
   padding: 5px;
 }
-
 .ss_scoreboard table tr td:nth-child(3) {
   text-align: right;
 }
-
 .ss_scoreboard table tr td:nth-child(3) span {
   margin-right: 15px;
 }
 
-.ss_buttons input {
+.ss_buttons a.btn {
   width: 100%;
   margin-bottom: 10px;
 }
 
 .ss_slider_content {
   padding: 24px;
+  display: none;
 }
 
 .ss_slider_content h2 {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .ss_slider_content .ss_slider_text {
@@ -110,7 +108,7 @@
   float: right;
 }
 
-.ss_slider_content .ss_slider_right input[type="button"] {
+.ss_slider_content .ss_slider_right .btn {
   float: right;
   width: 100%;
   margin-top: 5px;
@@ -145,7 +143,6 @@
   cursor: pointer;
   margin-right: 30px;
 }
-
 .ss_slider_menu .ss_slider_bt {
   background: #ccc;
   width: 14px;
@@ -169,7 +166,7 @@
 
   .ss_slider_content .ss_slider_text .ss_slider_author {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
   }
 
   .ss_slider_content .ss_slider_right {
@@ -177,9 +174,9 @@
     position: relative;
   }
 
-  .ss_slider_content .ss_slider_right input[type="button"] {
+  .ss_slider_content .ss_slider_right .btn {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     width: 120px !important;
     right: 13px;
   }
