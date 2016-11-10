@@ -2538,5 +2538,640 @@
             ]
          }
       ]
-   }
+   },
+   {
+   "quizID":"4",
+   "quizFragen":[
+      {
+         "frage":"Wann wurde der 1. FC Köln gegründet?",
+         "antworten":[
+            {
+               "text":"13. Februar 1948",
+               "check":true
+            },
+            {
+               "text":"12. Februar 1904",
+               "check":false
+            },
+            {
+               "text":"01. Juni 1924",
+               "check":false
+            },
+            {
+               "text":"11. November 1911",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Wie ist der vollständige Name des 1. FC Kölns?",
+         "antworten":[
+            {
+               "text":"1. Fußball-Club Köln 01/07 e. V.",
+               "check":true
+            },
+            {
+               "text":"1. Fußball Club Köln 01/07 GmbH",
+               "check":false
+            },
+            {
+               "text":"1. Fußball Club Colonia 01/07 e. V.",
+               "check":false
+            },
+            {
+               "text":"1. Football Club Cologne Inc.",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Wie heißt der Geißbock, das Maskottchen, des 1. FC Köln?",
+         "antworten":[
+            {
+               "text":"Hennes",
+               "check":true
+            },
+            {
+               "text":"Lukas",
+               "check":false
+            },
+            {
+               "text":"Henning",
+               "check":false
+            },
+            {
+               "text":"Major",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"In welchem Stadtteil von Köln ist das Rhein-Energie Stadion?",
+         "antworten":[
+            {
+               "text":"Müngersdorf",
+               "check":true
+            },
+            {
+               "text":"Ehrenfeld",
+               "check":false
+            },
+            {
+               "text":"Hürth",
+               "check":false
+            },
+            {
+               "text":"Deutz",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Wie oft wurde der 1. FC Köln deutscher Meister?",
+         "antworten":[
+            {
+               "text":"Niemals",
+               "check":false
+            },
+            {
+               "text":"Viermal",
+               "check":false
+            },
+            {
+               "text":"Fünfmal",
+               "check":false
+            },
+            {
+               "text":"Dreimal",
+               "check":true
+            }
+         ]
+      },
+      {
+         "frage":"Welchen Platz belegte Köln bei der Saison 2015/16?",
+         "antworten":[
+            {
+               "text":"9. Platz",
+               "check":true
+            },
+            {
+               "text":"12. Platz",
+               "check":false
+            },
+            {
+               "text":"7. Platz",
+               "check":false
+            },
+            {
+               "text":"15. Platz",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Bei welchem Verein spielt Lukas Podolski derzeit?",
+         "antworten":[
+            {
+               "text":"Galatasaray Istanbul",
+               "check":true
+            },
+            {
+               "text":"Fenerbahçe Istanbul",
+               "check":false
+            },
+            {
+               "text":"Beşiktaş Istanbul",
+               "check":false
+            },
+            {
+               "text":"1. FC Köln",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Wieviele Zuschauer passen ins das Stadion des 1. FC Köln?",
+         "antworten":[
+            {
+               "text":"c.a. 50.000",
+               "check":true
+            },
+            {
+               "text":"c.a. 70.000",
+               "check":false
+            },
+            {
+               "text":"c.a. 100.000",
+               "check":false
+            },
+            {
+               "text":"c.a. 32.000",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Wer ist der aktuelle Hauptsponsor des 1. FC Köln?",
+         "antworten":[
+            {
+               "text":"Rewe",
+               "check":true
+            },
+            {
+               "text":"Hit",
+               "check":false
+            },
+            {
+               "text":"Funny Frisch",
+               "check":false
+            },
+            {
+               "text":"Rhein Energie",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Der 1. FC Köln hat neben seiner Männermannschaft auch eine Frauenfussballmannschaft. In welcher Liga spielen sie derzeit? (Saison 2016/2017)",
+         "antworten":[
+            {
+               "text":"Regionalliga West",
+               "check":true
+            },
+            {
+               "text":"2. Bundesliga",
+               "check":false
+            },
+            {
+               "text":"Regionalliga Nord",
+               "check":false
+            },
+            {
+               "text":"1. Bundesliga",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Wo ist die Heimat der 1. FC Köln Fans in ihrem Stadion?",
+         "antworten":[
+            {
+               "text":"Südkurve",
+               "check":true
+            },
+            {
+               "text":"Nordkurve",
+               "check":false
+            },
+            {
+               "text":"Ostkurve",
+               "check":false
+            },
+            {
+               "text":"Westkurve",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Wer ist der aktuelle Trainer des 1. FC Kölns? (Stand 11/2016)",
+         "antworten":[
+            {
+               "text":"Peter Stöger",
+               "check":true
+            },
+            {
+               "text":"Rudi Völler",
+               "check":false
+            },
+            {
+               "text":"Holger Stanislawski",
+               "check":false
+            },
+            {
+               "text":"Ståle Solbakken",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Die letzte Meisterschaft holte der FC 1978 vor Borussia Mönchengladbach. Wie wurde sie entschieden?",
+         "antworten":[
+            {
+               "text":"Durch das bessere Torverhältniss",
+               "check":true
+            },
+            {
+               "text":"Durch ein Entscheidungsspiel",
+               "check":false
+            },
+            {
+               "text":"Durch einen klaren Punktvorsprung",
+               "check":false
+            },
+            {
+               "text":"Durch einen Münzwurf",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Wie oft wurde der 1. FC Köln Vizemeister?",
+         "antworten":[
+            {
+               "text":"Siebenmal",
+               "check":true
+            },
+            {
+               "text":"Zweimal",
+               "check":false
+            },
+            {
+               "text":"Fünfmal",
+               "check":false
+            },
+            {
+               "text":"Achtmal",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"In welchem Stadtteil Kölns wurde der FC in seiner heutigen Form gegründet?",
+         "antworten":[
+            {
+               "text":"Sülz",
+               "check":true
+            },
+            {
+               "text":"Müngersdorf",
+               "check":false
+            },
+            {
+               "text":"Ehrenfeld",
+               "check":false
+            },
+            {
+               "text":"Südstadt",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Welcher FC Trainer war bisher am längsten im Amt?",
+         "antworten":[
+            {
+               "text":"Hennes Weisweiler",
+               "check":true
+            },
+            {
+               "text":"Rinus Michels",
+               "check":false
+            },
+            {
+               "text":"Hannes Löhr",
+               "check":false
+            },
+            {
+               "text":"Lukas Podolski",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Gegen wen verlor der FC sein einziges Europapokalfinalspiel?",
+         "antworten":[
+            {
+               "text":"Real Madrid",
+               "check":true
+            },
+            {
+               "text":"AC Mailand",
+               "check":false
+            },
+            {
+               "text":"FC Liverpool",
+               "check":false
+            },
+            {
+               "text":"FC Barcelona",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Gegen welchen Gegner holte der FC die meisten Punkte der Bundesliga?",
+         "antworten":[
+            {
+               "text":"VFB Stuttgart",
+               "check":true
+            },
+            {
+               "text":"Hamburger SV",
+               "check":false
+            },
+            {
+               "text":"Eintracht Frankfurt",
+               "check":false
+            },
+            {
+               "text":"Stürmer",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Welches Wort kommt am häufigsten in der FC-Hymne vor?",
+         "antworten":[
+            {
+               "text":"FC Kölle",
+               "check":true
+            },
+            {
+               "text":"Et",
+               "check":false
+            },
+            {
+               "text":"Schwöre",
+               "check":false
+            },
+            {
+               "text":"Alaaf",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Welcher Spieler trägt den Titel Prinz?",
+         "antworten":[
+            {
+               "text":"Lukas Podolski",
+               "check":true
+            },
+            {
+               "text":"Christopher Schorsch",
+               "check":false
+            },
+            {
+               "text":"Sebastian Freis",
+               "check":false
+            },
+            {
+               "text":"Christian Clemens",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Wie wird der 1. FC Köln in der Öffentlichkeit noch dargestellt?",
+         "antworten":[
+            {
+               "text":"als Karnevalsverein",
+               "check":true
+            },
+            {
+               "text":"als Retortenklub",
+               "check":false
+            },
+            {
+               "text":"als Traditionsverein",
+               "check":false
+            },
+            {
+               "text":"als Spaßverein",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Wann war der FC zuletzt Deutscher Meister?",
+         "antworten":[
+            {
+               "text":"1978",
+               "check":true
+            },
+            {
+               "text":"1962",
+               "check":false
+            },
+            {
+               "text":"1964",
+               "check":false
+            },
+            {
+               "text":"1983",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Gegen wen gewann der FC 1983 den DFB-Pokal?",
+         "antworten":[
+            {
+               "text":"Fortuna Köln",
+               "check":true
+            },
+            {
+               "text":"Hamburger SV",
+               "check":false
+            },
+            {
+               "text":"Werder Bremen",
+               "check":false
+            },
+            {
+               "text":"Bayern München",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Wann ist der FC erstmals in die 2. Liga abgestiegen?",
+         "antworten":[
+            {
+               "text":"1998",
+               "check":true
+            },
+            {
+               "text":"1997",
+               "check":false
+            },
+            {
+               "text":"1996",
+               "check":false
+            },
+            {
+               "text":"2000",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Was war das Besondere, als der FC 1964 Deutscher Meister wurde?",
+         "antworten":[
+            {
+               "text":"Es war die erste Bundesligasaison überhaupt",
+               "check":true
+            },
+            {
+               "text":"In der Saison spielten erstmals 20 Vereine in der Bundesliga",
+               "check":false
+            },
+            {
+               "text":"Der FC schlug Mönchengladbach mit 8:1",
+               "check":false
+            },
+            {
+               "text":"Es war der dritte Titel in Folge",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Den wievielten Platz belegt der 1. FC Köln in der ewigen Tabelle der Bundesliga? (Stand 11/2016)",
+         "antworten":[
+            {
+               "text":"Platz 8",
+               "check":true
+            },
+            {
+               "text":"Platz 14",
+               "check":false
+            },
+            {
+               "text":"Platz 5",
+               "check":false
+            },
+            {
+               "text":"Platz 14",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Wer war Kölns erster Trainer?",
+         "antworten":[
+            {
+               "text":"Karl Flink",
+               "check":true
+            },
+            {
+               "text":"Hennes Weisweiler",
+               "check":false
+            },
+            {
+               "text":"Helmut Schneider",
+               "check":false
+            },
+            {
+               "text":"Kappa",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Wie viele Jahre spielte der 1. FC Köln in der 2. Bundesliga?",
+         "antworten":[
+            {
+               "text":"8 Jahre",
+               "check":true
+            },
+            {
+               "text":"9 Jahre",
+               "check":false
+            },
+            {
+               "text":"12 Jahre",
+               "check":false
+            },
+            {
+               "text":"15 Jahre",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Fünf Jahre nach Gründung des 1. FC Köln wurde 1953 ein Vereinsheim im Grüngürtel errichtet. Welchen Namen erhielt dieses?",
+         "antworten":[
+            {
+               "text":"Geißbockheim",
+               "check":true
+            },
+            {
+               "text":"Geißbockhaus",
+               "check":false
+            },
+            {
+               "text":"Geißbocktreff",
+               "check":false
+            },
+            {
+               "text":"Geißböckchen",
+               "check":false
+            }
+         ]
+      },
+      {
+         "frage":"Welche Rückennummer trägt der FC Stammkeeper Timo Horn?",
+         "antworten":[
+            {
+               "text":"1",
+               "check":true
+            },
+            {
+               "text":"3",
+               "check":false
+            },
+            {
+               "text":"5",
+               "check":false
+            },
+            {
+               "text":"8",
+               "check":false
+            }
+         ]
+      }
+   ]
+}
 ]
