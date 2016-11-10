@@ -6,26 +6,33 @@ getQuizView(anzahl);
 Besorgt eine Quiz-Übersicht mit "anzahl" Quizze
 $(document).on( "onQuizView", function( event, data ) { 
 // Hier kommt die Berarbeitung der erhaltenen Daten
-// “data“ ist die JSON
+// “data“ sind die Informationen
 });
 
 getQuizViewByID(quizID);
 Besorgt das jeweilige Quiz aus der Übersicht mit der passenden ID
 $(document).on( "onQuizViewByID", function( event, data ) { 
 // Hier werden die erhaltenen Daten bearbeitet
-// in “data“ ist die JSON
+// “data“ sind die Informationen
 });
 
 getQuizByID(quizID);
 Besorgt 10 Fragen von dem Quiz mit der passenden ID
 $(document).on( "onQuizData", function( event, data ) { 
 // Hier kommt die Berarbeitung der erhaltenen Daten
-// “data“ ist die JSON
+// “data“ sind die Informationen
 });
 
 getHighscoreByID(quizID);
 Besorgt das Highscore mit der passenden ID
 $(document).on( "onHighscoreData", function( event, data ) { 
 // Hier kommt die Berarbeitung der erhaltenen Daten
-// “data“ ist die JSON
+// “data“ sind die Informationen
+});
+
+getHighscorePositions(quizID,"User",punkte);
+Besorgt die Highscore mit 5 Einträge mit dem eingeordneten User und seinen Punkten
+$(document).on( "onHighscorePositions", function( event, data ) { 
+// Hier werden die erhaltenen Daten bearbeitet
+// in “data“ sind die Informationen
 });
