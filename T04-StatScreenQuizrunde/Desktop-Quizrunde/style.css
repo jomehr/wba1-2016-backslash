@@ -56,6 +56,9 @@ p {
     justify-content: center;
 }
 
+.qr-answers button:hover {
+    background-color: #f8f5e4;
+}
 
 .qr-answers button span  {
 	height: 100%;
