@@ -3,65 +3,68 @@
 
 <head>
     <meta charset=UTF-8>
+    <link href="../../T09-CSS/style.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css">
-    <link href="../../T09-CSS/style.css" rel="stylesheet">
-    <link href="../../T09-CSS/style.css" rel="stylesheet">
-<script type="text/javascript" src="WebApp_Rahmen_Tablet.js"></script>
+    <script type="text/javascript" src="WebApp_Rahmen_Tablet.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Fubuizz</title>
+    <title>Fubuizz</title>
 </head>
 
 <body>
     <!--Beginn des Headers -->
-    <header id ="wa_desktop">
+    <header id="wa_desktop">
         <!--Dieser Div stellt den schwarzen Balken da-->
         <div class="wa_header">
             <!--Dieser Div stellt den schwarzen Balken da-->
             <div class="wa_Navigation">
-                <!-- Dieses Div beeinhaltet das Logo --><img class="wa_logo" src="logo.png">
+                <!-- Dieses Div beeinhaltet das Logo --><img class="wa_logo" src="logo.png" alt="Fubuizz_Logo">
                 <!-- Dieses Div enthält das Login oben rechts-->
                 <nav class="wa_login">
-                    <li><a href="#">Login</a></li>
-                    <li><a>|</a></li>
-                    <li><a href="#">Registrierung</a></li>
+                    <ul>
+                        <li><a href="#">Login</a></li>
+                        <li><a>|</a></li>
+                        <li><a href="#">Registrierung</a></li>
+                    </ul>
                 </nav>
             </div>
         </div>
         <!-- Dieses Div stellt den durchsichtigen Balken da-->
         <div id="wa_Navigation2">
             <nav class="wa_menue">
-                <li><a href="#">Übersicht</a></li>
-                <li><a href="#">Highscoreliste</a></li>
-                <li><a href="#">Teilen</a></li>
-                <li><a href="#">Über Fubuizz</a></li>
-                <li><a href="#">Einstellungen</a></li>
-            </nav>
-        </div>
-        <!-- Dieses Div enthält das Menü mit den einzelnen Punkten-->
-    </header>
-    <header_mobile>
-        <div class="wa_header_mobil">
-            <div id="wa_Sidenav_mobil" class="wa_sidenav_mobil font-secondary font-light">
-                <!--Inhalt vom Sidenav-->
                 <ul>
-                    <li><a href="javascript:void(0)" class="wa_closebtn_mobil" onclick="closeNav()">&times;</a></li>
-                    <!--Einbindung des Close Buttons mit Funktion-->
                     <li><a href="#">Übersicht</a></li>
                     <li><a href="#">Highscoreliste</a></li>
                     <li><a href="#">Teilen</a></li>
                     <li><a href="#">Über Fubuizz</a></li>
                     <li><a href="#">Einstellungen</a></li>
-                    <li><a href="#">Login | Registrierung</a></li>
                 </ul>
-            </div> <span class="wa_Button_mobil" onclick="openNav()">&#9776;</span>
-            <!--Button zum öffnen der Sidenav-->
-            <!--Javascriptfunktion Open und Close Button--><img src="img/Logo_Fubuizz.png" class="wa_logo"> </div>
-    </header_mobile>
+            </nav>
+        </div>
+        <!-- Dieses Div enthält das Menü mit den einzelnen Punkten-->
+    </header>
+    <header class="wa_header_mobil">
+        <div id="wa_Sidenav_mobil" class="wa_sidenav_mobil font-secondary font-light">
+            <!--Inhalt vom Sidenav-->
+            <ul>
+                <li><a href="javascript:void(0)" class="wa_closebtn_mobil" onclick="closeNav()">&times;</a></li>
+                <!--Einbindung des Close Buttons mit Funktion-->
+                <li><a href="#">Übersicht</a></li>
+                <li><a href="#">Highscoreliste</a></li>
+                <li><a href="#">Teilen</a></li>
+                <li><a href="#">Über Fubuizz</a></li>
+                <li><a href="#">Einstellungen</a></li>
+                <li><a href="#">Login | Registrierung</a></li>
+            </ul>
+        </div> <span class="wa_Button_mobil" onclick="openNav()">&#9776;</span>
+        <!--Button zum öffnen der Sidenav-->
+        <!--Javascriptfunktion Open und Close Button--><img src="img/Logo_Fubuizz.png" class="wa_logo" alt="Fubuizz_Logo_Mobile"> </header>
+    <main style="height:500px"> 
+    </main>
     <!-- Beginn des Foooters -->
     <footer class="wa_footer">
         <!-- Das footer Element wird in der Klasse definiert -->
         <!-- Der mittige Copyrighttext-->
-        <ul class="wa_copyright"> © 2016 - Fubuizz </ul>
+        <div class="wa_copyright"> © 2016 - Fubuizz </div>
     </footer>
 </body>
 
