@@ -17,11 +17,12 @@ and open the template in the editor.
 html{
     height				: 	100%;
     width				: 	100%;
-    background  		:	url(../images/Fanmeile-Gro%C3%9F.jpg);    
+    background  		:	url(../images/Headerimage-schraeg.png);    
 }
 
 /* ******************** LAYOUT ******************** 
 ***************************************************/
+
 
 header{
 	/* header inc. height nur temporaerer wert!!!*/
@@ -57,7 +58,7 @@ header{
 	padding-top 		:	10px;
 	padding-bottom		:	10px;
     padding-left        :   10px;
-    font-family         :   20px "Oswald Regular", serif;
+    font-family         :   25px "Oswald Regular", serif;
     font-weight         :   700;
 
 }
@@ -65,22 +66,22 @@ header{
 #hs-search{
     background-color    :   #504F48;
 	overflow			:	auto; 
+    width:              :   100%;
 }
+
 
 .hs-search-element{
 	color				:	white;
 	height 				:	35px;
 	margin-top 			:	10px;
 	margin-bottom		:	10px;	
-	width 				:	100%;
     font-size:              18px;
     font-weight         :   700;
     
     }  
 
-
 .hs-search-feld {
-	color				:	black;
+	color				:	#504f48;
 	height 				:	35px;
 	margin-top 			:	10px;
 	margin-bottom		:	10px;	
@@ -96,10 +97,19 @@ header{
 
 #hs-scoretable{
     width				:	100%;
-    height				:	600px;
     text-align			:	justify;
 }
 
+
+
+#player_table tr {
+    height: 30px;
+    padding: 10px;
+}
+
+#player_table {
+    height: 300px;   
+}
 #hs-scoretable tr:nth-child(2n) {
     background-color	:	#f7f4e4;
 }
@@ -113,6 +123,44 @@ footer{
     background-color	:	black;
     height				:	50px;  
 }
+
+.hs_fixed_headers {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  
+}
+  th, td {
+    padding: 5px;
+    text-align: left;
+   
+  }
+  
+  td:nth-child(1), th:nth-child(1) { min-width: 200px; }
+  td:nth-child(2), th:nth-child(2) { min-width: 500px; }
+  td:nth-child(3), th:nth-child(3) { width: 250px; }
+
+  thead {
+    background-color: #ccc;
+    color: black;
+}
+    tr {
+      display: block;
+      position: relative;
+    
+  }
+
+  tbody {
+
+    display: block;
+    overflow: auto;
+    width: 100%;
+    height: 300px;
+}
+      
+    tr:nth-child(even) {
+      background-color:#ddd;
+    }
 
 .hs-option_button{	    
 	align-content		:	center;
@@ -128,6 +176,11 @@ footer{
     text-align: center;
 	width				:	100%;	
 
+}
+
+#suche {
+    color: #504f48;
+    border: none;
 }
 
 a:link {

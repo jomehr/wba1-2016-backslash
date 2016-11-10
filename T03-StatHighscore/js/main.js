@@ -23,7 +23,7 @@ function addPlayer(position, player, points)
 	
 	var div = document.createElement('tr');
 	div.className = 'table_element';
-	div.innerHTML = '<th>'+position+'</th><th>'+player+'</th><th>'+points+'</th>';
+	div.innerHTML = '<td>'+position+'</td><td>'+player+'</td><td>'+points+'</td>';
 	
 	tableDiv.appendChild(div);
 }

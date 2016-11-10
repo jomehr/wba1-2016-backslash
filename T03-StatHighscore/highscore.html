@@ -2,11 +2,16 @@
 <html>   
     <head>
         <!--Optimierung für Suchmaschinen. Zeile 6 bis 9 -->
-        <link rel="stylesheet" type="text/css" href="css/hs-style.css" media="screen">
+ <link rel="stylesheet" type="text/css" href="css/hs-style.css"media="screen">
         <link rel="stylesheet" href="../T09-CSS/style.css">
-		<!-- Einbindung der CCS Datei. -->
 		
+        <!-- Einbindung der CCS Datei. -->
+        
 		<script src="js/main.js"></script>
+      <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>   
 	</head>
     
     <body style="max-width: 1000px;	margin: 0 auto; background-color:rgba(0,0,0,0);">
@@ -16,7 +21,7 @@
 				<div class="hs-ueberschriften">Effzeh - mer wesse alles üvver dich</div>
             </header>
 
-            <section id="hs-search" class"row">
+            <section id="hs-search" class="row">
                 <div class="col-sm-4 col-xs-12">
                     <div class="hs-search-element"><h3>Highscore</h3></div>
 				</div>
@@ -31,33 +36,39 @@
 					<input class="hs-search-element" id="suche" name="suche" placeholder="Suche" />
 				</div>
 			</section>
-            <div id="hs-list">                
-				<table id="hs-scoretable">
-					<thead>
-						<tr>
-							<th>Position</th>
-                            <th> Spieler</th>
-                            <th> Punkt</th>
-						</tr>
-					</thead>
-					<thead id="player_table">
-					</thead>
-                </table>
+            <div class="row">
+                <div class="col-xs-12">
+                    <table class="hs_fixed_headers">
+                        <thead> 
+                            <tr>
+                                <th>Position</th>
+                                <th> Spieler</th>
+                                <th> Punkte</th>
+                            </tr>
+                        </thead>
+                        <tbody id="player_table">
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
             </div>
-            <section>
+<!--            <div id="hs-list">                
+            </div>-->
+            <section class="row">
 					<div class="hs-option_button col-sm-3 col-xs-11 col-sm-offset-5">
 						<a href="link_titel.html"> Übersicht</a>
 					</div>
                     <div class="hs-option_button col-sm-3 col-xs-11">
-						<a href ="link_titel.html"> Dieses Quiz spielen !</a>
+						<a href="link_titel.html"> Dieses Quiz spielen !</a>
 					</div>
-					<div style="clear:both;" />                
+           
             </section>
-        </div>
+
 		
 	</body>
 	
 	<script>
 		test();
+            
 	</script>
 </html>
