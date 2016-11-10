@@ -5,32 +5,45 @@ var view = {
 	initQuizOverview: function () {
 		
 		//JSON via AJAX holen
-		getAjax(dataUrls.dataQuizOverviewURL, function (data) {
+		//getAjax(dataUrls.dataQuizOverviewURL, function (data) {
 			
 			//JSON speichern
-			var jsonData = JSON.parse(data);
+			//var jsonData = JSON.parse(data);
 			
 			//View mit Daten füttern
-			var element = document.querySelector('.js-quiz-uebersicht');
-			for (var i = 0; i < jsonData.quiz.length; i++) {
+			
+			/*for (var i = 0; i < jsonData.quiz.length; i++) {
 				var quiz = jsonData.quiz[i];
 				var content = '<li><a href="' + viewUrls.viewQuizStartURL + '?quizId=' + quiz.quizID + '">';
 				content += '<h2>' + quiz.titel + '</h2>';
 				content += '<p>' + quiz.text + '</p>';
 				content += '</a></li>';
-				element.innerHTML += content;
+				element.innerHTML += content;*/
+        
+        getQuizView(5);
+        $(document).on( "onQuizView", function( event, data ) { 
+            console.log(data[3].quizID); 
+            var element = document.querySelector('.js-quiz-uebersicht');
+            for (var i = 0; i < data.length; i++){
+                    var content = '<li><a href="' + data + '">';
+                    content += '<h2>' + data[i].titel + '</h2>';
+				    content += '<p>' + data[i].text + '</p>';
+				    content += '</a></li>';
+                    element.innerHTML += content;
+                }
+            });
 
-			}
-		})
-	},
+        }
+		//}}
+	
+
 
 	//View Quizstart initialisieren
 	initQuizStart: function () {
-		
 		//JSON via AJAX holen
 		getAjax(dataUrls.dataQuizOverviewURL, function (data) {
 
-			//JSON speichern
+            //JSON speichern
 			var jsonData = JSON.parse(data);
 
 			//quizID aus URL holen
@@ -62,7 +75,9 @@ var view = {
 
 		document.querySelector('.js-dauer').innerHTML = formatDuration(getQueryString('duration'));
 		document.querySelector('.js-anzahl-fragen').innerHTML = getQueryString('numberOfQuestions');
-		document.querySelector('.js-anzahl-richtig').innerHTML = getQueryString('countCorrectAnswers');		
+		document.querySelector('.js-anzahl-richtig').innerHTML = getQueryString('countCorrectAnswers');
+        
+
 	}
 }
 
@@ -129,20 +144,20 @@ var quiz = {
 			clearInterval(quiz.interval);
 
 			//Counter herunterzählen
-			quiz.interval = setInterval(function () {
-				counter--;
-				quiz.counter.innerHTML = counter;
-
-				//Ist der Counter abgelaufen?
-				if (counter === 0) {
-
-					//Nächste Frage anzeigen
-					quiz.nextQuestion();
-
-					//Counter clearen
-					clearInterval(quiz.interval);
-				}
-			}, 1000)
+//			quiz.interval = setInterval(function () {
+//				counter--;
+//				quiz.counter.innerHTML = counter;
+//
+//				//Ist der Counter abgelaufen?
+//				if (counter === 0) {
+//
+//					//Nächste Frage anzeigen
+//					quiz.nextQuestion();
+//
+//					//Counter clearen
+//					clearInterval(quiz.interval);
+//				}
+//			}, 1000)
 
 			//Index erhöhen
 			quiz.indexCurrentQuestion++;
