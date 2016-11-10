@@ -12,24 +12,36 @@
 .st_left {
 	float: left;
 	margin-right: 30px;
+    margin-left:3px;
 	width:100%;
 	max-width: 570px;
 }
 
-.st_right {
-    margin-top:10px;
-    float: right;
-    margin-right:15px;
+.st_right1 {
+    text-align:right;
+    align-content:right;
 }
 
-.st_middle{
-    margin-top:0px;
-    margin-right:35px;
-    float:right;
+.st_right2{
+    
+}
+
+@media (min-width: 1024px) {
+  .st_right2 {
+    text-align:right;
+    align-content:right;
+  }
+}
+
+.st_rightdown{
+    margin-bottom:45px;
 }
 
 .st_erg {
 	overflow: hidden;
+    margin-top:20px;
+    margin-left:3px;
+    margin-right:3px;
 }
 
 .st_box .st_box_content {
@@ -38,14 +50,14 @@
 }
 
 .st_botBox {
-    float:left;
+    margin: 0 auto;
 }
 
 .st_buttons input {
-	width: 295px;
+    width:100%;
     margin-right: 15px;
 	margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 h1, h2, h3 {
