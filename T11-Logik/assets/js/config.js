@@ -1,13 +1,13 @@
 //Basis Configs
 var base = {
-	dataURL: '../../../T13-Datenstruktur_Content/JSON',
+	dataURL: 'assets/json',
 	quizDuration: 10
 };
 
 //URLs JSONs
 var dataUrls = {
-	dataQuizOverviewURL: base.dataURL + '/uebersichtQuiz.json',
-	dataQuestionsURL: base.dataURL + '/quiz.json'
+	dataQuizOverviewURL: base.dataURL + '/quiz-uebersicht.json',
+	dataQuestionsURL: base.dataURL + '/quiz-fragen.json'
 
 };
 

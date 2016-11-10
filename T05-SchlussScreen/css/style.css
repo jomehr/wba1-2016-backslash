@@ -55,6 +55,7 @@
 	border-radius: 25px;
 	float: left;
 	margin-right: 10px;
+	margin-bottom: 5px;
 }
 
 .ss_scoreboard {
@@ -83,7 +84,7 @@
 	margin-right: 15px;
 }
 
-.ss_buttons input {
+.ss_buttons a.btn {
 	width: 100%;
 	margin-bottom: 10px;
 }
@@ -109,7 +110,7 @@
 	float: right;
 }
 
-.ss_slider_content .ss_slider_right input[type="button"] {
+.ss_slider_content .ss_slider_right .btn {
 	float: right;
 	width: 100%;
 	margin-top: 5px;
@@ -175,7 +176,7 @@
 		position: relative;
 	}
 	
-	.ss_slider_content .ss_slider_right input[type="button"] {
+	.ss_slider_content .ss_slider_right .btn {
 		position: absolute;
 		bottom: 0px;
 		width: 120px !important;

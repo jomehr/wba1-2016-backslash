@@ -1,6 +1,6 @@
 //Basis Configs
 var base = {
-	dataURL: '/assets/json',
+	dataURL: '/../assets/json',
 	quizDuration: 10
 };
 
