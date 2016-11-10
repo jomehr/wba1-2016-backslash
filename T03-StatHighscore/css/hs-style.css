@@ -1,0 +1,169 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13-Oct-2016, 22:43:46
+    Author     : vince
+*/
+/* ************ ALLGEMEINE FORMATIERUNG ************ 
+****************************************************/
+*{
+    margin  			:   0px;
+    padding 			:   0px;
+}
+
+html{
+    height				: 	100%;
+    width				: 	100%;
+    background  		:	url(../images/Fanmeile-Gro%C3%9F.jpg);    
+}
+
+/* ******************** LAYOUT ******************** 
+***************************************************/
+
+header{
+	/* header inc. height nur temporaerer wert!!!*/
+    height              :   50px;
+    color               :   white;
+    background-color    :   black;    
+    font				:	18px/30px "Oswald Regular", serif;    
+}
+
+#hs-overview{
+    height              :   50px;
+    width               :   100%;
+    color               :   white; 
+    background-color    :   rgba(0,0,0,0.5);
+    font				:	18px "Oswald Light", serif;
+}
+
+#hs-highscore{
+    
+    background-color	:   white;
+    align-content  		:   center;
+    height          	:   auto;
+}
+
+#hs-title{
+    color				:	black;
+    background-color    :   #E8C10B;
+	height				:	auto;
+	margin-top			:	75px;
+}
+
+.hs-ueberschriften{
+	padding-top 		:	10px;
+	padding-bottom		:	10px;
+    padding-left        :   10px;
+    font-family         :   20px "Oswald Regular", serif;
+    font-weight         :   700;
+
+}
+
+#hs-search{
+    background-color    :   #504F48;
+	overflow			:	auto; 
+}
+
+.hs-search-element{
+	color				:	white;
+	height 				:	35px;
+	margin-top 			:	10px;
+	margin-bottom		:	10px;	
+	width 				:	100%;
+    font-size:              18px;
+    font-weight         :   700;
+    
+    }  
+
+
+.hs-search-feld {
+	color				:	black;
+	height 				:	35px;
+	margin-top 			:	10px;
+	margin-bottom		:	10px;	
+	width 				:	100%;
+}
+
+#hs-list{
+	padding 			:	25px;
+    width				:   100%;
+    height  			:   400px;
+    overflow			:	auto;       
+}
+
+#hs-scoretable{
+    width				:	100%;
+    height				:	600px;
+    text-align			:	justify;
+}
+
+#hs-scoretable tr:nth-child(2n) {
+    background-color	:	#f7f4e4;
+}
+
+.table_element {
+	
+}
+
+footer{
+    color				:	white;
+    background-color	:	black;
+    height				:	50px;  
+}
+
+.hs-option_button{	    
+	align-content		:	center;
+    background			:	#CA0726;    
+    color				:	white;
+	height				:	35px;
+	margin-top 			:	20px;
+	margin-bottom		:	20px;
+	margin-left			:	15px;
+	margin-right		:	10px;
+	padding				:	10px;
+    text-decoration		:	none;
+    text-align: center;
+	width				:	100%;	
+
+}
+
+a:link {
+    
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+
+}
+
+a:hover {
+    
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+/* ****************** NAVIGATION ****************** 
+***************************************************/
+
+#hs-overview .menu{
+    width				:	100%;
+    list-style-type		:	none;
+     margin-left     	:	225px;     
+}
+
+#hs-overview .menu li a{
+    width				:	12%;
+    height				:	50px;
+    display				:	block;
+    float				:	left;    
+    color				:	white;
+    text-align			:	center;
+    text-decoration		:	none;
+    line-height			:	50px;
+}
