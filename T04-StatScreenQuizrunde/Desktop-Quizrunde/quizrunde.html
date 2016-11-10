@@ -8,100 +8,96 @@
         <link rel="stylesheet" type="text/css" href="../../T09-CSS/style.css">
         <!-- Einbinden der eigenen CSS -->
         <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     
     <body>
-        
-        <!-- Erstellung der Content-Box mit weißem Hintergrund -->
         <div class="container">
-        <div class="content bg-white">
-        <!-- Erstellung der Kopfzeile mit entsprechendem Thema -->
-            <div class="head row">
+            <!-- Erstellung der Content-Box mit weißem Hintergrund -->
+            <div class="qr-content bg-white">
+                <!-- Erstellung der Kopfzeile mit entsprechendem Thema -->
+                <div class="qr-head row qr-no-margin">
+                    <div class="col-xs-12">
+                    <h1>Effzeh - mer wisse alles üvver dich</h1>
+                    </div>
+                </div>
+            <!-- Platzhalter für den Timer -->
+            <div class="qr-timer row qr-no-margin">
                 <div class="col-xs-12">
-                <h1>Effzeh - mer wisse alles üvver dich</h1>
-            </div>
-            </div>
-        <!-- Platzhalter für den Timer -->
-            <div class="timer row">
-                <div class="col-xs-12">
-                <p>!Platzhalter Timer!</p>
-            </div>
-            </div>
-        <!-- Hier wird die Frage abgebildet -->
-            <div class="question row">
-                <div class="col-xs-12">
-                <p>"Welches dieser Zitate wird nicht Werders "Ostfriesen-Alemao" Dieter Eilts zugeschrieben?</p>
-            </div>
-            </div>
-        <!-- Erstellung der Antworten-Box -->
-            <div class="inner_box row">
-                <div class="col-xs-12">
-        <!-- Button-Eigenschaften werden erstellt -->
-        <!-- Farben für kleinen Button werden übergeben -->
-        <!-- Farben für großen Button werden übergeben -->
-        <!-- Schriften werden übergeben -->
-            <div class="answers font-secondary">
-                <button class="fg-black bg-lightgrey">
-        <!-- kleine Box mit Answer-Key wird erstellt -->
-                    <div class="short bg-yellow">
-                        A
-                    </div>
-        <!-- große Box mit Antwort wird erstellt -->
-                    <div class="long bg-lightgrey">
-                        "Das interessiert mich jetzt wie eine geplatzte Currywust im ostfriesischen Wattenmeer."
-                    </div>
-                </button>
-                
-                <button class="fg-black bg-lightgrey">
-                    <div class="short bg-yellow">
-                        B
-                    </div>
-                    <div class="long bg-lightgrey">
-                        "Wir dürfen jetzt nicht den Sand in den Kopf stecken."
-                    </div>
-                </button>
-           
-                <button class="fg-black bg-lightgrey">
-                    <div class="short bg-yellow">
-                        C
-                    </div>
-                    <div class="long bg-lightgrey">
-                        "Wenn meine Oma ein Bus wäre, dann könnte sie hupen."
-                    </div>
-                </button>
-            
-                <button class="fg-black bg-lightgrey">
-                    <div class="short bg-yellow">
-                        D
-                    </div>
-                    <div class="long bg-lightgrey">
-                        "Moin moin, Gascoigne."
-                    </div>
-                </button>
-            </div>
-                
-        <!-- Feedback-Icons werden erstellt -->
-            <div class="col-xs-12">
-                <div class="answer_icons">
-                    <div class="answer_icon bg-red"></div>
-                    <div class="answer_icon bg-red"></div>
-                    <div class="answer_icon bg-green"></div>
-                    <div class="answer_icon bg-red"></div>
-                    <div class="answer_icon bg-green"></div>
-                    <div class="answer_icon bg-green"></div>
-                    <div class="answer_icon bg-red"></div>
-                    <div class="answer_icon bg-mediumgrey"></div>
-                    <div class="answer_icon bg-mediumgrey"></div>
-                    <div class="answer_icon_last bg-mediumgrey"></div>
+                <p class="qr-text">!Platzhalter Timer!</p>
                 </div>
             </div>
-        <!-- Button für das Beenden des Quizzes wird erstellt -->
-            <div class="col-xs-12">
-            <div class="button1">
+            <!-- Hier wird die Frage abgebildet -->
+            <div class="qr-question row qr-no-margin">
+                <div class="col-xs-12">
+                <p class="qr-text">"Welches dieser Zitate wird nicht Werders "Ostfriesen-Alemao" Dieter Eilts zugeschrieben?</p>
+                </div>
+            </div>
+            <!-- Erstellung der Antworten-Box -->
+            <div class="qr-inner_box row qr-no-margin">
+            <div class="col-x s-12">
+            <!-- Button-Eigenschaften werden erstellt -->
+            <!-- Farben für kleinen Button werden übergeben -->
+            <!-- Farben für großen Button werden übergeben -->
+            <!-- Schriften werden übergeben -->
+            <div class="qr-answers font-secondary">
+                <button class="qr-fg-black bg-lightgrey">
+                    <!-- kleine Box mit Answer-Key wird erstellt -->
+                    <span class="qr-short bg-yellow">
+                    A
+                    </span>
+                    <!-- große Box mit Antwort wird erstellt -->
+                    <span class="qr-long bg-lightgrey">
+                    "Das interessiert mich jetzt wie eine geplatzte Currywust im ostfriesischen Wattenmeer."
+                     </span>
+                </button>
+                
+                <button class="qr-fg-black bg-lightgrey">
+                    <span class="qr-short bg-yellow">
+                        B
+                    </span>
+                    <span class="qr-long bg-lightgrey">
+                        "Wir dürfen jetzt nicht den Sand in den Kopf stecken."
+                    </span>
+                </button>
+           
+                <button class="qr-fg-black bg-lightgrey">
+                    <span class="qr-short bg-yellow">
+                        C
+                    </span>
+                    <span class="qr-long bg-lightgrey">
+                        "Wenn meine Oma ein Bus wäre, dann könnte sie hupen."
+                    </span>
+                </button>
+            
+                <button class="qr-fg-black bg-lightgrey">
+                    <span class="qr-short bg-yellow">
+                        D
+                    </span>
+                    <span class="qr-long bg-lightgrey">
+                        "Moin moin, Gascoigne."
+                    </span>
+                </button>
+            </div>
+                
+            <!-- Feedback-Icons werden erstellt -->
+            <div class="qr-answer_icons">
+                <div class="qr-answer_icon bg-red"></div>
+                <div class="qr-answer_icon bg-red"></div>
+                <div class="qr-answer_icon bg-green"></div>
+                <div class="qr-answer_icon bg-red"></div>
+                <div class="qr-answer_icon bg-green"></div>
+                <div class="qr-answer_icon bg-green"></div>
+                <div class="qr-answer_icon bg-red"></div>
+                <div class="qr-answer_icon bg-mediumgrey"></div>
+                <div class="qr-answer_icon bg-mediumgrey"></div>
+                <div class="qr-answer_icon_last bg-mediumgrey"></div>
+            </div>
+            <!-- Button für das Beenden des Quizzes wird erstellt -->
+            <div class="qr-button">
                 <button type="button" id="quiz_beenden">Quizrunde beenden</button>
             </div>
             </div>
-        </div>
         </div>
         </div>
         </div>

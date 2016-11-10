@@ -1,41 +1,57 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Startscreen</title>
+        <title>Fubuizz - Jetzt das Quiz starten</title>
         <link rel="stylesheet" href="../T09-CSS/style.css">
         <link rel="stylesheet" href="css/stylesheet.css">
+        <meta name="keywords" content="Fußball, Quiz, Fußballquiz, Bundesliga, Start Quizrunde">
+        <meta name="description" content="Fubuizz - Jetzt das Quiz starten">
         
     </head>
     <body>
-        <section class="st_box bg-white">
-            <header class="bg-yellow">
-                <h1>Effzeh - mer wesse alles üvver dich</h1>
-            </header>
-            <div id="pic">
-                <img src="BoxPic.png" style="width:100%;">
-            </div>
-            <section class="st_erg st_box_content">
-                <article class="st_left">
-                    <p>
-                        Das FC-Quizz schlecht hin. Der wahre FC Fan beantwortet diese Fragen im Schlaf. Dabei handelt es sich nicht nur um Fragen zur Fußballerischen Geschichte des Vereins, denn der FC hat auch außerhalb des Platzes eine große Geschichte. Mit diesem Quizz kannst du dein Wissen über den besten Verein der Welt testen. Los geht's!
-                    </p>
-                </article>
-                <article class="st_right">
-                    <h5 alignt="right">17.06.2016</h5>
-                    <h5 alignt="right">Hennes48</h5>
-                </article>
-            </section>
-            <article class="st_middle">
-                <p alignt="right">
-                    <b>524</b> mal gespielt
-                </p>
-            </article>
-            <section class="st_buttons st_box_content">
-                <input type="button" value="Übersicht">
-                <input type="button" value="Highscoreliste">
-                <input type="button" value="Jetzt spielen!">
-            </section>
-        </section>
+        <div class="container">
+            <!-- <section class="st_box bg-white"> -->
+                <div class="row bg-yellow" id="header">
+                    <div class="col-xs-12">
+                        <h1>Effzeh - mer wesse alles üvver dich</h1>
+                    </div>
+                </div>
+                <div class="row" id="pic">
+                    <img src="BoxPic.png" style="width:100%;">
+                </div>
+                <div class="row st_erg st_box_content">
+                    <div class="col-lg-8 col-xs-12">
+                        <p>
+                            Das FC-Quizz schlecht hin. Der wahre FC Fan beantwortet diese Fragen im Schlaf. Dabei handelt es sich nicht nur um Fragen zur Fußballerischen Geschichte des Vereins, denn der FC hat auch außerhalb des Platzes eine große Geschichte. Mit diesem Quiz kannst du dein Wissen über den besten Verein der Welt testen. Los geht's!
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-xs-12">
+                        <div class="row">
+                            <div class="font-bold st_right2 st_rightdown col-xs-6 col-lg-12">
+                                <p>17.06.2016</p>
+                                <p>Hennes48</p>
+                            </div>
+                            <div class="st_right1 col-xs-6 col-lg-12">
+                                <p><strong>524</strong> mal gespielt</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="row st_buttons">
+                    <div class="col-lg-4">
+                        <input class="col-lg-4" type="button" value="Übersicht">
+                    </div>
+                    <div class="col-lg-4">
+                        <input class="col-lg-4" type="button" value="Highscoreliste">
+                    </div>
+                    <div class="col-lg-4">
+                        <input class="col-lg-4" type="button" value="Jetzt spielen!">
+                    </div>
+                </div>
+            <!-- </section> -->
+        </div>
     </body>
 
 </html>
