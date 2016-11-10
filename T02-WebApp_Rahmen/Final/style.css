@@ -205,7 +205,8 @@ body {
     .wa_footer {
         /* Footer Design*/
         width: 100%;
-        position: relative background-color: rgba(0, 0, 0, 1);
+        position: relative;
+        background-color: rgba(0, 0, 0, 1);
         line-height: 80px;
     }
     .wa_copyright {
