@@ -1903,5 +1903,640 @@
             ]
          }
       ]
+   },
+   {
+      "quizID":"3",
+      "quizFragen":[
+         {
+            "frage":"Warum spielt mal Fußball mit Ball?",
+            "antworten":[
+               {
+                  "text":"Ist doch logo",
+                  "check":false
+               },
+               {
+                  "text":"omg was ne dumme Frage",
+                  "check":false
+               },
+               {
+                  "text":"halts maul",
+                  "check":true
+               },
+               {
+                  "text":"Weil Ball im Namen ist",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Wer bekommt die meisten Bälle ins Gesicht?",
+            "antworten":[
+               {
+                  "text":"Torwart",
+                  "check":false
+               },
+               {
+                  "text":"Der Trainer",
+                  "check":false
+               },
+               {
+                  "text":"HSV",
+                  "check":false
+               },
+               {
+                  "text":"Deine du weißt schon was",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage":"Warum ist der Himmel blau?",
+            "antworten":[
+               {
+                  "text":"Weil der Ball Rund ist",
+                  "check":false
+               },
+               {
+                  "text":"1.FC Köln",
+                  "check":true
+               },
+               {
+                  "text":"Milch",
+                  "check":false
+               },
+               {
+                  "text":"Gras",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Warum ist Gras krass?",
+            "antworten":[
+               {
+                  "text":"Es kennt keinen Hass",
+                  "check":true
+               },
+               {
+                  "text":"Es ist nicht blass",
+                  "check":false
+               },
+               {
+                  "text":"Es wird nass",
+                  "check":false
+               },
+               {
+                  "text":"Weil Fass",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Was geht ab?",
+            "antworten":[
+               {
+                  "text":"Dönerkebab",
+                  "check":false
+               },
+               {
+                  "text":"Pap­per­la­papp",
+                  "check":false
+               },
+               {
+                  "text":"Gib mir dein Bein",
+                  "check":false
+               },
+               {
+                  "text":"Nichts",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage":"Wer kennt schon alle Fußball-Fachwörter?",
+            "antworten":[
+               {
+                  "text":"Ich",
+                  "check":false
+               },
+               {
+                  "text":"Du",
+                  "check":false
+               },
+               {
+                  "text":"Fußball",
+                  "check":true
+               },
+               {
+                  "text":"Götze",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Diese Fragen sind komisch?",
+            "antworten":[
+               {
+                  "text":"Das ist keine Frage",
+                  "check":false
+               },
+               {
+                  "text":"Kann sein",
+                  "check":false
+               },
+               {
+                  "text":"Die sind Strange",
+                  "check":true
+               },
+               {
+                  "text":"Ja",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Fuß...",
+            "antworten":[
+               {
+                  "text":"massage",
+                  "check":false
+               },
+               {
+                  "text":"pilz",
+                  "check":false
+               },
+               {
+                  "text":"fetisch",
+                  "check":false
+               },
+               {
+                  "text":"ball",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage":"Brauchst du hilfe?",
+            "antworten":[
+               {
+                  "text":"Ein wenig",
+                  "check":true
+               },
+               {
+                  "text":"Pepe braucht hilfe",
+                  "check":false
+               },
+               {
+                  "text":"Nö",
+                  "check":false
+               },
+               {
+                  "text":"Jein",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Was ist Rund und ist kein Ball?",
+            "antworten":[
+               {
+                  "text":"Ein Ei",
+                  "check":false
+               },
+               {
+                  "text":"Nichts",
+                  "check":false
+               },
+               {
+                  "text":"Keine Ahnung",
+                  "check":true
+               },
+               {
+                  "text":"Beifall",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Wie wird man Fußballer?",
+            "antworten":[
+               {
+                  "text":"Mit einem Ball",
+                  "check":true
+               },
+               {
+                  "text":"Mit Ehrgeiz",
+                  "check":false
+               },
+               {
+                  "text":"Mit Füßen statt Händen",
+                  "check":false
+               },
+               {
+                  "text":"Einfach so",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Wer ist der meister des Balls?",
+            "antworten":[
+               {
+                  "text":"Der Ball selber",
+                  "check":false
+               },
+               {
+                  "text":"Der Fuß",
+                  "check":true
+               },
+               {
+                  "text":"Gott",
+                  "check":false
+               },
+               {
+                  "text":"Midi-Chlorianer",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Wer wurde 2.?",
+            "antworten":[
+               {
+                  "text":"Der 2.",
+                  "check":false
+               },
+               {
+                  "text":"Der 3. von vorgestern",
+                  "check":false
+               },
+               {
+                  "text":"Jemand",
+                  "check":true
+               },
+               {
+                  "text":"Niemand",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Welche Frage hättest du gerne in diesem Quiz?",
+            "antworten":[
+               {
+                  "text":"Ich hasse dein Quiz!",
+                  "check":true
+               },
+               {
+                  "text":"Du stinkst",
+                  "check":false
+               },
+               {
+                  "text":"Keine",
+                  "check":false
+               },
+               {
+                  "text":"Wer war der Trainer von Bayern diese Saison 2015/16?",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Was ist der beste Platz?",
+            "antworten":[
+               {
+                  "text":"1.",
+                  "check":true
+               },
+               {
+                  "text":"5.",
+                  "check":false
+               },
+               {
+                  "text":"10.",
+                  "check":false
+               },
+               {
+                  "text":"6889.",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Wer ist der König?",
+            "antworten":[
+               {
+                  "text":"Was hat das mit Fußball zu tun",
+                  "check":false
+               },
+               {
+                  "text":"Was für ein König",
+                  "check":false
+               },
+               {
+                  "text":"Julien",
+                  "check":true
+               },
+               {
+                  "text":"Kingpin",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Wie viele dumme Fragen kann man sich ausdenken?",
+            "antworten":[
+               {
+                  "text":"20",
+                  "check":false
+               },
+               {
+                  "text":"10",
+                  "check":false
+               },
+               {
+                  "text":"30",
+                  "check":true
+               },
+               {
+                  "text":"40",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Fußball",
+            "antworten":[
+               {
+                  "text":"Was wird getreten?",
+                  "check":false
+               },
+               {
+                  "text":"Was fliegt wie ein Ball?",
+                  "check":false
+               },
+               {
+                  "text":"Was ist ein Fußball?",
+                  "check":true
+               },
+               {
+                  "text":"Was ist Rund?",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Lel?",
+            "antworten":[
+               {
+                  "text":"lul",
+                  "check":true
+               },
+               {
+                  "text":"kek",
+                  "check":false
+               },
+               {
+                  "text":"lmao",
+                  "check":false
+               },
+               {
+                  "text":"rofl",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Wie ist das Wetter heute?",
+            "antworten":[
+               {
+                  "text":"Schlecht",
+                  "check":false
+               },
+               {
+                  "text":"Sehr schlecht",
+                  "check":false
+               },
+               {
+                  "text":"Ausserordentlich schlecht",
+                  "check":true
+               },
+               {
+                  "text":"geht so",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Hat dieses Quiz was mit Fußball zu tun?",
+            "antworten":[
+               {
+                  "text":"nein",
+                  "check":false
+               },
+               {
+                  "text":"nicht wirklich",
+                  "check":true
+               },
+               {
+                  "text":"nur zu 1% (was nicht stimmen kann)",
+                  "check":false
+               },
+               {
+                  "text":"sehr wenig",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Das Fußballfeld ist wie ein ...",
+            "antworten":[
+               {
+                  "text":"Eimer",
+                  "check":false
+               },
+               {
+                  "text":"Becher",
+                  "check":false
+               },
+               {
+                  "text":"Tonne",
+                  "check":false
+               },
+               {
+                  "text":"Teller",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage":"Zuerst sehen dann ...",
+            "antworten":[
+               {
+                  "text":"treten",
+                  "check":true
+               },
+               {
+                  "text":"schlagen",
+                  "check":false
+               },
+               {
+                  "text":"liegen",
+                  "check":false
+               },
+               {
+                  "text":"essen",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Sag was",
+            "antworten":[
+               {
+                  "text":"was?",
+                  "check":false
+               },
+               {
+                  "text":"was?!",
+                  "check":false
+               },
+               {
+                  "text":"was!",
+                  "check":true
+               },
+               {
+                  "text":"was!!",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Wer soll mal absteigen?",
+            "antworten":[
+               {
+                  "text":"FC Bayern München",
+                  "check":false
+               },
+               {
+                  "text":"VfB Stuttgart",
+                  "check":false
+               },
+               {
+                  "text":"SV Werder Bremen",
+                  "check":false
+               },
+               {
+                  "text":"Hamburger SV",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage":"Welcher Ball bringt den Sieg?",
+            "antworten":[
+               {
+                  "text":"Der Fußball",
+                  "check":false
+               },
+               {
+                  "text":"Der Siegball",
+                  "check":false
+               },
+               {
+                  "text":"Der Tennisball",
+                  "check":false
+               },
+               {
+                  "text":"Die Seemine",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage":"Wie viele Sechsecke hat ein Fußball?",
+            "antworten":[
+               {
+                  "text":"vielleicht 20",
+                  "check":false
+               },
+               {
+                  "text":"vielleicht 18",
+                  "check":false
+               },
+               {
+                  "text":"vielleicht 16",
+                  "check":true
+               },
+               {
+                  "text":"vielleicht 12",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Wie nennt man einen Ball auch?",
+            "antworten":[
+               {
+                  "text":"Ball",
+                  "check":false
+               },
+               {
+                  "text":"Fußball",
+                  "check":true
+               },
+               {
+                  "text":"B",
+                  "check":false
+               },
+               {
+                  "text":"Boing",
+                  "check":false
+               }
+            ]
+         },
+         {
+            "frage":"Wer wird das Quiz beim ersten spielen zu 100% richtig beantworten?",
+            "antworten":[
+               {
+                  "text":"Gerd Müller",
+                  "check":false
+               },
+               {
+                  "text":"Thomas Müller",
+                  "check":false
+               },
+               {
+                  "text":"Pele",
+                  "check":false
+               },
+               {
+                  "text":"Wahrscheinlich keiner",
+                  "check":true
+               }
+            ]
+         },
+         {
+            "frage":"Wer hat sich dieses Quiz ausgedacht?",
+            "antworten":[
+               {
+                  "text":"Ein Trottel",
+                  "check":false
+               },
+               {
+                  "text":"Ein Gorilla",
+                  "check":false
+               },
+               {
+                  "text":"Eine Giraffe",
+                  "check":true
+               },
+               {
+                  "text":"Bob",
+                  "check":false
+               }
+            ]
+         }
+      ]
    }
 ]
