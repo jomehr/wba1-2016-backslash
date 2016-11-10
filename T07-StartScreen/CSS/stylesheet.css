@@ -1,4 +1,4 @@
-
+/*  */
 .st_box {
 	margin-top: 10px;
 	margin: 0 auto;
@@ -9,34 +9,64 @@
     border-width:1px;
 }
 
-.st_left {
-	float: left;
-	margin-right: 30px;
-    margin-left:3px;
-	width:100%;
-	max-width: 570px;
+/*  */
+.st_left_col {
+	line-height:1.25;
+    padding-left:0px;
 }
 
+.st_right_col{
+    padding-right:0px;
+}
+
+/*  */
 .st_right1 {
     text-align:right;
     align-content:right;
+    margin-top:35px;
 }
 
+/*  */
 .st_right2{
-    
+    margin-top:20px;
+    line-height:1.2;
 }
 
+.container{
+    border-style:ridge;
+    border-color:lightgrey;
+    border-width:1px;
+    padding-bottom:20px;
+    padding-left:15px;
+    padding-right:15px;
+    background:white;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+/*  */
 @media (min-width: 1024px) {
   .st_right2 {
     text-align:right;
     align-content:right;
+    margin-top:0px;
+    margin-bottom:10px;
   }
 }
 
-.st_rightdown{
-    margin-bottom:45px;
+@media (min-width: 1024px) {
+  .st_right1 {
+      margin-top:20px;
+      margin-bottom:10px;
+  }
 }
 
+/*  */
+.st_rightdown{
+    margin-bottom:20px;
+}
+
+/*  */
 .st_erg {
 	overflow: hidden;
     margin-top:20px;
@@ -44,22 +74,40 @@
     margin-right:3px;
 }
 
+/*  */
 .st_box .st_box_content {
 	padding: 20px;
     margin-left:15px;
 }
-
+/*  */
 .st_botBox {
     margin: 0 auto;
 }
 
-.st_buttons input {
+body {
+    background-image:url(../../T10-Asset/Bilder/Header/Headerimage-schraeg.png);
+    background-size:cover;
+    background-position:50% 50%;
+    display:block;
+    background-repeat:no-repeat;
+}
+
+/*  */
+/* .st_buttons input {
+    width:100%;
+    margin-right: 15px;
+	margin-bottom: 10px;
+    margin-top: 15px;
+} */
+
+.btn{
     width:100%;
     margin-right: 15px;
 	margin-bottom: 10px;
     margin-top: 15px;
 }
 
+/* font and size for the headlines */
 h1, h2, h3 {
   font-family: "Oswald", sans-serif;
   margin-bottom: 0px;
