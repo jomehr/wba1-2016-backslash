@@ -119,6 +119,7 @@ function getHighscorePositions(quizID, user, punkte){
             var i = 0;
             
             while(done){
+            if(i<hs.highscore.length){
                 if(hs.highscore[i].punktzahl <= punkte){
                     
                     if(hs.highscore[i].position == 1){
@@ -136,16 +137,31 @@ function getHighscorePositions(quizID, user, punkte){
                                                                   punktzahl: hs.highscore[i+j].punktzahl});}
                     }
                     
-                    else{
+                    else if(hs.highscore[i].position < hs.highscore.length){
                         for(var j=0;j<2;j++){highscoreArray.push(hs.highscore[i-2+j]);}
                         highscoreArray.push({position: i+1, name: user, punktzahl: punkte});
                         for(var j=0;j<2;j++){highscoreArray.push({position: parseInt(hs.highscore[i+j].position)+1,
                                                                   name: hs.highscore[i+j].name,
                                                                   punktzahl: hs.highscore[i+j].punktzahl});}
                     }
-                    var jsonOut = highscoreArray;
-                    done = false;
+                
+                    else if(hs.highscore[i].position == hs.highscore.length){
+                        for(var j=0;j<3;j++){highscoreArray.push(hs.highscore[i-3+j]);}
+                        highscoreArray.push({position: i+1, name: user, punktzahl: punkte});
+                        highscoreArray.push({position: parseInt(hs.highscore[i].position)+1,
+                                             name: hs.highscore[i].name,
+                                             punktzahl: hs.highscore[i].punktzahl});
+                    }                    
+                var jsonOut = ({highscore: highscoreArray});
+                done = false;
                 }
+            }
+            else{
+                for(var j=0;j<4;j++){highscoreArray.push(hs.highscore[i-4+j]);}
+                highscoreArray.push({position: i+1, name: user, punktzahl: punkte});
+                var jsonOut = ({highscore: highscoreArray});
+                done = false;
+            }
                 i++;
             }
             
