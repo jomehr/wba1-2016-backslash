@@ -1,0 +1,58 @@
+
+.st_box {
+	margin-top: 10px;
+	margin: 0 auto;
+	max-width: 1000px;
+	min-width: 400px;
+    border-color:#929292;
+    border-style:ridge;
+    border-width:1px;
+}
+
+.st_left {
+	float: left;
+	margin-right: 30px;
+	width:100%;
+	max-width: 570px;
+}
+
+.st_right {
+    margin-top:10px;
+    float: right;
+    margin-right:15px;
+}
+
+.st_middle{
+    margin-top:0px;
+    margin-right:35px;
+    float:right;
+}
+
+.st_erg {
+	overflow: hidden;
+}
+
+.st_box .st_box_content {
+	padding: 20px;
+    margin-left:15px;
+}
+
+.st_botBox {
+    float:left;
+}
+
+.st_buttons input {
+	width: 295px;
+    margin-right: 15px;
+	margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+h1, h2, h3 {
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top:16px;
+  padding-bottom:16px;
+  padding-left:8px;
+}
