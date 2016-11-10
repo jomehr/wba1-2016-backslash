@@ -154,7 +154,7 @@ p {
 	text-align: center;
 }
 
-.qr-answer_icon {
+    .qr-answer_icon {
 	width: 20px;
 	height: 20px;
 	display: inline-block;
@@ -162,11 +162,49 @@ p {
 	border-radius: 25px;
 }
 
-.qr-answer_icon_last {
+    .qr-answer_icon_last {
 	width: 20px;
 	height: 20px;
 	display: inline-block;
 	border-radius: 25px;
+    }
+}
+
+/*Dritter Breakpoint - Feedbacck-Icons werden verkleinert, Schrift wird verkleinert*/
+@media screen and (max-width: 414px){
+    .qr-answer_icons {
+	width: auto;
+	height: 16px;
+	margin: 0 auto;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	text-align: center;
+}
+
+    .qr-answer_icon {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	margin-right: 5px;
+	border-radius: 25px;
+}
+
+    .qr-answer_icon_last {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	border-radius: 25px;
+    }
+    
+    .qr-answers button .qr-long {
+	font-size: 11px;
+	width: calc(100% - 50px);
+    line-height: 2.8;
+    }
+    
+    .qr-button1 button {
+	display: table-cell;
+    width: 200px;
     }
 }
 
