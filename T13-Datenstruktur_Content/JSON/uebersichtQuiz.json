@@ -23,7 +23,7 @@
       "autor":"Peter Heine",
       "datum":"15.05.2016",
       "spielzahl":"5003",
-      "bild":"/URL",
+      "bild":"https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Stadion8-Klein.jpg",
       "text":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
    },
    {
@@ -32,16 +32,16 @@
       "autor":"NilsBohn",
       "datum":"08.08.2016",
       "spielzahl":"20001",
-      "bild":"/URL",
+      "bild":"https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Fankurve-Klein.jpg",
       "text":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
    },
    {
       "quizID":"4",
-      "titel":"Platzhalter Titel",
-      "autor":"Platzhalter Autor",
-      "datum":"01.01.2001",
+      "titel":"Das ultimative Jokequiz",
+      "autor":"Michel",
+      "datum":"10.11.2016",
       "spielzahl":"100",
-      "bild":"/URL",
+      "bild":"https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Spiel1-Klein.jpg",
       "text":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
    },
    {
@@ -50,7 +50,7 @@
       "autor":"Platzhalter Autor",
       "datum":"01.01.2001",
       "spielzahl":"100",
-      "bild":"/URL",
+      "bild":"https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Fan-NurKlein.jpg",
       "text":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
    },
    {
@@ -59,7 +59,7 @@
       "autor":"Platzhalter Autor",
       "datum":"01.01.2001",
       "spielzahl":"100",
-      "bild":"/URL",
+      "bild":"https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/BallM-NurKlein.jpg",
       "text":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
    },
    {
@@ -68,7 +68,7 @@
       "autor":"Platzhalter Autor",
       "datum":"01.01.2001",
       "spielzahl":"100",
-      "bild":"/URL",
+      "bild":"https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Gras-Klein.jpg",
       "text":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
    }
 ]
