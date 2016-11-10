@@ -131,7 +131,13 @@ p {
 	width: calc(100% - 50px);
     line-height: 1.7;
     }
+    
+     .answers button:hover {
+	background-color: #f8f5e4;
+    }
 }
+
+
 
 @media screen and (max-width: 538px){
     .answer_icons {
@@ -156,7 +162,7 @@ p {
 	height: 20px;
 	display: inline-block;
 	border-radius: 25px;
-}
+    }
 }
 
     
