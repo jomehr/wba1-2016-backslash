@@ -36,7 +36,7 @@ body {
 }
 
 .wa_header a {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   text-decoration: none;
   color: rgba(255, 255, 255, 1);
 }
@@ -64,10 +64,9 @@ body {
 
 #wa_Navigation2 {
   /*Durchsichtiger Hintergrund, also der Untere Teil des Footers */
-  margin-top: 20px;
   background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
-  margin-top: 0px;
+  margin-top: 0;
   height: 40px;
 }
 
@@ -87,7 +86,7 @@ body {
 }
 
 .wa_menue a {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   color: rgba(255, 255, 255, 1);
 }
 
@@ -102,7 +101,7 @@ body {
   color: white;
   padding: 10px;
   font-size: 20px;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
 }
 
 .wa_footer {
@@ -117,7 +116,7 @@ body {
 .wa_copyright {
   /* Copyright Text im Footer*/
   color: rgba(255, 255, 255, 1);
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   text-align: center;
   margin-top: 40px;
 }
@@ -177,7 +176,7 @@ body {
   }
   #text {
     padding-top: 1000px;
-    margin-left: 0px;
+    margin-left: 0;
   }
   .wa_sidenav_mobil a:hover {
     color: white;
@@ -195,7 +194,7 @@ body {
   .wa_copyright {
     /* Copyright Text im Footer*/
     color: rgba(255, 255, 255, 1);
-    font-family: Oswald;
+    font-family: Oswald, sans-serif;
     text-align: center;
     margin-top: 40px;
 
