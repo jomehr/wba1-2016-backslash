@@ -1,56 +1,57 @@
-.row {
-	margin-left: 0px;
-	margin-right: 0px;
+.row.qr-no-margin {
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .qr-content {
-	width: 90%;
-	margin: 0 auto;
-	margin-top: 30px;
-	border: #929292 solid;
-	border-width: 0px 1px 1px 1px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    border: #929292 solid;
+    border-width: 0px 1px 1px 1px;
 }
 
 /*Background-Bild wird eingefügt*/
 body {
-	background-size: cover;
-	background-position: 50% 50%;
-	display: block;
-	background-image: url(Headerimage-schraeg.png);
-	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: block;
+    background-image: url(Headerimage-schraeg.png);
+    background-repeat: no-repeat;
 }
 
 .qr-head {
-	background-color: #e9c20c;
-	padding: 10px 0px 10px 10px;
+    background-color: #e9c20c;
+    padding: 10px 0px 10px 10px;
 }
 
 /*Schriftgröße sowie Art wird an Timer und Question übergeben*/
 p.qr-text {
-	font-size: 18px;
-	font-weight: bold;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .qr-timer {
-	text-align: center;
-	padding: 50px 0px 0px 0px;
-	font-size: 25px;
+    text-align: center;
+    padding: 50px 0px 0px 0px;
+    font-size: 25px;
 }
 
 .qr-question {
-	text-align: center;
-	padding: 50px 0px 20px 0px;
+    text-align: center;
+    padding: 50px 0px 20px 0px;
 }
 
 /*Padding für Abstand zu den inneren Elementen*/
 .qr-inner_box {
-	padding: 24px;
+    padding: 24px;
 }
+
 /*Flex-Ansicht um Schrift in der Antwort vertikal zu zentrieren*/
 .qr-answers button {
-	padding: 0px 0px 0px 0px;
-	height: 50px;
-	width: 100%;
+    padding: 0px 0px 0px 0px;
+    height: 50px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,156 +61,153 @@ p.qr-text {
     background-color: #f8f5e4;
 }
 
-.qr-answers button span  {
-	height: 100%;
-	float: left;
+.qr-answers button span {
+    height: 100%;
+    float: left;
     position: relative;
 }
 
 /*Design der Boxen mit den Answer-Keys*/
 .qr-answers button .qr-short {
-	width: 50px;
-	font-size: 30px;
+    width: 50px;
+    font-size: 30px;
     line-height: 1.7;
 }
 
 /*Design der Boxen mit den Antworten*/
 .qr-answers button .qr-long {
-	font-size: 18px;
-	width: calc(100% - 50px);
-    line-height: 2.8;
+    font-size: 18px;
+    width: calc(100% - 50px);
 }
 
 /*Schriftfarbe in Antwort wird übergeben, da durch Teamkürzel die vordifinierte Klasse überschrieben wird*/
 .qr-fg-black {
-	margin-bottom: 10px;
+    margin-bottom: 10px;
     color: black;
 }
 
 .qr-answer_icons {
-	width: auto;
-	height: 25px;
-	margin: 0 auto;
-	padding-top: 40px;
-	padding-bottom: 40px;
-	text-align: center;
+    width: auto;
+    height: 25px;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
 }
 
 .qr-answer_icon {
-	width: 25px;
-	height: 25px;
-	display: inline-block;
-	margin-right: 15px;
-	border-radius: 25px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin-right: 15px;
+    border-radius: 25px;
 }
 
 .qr-answer_icon_last {
-	width: 25px;
-	height: 25px;
-	display: inline-block;
-	border-radius: 25px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    border-radius: 25px;
 }
 
-.button {
-	display: table;
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 40px;
+.qr-button {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
 }
 
-.button button {
-	display: table-cell;
+.qr-button button {
+    display: table-cell;
     width: 300px;
 }
 
 /*Erster Breakpoint - Antwort-Boxen werden vergrößert*/
-@media screen and (max-width: 818px){
+@media screen and (max-width: 818px) {
     .qr-answers button {
-	height: 100px;
-	width: 100%;
-    }
-    
-    .qr-answers button .qr-short {
-	width: 50px;
-	font-size: 30px;
-    line-height: 3.3;
+        height: 100px;
+        width: 100%;
     }
 
+    .qr-answers button .qr-short {
+        width: 50px;
+        font-size: 30px;
+        line-height: 3.3;
+    }
 
     .qr-answers button .qr-long {
-	font-size: 18px;
-	width: calc(100% - 50px);
-    line-height: 1.7;
-    padding: 0px 10px 0px 10px;
+        font-size: 18px;
+        width: calc(100% - 50px);
+        line-height: 1.7;
+        padding: 0px 10px 0px 10px;
     }
-    
-     .qr-answers button:hover {
-	background-color: #f8f5e4;
+
+    .qr-answers button:hover {
+        background-color: #f8f5e4;
     }
 }
+
 /*Zweiter Breakpoint - Feedbacck-Icons werden verkleinert*/
-@media screen and (max-width: 538px){
+@media screen and (max-width: 538px) {
     .qr-answer_icons {
-	width: auto;
-	height: 20px;
-	margin: 0 auto;
-	padding-top: 40px;
-	padding-bottom: 40px;
-	text-align: center;
-}
+        width: auto;
+        height: 20px;
+        margin: 0 auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
 
     .qr-answer_icon {
-	width: 20px;
-	height: 20px;
-	display: inline-block;
-	margin-right: 10px;
-	border-radius: 25px;
-}
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        margin-right: 10px;
+        border-radius: 25px;
+    }
 
     .qr-answer_icon_last {
-	width: 20px;
-	height: 20px;
-	display: inline-block;
-	border-radius: 25px;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        border-radius: 25px;
     }
 }
 
 /*Dritter Breakpoint - Feedbacck-Icons werden verkleinert, Schrift wird verkleinert*/
-@media screen and (max-width: 414px){
+@media screen and (max-width: 414px) {
     .qr-answer_icons {
-	width: auto;
-	height: 16px;
-	margin: 0 auto;
-	padding-top: 40px;
-	padding-bottom: 40px;
-	text-align: center;
-}
+        width: auto;
+        height: 16px;
+        margin: 0 auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
 
     .qr-answer_icon {
-	width: 16px;
-	height: 16px;
-	display: inline-block;
-	margin-right: 5px;
-	border-radius: 25px;
-}
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        margin-right: 5px;
+        border-radius: 25px;
+    }
 
     .qr-answer_icon_last {
-	width: 16px;
-	height: 16px;
-	display: inline-block;
-	border-radius: 25px;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        border-radius: 25px;
     }
-    
+
     .qr-answers button .qr-long {
-	font-size: 11px;
-	width: calc(100% - 50px);
-    line-height: 2.8;
+        font-size: 11px;
+        width: calc(100% - 50px);
+        line-height: 2.8;
     }
-    
-    .button button {
-	display: table-cell;
-    width: 200px;
+
+    .qr-button button {
+        display: table-cell;
+        width: 200px;
     }
 }
-
-    
