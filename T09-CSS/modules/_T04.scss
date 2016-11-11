@@ -1,4 +1,4 @@
-.row.qr-no-margin {
+.qr-no-margin {
   margin-left: 0;
   margin-right: 0;
 }
@@ -10,20 +10,13 @@
   border-width: 0 1px 1px 1px;
 }
 
-/*Background-Bild wird eingefügt*/
-body {
-  background-size: cover;
-  display: block;
-  background: url(../assets/img/Headerimage-schraeg.png) no-repeat 50% 50%;
-}
-
 .qr-head {
   background-color: #e9c20c;
   padding: 10px 0 10px 10px;
 }
 
 /*Schriftgröße sowie Art wird an Timer und Question übergeben*/
-p.qr-text {
+.qr-text {
   font-size: 18px;
   font-weight: bold;
 }

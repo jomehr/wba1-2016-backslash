@@ -1,20 +1,10 @@
-.st_box {
-  margin-top: 10px;
-  margin: 0 auto;
-  max-width: 1000px;
-  min-width: 400px;
-  border-color: #929292;
-  border-style: ridge;
-  border-width: 1px;
-}
-
 .st_left_col {
   line-height: 1.25;
-  padding-left: 0px;
+  padding-left: 0;
 }
 
 .st_right_col {
-  padding-right: 0px;
+  padding-right: 0;
 }
 
 .st_right1 {
@@ -28,10 +18,8 @@
   line-height: 1.2;
 }
 
-.container {
-  border-style: ridge;
-  border-color: lightgrey;
-  border-width: 1px;
+.st_box {
+  border: 1px ridge lightgrey;
   padding-bottom: 20px;
   padding-left: 15px;
   padding-right: 15px;
@@ -44,7 +32,7 @@
   .st_right2 {
     text-align: right;
     align-content: right;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 10px;
   }
 }
@@ -67,38 +55,23 @@
   margin-right: 3px;
 }
 
-.st_box .st_box_content {
-  padding: 20px;
-  margin-left: 15px;
-}
-
 .st_botBox {
   margin: 0 auto;
 }
 
-/* problems with other styles */
-/*
-body {
-  background-image: url(../../T10-Asset/Bilder/Header/Headerimage-schraeg.png);
-  background-size: cover;
-  background-position: 50% 50%;
-  display: block;
-  background-repeat: no-repeat;
-}
-
-.btn {
+.st_buttons .btn {
   width: 100%;
   margin-right: 15px;
   margin-bottom: 10px;
   margin-top: 15px;
 }
 
-!* font and size for the headlines *!
-h1, h2, h3 {
+/* font and size for the headlines */
+.st_box h1 {
   font-family: "Oswald", sans-serif;
-  margin-bottom: 0px;
-  margin-top: 0px;
+  margin-bottom: 0;
+  margin-top: 0;
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 8px;
-}*/
+}

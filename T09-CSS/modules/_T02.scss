@@ -1,23 +1,3 @@
-html {
-  background-color: white;
-}
-
-body {
-  /*Grundsätzlich erstmal auf 100%*/
-  width: 100%;
-  height: 100%;
-
-}
-
-.background {
-  position: absolute;
-  top: 64px;
-  width: 100%;
-  height: 500px;
-  background-size: cover;
-  background: url(assets/img/background.png) no-repeat bottom;
-}
-
 .wa_header_mobil {
   display: none;
 }
