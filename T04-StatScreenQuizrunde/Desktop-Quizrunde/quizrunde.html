@@ -9,9 +9,12 @@
         <!-- Einbinden der eigenen CSS -->
         <link rel="stylesheet" type="text/css" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Einbinden der CSS und JavaScript von Team 12-->
+		<link rel="stylesheet" href="../../T12_AnimationUebergaenge/final/animate.css">
+		<script type="text/javascript" src="../../T12_AnimationUebergaenge/final/scripts.js"></script>
     </head>
     
-    <body>
+    <body class="animated fadeInRightBig">
         <div class="container">
             <!-- Erstellung der Content-Box mit weißem Hintergrund -->
             <div class="qr-content bg-white">
@@ -47,7 +50,7 @@
                     A
                     </span>
                     <!-- große Box mit Antwort wird erstellt -->
-                    <span class="qr-long bg-lightgrey">
+                    <span class="qr-long bg-lightgrey" id="wrongAnswer1" onclick="changeAnswerButtonColor('wrongAnswer1')">
                     "Das interessiert mich jetzt wie eine geplatzte Currywust im ostfriesischen Wattenmeer."
                      </span>
                 </button>
@@ -56,7 +59,7 @@
                     <span class="qr-short bg-yellow">
                         B
                     </span>
-                    <span class="qr-long bg-lightgrey">
+                    <span class="qr-long bg-lightgrey" id="wrongAnswer2" onclick="changeAnswerButtonColor('wrongAnswer2')">
                         "Wir dürfen jetzt nicht den Sand in den Kopf stecken."
                     </span>
                 </button>
@@ -65,7 +68,7 @@
                     <span class="qr-short bg-yellow">
                         C
                     </span>
-                    <span class="qr-long bg-lightgrey">
+                    <span class="qr-long bg-lightgrey" id="wrongAnswer3" onclick="changeAnswerButtonColor('wrongAnswer3')">
                         "Wenn meine Oma ein Bus wäre, dann könnte sie hupen."
                     </span>
                 </button>
@@ -74,7 +77,7 @@
                     <span class="qr-short bg-yellow">
                         D
                     </span>
-                    <span class="qr-long bg-lightgrey">
+                    <span class="qr-long bg-lightgrey" id="rightAnswer" onclick="changeAnswerButtonColor('rightAnswer')">
                         "Moin moin, Gascoigne."
                     </span>
                 </button>

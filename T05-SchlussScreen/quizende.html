@@ -8,9 +8,11 @@
 		<link rel="stylesheet" href="css/style.css"/>
 		<script type="text/javascript" src="js/slider.js"></script>
 		<!-- Zoom für mobile Geräte  -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">	
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Animationen  -->
+		<link rel="stylesheet" href="../T12_AnimationUebergaenge/final/animate.css">		
 	</head>
-	<body style="background: lightgrey; max-width: 1000px; margin: 0 auto;">
+	<body style="background: lightgrey; max-width: 1000px; margin: 0 auto;" class="animated fadeInDownBig">
 		<!-- allgemeine Box-->
 		<div class="ss_box">
 			<header class="bg-yellow">
@@ -32,15 +34,15 @@
 							<!-- Wird automatisch gefüllt sobald die Breite weniger als 992px. Siehe script.js funktion moveScoreText()  -->
 							<p class="ss_mobile_answer_txt"></p>
 							<!--  Richtig beantwortete Fragen (Punkte rot/grün)  -->
-							<div class="ss_score_points">
-								<div class="ss_score_point bg-red"></div>
+							<div class="ss_score_points animated slideInLeft">
+								<div class="ss_score_point bg-red animated flash"></div>
 								<div class="ss_score_point bg-green"></div>
 								<div class="ss_score_point bg-green"></div>
-								<div class="ss_score_point bg-red"></div>
+								<div class="ss_score_point bg-red animated flash"></div>
 								<div class="ss_score_point bg-green"></div>
 								<div class="ss_score_point bg-green"></div>
-								<div class="ss_score_point bg-red"></div>
-								<div class="ss_score_point bg-red"></div>
+								<div class="ss_score_point bg-red animated flash"></div>
+								<div class="ss_score_point bg-red animated flash"></div>
 								<div class="ss_score_point bg-green"></div>
 								<div class="ss_score_point bg-green"></div>
 							</div>
