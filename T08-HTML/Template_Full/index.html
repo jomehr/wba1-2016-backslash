@@ -274,10 +274,9 @@ $(function(){
     function viewSite() {
         switch(sessionobject.view) {
         case "1":
-            console.log("1");
+            quizinfo();
             break;
         case "2":
-            quizinfo();
             break;
         case "3":
             quizend();
@@ -286,7 +285,7 @@ $(function(){
             console.log("4");
             break;
         default:
-            console.log("default");
+            alert("Bitte sessionStorage.setItem('view','id') in die Console eingeben. \n id info : 0 = default \n 1 = quizinfo \n 2 = quiz(undefined) \n 3 = quizend \n 4 = highscore(undefined)");
             break;
         }
     }
