@@ -3,6 +3,7 @@
 <head>
     <title>Schlussscreen</title>
     <link rel="stylesheet" href="../../T09-CSS/style.build.css">
+    <link rel="stylesheet" href="./css/t07_stylesheet.css">
     <link rel="stylesheet" href="./css/flickity.css" media="screen">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -73,110 +74,160 @@
 <script src="js/flickity.pkgd.min.js"></script>
 <script src="https://rawgit.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/API/BS_API.js"></script>
 
+<!-- Quizinfo Template-->
+<script id="quizinfo-template" type="text/x-handlebars-template">
+    <!-- body with title, information text, username -->
+        {{#quizinfo}}
+        <div class="container">
+            <!-- <section class="st_box bg-white"> -->
+                <div class="row bg-yellow" id="header">
+                    <div class="col-xs-12">
+                        <h1>{{titel}}</h1>
+                    </div>
+                </div>
+                <div class="row" id="pic">
+                    <img src="{{bild}}" alt="teaserbild" style="width:100%;">
+                </div>
+                <div class="row st_erg st_box_content">
+                    <div class="st_left_col col-lg-8 col-xs-12">
+                        <p>{{text}}</p>
+                    </div>
+                    <div class="st_right_col col-lg-4 col-xs-12">
+                        <div class="row">
+                            <div class="font-bold st_right2 st_rightdown col-xs-6 col-lg-12">
+                                <p>{{datum}}</p>
+                                <p>{{autor}}</p>
+                            </div>
+                            <div class="st_right1 col-xs-6 col-lg-12">
+                                <p><strong>{{spielzahl}}</strong> mal gespielt</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- buttons  -->
+                <div class="row st_buttons">
+                    <div class="col-lg-4">
+                        <a class="btn col-lg-4" href="">Übersicht</a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a class="btn col-lg-4" href="">Highscoreliste</a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a class="btn col-lg-4" href="">Jetzt spielen!</a>
+                    </div>
+                </div>
+                {{/quizinfo}}
+            <!-- </section> -->
+        </div>
+</script>
+
 <!-- Quizend Template-->
 <script id="Quizend-template" type="text/x-handlebars-template">
 
-{{#datquiz}}
-<div class="ss_box">
-  <header class="bg-yellow">
-      <h1 id="JS_Titel">{{titel}}</h1>
-  </header>
-  <div class="ss_erg ss_box_content row">
-      <div class="ss_left col-md-8 col-xs-12">
-          <h2 style="margin-top: 0px;">Dein Ergebnis</h2>
-          <div class="ss_score row">
-              <div class="ss_score_sp col-md-7 col-xs-12">
-                  <p class="ss_mobile_points_txt"></p>
-                  <div class="ss_score_balken bg-mediumgrey">
-                      <div class="ss_scale_score" id="JS_ScaleScore" style="width: 10%;">
-                      </div>
-                  </div>
-                  <p class="ss_mobile_answer_txt"></p>
-                  <div class="ss_score_points" id="JS_Score">
-                  </div>
-              </div>
+  {{#datquiz}}
+  <div class="ss_box">
+    <header class="bg-yellow">
+        <h1 id="JS_Titel">{{titel}}</h1>
+    </header>
+    <div class="ss_erg ss_box_content row">
+        <div class="ss_left col-md-8 col-xs-12">
+            <h2 style="margin-top: 0px;">Dein Ergebnis</h2>
+            <div class="ss_score row">
+                <div class="ss_score_sp col-md-7 col-xs-12">
+                    <p class="ss_mobile_points_txt"></p>
+                    <div class="ss_score_balken bg-mediumgrey">
+                        <div class="ss_scale_score" id="JS_ScaleScore" style="width: 10%;">
+                        </div>
+                    </div>
+                    <p class="ss_mobile_answer_txt"></p>
+                    <div class="ss_score_points" id="JS_Score">
+                    </div>
+                </div>
 
-              <div class="ss_score_txt col-md-5">
-                  <p id=JS_punkte>{{points}} von {{maxpoints}}</p>
-                  <p id=JS_richtig>{{countright}} von {{countquestions}}</p>
-              </div>
-          </div>
-          <p>Ich will mehr zu diesem Thema wissen</p>
-          <div class="ss_scoreboard">
-              <p>Neue Position</p>
-                  <table class="font-bold table">
-                      {{#each highscore}}
-                      <tr>
-                          <td>{{this.position}}</td>
-                          <td>{{this.name}}</td>
-                          <td>{{this.punktzahl}} Punkte</td>
-                      </tr>
-                      {{/each}}
-                  </table>
+                <div class="ss_score_txt col-md-5">
+                    <p id=JS_punkte>{{points}} von {{maxpoints}}</p>
+                    <p id=JS_richtig>{{countright}} von {{countquestions}}</p>
+                </div>
+            </div>
+            <p>Ich will mehr zu diesem Thema wissen</p>
+            <div class="ss_scoreboard">
+                <p>Neue Position</p>
+                    <table class="font-bold table">
+                        {{#each highscore}}
+                        <tr>
+                            <td>{{this.position}}</td>
+                            <td>{{this.name}}</td>
+                            <td>{{this.punktzahl}} Punkte</td>
+                        </tr>
+                        {{/each}}
+                    </table>
 
-          </div>
-      </div>
-      <div class="ss_right col-md-4 col-xs-12">
-          <figure>
-              <img src="{{bild}}" alt="Fan1.jpg" class="img-responsive" id="{{bild}}"/>
-              <figcaption>
-
-                  <p id="JS_Text">{{text}}</p>
-                {{/datquiz}}
-              </figcaption>
-          </figure>
-      </div>
-  </div>
-
-
-  <div class="ss_buttons ss_box_content row">
-				<div class="col-sm-4">
-					<a class="btn" href="">Übersicht</a>
-				</div>
-				<div class="col-sm-4">
-					<a class="btn" href="">Highscoreliste</a>
-				</div>
-				<div class="col-sm-4">
-					<a class="btn" href="">Jetzt spielen!</a>
-				</div>
-			</div>
-</div>
-<!--  allgemeine mit Inhalt des Sliders  -->
-
-<div class="ss_box">
-<h2 style="text-align: center; padding-top: 24px;">Das könnte dir auch gefallen</h2>
-
-<!--  Sliderelement  -->
-<div class="main-gallery">
-{{#each quizes}}
-  <div class="gallery-cell">
-    <div class="ss_slider_content row">
-        <!--  linke Seite vom Slider  -->
-        <div class="col-md-4">
-            <h2 id="JS_SliderTitel">{{this.titel}}</h2>
-            <img class="img-responsive" src={{this.bild}} alt="Stadion10.jpg" id="JS_SliderBild"/>
-        </div>
-        <!--  Mitte vom Slider  -->
-        <div class="col-md-6 ss_slider_text">
-            <p id="JS_SliderText">{{this.text}}</p>
-            <div class="ss_slider_author font-bold" id="JS_SliderDU">
-                {{this.datum}}<br/>
-                {{this.autor}}
             </div>
         </div>
-        <!--  rechte Seite vom Slider  -->
-        <div class="col-md-2 ss_slider_right">
-            <p><span class="font-bold" id="JS_SliderPlayed">{{this.spielzahl}}</span> mal gespielt</p>
-            <div class="ss_slider_points fg-white bg-darkgrey font-bold">8 / 10 Punkten</div>
-            <a class="btn" href="">Jetzt spielen!</a>
+        <div class="ss_right col-md-4 col-xs-12">
+            <figure>
+                <img src="{{bild}}" alt="Fan1.jpg" class="img-responsive" id="{{bild}}"/>
+                <figcaption>
+
+                    <p id="JS_Text">{{text}}</p>
+                  {{/datquiz}}
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+
+    <div class="ss_buttons ss_box_content row">
+  				<div class="col-sm-4">
+  					<a class="btn" href="">Übersicht</a>
+  				</div>
+  				<div class="col-sm-4">
+  					<a class="btn" href="">Highscoreliste</a>
+  				</div>
+  				<div class="col-sm-4">
+  					<a class="btn" href="">Jetzt spielen!</a>
+  				</div>
+  			</div>
+  </div>
+
+  <!--  allgemeine mit Inhalt des Sliders  -->
+  <div class="ss_box">
+  <h2 style="text-align: center; padding-top: 24px;">Das könnte dir auch gefallen</h2>
+
+  <!--  Sliderelement  -->
+  <div class="main-gallery">
+  {{#each quizes}}
+    <div class="gallery-cell">
+      <div class="ss_slider_content row">
+          <!--  linke Seite vom Slider  -->
+          <div class="col-md-4">
+              <h2 id="JS_SliderTitel">{{this.titel}}</h2>
+              <img class="img-responsive" src={{this.bild}} alt="Stadion10.jpg" id="JS_SliderBild"/>
+          </div>
+          <!--  Mitte vom Slider  -->
+          <div class="col-md-6 ss_slider_text">
+              <p id="JS_SliderText">{{this.text}}</p>
+              <div class="ss_slider_author font-bold" id="JS_SliderDU">
+                  {{this.datum}}<br/>
+                  {{this.autor}}
+              </div>
+          </div>
+          <!--  rechte Seite vom Slider  -->
+          <div class="col-md-2 ss_slider_right">
+              <p><span class="font-bold" id="JS_SliderPlayed">{{this.spielzahl}}</span> mal gespielt</p>
+              <div class="ss_slider_points fg-white bg-darkgrey font-bold">8 / 10 Punkten</div>
+              <a class="btn" href="">Jetzt spielen!</a>
+          </div>
         </div>
       </div>
-    </div>
-{{/each}}
-</div>
-</div>
+  {{/each}}
+  </div>
+  </div>
 
 </script>
+
 
 
 <!--
@@ -186,7 +237,6 @@ Highscore fill Funktion & Quiz Info
 $(function(){
 
     var Quizobject = {};
-    console.log(Quizobject);
     //Userdaten rand generieren solange keine bestehen!!!
     var rand1 = Math.random(); //Punkte
     var rand2 = 1000; //maxPunkte
@@ -207,89 +257,134 @@ $(function(){
       "countright":sessionStorage.getItem('correctanswers'),
       "countquestions":sessionStorage.getItem('amountquestions'),
       "quizID" : sessionStorage.getItem('quizid'),
-      "username" : sessionStorage.getItem('username')
+      "username" : sessionStorage.getItem('username'),
+      "view" : sessionStorage.getItem('view')
     };
+    if (sessionobject.view === undefined) {
+      sessionobject.view = 0;
+    }
+    console.log(sessionobject.view);
 
-    getQuizViewByID(sessionobject.quizID);
-    $(document).on("onQuizViewByID", function (event, data) {
-        getHighscorePositions(sessionobject.quizID,sessionobject.username,sessionobject.points);
-        var quizInfo ={};
-        if (quizInfo.bild === "/URL") {
-            quizInfo.bild = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Stadion3-Klein.jpg";
+    // Switch view
+    // 0 default (startseite)
+    // 1 quizInfo
+    // 2 quiz
+    // 3 Quizend
+    // 4 Quiz Highscore
+    function viewSite() {
+        switch(sessionobject.view) {
+        case "1":
+            console.log("1");
+            break;
+        case "2":
+            quizinfo();
+            break;
+        case "3":
+            quizend();
+            break;
+        case "4":
+            console.log("4");
+            break;
+        default:
+            console.log("default");
+            break;
         }
-        Quizobject.datquiz=data;
-    });
+    }
+    function quizend(){
+      getQuizViewByID(sessionobject.quizID);
+      $(document).on("onQuizViewByID", function (event, data) {
+          getHighscorePositions(sessionobject.quizID,sessionobject.username,sessionobject.points);
+          var quizInfo ={};
+          if (quizInfo.bild === "/URL") {
+              quizInfo.bild = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Stadion3-Klein.jpg";
+          }
+          Quizobject.datquiz=data;
+      });
 
-    // HIGHSCORE info
+      // HIGHSCORE info
 
-    $(document).on("onHighscorePositions", function (event, data) {
-      getQuizView(7);
-      $.extend(Quizobject.datquiz,data);
-    });
+      $(document).on("onHighscorePositions", function (event, data) {
+        getQuizView(7);
+        $.extend(Quizobject.datquiz,data);
+      });
 
 
-    //Random Quiz Vorschlag
+      //Random Quiz Vorschlag
 
-    $(document).on("onQuizView", function (event, data) {
-        var nQuizObject = data; //copy object
-        var quizInfo = data;
-        var icount = 0;
-        var ARQused = [];
-        ARQused[0] = sessionobject.quizID;
-        var iRand = Math.random();
+      $(document).on("onQuizView", function (event, data) {
+          var nQuizObject = data; //copy object
+          var quizInfo = data;
+          var icount = 0;
+          var ARQused = [];
+          ARQused[0] = sessionobject.quizID;
+          var iRand = Math.random();
 
-        //RAND Quiz außer aufgerufene Quiz.
-        for (var i = 0; icount < 4; i++) {
-            var iRand = Math.round(Math.random() * ( quizInfo.length - 0 ));
-            if (iRand !== 0) {
-                iRand--;
-            }
-            while ((ARQused.indexOf("" + iRand) > -1)) {
-                iRand = Math.round(Math.random() * ( quizInfo.length - 0 ));
-                if (iRand !== 0) {
-                    iRand--;
-                }
-            }
+          //RAND Quiz außer aufgerufene Quiz.
+          for (var i = 0; icount < 4; i++) {
+              var iRand = Math.round(Math.random() * ( quizInfo.length - 0 ));
+              if (iRand !== 0) {
+                  iRand--;
+              }
+              while ((ARQused.indexOf("" + iRand) > -1)) {
+                  iRand = Math.round(Math.random() * ( quizInfo.length - 0 ));
+                  if (iRand !== 0) {
+                      iRand--;
+                  }
+              }
 
-            if (quizInfo[iRand].quizID !== sessionobject.quizID) { // <- Abfrage ob QuizID == Random ID ist wenn true neu generieren
-                icount++;
-                ARQused[icount] = quizInfo[iRand].quizID;
-                nQuizObject[icount-1] = quizInfo[iRand];
-                if (quizInfo[iRand].bild === "/URL") {
-                    quizInfo[iRand].bild = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Stadion3-Klein.jpg";
-                }
-            }
-        }
+              if (quizInfo[iRand].quizID !== sessionobject.quizID) { // <- Abfrage ob QuizID == Random ID ist wenn true neu generieren
+                  icount++;
+                  ARQused[icount] = quizInfo[iRand].quizID;
+                  nQuizObject[icount-1] = quizInfo[iRand];
+                  if (quizInfo[iRand].bild === "/URL") {
+                      quizInfo[iRand].bild = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Stadion3-Klein.jpg";
+                  }
+              }
+          }
 
-        Quizobject.quizes = nQuizObject;
-        Quizobject.quizes=Quizobject.quizes.slice(0,4);
-        $.extend(Quizobject.datquiz,sessionobject);
+          Quizobject.quizes = nQuizObject;
+          Quizobject.quizes=Quizobject.quizes.slice(0,4);
+          $.extend(Quizobject.datquiz,sessionobject);
 
-        var source = $("#Quizend-template").html();
+          var source = $("#Quizend-template").html();
+          var template = Handlebars.compile(source);
+          $('#templatespaceholder_handlebars').append(template(Quizobject));
+          //Aktualisieren der richtig Falsch antworten & Scalebar füllen
+
+          var percent = Math.round((sessionobject.points / sessionobject.maxpoints) * 100);
+          document.getElementById("JS_ScaleScore").style.width = percent + "%";
+          //Red/Green Icons füllen
+          item = document.getElementById('JS_Score');
+          var redicon = '<div class="ss_score_point bg-red" ></div>';
+          var greenicon = '<div class="ss_score_point bg-green" ></div>';
+          var length = sessionobject.countquestions;
+          for (var i = 0; i < length; i++) {
+              var random = Math.random();
+              if (random >= 0.5) {
+                  item.innerHTML += redicon;
+              } else {
+                  item.innerHTML += greenicon;
+              }
+          }
+          $('.main-gallery').flickity({
+            cellAlign: 'left',
+            contain: true
+          });
+      });
+    }
+
+    function quizinfo(){
+      getQuizViewByID(sessionobject.quizID);
+      $(document).on("onQuizViewByID", function (event, data) {
+        Quizobject.quizinfo=data;
+        Quizobject.sessionobject=sessionobject;
+        var source = $("#quizinfo-template").html();
         var template = Handlebars.compile(source);
         $('#templatespaceholder_handlebars').append(template(Quizobject));
-        //Aktualisieren der richtig Falsch antworten & Scalebar füllen
-
-        var percent = Math.round((sessionobject.points / sessionobject.maxpoints) * 100);
-        document.getElementById("JS_ScaleScore").style.width = percent + "%";
-        //Red/Green Icons füllen
-        item = document.getElementById('JS_Score');
-        var redicon = '<div class="ss_score_point bg-red" ></div>';
-        var greenicon = '<div class="ss_score_point bg-green" ></div>';
-        var length = sessionobject.countquestions;
-        for (var i = 0; i < length; i++) {
-            var random = Math.random();
-            if (random >= 0.5) {
-                item.innerHTML += redicon;
-            } else {
-                item.innerHTML += greenicon;
-            }
-        }
-        $('.main-gallery').flickity({
-          cellAlign: 'left',
-          contain: true
-        });
-    });
+      });
+    }
+    viewSite();
+    console.log(Quizobject);
   });
 </script>
 </body>
