@@ -25,7 +25,7 @@
 }
 
 .ss_score {
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .ss_score_balken {
@@ -68,16 +68,20 @@
 .ss_scoreboard table tr:nth-child(odd) {
   background: #f8f5e4;
 
-}.ss_scoreboard table tr.ss_sb_user {
-   background-color: #929292;
- }
+}
+
+.ss_scoreboard table tr.ss_sb_user {
+  background-color: #929292;
+}
 
 .ss_scoreboard table tr td {
   padding: 5px;
 }
+
 .ss_scoreboard table tr td:nth-child(3) {
   text-align: right;
 }
+
 .ss_scoreboard table tr td:nth-child(3) span {
   margin-right: 15px;
 }
@@ -89,7 +93,6 @@
 
 .ss_slider_content {
   padding: 24px;
-  display: none;
 }
 
 .ss_slider_content h2 {
@@ -143,6 +146,7 @@
   cursor: pointer;
   margin-right: 30px;
 }
+
 .ss_slider_menu .ss_slider_bt {
   background: #ccc;
   width: 14px;

@@ -1,28 +1,25 @@
 .row.qr-no-margin {
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .qr-content {
   width: 90%;
-  margin: 0 auto;
-  margin-top: 30px;
+  margin: 30px auto 0;
   border: #929292 solid;
-  border-width: 0px 1px 1px 1px;
+  border-width: 0 1px 1px 1px;
 }
 
 /*Background-Bild wird eingefügt*/
 body {
   background-size: cover;
-  background-position: 50% 50%;
   display: block;
-  background-image: url(Headerimage-schraeg.png);
-  background-repeat: no-repeat;
+  background: url(../assets/img/Headerimage-schraeg.png) no-repeat 50% 50%;
 }
 
 .qr-head {
   background-color: #e9c20c;
-  padding: 10px 0px 10px 10px;
+  padding: 10px 0 10px 10px;
 }
 
 /*Schriftgröße sowie Art wird an Timer und Question übergeben*/
@@ -33,13 +30,13 @@ p.qr-text {
 
 .qr-timer {
   text-align: center;
-  padding: 50px 0px 0px 0px;
+  padding: 50px 0 0 0;
   font-size: 25px;
 }
 
 .qr-question {
   text-align: center;
-  padding: 50px 0px 20px 0px;
+  padding: 50px 0 20px 0;
 }
 
 /*Padding für Abstand zu den inneren Elementen*/
@@ -49,7 +46,7 @@ p.qr-text {
 
 /*Flex-Ansicht um Schrift in der Antwort vertikal zu zentrieren*/
 .qr-answers button {
-  padding: 0px 0px 0px 0px;
+  padding: 0 0 0 0;
   height: 50px;
   width: 100%;
   display: flex;
@@ -139,7 +136,7 @@ p.qr-text {
     font-size: 18px;
     width: calc(100% - 50px);
     line-height: 1.7;
-    padding: 0px 10px 0px 10px;
+    padding: 0 10px 0 10px;
   }
 
   .qr-answers button:hover {
