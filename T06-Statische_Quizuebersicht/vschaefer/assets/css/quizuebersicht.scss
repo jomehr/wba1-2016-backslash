@@ -1,0 +1,28 @@
+/* Breakpoint für Tablet-Ansicht */ 
+$screen-sm-min: 768px;
+
+img {
+	width: 100%;
+}
+
+/* Zeigt Element nur in Viewport XS an */
+._visible-xs-block {
+	display: block;
+	@media(min-width: $screen-sm-min) {
+		display: none;
+	}
+}
+
+/* Blendet Element in Viewport XS aus */
+._hidden-xs {
+	display: none;
+	@media(min-width: $screen-sm-min) {
+		display: initial;
+	}
+}
+
+/* Richtet Element rechts aus */
+_.pull-right {
+	float: right;
+}
+

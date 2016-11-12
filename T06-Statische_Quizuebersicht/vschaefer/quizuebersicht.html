@@ -1,12 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Quizübersicht</title>
 	<link rel="stylesheet" href="/T09-CSS/style.css">
 	<link rel="stylesheet" href="assets/css/quizuebersicht.css">
 </head>
+
 <body>
+	<!-- Quizübersicht -->
+	<main class="container">
+
+		<!-- Headline -->
+		<header class="row">
+			<div class="col-sm-4">
+				<h1>Quizzübersicht</h1>
+			</div>
+
+			<!-- Dropdown sortieren -->
+			<div class="col-sm-4">
+				<select>
+					<option value="datum">nach Erscheinungsdatum</option>
+					<option value="alphabetisch">alphabetisch</option>
+					<option value="beliebtheit">nach Beliebtheit</option>
+				</select>
+			</div>
+
+			<!-- Suchfeld -->
+			<div class="col-sm-4">
+				<input type="text" maxlength="30" placeholder="suchen">
+			</div>
+		</header>
+
+		<!-- Auflistung Quizspiele -->
+		<section>
+			<ul>
+				<!-- Quizspiel -->
+				<li>
+					<div class="row">
+					
+						<!-- Headline -->
+						<div class="col-sm-8">
+							<h2>Effzeh - Fußballtraum im Schatten des Doms</h2>
+						</div>
+						<div class="col-sm-4 _hidden-xs">
+							<p><strong>315</strong> mal gespielt</p>
+						</div>
+					</div>
+					
+					
+					<div class="row">
+						<!-- Quizbild -->
+						<div class="col-sm-4">
+							<img src="assets/img/fc-koeln-fans.png" alt="Fans vom 1. FC Köln">
+						</div>
+						
+						<!-- Quizinfos -->
+						<div class="col-sm-8">
+							<p>Das FC-Quizz schlecht hin. Der wahre FC Fan beantwortet diese Fragen im Schlaf. Dabei handelt es sich nicht nur um Fragen zur Fußballerischen Geschichte des Vereins, denn der FC hat auch außerhalb des Platzes eine große Geschichte. Mit diesem Quizz kannst du dein Wissen über den besten Verein der Welt testen. Los geht's!</p>
+							<div class="row">
+								<div class="col-xs-6 col-sm-8">
+									<time>17.06.2016</time>
+									<p>Hennes48</p>
+								</div>
+								<div class="col-xs-6"></div>
+								<div class="col-xs-6 _visible-xs-block">
+									<p><strong>315</strong> mal gespielt</p>
+								</div>
+								<div class="col-xs-12 col-sm-6">
+									<a href="#" class="btn">Jetzt spielen!</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</section>
+	</main>
 	
+	<!-- Zuletzt gespielt -->
+	<section class="container">
+		<div class="row">
+		
+			<!-- Healine -->
+			<div class="col-xs-12">
+				<h1>Zuletzt gespielt</h1>
+			</div>
+		</div>
+		
+		<!-- Slide -->
+		<div class="row">
+			
+			<!-- Headline -->
+			<div class="col-sm-8">
+				<h2>
+					Das Stadion Quizz
+				</h2>
+			</div>
+			<div class="col-sm-4 _hidden-xs">
+				<p><strong>315</strong> mal gespielt</p>
+			</div>
+		</div>
+		<div class="row">
+		
+			<!-- Quizbild -->
+			<div class="col-xs-12 col-sm-4">
+				<img src="assets/img/stadion.png" alt="Fußballstadion">
+			</div>
+			
+			<!-- Quizinfos -->
+			<div class="col-xs-12 col-sm-8">
+				<p>Die größten, bedeutensten, modernsten und wichtigsten Stadien der Welt. Kaum etwas ist bei großen Verienen so bedeutend wie das Stadion. Es ist nicht nur ein Statussymbol für jeden erfolgreichen Verein, sondern oft auch ein Denkmal für große Ereignisse in der Historie eines Vereiens. Hier findest Fragen zu den Stadien der Welt. Auf geht's!</p>
+				<div class="row">
+					<div class="col-xs-6">
+						<time>17.06.2016</time>
+						<p>Hennes48</p>
+					</div>
+					<div class="col-xs-6 _visible-xs-block">
+						<p><strong>315</strong> mal gespielt</p>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<p>beendet mit 8/10 Punkte</p>
+						<a href="#" class="btn">Erneut spielen!</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
 </body>
+
 </html>

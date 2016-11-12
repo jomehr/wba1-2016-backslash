@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AAAA,mCAAmC;AAGnC,GAAI;EACH,KAAK,EAAE,IAAI;;AAGZ,yCAAyC;AACzC,kBAAmB;EAClB,OAAO,EAAE,KAAK;EACd,yBAAkC;IAFnC,kBAAmB;MAGjB,OAAO,EAAE,IAAI;;AAIf,wCAAwC;AACxC,WAAY;EACX,OAAO,EAAE,IAAI;EACb,yBAAkC;IAFnC,WAAY;MAGV,OAAO,EAAE,OAAO;;AAIlB,gCAAgC;AAChC,YAAa;EACZ,KAAK,EAAE,KAAK",
+"sources": ["quizuebersicht.scss"],
+"names": [],
+"file": "quizuebersicht.css"
+}
