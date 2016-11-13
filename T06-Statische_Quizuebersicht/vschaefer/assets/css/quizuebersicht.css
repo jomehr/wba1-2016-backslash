@@ -1,24 +1,26 @@
-@charset "UTF-8";
-/* Breakpoint für Tablet-Ansicht */
-/* Zeigt Element nur in Viewport XS an */
 ._visible-xs-block {
   display: block; }
   @media (min-width: 768px) {
     ._visible-xs-block {
-      display: none; } }
+      display: none !important; } }
 
-/* Blendet Element in Viewport XS aus */
 ._hidden-xs {
-  display: none; }
+  display: none !important; }
   @media (min-width: 768px) {
     ._hidden-xs {
-      display: initial; } }
+      display: initial !important; } }
 
-/* Setzt zwei Spalten in einer Row auf gleiche Höhe */
 @media (min-width: 768px) {
   .row._same-height-sm {
     display: flex; }
     .row._same-height-sm > [class*='col-'] {
+      display: flex;
+      flex-direction: column; } }
+
+@media (max-width: 767px) {
+  .row._same-height-xs {
+    display: flex; }
+    .row._same-height-xs > [class*='col-'] {
       display: flex;
       flex-direction: column; } }
 
@@ -31,21 +33,49 @@
 ._margin-top-1 {
   margin-top: 15px; }
 
+._margin-top-2 {
+  margin-top: 30px; }
+
 .qo-headline {
   margin-left: 0; }
+  .qo-headline.-smallcentered {
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 15px;
+    text-align: center; }
 
 .qo-content-box {
   border: 1px solid #929292;
-  padding: 0 15px 15px 15px;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  padding: 0 15px 15px 15px; }
 
 .qo-headline-box {
   padding: 20px 0 20px 0; }
+  .qo-headline-box .qo-select-box {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0;
+    border: 1px solid #fff;
+    line-height: 18px;
+    margin-top: 15px;
+    padding: 5px 0 5px 8px;
+    width: 100%; }
+    .qo-headline-box .qo-select-box:focus {
+      outline: none;
+      border: 1px black solid; }
+    @media (min-width: 768px) {
+      .qo-headline-box .qo-select-box {
+        margin-top: 0; } }
+  .qo-headline-box .qo-search-box {
+    margin-top: 15px;
+    width: 100%; }
+    @media (min-width: 768px) {
+      .qo-headline-box .qo-search-box {
+        margin-top: 0; } }
 
 .qo-image {
-  width: 100%; }
-
-.qo-button {
   width: 100%; }
 
 .qo-quiz-summary .qo-headline,
@@ -55,32 +85,40 @@
   text-align: right; }
 
 .qo-quiz-details .qo-text {
-  line-height: 1.2; }
+  line-height: 1.2;
+  margin-top: 15px; }
+  @media (min-width: 768px) {
+    .qo-quiz-details .qo-text {
+      margin-top: 0; } }
 
-@media (min-width: 768px) {
-  .qo-quizinfo-box {
-    display: flex;
-    align-items: flex-end;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin-right: 0; } }
-.qo-quizinfo-box .counter {
-  text-align: right; }
-
-.qo-select-box {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  border-radius: 0;
-  border: 1px solid #fff;
-  line-height: 18px;
-  padding: 5px 0 5px 8px; }
-  .qo-select-box:focus {
-    outline: none;
-    border: 1px black solid; }
+.qo-quizinfo-box {
+  margin-top: 30px;
+  align-items: flex-end; }
+  @media (min-width: 768px) {
+    .qo-quizinfo-box {
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin-left: 0;
+      margin-right: 0; } }
+  .qo-quizinfo-box .qo-counter {
+    text-align: right; }
+  .qo-quizinfo-box .qo-time, .qo-quizinfo-box .qo-author {
+    font-weight: 700; }
+  .qo-quizinfo-box .qo-author {
+    margin-top: 15px; }
+  .qo-quizinfo-box .qo-points {
+    background-color: #504f48;
+    color: white;
+    display: inline-block;
+    margin-bottom: 7.5px;
+    margin-top: 30px;
+    padding: 5px 10px;
+    float: right; }
+  .qo-quizinfo-box .qo-button {
+    width: 100%; }
 
 .qo-wrapper-select-box::after {
   content: ""; }

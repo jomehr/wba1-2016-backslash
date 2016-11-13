@@ -1,24 +1,24 @@
-/* Breakpoint für Tablet-Ansicht */
+//Breakpoint für Tablet-Ansicht
 $screen-sm-min: 768px;
 
 $grid-gutter-width: 15px;
 
-/* Zeigt Element nur in Viewport XS an */
+//Zeigt Element nur in Viewport XS an
 ._visible-xs-block {
 	display: block;
 	@media(min-width: $screen-sm-min) {
-		display: none;
+		display: none !important;
 	}
 }
-/* Blendet Element in Viewport XS aus */
+//Blendet Element in Viewport XS aus
 ._hidden-xs {
-	display: none;
+	display: none !important;
 	@media(min-width: $screen-sm-min) {
-		display: initial;
+		display: initial !important;
 	}
 }
 
-/* Setzt zwei Spalten in einer Row auf gleiche Höhe */
+//Setzt zwei Spalten in einer Row auf gleiche Höhe
 .row._same-height-sm {
 	@media(min-width: $screen-sm-min) {
 		display: flex;
@@ -28,6 +28,18 @@ $grid-gutter-width: 15px;
 		}
 	}
 }
+
+.row._same-height-xs {
+	@media(max-width: $screen-sm-min - 1) {
+		display: flex;
+		&>[class*='col-'] {
+			display: flex;
+			flex-direction: column;
+		}
+		
+	}
+}
+
 
 ._margin-top-0 {
 	margin-top: 0;
@@ -41,27 +53,67 @@ $grid-gutter-width: 15px;
 	margin-top: $grid-gutter-width;
 }
 
-.qo-headline {
-	margin-left: 0;
+._margin-top-2 {
+	margin-top: $grid-gutter-width*2;
 }
 
+.qo-headline {
+	margin-left: 0;
+	
+	&.-smallcentered {
+		font-size: 18px;
+		font-weight: normal;
+		margin-top: $grid-gutter-width;
+		text-align: center;
+	}
+}
+
+//Diese CSS-Regel sollte man später der Klasse 'container' zusesen
 .qo-content-box {
 	border: 1px solid #929292;
-	padding: 0 $grid-gutter-width $grid-gutter-width $grid-gutter-width;
 	margin-bottom: $grid-gutter-width;
+	padding: 0 $grid-gutter-width $grid-gutter-width $grid-gutter-width;
 }
 
 .qo-headline-box {
 	padding: 20px 0 20px 0;
+	
+	.qo-select-box {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		border: none;
+		border-radius: 0;
+		border: 1px solid #fff;
+		line-height: 18px;
+		margin-top: $grid-gutter-width;
+		padding: 5px 0 5px 8px;
+		width: 100%;
+		&:focus {
+			outline: none;
+			border: 1px black solid;
+		}
+		@media(min-width: $screen-sm-min) {		
+			margin-top: 0;
+		}
+	}
+
+	.qo-search-box {
+		margin-top: $grid-gutter-width;
+		@media(min-width: $screen-sm-min) {		
+			margin-top: 0;
+		}
+		
+		width: 100%;
+	}
+	
 }
 
 .qo-image {
 	width: 100%;
 }
 
-.qo-button {
-	width: 100%;
-}
+
 
 .qo-quiz-summary {
 	.qo-headline,
@@ -76,39 +128,61 @@ $grid-gutter-width: 15px;
 .qo-quiz-details {
 	.qo-text {
 		line-height: 1.2;
+		margin-top: $grid-gutter-width;
+		@media(min-width: $screen-sm-min) {
+			margin-top: 0;
+		}
+		
 	}
 }
 
 .qo-quizinfo-box {
+	margin-top: $grid-gutter-width*2;
+		align-items: flex-end;
+
 	@media(min-width: $screen-sm-min) {
 		display: flex;
-		align-items: flex-end;
 		position: absolute;
 		bottom: 0;
 		left: 0;
 		right: 0;
+		margin-left: 0;
 		margin-right: 0;
 	}
 	
-	.counter {
+	.qo-counter {
 		text-align: right;
 	}
+	
+	.qo-time, .qo-author {
+		font-weight: 700;
+	}
+	
+	.qo-author {
+		margin-top: $grid-gutter-width;
+	}
+	
+	.qo-time {
+//		margin-top: $grid-gutter-width*2;
+	}
+	
+	.qo-points {
+		background-color: #504f48;
+		color: white;
+		display: inline-block;
+		margin-bottom: $grid-gutter-width/2;
+		margin-top: $grid-gutter-width*2;		
+		padding: 5px 10px;
+		float: right;
+		
+	}
+	
+	.qo-button {
+		width: 100%;
+	}
+	
 }
 
-.qo-select-box {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	border: none;
-	border-radius: 0;
-	border: 1px solid #fff;
-	line-height: 18px;
-	padding: 5px 0 5px 8px;
-	&:focus {
-		outline: none;
-		border: 1px black solid;
-	}
-}
 
 .qo-wrapper-select-box::after {
 	content: "";
