@@ -391,9 +391,9 @@ Highscore fill Funktion & Quiz Info
         function quiz() {
             getQuizByID(sessionobject.quizID);
             $(document).on("onQuizData", function (event, data) {
-                Quizobject.quizinfo = data;
+                Quizobject.quiz = data;
                 Quizobject.sessionobject = sessionobject;
-                var source = $("#quizinfo-template").html();
+                var source = $("#quiz-template").html();
                 var template = Handlebars.compile(source);
                 $('#templatespaceholder_handlebars').append(template(Quizobject));
             });
