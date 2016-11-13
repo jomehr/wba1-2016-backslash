@@ -24,17 +24,8 @@
       display: flex;
       flex-direction: column; } }
 
-._margin-top-0 {
-  margin-top: 0; }
-
-._margin-top-05 {
-  margin-top: 7.5px; }
-
 ._margin-top-1 {
   margin-top: 15px; }
-
-._margin-top-2 {
-  margin-top: 30px; }
 
 .qo-headline {
   margin-left: 0; }
@@ -70,10 +61,21 @@
         margin-top: 0; } }
   .qo-headline-box .qo-search-box {
     margin-top: 15px;
+    text-indent: 10px;
     width: 100%; }
     @media (min-width: 768px) {
       .qo-headline-box .qo-search-box {
         margin-top: 0; } }
+    .qo-headline-box .qo-search-box::input-placeholder {
+      font-style: italic; }
+    .qo-headline-box .qo-search-box::-webkit-input-placeholder {
+      font-style: italic; }
+    .qo-headline-box .qo-search-box:-moz-placeholder {
+      font-style: italic; }
+    .qo-headline-box .qo-search-box::-moz-placeholder {
+      font-style: italic; }
+    .qo-headline-box .qo-search-box::-ms-input-placeholder {
+      font-style: italic; }
 
 .qo-image {
   width: 100%; }
@@ -105,7 +107,8 @@
       margin-right: 0; } }
   .qo-quizinfo-box .qo-counter {
     text-align: right; }
-  .qo-quizinfo-box .qo-time, .qo-quizinfo-box .qo-author {
+  .qo-quizinfo-box .qo-time,
+  .qo-quizinfo-box .qo-author {
     font-weight: 700; }
   .qo-quizinfo-box .qo-author {
     margin-top: 15px; }
