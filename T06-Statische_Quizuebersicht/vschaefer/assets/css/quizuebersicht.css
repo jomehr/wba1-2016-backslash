@@ -171,7 +171,7 @@
 .qo-collapse-link {
   color: black;
   display: inline-block; }
-  .qo-collapse-link:hover {
+  .qo-collapse-link:hover, .qo-collapse-link:focus {
     color: black;
     text-decoration: none; }
   .qo-collapse-link .qo-arrow {
