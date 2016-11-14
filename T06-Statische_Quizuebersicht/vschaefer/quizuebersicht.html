@@ -4,8 +4,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Quizübersicht</title>
-	<link rel="stylesheet" href="/T09-CSS/style.css">
+	<link rel="stylesheet" href="../../T09-CSS/style.css">
 	<link rel="stylesheet" href="assets/css/quizuebersicht.css">
+	<script type="application/javascript" src="assets/js/collapse.js"></script>
 </head>
 
 <body>
@@ -38,12 +39,12 @@
 		<section>
 			<ul>
 				<!-- Quizspiel -->
-				<li>
+				<li class="js-collapse-section">
 					<div class="row qo-quiz-summary">
 
 						<!-- Headline -->
 						<div class="col-sm-8">
-							<h2 class="qo-headline">1. FC Köln - Mer wesse alles üvver dich</h2>
+							<a href="#" class="qo-collapse-link js-collapse-link"><i class="qo-arrow ico-light-arrow-right"></i><h2 class="qo-subheadline">1. FC Köln - Mer wesse alles üvver dich</h2></a>
 						</div>
 						<div class="col-sm-4 _hidden-xs">
 							<p class="qo-infos"><strong>315</strong> mal gespielt</p>
@@ -51,7 +52,7 @@
 					</div>
 
 
-					<div class="row qo-quiz-details _margin-top-1 _same-height-sm">
+					<div class="row qo-quiz-details js-collapse-details _same-height-sm">
 						<!-- Quizbild -->
 						<div class="col-sm-6 col-md-4">
 							<img class="qo-image" src="assets/img/fc-koeln-fans.png" alt="Fans vom 1. FC Köln">
@@ -87,6 +88,56 @@
 						</div>
 					</div>
 				</li>
+				<li class="collapse-section js-collapse-section">
+					<div class="row qo-quiz-summary">
+
+						<!-- Headline -->
+						<div class="col-sm-8">
+							<a href="#" class="qo-collapse-link js-collapse-link"><i class="qo-arrow ico-light-arrow-right"></i><h2 class="qo-subheadline">1. FC Köln - Mer wesse alles üvver dich</h2></a>
+						</div>
+						<div class="col-sm-4 _hidden-xs">
+							<p class="qo-infos"><strong>315</strong> mal gespielt</p>
+						</div>
+					</div>
+
+
+					<div class="row qo-quiz-details js-collapse-details _same-height-sm">
+						<!-- Quizbild -->
+						<div class="col-sm-6 col-md-4">
+							<img class="qo-image" src="assets/img/fc-koeln-fans.png" alt="Fans vom 1. FC Köln">
+						</div>
+
+						<!-- Quizinfos -->
+						<div class="col-sm-6 col-md-8">
+							<div class="row">
+								<div class="col-sm-12 col-md-10">
+									<p class="qo-text">Das FC-Quizz schlecht hin. Der wahre FC Fan beantwortet diese Fragen im Schlaf. Dabei handelt es sich nicht nur um Fragen zur Fußballerischen Geschichte des Vereins, denn der FC hat auch außerhalb des Platzes eine große Geschichte. Mit diesem Quizz kannst du dein Wissen über den besten Verein der Welt testen. Los geht's!</p>
+								</div>
+							</div>
+
+							<div class="row qo-quizinfo-box _same-height-xs">
+								<div class="col-xs-6 col-sm-4 col-md-6">
+									<p class="qo-time">
+										<time>17.06.2016</time>
+									</p>
+									<p class="qo-author">Hennes48</p>
+								</div>
+								<div class="col-xs-6 _visible-xs-block qo-counter">
+									<p><strong>315</strong> mal gespielt</p>
+								</div>
+								<div class="col-sm-8 col-md-6 _hidden-xs">
+									<a href="#" class="btn qo-button">Jetzt spielen!</a>
+								</div>
+							</div>
+							<div class="row qo-quizinfo-box">
+								<div class="col-xs-12 _visible-xs-block">
+									<a href="#" class="btn qo-button">Jetzt spielen!</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				
 			</ul>
 		</section>
 	</main>
@@ -106,7 +157,7 @@
 
 			<!-- Headline -->
 			<div class="col-sm-8">
-				<h2 class="qo-headline">Das Stadion Quizz</h2>
+				<h2 class="qo-subheadline">Das Stadion Quizz</h2>
 			</div>
 			<div class="col-sm-4 _hidden-xs ">
 				<p class="qo-infos"><strong>67</strong> mal gespielt</p>
