@@ -5,6 +5,8 @@
     <title>Fubuizz</title>
     <link rel="stylesheet" href="../../T09-CSS/style.build.css">
     <link rel="stylesheet" href="./css/flickity.css" media="screen">
+    <link rel="stylesheet" href="T06/assets/css/quizuebersicht.css">
+    <link rel="stylesheet" href="T06/assets/lib/flickity.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -70,12 +72,14 @@
     <div class="wa_copyright"> © 2016 - Fubuizz</div>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.2/handlebars.min.js"></script>
 <script type="text/javascript" src="./T02/WebApp_Rahmen_Tablet.js"></script>
 <script src="js/flickity.pkgd.min.js"></script>
 <script src="https://rawgit.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/API/BS_API.js"></script>
+<script type="application/javascript" src="T06/assets/lib/flickity.pkgd.min.js"></script>
+<script type="application/javascript" src="T06/assets/js/collapse.js"></script>
+<script type="application/javascript" src="T06/assets/js/quizuebersicht.js"></script>
 
 <!-- Quizinfo Template-->
 <script id="quizinfo-template" type="text/x-handlebars-template">
@@ -293,12 +297,14 @@
 
     <!--  allgemeine mit Inhalt des Sliders  -->
     <div class="container ss_box">
+
         <h2 style="text-align: center; padding-top: 24px;">Das könnte dir auch gefallen</h2>
 
-        <!--  Sliderelement  -->
-        <div class="main-gallery">
+        <!-- Carousel -->
+    		<div class="js-carousel">
             {{#each quizes}}
-            <div class="gallery-cell">
+            <!-- Carousel Cell-->
+            <div class="js-carousel-cell">
                 <div class="ss_slider_content row">
                     <!--  linke Seite vom Slider  -->
                     <div class="col-md-4">
@@ -325,6 +331,237 @@
         </div>
     </div>
 
+</script>
+
+<!-- Quizoverview // HOME -->
+<script id="Quizoverview-template" type="text/x-handlebars-template">
+  <!-- Quizübersicht -->
+  <main class="container qo-content-box">
+    <!-- Headline -->
+    <header class="row bg-yellow qo-headline-box">
+      <div class="col-sm-4">
+        <h1 class="qo-headline">Quizzübersicht</h1>
+      </div>
+
+      <!-- Dropdown sortieren -->
+      <div class="col-sm-4">
+        <div class="qo-wrapper-select-box">
+          <select class="qo-select-box">
+            <option value="datum">nach Erscheinungsdatum</option>
+            <option value="alphabetisch">alphabetisch</option>
+            <option value="beliebtheit">nach Beliebtheit</option>
+          </select>
+        </div>
+      </div>
+      <!-- End Dropdown sortieren -->
+
+      <!-- Suchfeld -->
+      <div class="col-sm-4">
+        <input type="text" class="qo-search-box" maxlength="30" placeholder="suchen">
+      </div>
+      <!-- End Suchfeld -->
+    </header>
+    <!--End Headline -->
+
+    <!-- Auflistung Quizspiele -->
+    <section>
+      <ul>
+        <!-- Quizspiel -->
+        {{#each quizes}}
+        <li class="js-collapse-section">
+          <div class="row qo-quiz-summary js-quiz-summary">
+
+            <!-- Headline -->
+            <div class="col-sm-8">
+              <a href="#" class="qo-collapse-link js-collapse-link"><i class="qo-arrow ico-light-arrow-right"></i><h2 class="qo-subheadline">{{titel}}</h2></a>
+            </div>
+            <div class="col-sm-4 _hidden-xs">
+              <p class="qo-infos"><strong>{{spielzahl}}</strong> mal gespielt</p>
+            </div>
+          </div>
+
+
+          <div class="row qo-quiz-details js-collapse-details _same-height-sm">
+            <!-- Quizbild -->
+            <div class="col-sm-6 col-md-4">
+              <img class="qo-image" src="{{bild}}" alt="{{titel}}">
+            </div>
+            <!-- End Quizbild -->
+
+            <!-- Quizinfos -->
+            <div class="col-sm-6 col-md-8">
+              <div class="row">
+                <div class="col-sm-12 col-md-10">
+                  <p class="qo-text">{{text}}</p>
+                </div>
+              </div>
+
+              <div class="row qo-quizinfo-box _same-height-xs">
+                <div class="col-xs-6 col-sm-4 col-md-6">
+                  <p class="qo-time">
+                    <time>{{datum}}</time>
+                  </p>
+                  <p class="qo-author">{{autor}}</p>
+                </div>
+                <div class="col-xs-6 _visible-xs-block qo-counter">
+                  <p><strong>{{spielzahl}}</strong> mal gespielt</p>
+                </div>
+                <div class="col-sm-8 col-md-6 _hidden-xs">
+                  <a href="#" class="btn qo-button">Jetzt spielen!</a>
+                </div>
+              </div>
+              <div class="row qo-quizinfo-box">
+                <div class="col-xs-12 _visible-xs-block">
+                  <a href="#" class="btn qo-button">Jetzt spielen!</a>
+                </div>
+              </div>
+            </div>
+            <!-- End Quizinfos -->
+          </div>
+        </li>
+        {{/each}}
+        <!-- End Quizspiel -->
+
+      </ul>
+    </section>
+    <!--End Auflistung Quizspiele -->
+  </main>
+  <!-- End Quizübersicht -->
+
+  <!-- Zuletzt gespielt -->
+  <section class="container qo-content-box qo-box-last-played">
+    <div class="row">
+
+      <!-- Healine -->
+      <div class="col-xs-12">
+        <h1 class="qo-headline -smallcentered font-primary">Zuletzt gespielt</h1>
+      </div>
+      <!-- End Headline -->
+    </div>
+
+    <!-- Carousel -->
+    <div class="js-carousel">
+
+      <!-- Carousel Cell-->
+      <div class="js-carousel-cell">
+
+        <div class="row qo-quiz-summary">
+
+          <!-- Headline -->
+          <div class="col-sm-8">
+            <h2 class="qo-subheadline -withoutmargin">Das Stadion Quizz</h2>
+          </div>
+          <div class="col-sm-4 _hidden-xs ">
+            <p class="qo-infos"><strong>67</strong> mal gespielt</p>
+          </div>
+
+          <!-- End Headline -->
+        </div>
+
+
+        <div class="row qo-quiz-details  _same-height-sm">
+          <!-- Quizbild -->
+          <div class="col-sm-6 col-md-4">
+            <img class="qo-image" src="T06/assets/img/stadion.png" alt="Fußballstadion">
+          </div>
+          <!--End Quizbild -->
+
+          <!-- Quizinfos -->
+          <div class="col-sm-6 col-md-8">
+            <div class="row">
+              <div class="col-sm-12 col-md-10">
+                <p class="qo-text">Die größten, bedeutensten, modernsten und wichtigsten Stadien der Welt. Kaum etwas ist bei großen Verienen so bedeutend wie das Stadion. Es ist nicht nur ein Statussymbol für jeden erfolgreichen Verein, sondern oft auch ein Denkmal für große Ereignisse in der Historie eines Vereiens. Hier findest Fragen zu den Stadien der Welt. Auf geht's! </p>
+              </div>
+            </div>
+
+            <div class="row qo-quizinfo-box _same-height-xs">
+              <div class="col-xs-6 col-sm-4 col-md-6">
+                <p class="qo-time">
+                  <time>17.06.2016</time>
+                </p>
+                <p class="qo-author">Hennes48</p>
+              </div>
+              <div class="col-xs-6 _visible-xs-block qo-counter">
+                <p><strong>37</strong> mal gespielt</p>
+              </div>
+              <div class="col-sm-8 col-md-6 _hidden-xs">
+                <p class="qo-points">8 / 10 Punkten</p>
+                <a href="#" class="btn qo-button">Erneut spielen!</a>
+              </div>
+            </div>
+            <div class="row qo-quizinfo-box">
+              <div class="col-xs-12 _visible-xs-block">
+                <p class="qo-points">beendet mit 8/10 Punkte</p>
+                <a href="#" class="btn qo-button">Erneut spielen!</a>
+              </div>
+            </div>
+
+          </div>
+          <!-- End Quizinfos -->
+        </div>
+      </div>
+      <!-- End Carousel Cell-->
+      <!-- Carousel Cell-->
+      <div class="js-carousel-cell">
+        <div class="row qo-quiz-summary">
+
+          <!-- Headline -->
+          <div class="col-sm-8">
+            <h2 class="qo-subheadline -withoutmargin">Das Stadion Quizz</h2>
+          </div>
+          <div class="col-sm-4 _hidden-xs ">
+            <p class="qo-infos"><strong>67</strong> mal gespielt</p>
+          </div>
+
+          <!-- End Headline -->
+        </div>
+
+
+        <div class="row qo-quiz-details  _same-height-sm">
+          <!-- Quizbild -->
+          <div class="col-sm-6 col-md-4">
+            <img class="qo-image" src="T06/assets/img/stadion.png" alt="Fußballstadion">
+          </div>
+          <!--End Quizbild -->
+
+          <!-- Quizinfos -->
+          <div class="col-sm-6 col-md-8">
+            <div class="row">
+              <div class="col-sm-12 col-md-10">
+                <p class="qo-text">Die größten, bedeutensten, modernsten und wichtigsten Stadien der Welt. Kaum etwas ist bei großen Verienen so bedeutend wie das Stadion. Es ist nicht nur ein Statussymbol für jeden erfolgreichen Verein, sondern oft auch ein Denkmal für große Ereignisse in der Historie eines Vereiens. Hier findest Fragen zu den Stadien der Welt. Auf geht's! </p>
+              </div>
+            </div>
+
+            <div class="row qo-quizinfo-box _same-height-xs">
+              <div class="col-xs-6 col-sm-4 col-md-6">
+                <p class="qo-time">
+                  <time>17.06.2016</time>
+                </p>
+                <p class="qo-author">Hennes48</p>
+              </div>
+              <div class="col-xs-6 _visible-xs-block qo-counter">
+                <p><strong>37</strong> mal gespielt</p>
+              </div>
+              <div class="col-sm-8 col-md-6 _hidden-xs">
+                <p class="qo-points">8 / 10 Punkten</p>
+                <a href="#" class="btn qo-button">Erneut spielen!</a>
+              </div>
+            </div>
+            <div class="row qo-quizinfo-box">
+              <div class="col-xs-12 _visible-xs-block">
+                <p class="qo-points">beendet mit 8/10 Punkte</p>
+                <a href="#" class="btn qo-button">Erneut spielen!</a>
+              </div>
+            </div>
+
+          </div>
+          <!-- End Quizinfos -->
+        </div>
+      </div>
+      <!-- End Carousel Cell-->
+    </div>
+  </section>
+  <!--End Zuletzt gespielt -->
 </script>
 
 
@@ -383,6 +620,7 @@ Highscore fill Funktion & Quiz Info
                 case "4":
                     break;
                 default:
+                    quizoverview();
                     console.log("Bitte sessionStorage.setItem('view','id') in die Console eingeben. \n id info : \n 0 = default \n 1 = quizinfo \n 2 = quiz(undefined) \n 3 = quizend \n 4 = highscore(undefined)");
                     break;
             }
@@ -391,7 +629,7 @@ Highscore fill Funktion & Quiz Info
          function quiz() {
              getQuizByID(sessionobject.quizID);
              $(document).on("onQuizData", function (event, data) {
-                Quizobject.quiz = data;
+              Quizobject.quiz = data;
               Quizobject.sessionobject = sessionobject;
               var source = $("#quiz-template").html();
                 var template = Handlebars.compile(source);
@@ -475,10 +713,40 @@ Highscore fill Funktion & Quiz Info
                         item.innerHTML += greenicon;
                     }
                 }
-                $('.main-gallery').flickity({
-                    cellAlign: 'left',
-                    contain: true
-                });
+                var flickityConfig = {
+                  // options
+                  cellAlign: 'left',
+                  cellSelector: '.js-carousel-cell',
+                  contain: true,
+                  imagesLoaded: true,
+                  prevNextButtons: false,
+                  setGallerySize: true,
+                }
+                var $carousel = $('.js-carousel').flickity(flickityConfig)
+                slideshowNavi.init($carousel);
+            });
+        }
+
+        function quizoverview() {
+            getQuizView(10);
+            //Random Quiz Vorschlag
+            $(document).on("onQuizView", function (event, data) {
+                Quizobject.quizes = data; //copy object
+                var source = $("#Quizoverview-template").html();
+                var template = Handlebars.compile(source);
+                $('#templatespaceholder_handlebars').append(template(Quizobject));
+                collapse.init();
+                var flickityConfig = {
+                  // options
+                  cellAlign: 'left',
+                  cellSelector: '.js-carousel-cell',
+                  contain: true,
+                  imagesLoaded: true,
+                  prevNextButtons: false,
+                  setGallerySize: true,
+                }
+                var $carousel = $('.js-carousel').flickity(flickityConfig)
+                slideshowNavi.init($carousel);
             });
         }
 
