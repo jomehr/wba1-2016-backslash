@@ -46,29 +46,56 @@
    },
    {
       "quizID":"5",
-      "titel":"Platzhalter Titel",
-      "autor":"Platzhalter Autor",
-      "datum":"01.01.2001",
-      "spielzahl":"100",
-      "bild":"https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Fan-NurKlein.jpg",
-      "text":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+      "titel":"Le Fußeballo Quizoo",
+      "autor":"DatBoi",
+      "datum":"01.11.2011",
+      "spielzahl":"88",
+      "bild":"https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Tor-Klein.jpg",
+      "text":"El Quizoo de la Quizoo est mui gusto et mucho grand bandito de quadrato muchacho harambe qualle."
    },
    {
       "quizID":"6",
-      "titel":"Platzhalter Titel",
-      "autor":"Platzhalter Autor",
-      "datum":"01.01.2001",
-      "spielzahl":"100",
-      "bild":"https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/BallM-NurKlein.jpg",
-      "text":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+      "titel":"Ein Quiz für Bananen",
+      "autor":"LeBananan",
+      "datum":"01.11.2016",
+      "spielzahl":"1000",
+      "bild":"https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Stadion7-Klein.jpg",
+      "text":"Bist du eine Banane? Magst du Bananen? Dann bist du wahrscheinlich kanniblae, aber bist du keine Banane und magst Bananen, dann ist alles in Ordnung. Ahja spiel das Quiz pls."
    },
    {
       "quizID":"7",
-      "titel":"Platzhalter Titel",
-      "autor":"Platzhalter Autor",
-      "datum":"01.01.2001",
-      "spielzahl":"100",
-      "bild":"https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Gras-Klein.jpg",
-      "text":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+      "titel":"Verrückte Bälle rollen weit",
+      "autor":"Bollocks",
+      "datum":"01.01.2017",
+      "spielzahl":"8009",
+      "bild":"https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/BallM-NurKlein.jpg",
+      "text":"Oh damn Bälle, Bälle sind rund und rund und rund und rund und rund und rund und rund rund und vor allem sehr besonders Rund."
+   },
+   {
+      "quizID":"8",
+      "titel":"1 Fußball Quiz",
+      "autor":"PeterPeterson",
+      "datum":"01.01.2018",
+      "spielzahl":"8809",
+      "bild":"https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Stadion14-Klein.jpg",
+      "text":"Eine Fußballquiz. Spaß viel du hoffe haben. Muss mehr schreiben? ich nicht gut deutscH."
+   },
+   {
+      "quizID":"9",
+      "titel":"Die schlechteste Mannschaft",
+      "autor":"lolpü",
+      "datum":"01.01.1945",
+      "spielzahl":"76312",
+      "bild":"https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Stadion8-Klein.jpg",
+      "text":"Du denkst dir wahrscheinlich, du kennst schon die schlechteste Mannschaft, aber dieses Quiz zeigt dir wer der wahre failer des Lebens ist."
+   },
+   {
+      "quizID":"10",
+      "titel":"Ein Fan",
+      "autor":"Duden123",
+      "datum":"12.11.1998",
+      "spielzahl":"212",
+      "bild":"https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Fan-NurKlein.jpg",
+      "text":"Guckt ihn euch an, dieser Mongo. Hebt der einfach seine Hand und streckt die in die Luft. Was will er damit erreichen? Man weiß es eigentlich nicht, aber hier ist ein Quiz über diesen Typen."
    }
 ]
