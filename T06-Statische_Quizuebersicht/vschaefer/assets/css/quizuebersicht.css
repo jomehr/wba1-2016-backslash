@@ -1,3 +1,8 @@
+@charset "UTF-8";
+/* Variablen
+============================================================*/
+/* Helper
+============================================================*/
 ._visible-xs-block {
   display: block; }
   @media (min-width: 768px) {
@@ -24,8 +29,21 @@
       display: flex;
       flex-direction: column; } }
 
-._margin-top-1 {
-  margin-top: 15px; }
+/* Components und Elements
+============================================================*/
+.qo-content-box {
+  border: 1px solid #929292;
+  margin-bottom: 15px;
+  padding: 0 15px 15px 15px;
+  margin-left: 15px;
+  margin-right: 15px; }
+  @media (min-width: 768px) {
+    .qo-content-box {
+      margin-left: auto;
+      margin-right: auto; } }
+
+.qo-box-last-played {
+  padding-bottom: 80px; }
 
 .qo-headline {
   margin-left: 0; }
@@ -38,17 +56,11 @@
 .qo-subheadline {
   display: inline-block;
   margin-left: 10px; }
-  .qo-subheadline.-smallcentered {
-    margin-left: 0;
-    font-size: 18px;
-    font-weight: normal;
-    margin-top: 15px;
-    text-align: center; }
+  .qo-subheadline.-withoutmargin {
+    margin-left: 0; }
 
-.qo-content-box {
-  border: 1px solid #929292;
-  margin-bottom: 15px;
-  padding: 0 15px 15px 15px; }
+.qo-image {
+  width: 100%; }
 
 .qo-headline-box {
   padding: 20px 0 20px 0; }
@@ -99,21 +111,29 @@
       font-style: italic;
       line-height: 1.3; }
 
-.qo-image {
-  width: 100%; }
+.qo-quiz-summary {
+  transition: background-color 0; }
+  .qo-quiz-summary .qo-headline,
+  .qo-quiz-summary .qo-infos {
+    margin-top: 15px; }
+  .qo-quiz-summary .qo-infos {
+    text-align: right; }
+  .qo-quiz-summary.-active {
+    transition: background-color 0.5s;
+    background-color: #f8f5e4; }
 
-.qo-quiz-summary .qo-headline,
-.qo-quiz-summary .qo-infos {
-  margin-top: 15px; }
-.qo-quiz-summary .qo-infos {
-  text-align: right; }
-
-.qo-quiz-details .qo-text {
-  line-height: 1.2;
-  margin-top: 15px; }
-  @media (min-width: 768px) {
-    .qo-quiz-details .qo-text {
-      margin-top: 0; } }
+.qo-quiz-details {
+  transition: background-color 0; }
+  .qo-quiz-details .qo-text {
+    line-height: 1.2;
+    margin-top: 15px; }
+    @media (min-width: 768px) {
+      .qo-quiz-details .qo-text {
+        margin-top: 0; } }
+  .qo-quiz-details.-active {
+    padding-bottom: 15px;
+    transition: background-color 0.5s;
+    background-color: #f8f5e4; }
 
 .qo-quizinfo-box {
   margin-top: 30px;
@@ -161,5 +181,29 @@
     transform: rotate(270deg) !important; }
   .qo-collapse-link.-collapsed .qo-arrow {
     transform: rotate(180deg) !important; }
+
+/* Styles für Flickity
+============================================================*/
+.js-carousel-cell {
+  height: auto;
+  width: 100%; }
+
+.flickity-page-dots {
+  bottom: -75px !important; }
+  .flickity-page-dots .dot {
+    height: 14px !important;
+    width: 14px !important;
+    margin: 0 12px !important; }
+
+.flickity-page-dots .button-item {
+  margin: 0 20px !important; }
+
+.button-item {
+  display: inline-block; }
+  .button-item > .button {
+    padding: 0;
+    margin: 0 !important;
+    color: black;
+    background: none; }
 
 /*# sourceMappingURL=quizuebersicht.css.map */

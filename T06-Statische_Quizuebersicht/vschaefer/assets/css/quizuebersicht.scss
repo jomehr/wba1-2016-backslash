@@ -1,7 +1,14 @@
+/* Variablen
+============================================================*/
+
 //Breakpoint für Tablet-Ansicht
 $screen-sm-min: 768px;
 $grid-gutter-width: 15px;
-//Zeigt Element nur in Viewport XS an
+
+/* Helper
+============================================================*/
+
+//Zeigt Element nur bei Breakpoint SM an
 ._visible-xs-block {
 	display: block;
 	@media(min-width: $screen-sm-min) {
@@ -9,7 +16,7 @@ $grid-gutter-width: 15px;
 	}
 }
 
-//Blendet Element in Viewport XS aus
+//Blendet Element bei Breakpoint SM aus
 ._hidden-xs {
 	display: none !important;
 	@media(min-width: $screen-sm-min) {
@@ -17,7 +24,7 @@ $grid-gutter-width: 15px;
 	}
 }
 
-//Setzt zwei Spalten in einer Row auf gleiche Höhe
+//Setzt zwei Spalten in einer Row auf gleiche Höhe bei Breakpoint SM
 .row._same-height-sm {
 	@media(min-width: $screen-sm-min) {
 		display: flex;
@@ -28,6 +35,7 @@ $grid-gutter-width: 15px;
 	}
 }
 
+//Setzt zwei Spalten in einer Row auf gleiche Höhe bei Breakpoint XS
 .row._same-height-xs {
 	@media(max-width: $screen-sm-min - 1) {
 		display: flex;
@@ -38,8 +46,28 @@ $grid-gutter-width: 15px;
 	}
 }
 
-._margin-top-1 {
-	margin-top: $grid-gutter-width;
+/* Components und Elements
+============================================================*/
+
+
+//Diese CSS-Regel sollte man später der Klasse 'container' zusesen
+.qo-content-box {
+	border: 1px solid #929292;
+	margin-bottom: $grid-gutter-width;
+	padding: 0 $grid-gutter-width $grid-gutter-width $grid-gutter-width;
+
+	margin-left: $grid-gutter-width;
+	margin-right: $grid-gutter-width;
+	
+	@media(min-width: $screen-sm-min) {
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+}
+
+.qo-box-last-played {
+	padding-bottom: 80px;
 }
 
 .qo-headline {
@@ -55,20 +83,13 @@ $grid-gutter-width: 15px;
 .qo-subheadline {
 	display: inline-block;
 	margin-left: 10px;
-	&.-smallcentered {
+	&.-withoutmargin {
 		margin-left: 0;
-		font-size: 18px;
-		font-weight: normal;
-		margin-top: $grid-gutter-width;
-		text-align: center;
 	}
 }
 
-//Diese CSS-Regel sollte man später der Klasse 'container' zusesen
-.qo-content-box {
-	border: 1px solid #929292;
-	margin-bottom: $grid-gutter-width;
-	padding: 0 $grid-gutter-width $grid-gutter-width $grid-gutter-width;
+.qo-image {
+	width: 100%;
 }
 
 .qo-headline-box {
@@ -131,11 +152,10 @@ $grid-gutter-width: 15px;
 	}
 }
 
-.qo-image {
-	width: 100%;
-}
+
 
 .qo-quiz-summary {
+	transition: background-color 0;
 	.qo-headline,
 	.qo-infos {
 		margin-top: $grid-gutter-width;
@@ -143,15 +163,25 @@ $grid-gutter-width: 15px;
 	.qo-infos {
 		text-align: right;
 	}
+	&.-active {
+		transition: background-color 0.5s;
+		background-color: #f8f5e4;
+	}
 }
 
 .qo-quiz-details {
+	transition: background-color 0;
 	.qo-text {
 		line-height: 1.2;
 		margin-top: $grid-gutter-width;
 		@media(min-width: $screen-sm-min) {
 			margin-top: 0;
 		}
+	}
+	&.-active {
+		padding-bottom: $grid-gutter-width;
+		transition: background-color 0.5s;
+		background-color: #f8f5e4;
 	}
 }
 
@@ -198,8 +228,6 @@ $grid-gutter-width: 15px;
 	.js-collapse-details {
 		overflow: hidden;
 	}
-	.js-collapse-details.-collapsed {
-	}
 }
 
 .qo-collapse-link {
@@ -209,13 +237,11 @@ $grid-gutter-width: 15px;
 		color: black;
 		text-decoration: none;
 	}
-	
 	.qo-arrow {
 		display: inline-block;
 		padding-top: 2px;
 		transition: all 0.5s;
 		transform: rotate(270deg) !important;
-		
 	}
 	&.-collapsed {
 		.qo-arrow {
@@ -223,3 +249,35 @@ $grid-gutter-width: 15px;
 		}
 	}
 }
+
+/* Styles für Flickity
+============================================================*/
+.js-carousel-cell {
+	height: auto;
+	width: 100%;
+}
+
+.flickity-page-dots {
+	bottom: -75px !important;
+	.dot {
+		height: 14px !important;
+		width: 14px !important;
+		margin: 0 12px !important;
+	}
+}
+
+//Vor- und Zurueck-Schalflaechen neben den Punkten
+.flickity-page-dots .button-item {
+	margin: 0 20px !important;
+}
+
+.button-item {
+	display: inline-block;
+	>.button {
+		padding: 0;
+		margin: 0 !important;
+		color: black;
+		background: none;
+	}
+}
+

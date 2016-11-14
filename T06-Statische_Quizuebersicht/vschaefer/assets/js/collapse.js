@@ -18,14 +18,16 @@ var collapse = {
 		var link = e.currentTarget;
 		var section = link.closest('.js-collapse-section');
 		var details = section.querySelector('.js-collapse-details');
+		var summary = section.querySelector('.js-quiz-summary');
 		
-		console.log(link);
+		e.preventDefault();
 		
-		
-
 		if (hasClass(details, '-collapsed')) {
 			link.classList.remove('-collapsed');
+			
 			details.classList.remove('-collapsed');
+			details.classList.add('-active');
+			summary.classList.add('-active');
 
 			var prevHeight = details.style.height;
 			details.style.transition = 'height .3s ease-in-out';
@@ -40,6 +42,8 @@ var collapse = {
 			
 			link.classList.add('-collapsed');
 			details.classList.add('-collapsed');
+			details.classList.remove('-active');
+			summary.classList.remove('-active');
 
 			details.style.transition = 'height .3s ease-in-out';
 
@@ -60,14 +64,6 @@ function handleTransitionEnd(e) {
 	element.style.height = 'auto'
 	element.removeEventListener('transitionend', handleTransitionEnd, false);
 }
-
-
-document.addEventListener('DOMContentLoaded', function () {
-	collapse.init();
-});
-
-
-
 
 // closest polyfill (von http://plain.js)
 this.Element && function (ElementPrototype) {
