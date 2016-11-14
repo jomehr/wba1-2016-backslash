@@ -1,23 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
 	collapse.init();
-
-	var element = document.querySelector('.js-carousel');
-	var flickityConfig = {
-		// options
-		cellAlign: 'left',
-		cellSelector: '.js-carousel-cell',
-		contain: true,
-		imagesLoaded: true,
-		prevNextButtons: false,
-		setGallerySize: true,
-	}
-	var $carousel = $('.js-carousel').flickity(flickityConfig)
-
-
-
-
-
-	slideshowNavi.init($carousel);
 });
 
 	/* Zur Initialisierung von zusätzlichen Schaltflächen
@@ -26,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	var slideshowNavi = {
 		_slideShows: null,
 		init: function (selector) {
-			
+
 
 			this._slideShows = selector;
 			if (this._slideShows) {
