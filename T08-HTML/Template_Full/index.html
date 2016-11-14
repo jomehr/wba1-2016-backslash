@@ -216,7 +216,7 @@
             <button type="button" id="quiz_beenden">Quizrunde beenden</button>
         </div>
         </div>
-        {{/#quiz}}
+        {{/quiz}}
     </div>
     </div>
     </div>
@@ -388,18 +388,16 @@ Highscore fill Funktion & Quiz Info
             }
         }
 
-        // function quiz() {
-        //     getQuizByID(sessionobject.quizID);
-        //     $(document).on("onQuizData", function (event, data) {
-        //         Quizobject.quiz = data;
-        //         Quizobject.sessionobject = sessionobject;
-        //         var source = $("#quiz-template").html();
-        //         var template = Handlebars.compile(source);
-        //         $('#templatespaceholder_handlebars').append(template(Quizobject));
-        //     });
-        // }
-        //
-        // viewSite();
+         function quiz() {
+             getQuizByID(sessionobject.quizID);
+             $(document).on("onQuizData", function (event, data) {
+                Quizobject.quiz = data;
+              Quizobject.sessionobject = sessionobject;
+              var source = $("#quiz-template").html();
+                var template = Handlebars.compile(source);
+               $('#templatespaceholder_handlebars').append(template(Quizobject));
+            });
+       }
 
         function quizend() {
             getQuizViewByID(sessionobject.quizID);
