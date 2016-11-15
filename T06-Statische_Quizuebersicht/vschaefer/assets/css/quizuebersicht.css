@@ -62,6 +62,18 @@
 .qo-image {
   width: 100%; }
 
+/* Bugfix - Höhe von Eingabefeldern und Dropdowns 
+ * wird vom Firefox falsch berechnet 
+ */
+@-moz-document url-prefix() {
+  .qo-select-box, .qo-search-box {
+    height: 30px;
+    text-indent: -1px !important;
+    padding: 3px 0 5px 8px !important; }
+
+  .qo-search-box {
+    text-indent: 3px !important;
+    padding: 5px 0 3px 8px !important; } }
 .qo-headline-box {
   padding: 20px 0 20px 0; }
   .qo-headline-box .qo-select-box {
@@ -74,9 +86,10 @@
     border: none;
     border-radius: 0;
     border: 1px solid #fff;
-    line-height: 18px;
+    line-height: 20px;
     margin-top: 15px;
-    padding: 5px 0 5px 8px;
+    text-indent: 2px;
+    padding: 4px 0 4px 8px;
     width: 100%; }
     .qo-headline-box .qo-select-box:focus {
       outline: none;
@@ -90,8 +103,8 @@
     background-repeat: no-repeat, repeat;
     background-position: 100% 50%, 0 0;
     margin-top: 15px;
-    padding: 5px 0 5px 8px;
-    text-indent: 10px;
+    padding: 4px 0 4px 8px;
+    text-indent: 4px;
     width: 100%; }
     @media (min-width: 768px) {
       .qo-headline-box .qo-search-box {
