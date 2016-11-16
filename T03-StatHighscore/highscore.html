@@ -1,47 +1,50 @@
 <!doctype html>
-<html>   
-    <head>
-        <!--Optimierung für Suchmaschinen. Zeile 6 bis 9 -->
- <link rel="stylesheet" type="text/css" href="css/hs-style.css"media="screen">
-        <link rel="stylesheet" href="../T09-CSS/style.css">
-		
-        <!-- Einbindung der CCS Datei. -->
-        
+<html>
+	<head>
+		<title>Highscore</title>
+		<!--Optimierung für Suchmaschinen. Zeile 6 bis 9 -->
+		<link rel="stylesheet" type="text/css" href="css/hs-style.css" media="screen">
+		<link rel="stylesheet" href="../T09-CSS/style.css">
+		<!-- Einbindung der CCS Datei. -->
 		<script src="js/main.js"></script>
-      <script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>   
+		<script
+			src="https://code.jquery.com/jquery-3.1.1.min.js"
+			integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			crossorigin="anonymous">
+		</script>
+		<script>
+			$(document).ready( function() {
+				test();
+			})
+		</script>
 	</head>
-    
-    <body style="max-width: 1000px;	margin: 0 auto; background-color:rgba(0,0,0,0);">
-       
-        <div id="hs-highscore">
-		
-            <header id="hs-title">
-				<div class="hs-ueberschriften">Effzeh - mer wesse alles üvver dich</div>
-            </header>
 
-            <section id="hs-search" class="row">
-                <div class="col-sm-4 col-xs-12">
-                    <div class="hs-search-element"><h3>Highscore</h3></div>
-				</div>
-				<div class="col-sm-4 col-xs-12">
-					<select class="hs-search-feld" name="sortieren nach"> 
-						<option>Zeitraum</option>
-						<option>...</option>
-                        <option>...</option>
-					</select>
-				</div>
-				<div class="col-sm-4 col-xs-12">
-					<input class="hs-search-element" id="suche" name="suche" placeholder="Suche" />
-				</div>
-			</section>
-            <div class="row">
-                <div class="col-xs-12">
+	<body style="max-width: 1000px;	margin: 0 auto; background-color:rgba(0,0,0,0);">
+		<div id="hs-highscore">
+			<header id="hs-title">
+				<div class="hs-ueberschriften">Effzeh - mer wesse alles üvver dich</div>
+			</header>			
+			<article id="hs-search" class="row">				
+					<div class="col-sm-4 col-xs-12">
+						<div class="hs-search-element">					
+							<p>Highscore</p>				
+						</div>
+					</div>
+					<div class="col-sm-4 col-xs-12">
+						<select class="hs-search-feld" name="sortieren nach"> 
+							<option>Zeitraum</option>
+							<option>...</option>
+							<option>...</option>
+						</select>
+					</div>
+					<div class="col-sm-4 col-xs-12">
+						<input class="hs-search-element" id="hs-search-input" name="suche" placeholder="Suche" />
+					</div>				
+			</article>			
+            <article>                
                     <table class="hs_fixed_headers">
                         <thead> 
-                            <tr>
+                            <tr class = "hs_fixed_headers_title">
                                 <th>Position</th>
                                 <th> Spieler</th>
                                 <th> Punkte</th>
@@ -49,23 +52,20 @@
                         </thead>
                         <tbody id="player_table">
                         </tbody>
-                    </table>
-                    </div>
-                </div>
-				
-			 <section class="row">
-				<div class="hs-option_button col-sm-3 col-xs-11 col-sm-offset-5">
+                    </table>                    
+			</article>				
+			 <article class="row">
+				<div class = "col-sm-4 col-xs-12 col-sm-offset-4">
+					<div class="hs-option_button">
 						<a href="link_titel.html"> Übersicht</a>
+					</div>
 				</div>
-                <div class="hs-option_button col-sm-3 col-xs-11">
+				<div class = "col-sm-4 col-xs-12">
+					<div class="hs-option_button">
 						<a href="link_titel.html"> Dieses Quiz spielen !</a>
+					</div>
 				</div>
-           
-            </section>				
-            </div>
-		
+            </article>				
+		</div>		
 	</body>
-	<script>
-		test();            
-	</script>
 </html>
