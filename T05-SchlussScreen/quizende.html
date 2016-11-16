@@ -27,10 +27,28 @@
 							<!-- Wird automatisch gefüllt sobald die Breite weniger als 992px. Siehe script.js funktion moveScoreText()  -->
 							<p class="ss_mobile_points_txt"></p>
 							<!--  Punktebalken  -->
-							<div class="ss_score_balken bg-mediumgrey">
-								<div class="ss_scale_score" style="width: 60%;">
+							<div class="ss_score_balken bg-mediumgrey" id="myProgress">
+								<div class="ss_scale_score" style="width: 0%;" id="myBar">
 								</div>
 							</div>
+							<script>
+								function move() {
+								 
+								  var elem = document.getElementById("myBar");
+								  var width = 0;
+								  var id = setInterval(frame, 30);
+								  function frame() {
+									if (width >= 60) {
+									  clearInterval(id);
+									} else {
+									  width++;
+									  elem.style.width = width + '%';
+									  document.getElementById("label").innerHTML = width * 1  + '%';
+									}
+								  }
+								}
+								window.setTimeout(move,1000);
+							</script>
 							<!-- Wird automatisch gefüllt sobald die Breite weniger als 992px. Siehe script.js funktion moveScoreText()  -->
 							<p class="ss_mobile_answer_txt"></p>
 							<!--  Richtig beantwortete Fragen (Punkte rot/grün)  -->
