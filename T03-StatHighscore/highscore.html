@@ -2,7 +2,8 @@
 <html>
 	<head>
 		<title>Highscore</title>
-		<!--Optimierung für Suchmaschinen. Zeile 6 bis 9 -->
+		
+		<meta charset="utf-8">		
 		<link rel="stylesheet" type="text/css" href="css/hs-style.css" media="screen">
 		<link rel="stylesheet" href="../T09-CSS/style.css">
 		<!-- Einbindung der CCS Datei. -->
@@ -26,31 +27,31 @@
 			</header>			
 			<article id="hs-search" class="row">				
 					<div class="col-sm-4 col-xs-12">
-						<div class="hs-search-element">					
-							<p>Highscore</p>				
+						<div class="hs-search-element font-primary">					
+							<p>Highscoreliste</p>				
 						</div>
 					</div>
 					<div class="col-sm-4 col-xs-12">
-						<select class="hs-search-feld" name="sortieren nach"> 
-							<option>Position</option>
+						<select class="hs-search-feld font-primary font-bold" name="sortieren nach"> 
+							<option>Zeitraum</option>
 							<option>Punkte</option>
 							<option>Spieler</option>
 						</select>
 					</div>
 					<div class="col-sm-4 col-xs-12">
-						<input class="hs-search-element" id="hs-search-input" name="suche" placeholder="Spieler suche"/>
+						<input class="hs-search-element font-italic" id="hs-search-input" name="suche" placeholder="Spieler suchen"/>
 					</div>				
 			</article>			
             <article>                
-                    <table class="hs_fixed_headers">
+                    <table class="hs_fixed_headers font-primary">
                         <thead> 
                             <tr class = "hs-fixed-headers-title">
                                 <th>Position</th>
-                                <th> Spieler</th>
-                                <th> Punkte</th>
+                                <th>Spieler</th>
+                                <th>Punkte</th>
                             </tr>
                         </thead>
-                        <tbody id="player_table">
+                        <tbody class = "font-secondary" id="player_table">
                         </tbody>
                     </table>                    
 			</article>				

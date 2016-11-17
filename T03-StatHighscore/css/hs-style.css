@@ -49,9 +49,12 @@ footer{
 
 
 #btn-uebersicht{
+	top
 }
 
 #btn-play{	
+	float				:	right;
+
 }
 
 #hs-highscore{
@@ -88,12 +91,14 @@ footer{
 		}
 
 #player_table {
-    height: 300px;   
+    height						: 300px;
+	padding						: 0 10px;
 }
 
 		#player_table tr {
-			height		:	30px;
+			height		:	15px;
 			padding		:	10px;
+			font-size	:	14px;
 }
 
 #hs-search{
@@ -139,21 +144,20 @@ thead {
 }
 
 th{
-	text-align			:	left;
-	padding-left		:	10px;
-	font-family			:	"NotoSan Regular", serif;	
-	
+	text-align			:	left;	
+	font-family			:	"NotoSan Regular", serif;
 	
 }
 td{
 	font-family			:	"NotoSan Bold", serif;
+
 	
 }
   
 tr {
     display				:	block;
-    position			:	relative;
-    
+    position			:	relative; 
+	line-height			:	5px;
 }
 
 tbody {
@@ -161,6 +165,7 @@ tbody {
     overflow			:	auto;
     width				:	100%;
     height				:	300px;
+	
 } 
 a:link {
     
@@ -180,11 +185,9 @@ a:link {
   border-collapse		:	collapse;
 }
 
-		.hs-fixed-headers-title th{
-			margin-left 		:	10px;
+		.hs-fixed-headers-title th{			
 			background-color	:	white;
-			padding				:	10px;
-			font-weight			:	normal;
+			padding				:	10px;					
 		}
 		
 .hs-option_button{	    
@@ -207,23 +210,21 @@ a:link {
 	height 				:	35px;
 	margin-top 			:	10px;
 	margin-bottom		:	10px;	
-    font-size			:   18px;
-    font-weight         :   700;
+    font-size			:   18px;   
 	width				:	100%;
     line-height 		:	35px;
 	
 } 
 
 		.hs-search-element p{
-			font-size		:	18px;
-			font-family		:   "Oswald Regular", serif;
+			font-size		:	18px;			
 			font-weight     :   700;
 		}
 
 		.hs-search-element::-webkit-input-placeholder{
 			padding-left		:	5px;
 			font-size			:	18px;
-			font-family			:	"Oswald Regular", serif;
+			color				:	#DCDCDC;											
 			background-image	:	url(../images/svg/input-style.svg);
 			background-repeat	:	no-repeat;
 			background-position	:	100% 50%, 0 0;
@@ -241,15 +242,11 @@ a:link {
 	background-image	:	url(../images/svg/dropdown-style.svg);
 	background-repeat	:	no-repeat, repeat;
 	background-position	:	100% 50%, 0 0;
+	padding-left		:	5px;
+	font-family			:	"Oswald Regular", serif;
 }
 
-		.hs-search-feld::-webkit-select{
-			padding-left		:	5px;
-			font-family			:	"Oswald Regular", serif;
-			
-			
-		}
-
+		
 .hs-ueberschriften{
 	padding-top 		:	10px;
 	padding-bottom		:	10px;
