@@ -2,8 +2,8 @@ Benötigte Scripts
 jQuery Library: https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
 API: https://rawgit.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/API/BS_API.js
 
-getQuizView(anzahl, sort);
-Besorgt eine Quiz-Übersicht mit "anzahl" Quizze mit jeweiligen Sortierung
+getQuizView(anzahl, searchString, sort);
+Besorgt eine Quiz-Übersicht mit "anzahl" Quizze mit optionaler Suche nach einem bestimmten String und optionaler Sortierung
 sort = 0 -> nach Datum absteigend
 sort = 1 -> nach Titel aufsteigend
 sort = 2 -> nach Spielzahl aufsteigend
