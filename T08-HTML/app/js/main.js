@@ -46,6 +46,7 @@ $(function () {
                 quizend();
                 break;
             case "4":
+                highscore();
                 break;
             default:
                 quizoverview();
@@ -69,7 +70,7 @@ $(function () {
         }
 
         function handleClick(e) {
-
+            console.log("test");
             //Standardverhalten preventen
             e.preventDefault();
 
@@ -158,36 +159,36 @@ $(function () {
             Quizobject.quizes = Quizobject.quizes.slice(0, 4);
             $.extend(Quizobject.datquiz, sessionobject);
 
-            view.render("quizend", Quizobject);
+            view.render("quizend", Quizobject, function(){
+              //Aktualisieren der richtig Falsch antworten & Scalebar füllen
+              var percent = Math.round((sessionobject.points / sessionobject.maxpoints) * 100);
+              document.getElementById("JS_ScaleScore").style.width = percent + "%";
+              //Red/Green Icons füllen
+              item = document.getElementById('JS_Score');
+              var redicon = '<div class="ss_score_point bg-red" ></div>';
+              var greenicon = '<div class="ss_score_point bg-green" ></div>';
+              var length = sessionobject.countquestions;
+              for (var i = 0; i < length; i++) {
+                  var random = Math.random();
+                  if (random >= 0.5) {
+                      item.innerHTML += redicon;
+                  } else {
+                      item.innerHTML += greenicon;
+                  }
+              }
+              var flickityConfig = {
+                  // options
+                  cellAlign: 'left',
+                  cellSelector: '.js-carousel-cell',
+                  contain: true,
+                  imagesLoaded: true,
+                  prevNextButtons: false,
+                  setGallerySize: true
+              };
+              var $carousel = $('.js-carousel').flickity(flickityConfig);
+              slideshowNavi.init($carousel);
 
-            //Aktualisieren der richtig Falsch antworten & Scalebar füllen
-            var percent = Math.round((sessionobject.points / sessionobject.maxpoints) * 100);
-            document.getElementById("JS_ScaleScore").style.width = percent + "%";
-            //Red/Green Icons füllen
-            item = document.getElementById('JS_Score');
-            var redicon = '<div class="ss_score_point bg-red" ></div>';
-            var greenicon = '<div class="ss_score_point bg-green" ></div>';
-            var length = sessionobject.countquestions;
-            for (var i = 0; i < length; i++) {
-                var random = Math.random();
-                if (random >= 0.5) {
-                    item.innerHTML += redicon;
-                } else {
-                    item.innerHTML += greenicon;
-                }
-            }
-            var flickityConfig = {
-                // options
-                cellAlign: 'left',
-                cellSelector: '.js-carousel-cell',
-                contain: true,
-                imagesLoaded: true,
-                prevNextButtons: false,
-                setGallerySize: true
-            };
-            var $carousel = $('.js-carousel').flickity(flickityConfig);
-            slideshowNavi.init($carousel);
-            clicklistener();
+            });
         });
     }
 
@@ -211,9 +212,8 @@ $(function () {
                 };
                 var $carousel = $('.js-carousel').flickity(flickityConfig);
                 slideshowNavi.init($carousel);
+                clicklistener();
             });
-
-            clicklistener();
         });
     }
 
@@ -223,11 +223,22 @@ $(function () {
             Quizobject.quizinfo = data;
             Quizobject.sessionobject = sessionobject;
 
-            view.render("quizinfo", Quizobject);
+            view.render("quizinfo", Quizobject, function () {
 
-            clicklistener();
+            });
         });
     }
 
+    function highscore() {
+      getHighscoreByID(sessionobject.quizID);
+      $(document).on( "onHighscoreData", function( event, data ) {
+          Quizobject.quizinfo = data;
+          Quizobject.sessionobject = sessionobject;
+
+          view.render("highscore", Quizobject, function () {
+            
+          });
+      });
+    }
     viewSite();
 });

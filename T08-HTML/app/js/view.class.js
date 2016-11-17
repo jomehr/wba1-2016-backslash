@@ -3,8 +3,8 @@ var view = {
         "quizoverview",
         "quizinfo",
         "quizround",
-        "quizend"
-        //"highscore"
+        "quizend",
+        "highscore"
     ],
     name: "quizoverview",
     render: function (view, data, callback) {
@@ -15,6 +15,7 @@ var view = {
                 templatespaceholder.empty();
                 templatespaceholder.append(template(data));
                 this.name = view;
+                
                 if (typeof callback == "function") {
                     callback();
                 }
