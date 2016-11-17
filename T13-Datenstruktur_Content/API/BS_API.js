@@ -70,7 +70,7 @@ json_request.send();
 }
 
 //Holt QuizUebersicht
-function getQuizView(anzahl){
+function getQuizView(anzahl, sort){
     var quizView = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/uebersichtQuiz.json";
     var json_request = new XMLHttpRequest();
 
@@ -78,6 +78,15 @@ function getQuizView(anzahl){
         if(json_request.readyState == 4 && json_request.status === 200 ){
             var jsonData = JSON.parse(json_request.responseText);
             var quizArray = [];
+            
+            if(sort == 0) 
+                sortJSON(jsonData, "datum", false);
+            else if(sort == 1)
+                sortJSON(jsonData, "titel", true);
+            else if(sort == 2) 
+                sortJSON(jsonData, "spielzahl", true);
+            else    
+                sortJSON(jsonData, "datum", false);
             
             for(var i=0;i<anzahl;i++){
                 quizArray.push(jsonData[i]);
@@ -169,4 +178,32 @@ function getHighscorePositions(quizID, user, punkte){
         }};
 json_request.open("GET", highscoreData,true );
 json_request.send();
+}
+
+//Zusaetzliche Funktionen fuer die Bearbeitung
+//Funktion zum sortieren des Arrays
+function sortJSON(json, prop, asc) {
+    json = json.sort(function(a, b) {
+        if (asc) {
+            if(prop == "datum") 
+                return (parseDate(a[prop]) > parseDate(b[prop])) ? 1 : ((parseDate(a[prop]) < parseDate(b[prop])) ? -1 : 0);
+            else if(prop == "spielzahl")
+                return (parseInt(a[prop], 10) > parseInt(b[prop], 10)) ? 1 : ((parseInt(a[prop], 10) < parseInt(b[prop], 10)) ? -1 : 0);
+            else 
+                return (a[prop] > b[prop]) ? 1 : ((a[prop] < b[prop]) ? -1 : 0);    
+        } else {
+            if(prop == "datum") 
+                return (parseDate(b[prop]) > parseDate(a[prop])) ? 1 : ((parseDate(b[prop]) < parseDate(a[prop])) ? -1 : 0);
+            else if(prop == "spielzahl")
+                return (parseInt(b[prop], 10) > parseInt(a[prop], 10)) ? 1 : ((parseInt(b[prop], 10) < parseInt(a[prop], 10)) ? -1 : 0);
+            else
+                return (b[prop] > a[prop]) ? 1 : ((b[prop] < a[prop]) ? -1 : 0);
+        }
+    });
+}
+
+//Funktion zum parsen des Datum
+function parseDate(input) {
+  var parts = input.match(/(\d+)/g);
+  return new Date(parts[2], parts[1]-1, parts[0]);
 }
