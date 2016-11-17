@@ -187,7 +187,7 @@ $(function () {
               };
               var $carousel = $('.js-carousel').flickity(flickityConfig);
               slideshowNavi.init($carousel);
-
+              clicklistener();
             });
         });
     }
@@ -224,7 +224,7 @@ $(function () {
             Quizobject.sessionobject = sessionobject;
 
             view.render("quizinfo", Quizobject, function () {
-
+            clicklistener();
             });
         });
     }
@@ -232,11 +232,11 @@ $(function () {
     function highscore() {
       getHighscoreByID(sessionobject.quizID);
       $(document).on( "onHighscoreData", function( event, data ) {
-          Quizobject.quizinfo = data;
+          Quizobject = data;
           Quizobject.sessionobject = sessionobject;
-
+          console.log(Quizobject);
           view.render("highscore", Quizobject, function () {
-            
+          clicklistener();
           });
       });
     }
