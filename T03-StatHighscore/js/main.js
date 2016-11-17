@@ -9,7 +9,7 @@ function test()
 	var Player = "ME :D";
 	var Points = 50;
 
-	for(var i = 0; i < 20; i++){
+	for(var i = 0; i < 50; i++){
 		addPlayer(Position, Player, Points);
 	}
 }

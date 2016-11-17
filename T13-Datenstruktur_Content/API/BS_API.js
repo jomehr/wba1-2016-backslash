@@ -27,7 +27,7 @@ json_request.send();
 
 //Holt Quiz mit der passenden ID
 function getQuizByID(quizID){
-    var quizData = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/quiz.json";
+    var quizData = "https://rawgit.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/quiz.json";
     var json_request = new XMLHttpRequest();
 
     json_request.onreadystatechange = function(){
@@ -56,7 +56,7 @@ json_request.send();
 
 //Holt Highscore mit der passenden ID
 function getHighscoreByID(quizID){
-    var highscoreData = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/highscore.json";
+    var highscoreData = "https://rawgit.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/highscore.json";
     var json_request = new XMLHttpRequest();
 
     json_request.onreadystatechange = function(){
@@ -70,28 +70,41 @@ json_request.send();
 }
 
 //Holt QuizUebersicht
-function getQuizView(anzahl, sort){
-    var quizView = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/uebersichtQuiz.json";
+var jsonQuizView = "";
+
+function getQuizView(anzahl, searchString = "", sort = 0){
+    var quizView = "https://rawgit.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/uebersichtQuiz.json";
     var json_request = new XMLHttpRequest();
 
     json_request.onreadystatechange = function(){
         if(json_request.readyState == 4 && json_request.status === 200 ){
-            var jsonData = JSON.parse(json_request.responseText);
+            if(jsonQuizView == "") {
+                var jsonData = JSON.parse(json_request.responseText);
+                jsonQuizView = jsonData;
+            }
+            else {
+                jsonData = jsonQuizView;
+            }
+
             var quizArray = [];
-            
+
+            for(var i=0;i<jsonData.length;i++){
+                if(searchString != "" && jsonData[i].titel.indexOf(searchString) >= 0) 
+                    quizArray.push(jsonData[i]);
+                else if(searchString == "")
+                    quizArray.push(jsonData[i]);
+            }
+
             if(sort == 0) 
-                sortJSON(jsonData, "datum", false);
+                sortJSON(quizArray, "datum", false);
             else if(sort == 1)
                 sortJSON(jsonData, "titel", true);
             else if(sort == 2) 
-                sortJSON(jsonData, "spielzahl", true);
+                sortJSON(quizArray, "spielzahl", true);
             else    
-                sortJSON(jsonData, "datum", false);
-            
-            for(var i=0;i<anzahl;i++){
-                quizArray.push(jsonData[i]);
-            }
-            var jsonOut = quizArray;
+                sortJSON(quizArray, "datum", false);
+
+            var jsonOut = quizArray.slice(0,anzahl);
             $( document ).trigger( "onQuizView", [ jsonOut ] );
         }};
 json_request.open("GET", quizView,true );
@@ -100,7 +113,7 @@ json_request.send();
 
 //Holt ein bestimmtes Quiz aus der Uebersicht
 function getQuizViewByID(quizID){
-    var quizView = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/uebersichtQuiz.json";
+    var quizView = "https://rawgit.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/uebersichtQuiz.json";
     var json_request = new XMLHttpRequest();
 
     json_request.onreadystatechange = function(){
@@ -116,7 +129,7 @@ json_request.send();
 
 //Holt 2 Position über und unter den angegebenen Punkten
 function getHighscorePositions(quizID, user, punkte){
-    var highscoreData = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/highscore.json";
+    var highscoreData = "https://rawgit.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/highscore.json";
     var json_request = new XMLHttpRequest();
 
     json_request.onreadystatechange = function(){
@@ -133,7 +146,7 @@ function getHighscorePositions(quizID, user, punkte){
                     
                     if(hs.highscore[i].position == 1){
                         highscoreArray.push({position: 1, name: user, punktzahl: punkte});
-                        for(var j=0;j<4;j++){highscoreArray.push({position: parseInt(hs.highscore[i+j].position)+1,
+                        for(var j=0;j<4;j++){highscoreArray.push({position: (hs.highscore[i+j].position)+1,
                                                                   name: hs.highscore[i+j].name,
                                                                   punktzahl: hs.highscore[i+j].punktzahl});}
                     }
@@ -141,7 +154,7 @@ function getHighscorePositions(quizID, user, punkte){
                     else if(hs.highscore[i].position == 2){
                         highscoreArray.push(hs.highscore[i-1]);
                         highscoreArray.push({position: 2, name: user, punktzahl: punkte});
-                        for(var j=0;j<3;j++){highscoreArray.push({position: parseInt(hs.highscore[i+j].position)+1,
+                        for(var j=0;j<3;j++){highscoreArray.push({position: (hs.highscore[i+j].position)+1,
                                                                   name: hs.highscore[i+j].name,
                                                                   punktzahl: hs.highscore[i+j].punktzahl});}
                     }
@@ -149,7 +162,7 @@ function getHighscorePositions(quizID, user, punkte){
                     else if(hs.highscore[i].position < hs.highscore.length){
                         for(var j=0;j<2;j++){highscoreArray.push(hs.highscore[i-2+j]);}
                         highscoreArray.push({position: i+1, name: user, punktzahl: punkte});
-                        for(var j=0;j<2;j++){highscoreArray.push({position: parseInt(hs.highscore[i+j].position)+1,
+                        for(var j=0;j<2;j++){highscoreArray.push({position: (hs.highscore[i+j].position)+1,
                                                                   name: hs.highscore[i+j].name,
                                                                   punktzahl: hs.highscore[i+j].punktzahl});}
                     }
@@ -157,7 +170,7 @@ function getHighscorePositions(quizID, user, punkte){
                     else if(hs.highscore[i].position == hs.highscore.length){
                         for(var j=0;j<3;j++){highscoreArray.push(hs.highscore[i-3+j]);}
                         highscoreArray.push({position: i+1, name: user, punktzahl: punkte});
-                        highscoreArray.push({position: parseInt(hs.highscore[i].position)+1,
+                        highscoreArray.push({position: (hs.highscore[i].position)+1,
                                              name: hs.highscore[i].name,
                                              punktzahl: hs.highscore[i].punktzahl});
                     }                    
@@ -188,14 +201,14 @@ function sortJSON(json, prop, asc) {
             if(prop == "datum") 
                 return (parseDate(a[prop]) > parseDate(b[prop])) ? 1 : ((parseDate(a[prop]) < parseDate(b[prop])) ? -1 : 0);
             else if(prop == "spielzahl")
-                return (parseInt(a[prop], 10) > parseInt(b[prop], 10)) ? 1 : ((parseInt(a[prop], 10) < parseInt(b[prop], 10)) ? -1 : 0);
+                return (a[prop] > b[prop]) ? 1 : ((a[prop] < b[prop]) ? -1 : 0);
             else 
                 return (a[prop] > b[prop]) ? 1 : ((a[prop] < b[prop]) ? -1 : 0);    
         } else {
             if(prop == "datum") 
                 return (parseDate(b[prop]) > parseDate(a[prop])) ? 1 : ((parseDate(b[prop]) < parseDate(a[prop])) ? -1 : 0);
             else if(prop == "spielzahl")
-                return (parseInt(b[prop], 10) > parseInt(a[prop], 10)) ? 1 : ((parseInt(b[prop], 10) < parseInt(a[prop], 10)) ? -1 : 0);
+                return (b[prop] > a[prop]) ? 1 : ((b[prop] < a[prop]) ? -1 : 0);
             else
                 return (b[prop] > a[prop]) ? 1 : ((b[prop] < a[prop]) ? -1 : 0);
         }
