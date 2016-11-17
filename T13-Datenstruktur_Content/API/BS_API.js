@@ -104,7 +104,7 @@ function getQuizView(anzahl, searchString = "", sort = 0){
             else    
                 sortJSON(quizArray, "datum", false);
 
-            var jsonOut = quizArray;
+            var jsonOut = quizArray.slice(0,anzahl);
             $( document ).trigger( "onQuizView", [ jsonOut ] );
         }};
 json_request.open("GET", quizView,true );
