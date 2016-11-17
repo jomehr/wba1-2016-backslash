@@ -88,7 +88,7 @@ function getQuizView(anzahl, searchString = "", sort = 0){
 
             var quizArray = [];
 
-            for(var i=0;i<anzahl;i++){
+            for(var i=0;i<jsonData.length;i++){
                 if(searchString != "" && jsonData[i].titel.indexOf(searchString) >= 0) 
                     quizArray.push(jsonData[i]);
                 else if(searchString == "")
@@ -104,7 +104,7 @@ function getQuizView(anzahl, searchString = "", sort = 0){
             else    
                 sortJSON(quizArray, "datum", false);
 
-            var jsonOut = quizArray;
+            var jsonOut = quizArray.slice(0,anzahl);
             $( document ).trigger( "onQuizView", [ jsonOut ] );
         }};
 json_request.open("GET", quizView,true );
