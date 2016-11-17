@@ -4,9 +4,6 @@
 <head>
     <title>Fubuizz</title>
     <link rel="stylesheet" href="../../T09-CSS/style.build.css">
-    <link rel="stylesheet" href="./css/flickity.css" media="screen">
-    <link rel="stylesheet" href="T06/assets/css/quizuebersicht.css">
-    <link rel="stylesheet" href="T06/assets/lib/flickity.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -597,7 +594,7 @@ Highscore fill Funktion & Quiz Info
         if (sessionobject.view === undefined) {
             sessionobject.view = 0;
         }
-        console.log(sessionobject.view);
+
 
         // Switch view
         // 0 default (startseite)
@@ -606,7 +603,9 @@ Highscore fill Funktion & Quiz Info
         // 3 Quizend
         // 4 Quiz Highscore
         function viewSite() {
-            console.log(sessionobject.view);
+            console.log($("#templatespaceholder_handlebars"));
+            $('#templatespaceholder_handlebars').empty();
+
             switch (sessionobject.view) {
                 case "1":
                     quizinfo();
@@ -624,13 +623,20 @@ Highscore fill Funktion & Quiz Info
                     console.log("Bitte sessionStorage.setItem('view','id') in die Console eingeben. \n id info : \n 0 = default \n 1 = quizinfo \n 2 = quiz(undefined) \n 3 = quizend \n 4 = highscore(undefined)");
                     break;
             }
-            clicklistener();
         }
         function clicklistener (){
           var elements = document.querySelectorAll('.js-change-view');
+          console.log("test");
           //Eventlistener zu jedem Link hinzuf�gen
           for (i = 0; i < elements.length; i++) {
-            elements[i].addEventListener('click', handleClick);
+              var click_eventcheck = elements[i].getAttribute('events');
+
+              if(click_eventcheck === null) {
+                elements[i].setAttribute('events',"true");
+                elements[i].removeEventListener('click',handleClick);
+                elements[i].addEventListener('click', handleClick);
+              }
+
           }
 
           function handleClick(e) {
@@ -640,9 +646,7 @@ Highscore fill Funktion & Quiz Info
 
             //data auslesen
             var click_quizid = e.currentTarget.getAttribute('data-quizID');
-            console.log(click_quizid);
             var click_view = e.currentTarget.getAttribute('data-view');
-            console.log(click_view);
             if(click_quizid === null || click_quizid === undefined) {
               sessionobject.quizID=0;
             } else {
@@ -651,7 +655,7 @@ Highscore fill Funktion & Quiz Info
             sessionStorage.setItem('quizid', sessionobject.quizID);
             if(click_view !== sessionobject.view) {
               sessionobject.view=click_view;
-              sessionStorage.view=sessionobject.view;
+              sessionStorage.setItem('view',sessionobject.view);
             }
             viewSite();
         }
@@ -662,9 +666,9 @@ Highscore fill Funktion & Quiz Info
               Quizobject.quiz = data;
               Quizobject.sessionobject = sessionobject;
               var source = $("#quiz-template").html();
-                var template = Handlebars.compile(source);
-               $("#templatespaceholder_handlebars").empty();
+              var template = Handlebars.compile(source);
                $('#templatespaceholder_handlebars').append(template(Quizobject));
+               clicklistener();
             });
        }
 
@@ -723,11 +727,9 @@ Highscore fill Funktion & Quiz Info
                 Quizobject.quizes = nQuizObject;
                 Quizobject.quizes = Quizobject.quizes.slice(0, 4);
                 $.extend(Quizobject.datquiz, sessionobject);
-
                 var source = $("#Quizend-template").html();
                 var template = "";
                 template = Handlebars.compile(source);
-                $("#templatespaceholder_handlebars").empty();
                 $('#templatespaceholder_handlebars').append(template(Quizobject));
                 //Aktualisieren der richtig Falsch antworten & Scalebar füllen
                 var percent = Math.round((sessionobject.points / sessionobject.maxpoints) * 100);
@@ -756,7 +758,7 @@ Highscore fill Funktion & Quiz Info
                 }
                 var $carousel = $('.js-carousel').flickity(flickityConfig)
                 slideshowNavi.init($carousel);
-
+                clicklistener();
             });
         }
 
@@ -767,7 +769,7 @@ Highscore fill Funktion & Quiz Info
                 Quizobject.quizes = data; //copy object
                 var source = $("#Quizoverview-template").html();
                 var template = Handlebars.compile(source);
-                $("#templatespaceholder_handlebars").empty();
+
                 $('#templatespaceholder_handlebars').append(template(Quizobject));
                 collapse.init();
                 var flickityConfig = {
@@ -792,9 +794,9 @@ Highscore fill Funktion & Quiz Info
                 Quizobject.sessionobject = sessionobject;
                 var source = $("#quizinfo-template").html();
                 var template = Handlebars.compile(source);
-                $("#templatespaceholder_handlebars").empty();
-                $('#templatespaceholder_handlebars').append(template(Quizobject));
 
+                $('#templatespaceholder_handlebars').append(template(Quizobject));
+                clicklistener();
             });
         }
         viewSite();
