@@ -3,7 +3,6 @@ var view = {
 
 	//View Quizübersicht initialisieren
 	initQuizOverview: function () {
-<<<<<<< HEAD
 		
 		getQuizView(5, 0);
         $(document).on( "onQuizView", function( event, data ) { 
@@ -20,43 +19,8 @@ var view = {
         },
 		
 	
-
-=======
-
-		//JSON via AJAX holen
-		getAjax(dataUrls.dataQuizOverviewURL, function (data) {
-			console.log(data);
-			//JSON speichern
-			var jsonData = JSON.parse(data);
-
-			//View mit Daten füttern
-			var element = document.querySelector('.js-quiz-uebersicht');
-			for (var i = 0; i < jsonData.quiz.length; i++)
-				{
-				var quiz = jsonData.quiz[i];
-				var content = '<li><a href="' + viewUrls.viewQuizStartURL + '?quizId=' + quiz.quizID + '">';
-				content += '<h2>' + quiz.titel + '</h2>';
-				content += '<p>' + quiz.text + '</p>';
-				content += '</a></li>';
-				element.innerHTML += content;
-				}
-		})
-	},
->>>>>>> ba027d604c87cab75b6fca0905cf4b4a2540514f
-
 	//View Quizstart initialisieren
 	initQuizStart: function () {
-
-		//JSON via AJAX holen
-		//getAjax(dataUrls.dataQuizOverviewURL, function (data) {
-
-<<<<<<< HEAD
-            //JSON speichern
-			//var jsonData = JSON.parse(data);
-=======
-			//JSON speichern
-			var jsonData = JSON.parse(data);
->>>>>>> ba027d604c87cab75b6fca0905cf4b4a2540514f
 
 			//quizID aus URL holen
 			var quizID = getQueryString('quizId', window.location.href);
@@ -75,7 +39,6 @@ var view = {
                 var element = document.querySelector('.js-quiz-starten');
                 element.setAttribute('href', viewUrls.viewQuizRundeURL + '?quizId=' + quizID);
             });
-		//})
 	},
 
 	//View Quizende initialisieren
