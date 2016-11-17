@@ -24,13 +24,15 @@ $(function () {
         "username": sessionStorage.getItem('username'),
         "view": sessionStorage.getItem('view')
     };
+
     if (sessionobject.view === undefined) {
         sessionobject.view = 0;
+    } else {
+      sessionobject.view = parseInt(sessionobject.view);
     }
 
 
     function viewSite() {
-      console.log(sessionobject);
         //console.log("Bitte sessionStorage.setItem('view','id') in die Console eingeben. \n id info : \n 0 = default \n 1 = quizinfo \n 2 = quiz(undefined) \n 3 = quizend \n 4 = highscore(undefined)");
         switch (sessionobject.view) {
             case 1:
