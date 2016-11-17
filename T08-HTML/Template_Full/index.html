@@ -626,7 +626,7 @@ Highscore fill Funktion & Quiz Info
         }
         function clicklistener (){
           var elements = document.querySelectorAll('.js-change-view');
-          console.log("test");
+          console.log(elements);
           //Eventlistener zu jedem Link hinzuf�gen
           for (i = 0; i < elements.length; i++) {
               var click_eventcheck = elements[i].getAttribute('events');
@@ -667,8 +667,8 @@ Highscore fill Funktion & Quiz Info
               Quizobject.sessionobject = sessionobject;
               var source = $("#quiz-template").html();
               var template = Handlebars.compile(source);
-               $('#templatespaceholder_handlebars').append(template(Quizobject));
-               clicklistener();
+              $('#templatespaceholder_handlebars').append(template(Quizobject));
+              clicklistener();
             });
        }
 
@@ -769,8 +769,10 @@ Highscore fill Funktion & Quiz Info
                 Quizobject.quizes = data; //copy object
                 var source = $("#Quizoverview-template").html();
                 var template = Handlebars.compile(source);
-
-                $('#templatespaceholder_handlebars').append(template(Quizobject));
+                var templatehtml=template(Quizobject);
+                console.log(templatehtml);
+                debugger;
+                $('#templatespaceholder_handlebars').append(templatehtml);
                 collapse.init();
                 var flickityConfig = {
                   // options
@@ -794,7 +796,6 @@ Highscore fill Funktion & Quiz Info
                 Quizobject.sessionobject = sessionobject;
                 var source = $("#quizinfo-template").html();
                 var template = Handlebars.compile(source);
-
                 $('#templatespaceholder_handlebars').append(template(Quizobject));
                 clicklistener();
             });
