@@ -59,7 +59,7 @@
     <img src="../old/img/Logo_Fubuizz.png" class="wa_logo" alt="Fubuizz_Logo_Mobile">
 </header>
 
-<div id="templatespaceholder_handlebars">
+<div id="templatespaceholder">
 </div>
 
 <!-- Beginn des Foooters -->
@@ -89,6 +89,7 @@
 <script type="application/javascript" src="js/T06/quizuebersicht.js"></script>
 
 <!-- main logic -->
+<script type="application/javascript" src="js/view.class.js"></script>
 <script type="application/javascript" src="js/main.js"></script>
 
 
@@ -146,7 +147,7 @@
 </script>
 
 <!-- Quiz Template-->
-<script id="quiz-template" type="text/x-handlebars-template">
+<script id="quizround-template" type="text/x-handlebars-template">
 
     {{#quiz}}
     <div class="container">
@@ -247,7 +248,7 @@
 </script>
 
 <!-- Quizend Template-->
-<script id="Quizend-template" type="text/x-handlebars-template">
+<script id="quizend-template" type="text/x-handlebars-template">
 
     {{#datquiz}}
     <div class="container ss_box">
@@ -357,7 +358,7 @@
 </script>
 
 <!-- Quizoverview // HOME -->
-<script id="Quizoverview-template" type="text/x-handlebars-template">
+<script id="quizoverview-template" type="text/x-handlebars-template">
     <!-- Quizübersicht -->
     <main class="container qo-content-box bg-white">
         <!-- Headline -->

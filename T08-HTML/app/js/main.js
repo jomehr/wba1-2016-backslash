@@ -35,8 +35,6 @@ $(function () {
     // 3 Quizend
     // 4 Quiz Highscore
     function viewSite() {
-        $('#templatespaceholder_handlebars').empty();
-
         switch (sessionobject.view) {
             case "1":
                 quizinfo();
@@ -58,7 +56,6 @@ $(function () {
 
     function clicklistener() {
         var elements = document.querySelectorAll('.js-change-view');
-        console.log(elements);
         //Eventlistener zu jedem Link hinzuf�gen
         for (i = 0; i < elements.length; i++) {
             var click_eventcheck = elements[i].getAttribute('events');
@@ -98,9 +95,9 @@ $(function () {
         $(document).on("onQuizData", function (event, data) {
             Quizobject.quiz = data;
             Quizobject.sessionobject = sessionobject;
-            var source = $("#quiz-template").html();
-            var template = Handlebars.compile(source);
-            $('#templatespaceholder_handlebars').append(template(Quizobject));
+
+            view.render("quizround", Quizobject);
+
             clicklistener();
         });
     }
@@ -160,10 +157,9 @@ $(function () {
             Quizobject.quizes = nQuizObject;
             Quizobject.quizes = Quizobject.quizes.slice(0, 4);
             $.extend(Quizobject.datquiz, sessionobject);
-            var source = $("#Quizend-template").html();
-            var template = "";
-            template = Handlebars.compile(source);
-            $('#templatespaceholder_handlebars').append(template(Quizobject));
+
+            view.render("quizend", Quizobject);
+
             //Aktualisieren der richtig Falsch antworten & Scalebar füllen
             var percent = Math.round((sessionobject.points / sessionobject.maxpoints) * 100);
             document.getElementById("JS_ScaleScore").style.width = percent + "%";
@@ -200,12 +196,9 @@ $(function () {
         //Random Quiz Vorschlag
         $(document).on("onQuizView", function (event, data) {
             Quizobject.quizes = data; //copy object
-            var source = $("#Quizoverview-template").html();
-            var template = Handlebars.compile(source);
-            var templatehtml = template(Quizobject);
-            console.log(templatehtml);
-            debugger;
-            $('#templatespaceholder_handlebars').append(templatehtml);
+
+            view.render("quizoverview", Quizobject);
+
             collapse.init();
             var flickityConfig = {
                 // options
@@ -227,9 +220,9 @@ $(function () {
         $(document).on("onQuizViewByID", function (event, data) {
             Quizobject.quizinfo = data;
             Quizobject.sessionobject = sessionobject;
-            var source = $("#quizinfo-template").html();
-            var template = Handlebars.compile(source);
-            $('#templatespaceholder_handlebars').append(template(Quizobject));
+
+            view.render("quizinfo", Quizobject);
+
             clicklistener();
         });
     }
