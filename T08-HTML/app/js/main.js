@@ -31,7 +31,6 @@ $(function () {
       sessionobject.view = parseInt(sessionobject.view);
     }
 
-
     function viewSite() {
         //console.log("Bitte sessionStorage.setItem('view','id') in die Console eingeben. \n id info : \n 0 = default \n 1 = quizinfo \n 2 = quiz(undefined) \n 3 = quizend \n 4 = highscore(undefined)");
         switch (sessionobject.view) {
@@ -74,7 +73,6 @@ $(function () {
                     };
                     var $carousel = $('.js-carousel').flickity(flickityConfig);
                     slideshowNavi.init($carousel);
-
                     clicklistener();
                 });
                 break;
