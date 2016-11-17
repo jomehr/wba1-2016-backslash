@@ -3,7 +3,7 @@
 .ss_box {
 	margin: 20px auto 0px auto;
 	background: #fff;
-	
+	border: 1px solid #929292;
 }
 
 .ss_box header {
