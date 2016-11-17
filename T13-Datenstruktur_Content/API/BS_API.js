@@ -70,27 +70,40 @@ json_request.send();
 }
 
 //Holt QuizUebersicht
-function getQuizView(anzahl, sort){
+var jsonQuizView = "";
+
+function getQuizView(anzahl, searchString = "", sort = 0){
     var quizView = "https://rawgit.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/uebersichtQuiz.json";
     var json_request = new XMLHttpRequest();
 
     json_request.onreadystatechange = function(){
         if(json_request.readyState == 4 && json_request.status === 200 ){
-            var jsonData = JSON.parse(json_request.responseText);
+            if(jsonQuizView == "") {
+                var jsonData = JSON.parse(json_request.responseText);
+                jsonQuizView = jsonData;
+            }
+            else {
+                jsonData = jsonQuizView;
+            }
+
             var quizArray = [];
-            
+
+            for(var i=0;i<anzahl;i++){
+                if(searchString != "" && jsonData[i].titel.indexOf(searchString) >= 0) 
+                    quizArray.push(jsonData[i]);
+                else if(searchString == "")
+                    quizArray.push(jsonData[i]);
+            }
+
             if(sort == 0) 
-                sortJSON(jsonData, "datum", false);
+                sortJSON(quizArray, "datum", false);
             else if(sort == 1)
                 sortJSON(jsonData, "titel", true);
             else if(sort == 2) 
-                sortJSON(jsonData, "spielzahl", true);
+                sortJSON(quizArray, "spielzahl", true);
             else    
-                sortJSON(jsonData, "datum", false);
-            
-            for(var i=0;i<anzahl;i++){
-                quizArray.push(jsonData[i]);
-            }
+                sortJSON(quizArray, "datum", false);
+
             var jsonOut = quizArray;
             $( document ).trigger( "onQuizView", [ jsonOut ] );
         }};
