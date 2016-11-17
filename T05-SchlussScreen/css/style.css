@@ -3,6 +3,7 @@
 .ss_box {
 	margin: 20px auto 0px auto;
 	background: #fff;
+	
 }
 
 .ss_box header {
@@ -145,6 +146,26 @@
 	cursor: pointer;
 	margin-right: 30px;
 }
+
+.ss_slider_menu .ss_slider_menu_left,
+.ss_slider_menu .ss_slider_menu_right {
+	background-image: url(../img/dropdown-style.svg);
+	height: 20px;
+    width: 26px;
+}
+
+.ss_slider_menu .ss_slider_menu_left {
+	transform: rotate(90deg);
+	position: relative;
+    bottom: 4px;
+}
+
+.ss_slider_menu .ss_slider_menu_right {
+	transform: rotate(270deg);
+	position: relative;
+    bottom: 1px;
+}
+
 .ss_slider_menu .ss_slider_bt {
 	background: #ccc;
 	width: 14px;
