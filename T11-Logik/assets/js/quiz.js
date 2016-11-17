@@ -4,8 +4,15 @@ var view = {
 	//View Quizübersicht initialisieren
 	initQuizOverview: function () {
 		
+        /*
+        der erste Parameter "anzahl" gibt an wie viele Quizze man für die Übersicht haben möchte, der zweite "searchString" nach welchem Quiz man ggf. sucht und der dritte "sort" gibt an wie man es sortiert haben möchte
+        sort = 0 -> nach Datum absteigend (01.01.2017,...,01.01.2016)
+        sort = 1 -> nach Titel aufsteigend (A,B,C,D,...)
+        sort = 2 -> nach Spielzahl aufsteigend (67,100,200,...)
+        Nur der Parameter "anzahl" muss angegeben werden. Die zwei anderen "sort" und "searchString" sind optional! 
+    */
 		getQuizView(5, 0);
-        $(document).on( "onQuizView", function( event, data ) { 
+        $(document).on( "onQuizView", function( event, data) { 
 
             var element = document.querySelector('.js-quiz-uebersicht');
             for (var i = 0; i < data.length; i++){
