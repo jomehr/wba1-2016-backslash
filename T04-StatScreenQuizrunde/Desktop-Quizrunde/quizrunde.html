@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
     <head>
         <meta charset = "utf-8">
         <title>Quizrunde</title>
@@ -13,8 +13,23 @@
 		<link rel="stylesheet" href="../../T12_AnimationUebergaenge/final/animate.css">
 		<script type="text/javascript" src="../../T12_AnimationUebergaenge/final/scripts.js"></script>
 		<script type="text/javascript" src="../../T12_AnimationUebergaenge/final/timerScript.min.js"></script>
+
+        <style type="text/css" media="screen">
+            .answer--correct {
+                background-color: #4ac725 !important;
+            }
+
+            .answer--wrong {
+                background-color: #cb0727 !important;
+            }
+
+            .answer--correct span:last-child,
+            .answer--wrong   span:last-child {
+                background-color: transparent !important;
+            }
+        </style>
 	</head>
-    
+
     <body class="animated fadeInRightBig">
         <div class="container">
             <!-- Erstellung der Content-Box mit weißem Hintergrund -->
@@ -59,39 +74,39 @@
                     A
                     </span>
                     <!-- große Box mit Antwort wird erstellt -->
-                    <span class="qr-long bg-lightgrey" id="wrongAnswer1" onclick="changeAnswerButtonColor('wrongAnswer1')">
+                    <span class="qr-long bg-lightgrey" id="wrongAnswer1" data-antwort="0">
                     "Das interessiert mich jetzt wie eine geplatzte Currywust im ostfriesischen Wattenmeer."
                      </span>
                 </button>
-                
+
                 <button class="qr-fg-black bg-lightgrey">
                     <span class="qr-short bg-yellow">
                         B
                     </span>
-                    <span class="qr-long bg-lightgrey" id="wrongAnswer2" onclick="changeAnswerButtonColor('wrongAnswer2')">
+                    <span class="qr-long bg-lightgrey" id="wrongAnswer2" data-antwort="1">
                         "Wir dürfen jetzt nicht den Sand in den Kopf stecken."
                     </span>
                 </button>
-           
+
                 <button class="qr-fg-black bg-lightgrey">
                     <span class="qr-short bg-yellow">
                         C
                     </span>
-                    <span class="qr-long bg-lightgrey" id="wrongAnswer3" onclick="changeAnswerButtonColor('wrongAnswer3')">
+                    <span class="qr-long bg-lightgrey" id="wrongAnswer3" data-antwort="2">
                         "Wenn meine Oma ein Bus wäre, dann könnte sie hupen."
                     </span>
                 </button>
-            
+
                 <button class="qr-fg-black bg-lightgrey">
                     <span class="qr-short bg-yellow">
                         D
                     </span>
-                    <span class="qr-long bg-lightgrey" id="rightAnswer" onclick="changeAnswerButtonColor('rightAnswer')">
+                    <span class="qr-long bg-lightgrey" id="rightAnswer" data-antwort="3">
                         "Moin moin, Gascoigne."
                     </span>
                 </button>
             </div>
-                
+
             <!-- Feedback-Icons werden erstellt -->
             <div class="qr-answer_icons">
                 <div class="qr-answer_icon bg-red"></div>
