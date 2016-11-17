@@ -59,10 +59,9 @@ var view = {
         getQuizViewByID(sessionobject.quizID);
 
         $(document).on("onQuizViewByID", function (event, data) {
-
             Quizobject.quizinfo = data;
             Quizobject.sessionobject = sessionobject;
-            console.log(Quizobject);
+
             if (typeof callback == "function") {
                 callback(Quizobject);
             }
@@ -74,6 +73,8 @@ var view = {
         $(document).on("onQuizData", function (event, data) {
             Quizobject.quiz = data;
             Quizobject.sessionobject = sessionobject;
+
+            console.log(Quizobject);
 
             if (typeof callback == "function") {
                 callback(Quizobject);

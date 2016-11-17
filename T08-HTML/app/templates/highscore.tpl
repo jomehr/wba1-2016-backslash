@@ -1,5 +1,5 @@
-<div id="hs-highscore" class="container">
-    <header id="hs-title">
+<div id="hs-highscore" class="container font-secondary">
+    <header id="hs-title" class="bg-yellow fg-black">
         <div class="hs-ueberschriften">Effzeh - mer wesse alles üvver dich</div>
     </header>
     <article id="hs-search" class="row">
@@ -23,9 +23,9 @@
         <table class="hs_fixed_headers">
             <thead>
             <tr class="hs-fixed-headers-title">
-                <th>Position</th>
-                <th> Spieler</th>
-                <th> Punkte</th>
+                <th class="font-primary">Position</th>
+                <th class="font-primary">Spieler</th>
+                <th class="font-primary">Punkte</th>
             </tr>
             </thead>
             {{#each highscore}}

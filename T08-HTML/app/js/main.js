@@ -42,6 +42,10 @@ $(function () {
             case 2:
                 view.render("quizround", function () {
                     clicklistener();
+
+                    $("#templatespaceholder").on("transitionend", function () {
+                        console.log("sth");
+                    });
                 });
                 break;
             case 3:
@@ -119,12 +123,9 @@ $(function () {
             //Standardverhalten preventen
             e.preventDefault();
 
-            console.log(e);
-
             //data auslesen
             var click_quizid = e.currentTarget.getAttribute('data-quizID');
             var click_view = parseInt(e.currentTarget.getAttribute('data-view'));
-            console.log(click_view);
             if (click_quizid === null || click_quizid === undefined) {
                 sessionobject.quizID = 0;
             } else {
