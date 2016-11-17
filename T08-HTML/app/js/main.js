@@ -107,7 +107,6 @@ $(function () {
         //Eventlistener zu jedem Link hinzufügen
         for (i = 0; i < elements.length; i++) {
             var click_eventcheck = elements[i].getAttribute('events');
-
             if (click_eventcheck === null) {
                 elements[i].setAttribute('events', "true");
                 elements[i].removeEventListener('click', handleClick);

@@ -32,7 +32,7 @@
             <tr>
                 <td>{{this.position}}</td>
                 <td>{{this.name}}</td>
-                <td>{{this.punkte}}</td>
+                <td>{{this.punktzahl}}</td>
             </tr>
             {{/each}}
         </table>
