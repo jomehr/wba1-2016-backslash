@@ -28,7 +28,7 @@ $grid-gutter-width: 15px;
 .row._same-height-sm {
   @media(min-width: $screen-sm-min) {
     display: flex;
-    &>[class*='col-'] {
+    & > [class*='col-'] {
       display: flex;
       flex-direction: column;
     }
@@ -39,7 +39,7 @@ $grid-gutter-width: 15px;
 .row._same-height-xs {
   @media(max-width: $screen-sm-min - 1) {
     display: flex;
-    &>[class*='col-'] {
+    & > [class*='col-'] {
       display: flex;
       flex-direction: column;
     }
@@ -48,7 +48,6 @@ $grid-gutter-width: 15px;
 
 /* Components und Elements
 ============================================================*/
-
 
 //Diese CSS-Regel sollte man später der Klasse 'container' zusesen
 .qo-content-box {
@@ -91,7 +90,6 @@ $grid-gutter-width: 15px;
 .qo-image {
   width: 100%;
 }
-
 
 /* Bugfix - Höhe von Eingabefeldern und Dropdowns
  * wird vom Firefox falsch berechnet
@@ -170,8 +168,6 @@ $grid-gutter-width: 15px;
     }
   }
 }
-
-
 
 .qo-quiz-summary {
   transition: background-color 0;
@@ -292,7 +288,7 @@ $grid-gutter-width: 15px;
 
 .button-item {
   display: inline-block;
-  >.button {
+  > .button {
     padding: 0;
     margin: 0 !important;
     color: black;
