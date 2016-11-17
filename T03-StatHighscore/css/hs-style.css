@@ -135,11 +135,19 @@ tr:nth-child(even) {
 thead {
     background-color	:	#ccc;
     color				:	black;
+	text-align			:	center;
 }
 
-th, td {
-    padding				:	5px;
-    text-align			:	left;
+th{
+	text-align			:	left;
+	padding-left		:	10px;
+	font-family			:	"NotoSan Regular", serif;	
+	
+	
+}
+td{
+	font-family			:	"NotoSan Bold", serif;
+	
 }
   
 tr {
@@ -176,6 +184,7 @@ a:link {
 			margin-left 		:	10px;
 			background-color	:	white;
 			padding				:	10px;
+			font-weight			:	normal;
 		}
 		
 .hs-option_button{	    
