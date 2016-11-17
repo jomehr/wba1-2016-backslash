@@ -1,5 +1,5 @@
 {{#datquiz}}
-<div class="container ss_box">
+<section class="container ss_box">
     <header class="bg-yellow">
         <h1 id="JS_Titel">{{titel}}</h1>
     </header>
@@ -64,41 +64,45 @@
         </div>
     </div>
     {{/datquiz}}
-</div>
+</section>
 
-<!--  allgemeine mit Inhalt des Sliders  -->
-<div class="container ss_box ss_slider">
-
-    <h2>Das könnte dir auch gefallen</h2>
-
-    <!-- Carousel -->
-    <div class="js-carousel">
-        {{#each quizes}}
-        <!-- Carousel Cell-->
-        <div class="js-carousel-cell">
-            <div class="ss_slider_content row">
-                <!--  linke Seite vom Slider  -->
-                <div class="col-md-4">
-                    <h2 id="JS_SliderTitel">{{this.titel}}</h2>
-                    <img class="img-responsive" src={{this.bild}} alt="Stadion10.jpg" id="JS_SliderBild"/>
-                </div>
-                <!--  Mitte vom Slider  -->
-                <div class="col-md-6 ss_slider_text">
-                    <p id="JS_SliderText">{{this.text}}</p>
-                    <div class="ss_slider_author font-bold" id="JS_SliderDU">
-                        {{this.datum}}<br/>
-                        {{this.autor}}
-                    </div>
-                </div>
-                <!--  rechte Seite vom Slider  -->
-                <div class="col-md-2 ss_slider_right">
-                    <p><span class="font-bold" id="JS_SliderPlayed">{{this.spielzahl}}</span> mal gespielt</p>
-                    <div class="ss_slider_points fg-white bg-darkgrey font-bold">8 / 10 Punkten</div>
-                    <a class="btn js-change-view" data-view=2 data-quizid="{{this.quizID}}" href="">Jetzt
-                        spielen!</a>
-                </div>
+<section class="container ss_box ss_slider">
+    <header>
+        <h2>Das könnte dir auch gefallen</h2>
+    </header>
+    {{#each quizes}}
+    <!--  Sliderelement  -->
+    <div class="ss_slider_content row">
+        <!--  linke Seite vom Slider  -->
+        <div class="col-md-4">
+            <h2>{{this.titel}}</h2>
+            <img class="img-responsive" src="{{this.bild}}" alt="{{this.bild}}"/>
+        </div>
+        <!--  Mitte vom Slider  -->
+        <div class="col-md-6 ss_slider_text">
+            <p>{{this.text}}</p>
+            <div class="ss_slider_author font-bold">
+                {{this.datum}}<br/>
+                {{this.autor}}
             </div>
         </div>
-        {{/each}}
+        <!--  rechte Seite vom Slider  -->
+        <div class="col-md-2 ss_slider_right">
+            <p><span class="font-bold">{{this.spielzahl}}</span> mal gespielt</p>
+            <div class="ss_slider_points fg-white bg-darkgrey font-bold">8 / 10 Punkten</div>
+            <a class="btn js-change-view" data-view=2 data-quizid="{{this.quizID}}" href="">Jetzt spielen!</a>
+        </div>
     </div>
-</div>
+    {{/each}}
+
+    <!--  Slider Menüpunkte  -->
+    <div class="ss_slider_menu">
+        <div class="ss_slider_menu_elemente">
+            <i class="ss_slider_menu_left ico-light-arrow-left"></i>
+            <i class="ss_slider_menu_right ico-light-arrow-right"></i>
+        </div>
+    </div>
+</section>
+
+<script type="application/javascript" src="js/T05/slider.js"></script>
+<script type="application/javascript" src="js/T05/script.js"></script>
