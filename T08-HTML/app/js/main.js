@@ -197,20 +197,22 @@ $(function () {
         $(document).on("onQuizView", function (event, data) {
             Quizobject.quizes = data; //copy object
 
-            view.render("quizoverview", Quizobject);
+            view.render("quizoverview", Quizobject, function () {
+                collapse.init();
 
-            collapse.init();
-            var flickityConfig = {
-                // options
-                cellAlign: 'left',
-                cellSelector: '.js-carousel-cell',
-                contain: true,
-                imagesLoaded: true,
-                prevNextButtons: false,
-                setGallerySize: true
-            };
-            var $carousel = $('.js-carousel').flickity(flickityConfig);
-            slideshowNavi.init($carousel);
+                var flickityConfig = {
+                    // options
+                    cellAlign: 'left',
+                    cellSelector: '.js-carousel-cell',
+                    contain: true,
+                    imagesLoaded: true,
+                    prevNextButtons: false,
+                    setGallerySize: true
+                };
+                var $carousel = $('.js-carousel').flickity(flickityConfig);
+                slideshowNavi.init($carousel);
+            });
+
             clicklistener();
         });
     }
