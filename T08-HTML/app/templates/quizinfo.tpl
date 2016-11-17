@@ -11,16 +11,16 @@
         <img src="{{bild}}" alt="teaserbild" class="st-teaserbild">
     </div>
     <div class="row st_erg st_box_content">
-        <div class="st_left_col col-lg-8 col-xs-12">
+        <div class="st_left_col col-md-8 col-xs-12">
             <p>{{text}}</p>
         </div>
-        <div class="st_right_col col-lg-4 col-xs-12">
+        <div class="st_right_col col-md-4 col-xs-12">
             <div class="row">
-                <div class="font-bold st_right2 st_rightdown col-xs-6 col-lg-12">
+                <div class="font-bold st_right2 st_rightdown col-xs-6 col-md-12">
                     <p>{{datum}}</p>
                     <p>{{autor}}</p>
                 </div>
-                <div class="st_right1 col-xs-6 col-lg-12">
+                <div class="st_right1 col-xs-6 col-md-12">
                     <p><strong>{{spielzahl}}</strong> mal gespielt</p>
                 </div>
             </div>
@@ -30,13 +30,13 @@
 
     <!-- buttons  -->
     <div class="row st_buttons">
-        <div class="col-lg-4">
+        <div class="col-md-4">
             <a class="btn js-change-view" data-view=”0” href="">Übersicht</a>
         </div>
-        <div class="col-lg-4">
+        <div class="col-md-4">
             <a class="btn js-change-view" data-view=4 data-quizID="{{quizID}}" href="">Highscoreliste</a>
         </div>
-        <div class="col-lg-4">
+        <div class="col-md-4">
             <a class="btn js-change-view" data-view=2 data-quizID="{{quizID}}" href="">Jetzt spielen!</a>
         </div>
     </div>
