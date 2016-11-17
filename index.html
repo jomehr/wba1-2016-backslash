@@ -1,1 +1,93 @@
-Hallo Welt
+<!DOCTYPE html>
+<html lang="de">
+<meta charset="UTF-8">
+<head>
+    <title>Fubuizz</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="background"></div>
+<!--Beginn des Headers -->
+<header id="wa_desktop">
+    <!--Dieser Div stellt den schwarzen Balken da-->
+    <div class="wa_header">
+        <!--Dieser Div stellt den schwarzen Balken da-->
+        <div class="wa_Navigation">
+            <!-- Dieses Div beeinhaltet das Logo --><img class="wa_logo" src="old/img/logo.png" alt="Fubuizz_Logo">
+            <!-- Dieses Div enthält das Login oben rechts-->
+            <nav class="wa_login">
+                <ul>
+                    <li><a href="javascript:void(0)">Login</a></li>
+                    <li><a>|</a></li>
+                    <li><a href="javascript:void(0)">Registrierung</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- Dieses Div stellt den durchsichtigen Balken da-->
+    <div id="wa_Navigation2">
+        <nav class="wa_menue">
+            <ul>
+                <li><a href="javascript:void(0)" class="js-change-view" data-view="0">Übersicht</a></li>
+                <li><a href="javascript:void(0)" class="js-change-view" data-view="4">Highscoreliste</a></li>
+                <li><a href="javascript:void(0)">Teilen</a></li>
+                <li><a href="javascript:void(0)">Über Fubuizz</a></li>
+                <li><a href="javascript:void(0)">Einstellungen</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Dieses Div enthält das Menü mit den einzelnen Punkten-->
+</header>
+<header class="wa_header_mobil">
+    <div id="wa_Sidenav_mobil" class="wa_sidenav_mobil font-secondary font-light">
+        <!--Inhalt vom Sidenav-->
+        <ul>
+            <!--Einbindung des Close Buttons mit Funktion-->
+            <li><a href="javascript:void(0)" class="js-change-view" data-view="0">Übersicht</a></li>
+            <li><a href="javascript:void(0)" class="js-change-view" data-view="4">Highscoreliste</a></li>
+            <li><a href="javascript:void(0)">Teilen</a></li>
+            <li><a href="javascript:void(0)">Über Fubuizz</a></li>
+            <li><a href="javascript:void(0)">Einstellungen</a></li>
+            <li><a href="javascript:void(0)">Login | Registrierung</a></li>
+        </ul>
+    </div>
+    <div id="nav-icon4" class="wa_Button_mobil" onclick="openNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!--Button zum öffnen der Sidenav-->
+    <!--Javascriptfunktion Open und Close Button-->
+    <img src="old/img/Logo_Fubuizz.png" class="wa_logo" alt="Fubuizz_Logo_Mobile">
+</header>
+
+<div id="templatespaceholder" class="animated fadeInDownBig"></div>
+
+<!-- Beginn des Foooters -->
+<footer class="wa_footer">
+    <!-- Das footer Element wird in der Klasse definiert -->
+    <!-- Der mittige Copyrighttext-->
+    <div class="wa_copyright"> © 2016 Fubuizz</div>
+</footer>
+
+<!-- libraries -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.2/handlebars.min.js"></script>
+<script type="application/javascript" src="js/lib/flickity.pkgd.min.js"></script>
+
+<!-- data api -->
+<script src="https://rawgit.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/API/BS_API.js"></script>
+
+<!-- module logic -->
+<script type="application/javascript" src="js/T02/WebApp_Rahmen_Tablet.js"></script>
+<script type="application/javascript" src="js/T06/collapse.js"></script>
+<script type="application/javascript" src="js/T06/quizuebersicht.js"></script>
+<!--<script type="application/javascript" src="js/T12/scripts.js"></script>-->
+
+<!-- main logic -->
+<script type="application/javascript" src="js/view.class.js"></script>
+<script type="application/javascript" src="js/main.js"></script>
+</body>
+</html>

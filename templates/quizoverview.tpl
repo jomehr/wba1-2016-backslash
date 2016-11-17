@@ -129,7 +129,7 @@
             <div class="row qo-quiz-details  _same-height-sm">
                 <!-- Quizbild -->
                 <div class="col-sm-6 col-md-4">
-                    <img class="qo-image" src="../old/img/stadion.png" alt="Fußballstadion">
+                    <img class="qo-image" src="old/img/stadion.png" alt="Fußballstadion">
                 </div>
                 <!--End Quizbild -->
 
@@ -193,7 +193,7 @@
             <div class="row qo-quiz-details  _same-height-sm">
                 <!-- Quizbild -->
                 <div class="col-sm-6 col-md-4">
-                    <img class="qo-image" src="../old/img/stadion.png" alt="Fußballstadion">
+                    <img class="qo-image" src="old/img/stadion.png" alt="Fußballstadion">
                 </div>
                 <!--End Quizbild -->
 
