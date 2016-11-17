@@ -47,6 +47,13 @@ footer{
 /* ********************* ID's ********************* 
 ***************************************************/
 
+
+#btn-uebersicht{
+}
+
+#btn-play{	
+}
+
 #hs-highscore{
     margin-top			:	75px;
     background-color	:   white;
@@ -222,10 +229,17 @@ a:link {
 	-webkit-appearance	:	none;
 	-moz-appearance		:	none;
 	appearance			:	none;
-	background-image: url(../images/svg/dropdown-style.svg);
-	background-repeat: no-repeat, repeat;
-	background-position: 100% 50%, 0 0;
+	background-image	:	url(../images/svg/dropdown-style.svg);
+	background-repeat	:	no-repeat, repeat;
+	background-position	:	100% 50%, 0 0;
 }
+
+		.hs-search-feld::-webkit-select{
+			padding-left		:	5px;
+			font-family			:	"Oswald Regular", serif;
+			
+			
+		}
 
 .hs-ueberschriften{
 	padding-top 		:	10px;

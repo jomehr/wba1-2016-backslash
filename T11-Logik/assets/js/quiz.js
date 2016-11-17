@@ -3,51 +3,42 @@ var view = {
 
 	//View Quizübersicht initialisieren
 	initQuizOverview: function () {
+		
+		getQuizView(5, 0);
+        $(document).on( "onQuizView", function( event, data ) { 
 
-		//JSON via AJAX holen
-		getAjax(dataUrls.dataQuizOverviewURL, function (data) {
-			console.log(data);
-			//JSON speichern
-			var jsonData = JSON.parse(data);
-
-			//View mit Daten füttern
-			var element = document.querySelector('.js-quiz-uebersicht');
-			for (var i = 0; i < jsonData.quiz.length; i++)
-				{
-				var quiz = jsonData.quiz[i];
-				var content = '<li><a href="' + viewUrls.viewQuizStartURL + '?quizId=' + quiz.quizID + '">';
-				content += '<h2>' + quiz.titel + '</h2>';
-				content += '<p>' + quiz.text + '</p>';
-				content += '</a></li>';
-				element.innerHTML += content;
-				}
-		})
-	},
-
+            var element = document.querySelector('.js-quiz-uebersicht');
+            for (var i = 0; i < data.length; i++){
+                    var content = '<li><a href="' + viewUrls.viewQuizStartURL + "?quizID=" + data[i].quizID + '">';
+                    content += '<h2>' + data[i].titel + '</h2>';
+				    content += '<p>' + data[i].text + '</p>';
+				    content += '</a></li>';
+                    element.innerHTML += content;
+                }
+            });
+        },
+		
+	
 	//View Quizstart initialisieren
 	initQuizStart: function () {
-
-		//JSON via AJAX holen
-		getAjax(dataUrls.dataQuizOverviewURL, function (data) {
-
-			//JSON speichern
-			var jsonData = JSON.parse(data);
 
 			//quizID aus URL holen
 			var quizID = getQueryString('quizId', window.location.href);
 
 			//Ausgewähltes Quiz aus JSOn holen
-			var quiz = jsonData.quiz[quizID];
+            
+            getQuizViewByID(quizID);
+            $(document).on( "onQuizViewByID", function( event, data ) {          
 
-			//View mit Daten füttern
-			var element = document.querySelector('.js-quiz-info');
-			var content = '<h1>' + quiz.titel + '</h1>';
-			content += '<p>' + quiz.text + '</p>';
-			element.innerHTML += content;
+                //View mit Daten füttern
+                var element = document.querySelector('.js-quiz-info');
+                var content = '<h1>' + data.titel + '</h1>';
+                content += '<p>' + data.text + '</p>';
+                element.innerHTML += content;
 
-			var element = document.querySelector('.js-quiz-starten');
-			element.setAttribute('href', viewUrls.viewQuizRundeURL + '?quizId=' + quizID);
-		})
+                var element = document.querySelector('.js-quiz-starten');
+                element.setAttribute('href', viewUrls.viewQuizRundeURL + '?quizId=' + quizID);
+            });
 	},
 
 	//View Quizende initialisieren
@@ -118,7 +109,7 @@ var quiz = {
 			quiz.currentQuestion = quiz.questions[quiz.indexCurrentQuestion];
             
 			//Aktuelle Frage in HTML schreiben
-			document.querySelector('.js-quizfrage').innerHTML = quiz.currentQuestion.fragen;
+			document.querySelector('.js-quizfrage').innerHTML = quiz.currentQuestion.frage;
             
             //Erstellen eines Arrays mit 4 Zufälligen Zahlen von 1-4 die jeweils einmalig sind
             //für die zufällige Reihenfolge der Buttons
@@ -185,8 +176,19 @@ var quiz = {
 			//Variablen initialisieren
 			quiz.indexCurrentQuestion = 0;
 			quiz.correctAnswersNumber = 0;
-			quiz.numberOfQuestions = jsonData.quizFragen.length;
-			quiz.questions = jsonData.quizFragen;
+            
+            quiz.numberOfQuestions = 10;            
+            quiz.questions = new Array;
+            
+            //Erstellen eines Arrays mit 10 Zufälligen Zahlen von 1-30 die jeweils einmalig sind für die zufällige Reihenfolge der Fragen
+            var arr = []
+            while(arr.length < 10){
+                var randomnumber = Math.floor(Math.random()*30)
+                if(arr.indexOf(randomnumber) > -1) continue;
+                arr[arr.length] = randomnumber;
+                quiz.questions.push(jsonData[quizID].quizFragen[randomnumber]);
+                }
+            
 			quiz.startTime = Date.now();
 			quiz.counter = document.querySelector('.js-counter');
 
@@ -216,7 +218,7 @@ var quiz = {
             {aktMultiplikator = 0.5;}
             else {aktMultiplikator = maxMultiplikator-(gesamtZeitSek*0.01);}
             
-        var endpunktzahl = quiz.correctAnswersNumber*100*aktMultiplikator;
+        var endpunktzahl = parseInt(quiz.correctAnswersNumber*100*aktMultiplikator);
         console.log(endpunktzahl);
         
 
