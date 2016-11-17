@@ -43,7 +43,6 @@
     <div id="wa_Sidenav_mobil" class="wa_sidenav_mobil font-secondary font-light">
         <!--Inhalt vom Sidenav-->
         <ul>
-            <li><a href="javascript:void(0)" class="wa_closebtn_mobil" onclick="closeNav()">&times;</a></li>
             <!--Einbindung des Close Buttons mit Funktion-->
             <li><a href="javascript:void(0)" class="js-change-view" data-view="0">Übersicht</a></li>
             <li><a href="javascript:void(0)" class="js-change-view" data-view="4">Highscoreliste</a></li>
@@ -53,7 +52,11 @@
             <li><a href="javascript:void(0)">Login | Registrierung</a></li>
         </ul>
     </div>
-    <span class="wa_Button_mobil" onclick="openNav()">&#9776;</span>
+    <div id="nav-icon4" class="wa_Button_mobil" onclick="openNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
     <!--Button zum öffnen der Sidenav-->
     <!--Javascriptfunktion Open und Close Button-->
     <img src="../old/img/Logo_Fubuizz.png" class="wa_logo" alt="Fubuizz_Logo_Mobile">
@@ -73,7 +76,6 @@
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.2/handlebars.min.js"></script>
 <script type="application/javascript" src="js/lib/flickity.pkgd.min.js"></script>
-<script type="application/javascript" src="js/lib/timerScript.min.js"></script>
 
 <!-- data api -->
 <script src="https://rawgit.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/API/BS_API.js"></script>
@@ -82,7 +84,7 @@
 <script type="application/javascript" src="js/T02/WebApp_Rahmen_Tablet.js"></script>
 <script type="application/javascript" src="js/T06/collapse.js"></script>
 <script type="application/javascript" src="js/T06/quizuebersicht.js"></script>
-<script type="application/javascript" src="js/T12/scripts.js"></script>
+<!--<script type="application/javascript" src="js/T12/scripts.js"></script>-->
 
 <!-- main logic -->
 <script type="application/javascript" src="js/view.class.js"></script>

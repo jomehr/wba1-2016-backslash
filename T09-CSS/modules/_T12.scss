@@ -138,13 +138,13 @@
 
 /* from: http://stackoverflow.com/questions/29649643/how-to-create-a-circular-countdown-timer-using-html-css-or-javascript */
 /*Countdown*/
-.item {
+.qr-timer-item {
     position: relative;
     //float: center;
     transform: scale(0.8);
 }
 
-.item h2 {
+.qr-timer-item h2 {
     text-align:center;
     position: absolute;
     line-height: 125px;

@@ -11,7 +11,16 @@
         <!-- Platzhalter für den Timer -->
         <div class="qr-timer row qr-no-margin">
             <div class="col-xs-12">
-                <p class="qr-text">!Platzhalter Timer!</p>
+                <div class="qr-timer-item">
+                    <h2>15</h2>
+                    <svg width="160" height="160">
+                        <g>
+                            <title>Layer 1</title>
+                            <circle id="circle" class="circle_animation" r="69.85699" cy="81" cx="81" stroke-width="12"
+                                    stroke="#e9c20c" fill="none" style="stroke-dashoffset:880px;"/>
+                        </g>
+                    </svg>
+                </div>
             </div>
         </div>
         <!-- Hier wird die Frage abgebildet -->
@@ -94,3 +103,5 @@
         </div>
     </div>
 </div>
+
+<script type="application/javascript" src="js/lib/timerScript.min.js"></script>

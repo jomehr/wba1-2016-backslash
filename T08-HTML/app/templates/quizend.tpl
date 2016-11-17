@@ -15,7 +15,7 @@
                         </div>
                     </div>
                     <p class="ss_mobile_answer_txt"></p>
-                    <div class="ss_score_points" id="JS_Score">
+                    <div class="ss_score_points animated slideInLeft" id="JS_Score">
                     </div>
                 </div>
 

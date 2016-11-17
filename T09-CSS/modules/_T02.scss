@@ -148,13 +148,15 @@
   .wa_logo {
     height: 50px;
     display: block;
-    margin-left: 50%;
+    margin-left: -58px;
+    left: 50%;
+    position: fixed;
   }
   .wa_sidenav_mobil {
     position: fixed;
     overflow-x: hidden;
     z-index: 1;
-    padding-top: 60px;
+    padding-top: 20px;
     background-color: rgba(0, 0, 0, 0.8);
     margin-top: 64px;
     line-height: 1.7;
@@ -168,6 +170,7 @@
     font-size: 25px;
     text-align: left;
     margin-left: -10px;
+    text-decoration: none;
   }
   .wa_sidenav_mobil .wa_closebtn_mobil {
     text-decoration: none;

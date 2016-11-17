@@ -28,7 +28,7 @@ $(function () {
     if (sessionobject.view === undefined) {
         sessionobject.view = 0;
     } else {
-      sessionobject.view = parseInt(sessionobject.view);
+        sessionobject.view = parseInt(sessionobject.view);
     }
 
     function viewSite() {
@@ -49,9 +49,10 @@ $(function () {
                     //Aktualisieren der richtig Falsch antworten & Scalebar füllen
                     var percent = Math.round((sessionobject.points / sessionobject.maxpoints) * 100);
                     document.getElementById("JS_ScaleScore").style.width = percent + "%";
+                    document.getElementsByClassName("ss_score_balken")[0].setAttribute("data-value", "" + percent);
                     //Red/Green Icons füllen
                     var item = document.getElementById('JS_Score');
-                    var redicon = '<div class="ss_score_point bg-red" ></div>';
+                    var redicon = '<div class="ss_score_point bg-red animated flash" ></div>';
                     var greenicon = '<div class="ss_score_point bg-green" ></div>';
                     var length = sessionobject.countquestions;
                     for (var i = 0; i < length; i++) {
