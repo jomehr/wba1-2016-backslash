@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="row" id="pic">
-        <img src="{{bild}}" alt="teaserbild" style="width:100%;">
+        <img src="{{bild}}" alt="teaserbild" class="st-teaserbild">
     </div>
     <div class="row st_erg st_box_content">
         <div class="st_left_col col-lg-8 col-xs-12">

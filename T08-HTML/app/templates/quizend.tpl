@@ -11,7 +11,7 @@
                     <p class="ss_mobile_points_txt"></p>
                     <div class="ss_score_balken bg-mediumgrey">
                         <!-- 10% as defult value for score, changed by main logic -->
-                        <div class="ss_scale_score" id="JS_ScaleScore" style="width: 10%">
+                        <div class="ss_scale_score" id="JS_ScaleScore">
                         </div>
                     </div>
                     <p class="ss_mobile_answer_txt"></p>
@@ -67,9 +67,9 @@
 </div>
 
 <!--  allgemeine mit Inhalt des Sliders  -->
-<div class="container ss_box" style="padding-bottom:80px">
+<div class="container ss_box ss_slider">
 
-    <h2 style="text-align: center; padding-top: 24px;">Das könnte dir auch gefallen</h2>
+    <h2>Das könnte dir auch gefallen</h2>
 
     <!-- Carousel -->
     <div class="js-carousel">
