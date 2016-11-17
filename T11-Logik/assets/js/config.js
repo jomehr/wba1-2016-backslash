@@ -6,8 +6,10 @@ var base = {
 
 //URLs JSONs
 var dataUrls = {
-	dataQuizOverviewURL: base.dataURL + '/quiz-uebersicht.json',
-	dataQuestionsURL: base.dataURL + '/quiz-fragen.json'
+    //einbinden der Übersicht JSON
+	dataQuizOverviewURL: base.dataURL + '/uebersichtQuiz.json',
+    //einbinden der Fragen+Antworten JSON
+	dataQuestionsURL: base.dataURL + '/quiz.json'
 
 };
 

@@ -118,7 +118,7 @@ var quiz = {
 			quiz.currentQuestion = quiz.questions[quiz.indexCurrentQuestion];
             
 			//Aktuelle Frage in HTML schreiben
-			document.querySelector('.js-quizfrage').innerHTML = quiz.currentQuestion.fragen;
+			document.querySelector('.js-quizfrage').innerHTML = quiz.currentQuestion.frage;
             
             //Erstellen eines Arrays mit 4 Zufälligen Zahlen von 1-4 die jeweils einmalig sind
             //für die zufällige Reihenfolge der Buttons
@@ -185,8 +185,19 @@ var quiz = {
 			//Variablen initialisieren
 			quiz.indexCurrentQuestion = 0;
 			quiz.correctAnswersNumber = 0;
-			quiz.numberOfQuestions = jsonData.quizFragen.length;
-			quiz.questions = jsonData.quizFragen;
+            
+            quiz.numberOfQuestions = 10;            
+            quiz.questions = new Array;
+            
+            //Erstellen eines Arrays mit 10 Zufälligen Zahlen von 1-30 die jeweils einmalig sind für die zufällige Reihenfolge der Fragen
+            var arr = []
+            while(arr.length < 10){
+                var randomnumber = Math.floor(Math.random()*30)
+                if(arr.indexOf(randomnumber) > -1) continue;
+                arr[arr.length] = randomnumber;
+                quiz.questions.push(jsonData[quizID].quizFragen[randomnumber]);
+                }
+            
 			quiz.startTime = Date.now();
 			quiz.counter = document.querySelector('.js-counter');
 
@@ -216,7 +227,7 @@ var quiz = {
             {aktMultiplikator = 0.5;}
             else {aktMultiplikator = maxMultiplikator-(gesamtZeitSek*0.01);}
             
-        var endpunktzahl = quiz.correctAnswersNumber*100*aktMultiplikator;
+        var endpunktzahl = parseInt(quiz.correctAnswersNumber*100*aktMultiplikator);
         console.log(endpunktzahl);
         
 
