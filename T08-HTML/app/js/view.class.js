@@ -1,76 +1,87 @@
+var Quizobject = {};
+var sessionobject = {};
+
 var view = {
     availableViews: [
-        "quizoverview",
-        "quizinfo",
-        "quizround",
-        "quizend",
-        "highscore"
+        "quizoverview", //0
+        "quizinfo",     //1
+        "quizround",    //2
+        "quizend",      //3
+        "highscore"     //4
     ],
     name: "quizoverview",
-    render: function (view, data, callback) {
+    sessionobject: {},
+    render: function (view, callback) {
         if (this.availableViews.indexOf(view) > -1) {
-            $.get("templates/" + view + ".tpl", function (source) {
-                var template = Handlebars.compile(source);
-                var templatespaceholder = $("#templatespaceholder");
-                templatespaceholder.empty();
-                templatespaceholder.append(template(data));
-                this.name = view;
+            var pre_function = this["pre_" + view];
+            if (typeof pre_function == "function") {
+                pre_function(function (data) {
+                    $.get("templates/" + view + ".tpl", function (source) {
+                        var template = Handlebars.compile(source);
+                        var templatespaceholder = $("#templatespaceholder");
+                        templatespaceholder.empty();
+                        templatespaceholder.append(template(data));
+                        this.name = view;
 
-                if (typeof callback == "function") {
-                    callback();
-                }
-            });
-        } else {
-            //debug
-            console.log("undefined view: " + view);
+                        if (typeof callback == "function") {
+                            callback();
+                        }
+                    });
+                });
+            } else {
+                $.get("templates/" + view + ".tpl", function (source) {
+                    var template = Handlebars.compile(source);
+                    var templatespaceholder = $("#templatespaceholder");
+                    templatespaceholder.empty();
+                    templatespaceholder.append(template());
+                    this.name = view;
+
+                    if (typeof callback == "function") {
+                        callback();
+                    }
+                });
+            }
         }
     },
-    quizinfo: function() {
+    pre_quizoverview: function (callback) {
+        //Random Quiz Vorschlag
+        getQuizView(10);
+
+        $(document).on("onQuizView", function (event, data) {
+            Quizobject.quizes = data; //copy object
+
+            if (typeof callback == "function") {
+                callback(Quizobject);
+            }
+        });
+    },
+    pre_quizinfo: function () {
         getQuizViewByID(sessionobject.quizID);
+
         $(document).on("onQuizViewByID", function (event, data) {
             Quizobject.quizinfo = data;
             Quizobject.sessionobject = sessionobject;
 
-            view.render("quizinfo", Quizobject, function () {
-            clicklistener();
-            });
+            if (typeof callback == "function") {
+                callback(Quizobject);
+            }
         });
     },
-    highscore: function() {
-      getHighscoreByID(sessionobject.quizID);
-      $(document).on( "onHighscoreData", function( event, data ) {
-          Quizobject = data;
-          Quizobject.sessionobject = sessionobject;
-          console.log(Quizobject);
-          view.render("highscore", Quizobject, function () {
-          clicklistener();
-          });
-      });
-    },
-    quizoverview : function() {
-      getQuizView(10);
-      //Random Quiz Vorschlag
-      $(document).on("onQuizView", function (event, data) {
-        Quizobject.quizes = data; //copy object
-        view.render("quizoverview", Quizobject, function () {
-          collapse.init();
-          var flickityConfig = {
-          // options
-            cellAlign: 'left',
-            cellSelector: '.js-carousel-cell',
-            contain: true,
-            imagesLoaded: true,
-            prevNextButtons: false,
-            setGallerySize: true
-          };
-        var $carousel = $('.js-carousel').flickity(flickityConfig);
-        slideshowNavi.init($carousel);
-        clicklistener();
+    pre_quizround: function () {
+        getQuizByID(sessionobject.quizID);
+
+        $(document).on("onQuizData", function (event, data) {
+            Quizobject.quiz = data;
+            Quizobject.sessionobject = sessionobject;
+
+            if (typeof callback == "function") {
+                callback(Quizobject);
+            }
         });
-      });
     },
-    quizend : function() {
+    pre_quizend: function () {
         getQuizViewByID(sessionobject.quizID);
+
         $(document).on("onQuizViewByID", function (event, data) {
             getHighscorePositions(sessionobject.quizID, sessionobject.username, sessionobject.points);
             var quizInfo = {};
@@ -81,15 +92,12 @@ var view = {
         });
 
         // HIGHSCORE info
-
         $(document).on("onHighscorePositions", function (event, data) {
             getQuizView(7);
             $.extend(Quizobject.datquiz, data);
         });
 
-
         //Random Quiz Vorschlag
-
         $(document).on("onQuizView", function (event, data) {
             var nQuizObject = data; //copy object
             var quizInfo = data;
@@ -125,49 +133,21 @@ var view = {
             Quizobject.quizes = Quizobject.quizes.slice(0, 4);
             $.extend(Quizobject.datquiz, sessionobject);
 
-            view.render("quizend", Quizobject, function(){
-              //Aktualisieren der richtig Falsch antworten & Scalebar füllen
-              var percent = Math.round((sessionobject.points / sessionobject.maxpoints) * 100);
-              document.getElementById("JS_ScaleScore").style.width = percent + "%";
-              //Red/Green Icons füllen
-              item = document.getElementById('JS_Score');
-              var redicon = '<div class="ss_score_point bg-red" ></div>';
-              var greenicon = '<div class="ss_score_point bg-green" ></div>';
-              var length = sessionobject.countquestions;
-              for (var i = 0; i < length; i++) {
-                  var random = Math.random();
-                  if (random >= 0.5) {
-                      item.innerHTML += redicon;
-                  } else {
-                      item.innerHTML += greenicon;
-                  }
-              }
-              var flickityConfig = {
-                  // options
-                  cellAlign: 'left',
-                  cellSelector: '.js-carousel-cell',
-                  contain: true,
-                  imagesLoaded: true,
-                  prevNextButtons: false,
-                  setGallerySize: true
-              };
-              var $carousel = $('.js-carousel').flickity(flickityConfig);
-              slideshowNavi.init($carousel);
-              clicklistener();
-            });
+            if (typeof callback == "function") {
+                callback(Quizobject);
+            }
         });
     },
-    quiz: function() {
-        getQuizByID(sessionobject.quizID);
-        $(document).on("onQuizData", function (event, data) {
-            Quizobject.quiz = data;
+    pre_highscore: function () {
+        getHighscoreByID(sessionobject.quizID);
+
+        $(document).on("onHighscoreData", function (event, data) {
+            Quizobject = data;
             Quizobject.sessionobject = sessionobject;
 
-            view.render("quizround", Quizobject);
-
-            clicklistener();
+            if (typeof callback == "function") {
+                callback(Quizobject);
+            }
         });
     }
-
-
 };

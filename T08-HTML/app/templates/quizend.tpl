@@ -80,7 +80,7 @@
                 <!--  linke Seite vom Slider  -->
                 <div class="col-md-4">
                     <h2 id="JS_SliderTitel">{{this.titel}}</h2>
-                    <img class="img-responsive" src={{this.bild}} alt="Stadion10.jpg" id="JS_SliderBild"/>
+                    <img class="img-responsive" src="{{this.bild}}" alt="Stadion10" id="JS_SliderBild"/>
                 </div>
                 <!--  Mitte vom Slider  -->
                 <div class="col-md-6 ss_slider_text">
