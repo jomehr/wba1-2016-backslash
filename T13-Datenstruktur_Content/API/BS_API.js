@@ -1,10 +1,13 @@
 //Die Base-URL für die JSON Dateien (location)
-var baseURL = "https://rawgit.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON";
+var baseURL = 'https://rawgit.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON'
+var extHighscore = '/highscore.json';
+var extQuiz = '/quiz.json';
+var extView = '/uebersichtQuiz.json';
 
 //Eine der Funktionen, die im HTML Code abgerufen werden können
 function loadExample(){
     //Link zu der JSON mit den Daten
-    var highscoreData = baseURL + "/highscore.json";
+    var highscoreData = baseURL + extHighscore;
     
     //Erstellung einer XMLHttpRequest
     var json_request = new XMLHttpRequest();
@@ -30,7 +33,7 @@ json_request.send();
 
 //Holt Quiz mit der passenden ID
 function getQuizByID(quizID){
-    var quizData = baseURL + "/quiz.json";
+    var quizData = baseURL + extQuiz;
     var json_request = new XMLHttpRequest();
 
     json_request.onreadystatechange = function(){
@@ -59,7 +62,7 @@ json_request.send();
 
 //Holt Highscore mit der passenden ID
 function getHighscoreByID(quizID){
-    var highscoreData = baseURL + "/highscore.json";
+    var highscoreData = baseURL + extHighscore;
     var json_request = new XMLHttpRequest();
 
     json_request.onreadystatechange = function(){
@@ -77,7 +80,7 @@ json_request.send();
 var jsonQuizView = "";
 
 function getQuizView(anzahl, searchString = "", sort = 0){
-    var quizView = baseURL + "/uebersichtQuiz.json";
+    var quizView = baseURL + extQuiz;
     var json_request = new XMLHttpRequest();
 
     json_request.onreadystatechange = function(){
@@ -121,7 +124,7 @@ json_request.send();
 
 //Holt ein bestimmtes Quiz aus der Uebersicht
 function getQuizViewByID(quizID){
-    var quizView = baseURL + "/uebersichtQuiz.json";
+    var quizView = baseURL + extQuiz;
     var json_request = new XMLHttpRequest();
 
     json_request.onreadystatechange = function(){
@@ -137,7 +140,7 @@ json_request.send();
 
 //Holt 2 Position über und unter den angegebenen Punkten
 function getHighscorePositions(quizID, user, punkte){
-    var highscoreData = baseURL + "/highscore.json";
+    var highscoreData = baseURL + extHighscore;
     var json_request = new XMLHttpRequest();
 
     json_request.onreadystatechange = function(){
