@@ -1,2 +1,2 @@
 Hier entsteht die finale Version der Anwendung.
-[Hier gehts zur Anwendung](http://wba1-backslash.christiannoss.de/)
+<a href="http://wba1-backslash.christiannoss.de/app" target="_blank">Hier gehts zur Anwendung</a>
