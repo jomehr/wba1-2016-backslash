@@ -1,6 +1,6 @@
 [
    {
-      "quizID":"0",
+      "quizID":0,
       "quizFragen":[
          {
             "frage":"Wen bezeichnet man beim Fußball auch als Goalie ?",
@@ -635,7 +635,7 @@
       ]
    },
    {
-      "quizID":"1",
+      "quizID":1,
       "quizFragen":[
          {
             "frage":"Wer trainiert in der Saison 16/17 den Rekordmeister FC Bayern München?",
@@ -1270,7 +1270,7 @@
       ]
    },
    {
-      "quizID":"2",
+      "quizID":2,
       "quizFragen":[
          {
             "frage":"Wen besiegte der FC Liverpool im Champions-League Finale 2005 nach 0:4 Rückstand im Elfmeterschießen?",
@@ -1905,7 +1905,7 @@
       ]
    },
    {
-      "quizID":"3",
+      "quizID":3,
       "quizFragen":[
          {
             "frage":"Warum spielt mal Fußball mit Ball?",
@@ -2540,7 +2540,7 @@
       ]
    },
    {
-   "quizID":"4",
+   "quizID":4,
    "quizFragen":[
       {
          "frage":"Wann wurde der 1. FC Köln gegründet?",
