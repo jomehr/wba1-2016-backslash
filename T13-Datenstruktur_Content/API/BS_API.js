@@ -88,7 +88,7 @@ function getQuizView(anzahl, searchString = "", sort = 0){
 
             var quizArray = [];
 
-            for(var i=0;i<anzahl;i++){
+            for(var i=0;i<jsonData.length;i++){
                 if(searchString != "" && jsonData[i].titel.indexOf(searchString) >= 0) 
                     quizArray.push(jsonData[i]);
                 else if(searchString == "")
