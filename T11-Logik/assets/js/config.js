@@ -1,6 +1,6 @@
 //Basis Configs
 var base = {
-	dataURL: 'assets/json',
+	dataURL: '/assets/json',
 	quizDuration: 10
 };
 
@@ -13,7 +13,7 @@ var dataUrls = {
 
 //URLs HTML-Dateien
 var viewUrls = {
-    viewQuizStartURL: 'quiz-start.html',
+	viewQuizStartURL: 'quiz-start.html',
 	viewQuizRundeURL: 'quiz-runde.html',
 	viewQuizEndeURL: 'quiz-ende.html'
 };

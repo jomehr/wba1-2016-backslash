@@ -1,49 +1,36 @@
 //Zur Initialisierung der Views
 var view = {
-	
+
 	//View Quizübersicht initialisieren
 	initQuizOverview: function () {
-		
+
 		//JSON via AJAX holen
-		//getAjax(dataUrls.dataQuizOverviewURL, function (data) {
-			
+		getAjax(dataUrls.dataQuizOverviewURL, function (data) {
+			console.log(data);
 			//JSON speichern
-			//var jsonData = JSON.parse(data);
-			
+			var jsonData = JSON.parse(data);
+
 			//View mit Daten füttern
-			
-			/*for (var i = 0; i < jsonData.quiz.length; i++) {
+			var element = document.querySelector('.js-quiz-uebersicht');
+			for (var i = 0; i < jsonData.quiz.length; i++)
+				{
 				var quiz = jsonData.quiz[i];
 				var content = '<li><a href="' + viewUrls.viewQuizStartURL + '?quizId=' + quiz.quizID + '">';
 				content += '<h2>' + quiz.titel + '</h2>';
 				content += '<p>' + quiz.text + '</p>';
 				content += '</a></li>';
-				element.innerHTML += content;*/
-        
-        getQuizView(5);
-        $(document).on( "onQuizView", function( event, data ) { 
-            console.log(data[3].quizID); 
-            var element = document.querySelector('.js-quiz-uebersicht');
-            for (var i = 0; i < data.length; i++){
-                    var content = '<li><a href="' + data + '">';
-                    content += '<h2>' + data[i].titel + '</h2>';
-				    content += '<p>' + data[i].text + '</p>';
-				    content += '</a></li>';
-                    element.innerHTML += content;
-                }
-            });
-
-        }
-		//}}
-	
-
+				element.innerHTML += content;
+				}
+		})
+	},
 
 	//View Quizstart initialisieren
 	initQuizStart: function () {
+
 		//JSON via AJAX holen
 		getAjax(dataUrls.dataQuizOverviewURL, function (data) {
 
-            //JSON speichern
+			//JSON speichern
 			var jsonData = JSON.parse(data);
 
 			//quizID aus URL holen
@@ -62,22 +49,21 @@ var view = {
 			element.setAttribute('href', viewUrls.viewQuizRundeURL + '?quizId=' + quizID);
 		})
 	},
-	
+
 	//View Quizende initialisieren
 	initQuizEnd: function () {
 
 		//quizID aus URL holen
-		var quizID = getQueryString('quizId', window.location.href );
-		
+        var quizID = getQueryString('quizId', window.location.href );
+
 		//View mit Daten füttern
 		var element = document.querySelector('.js-quiz-starten');
 		element.setAttribute('href', viewUrls.viewQuizStartURL + '?quizId=' + quizID);
 
 		document.querySelector('.js-dauer').innerHTML = formatDuration(getQueryString('duration'));
 		document.querySelector('.js-anzahl-fragen').innerHTML = getQueryString('numberOfQuestions');
-		document.querySelector('.js-anzahl-richtig').innerHTML = getQueryString('countCorrectAnswers');
-        
-
+		document.querySelector('.js-anzahl-richtig').innerHTML = getQueryString('countCorrectAnswers');   
+        document.querySelector('.js-endpunktzahl').innerHTML = getQueryString('endpunktzahl');
 	}
 }
 
@@ -85,7 +71,9 @@ var view = {
 var quiz = {
 
 	//Anzahl der richtig beantworteten Fragen
-	countCorrectAnswers: null,
+    countCorrectAnswers: [false, false, false, false, false, false, false, false, false, false],
+    
+    correctAnswersNumber: null,
 
 	//Anzahl der Fragen
 	numberOfQuestions: null,
@@ -113,27 +101,41 @@ var quiz = {
 
 		//Wurde die Frage richtig beantwortet?
 		if (quiz.currentQuestion.antworten[indexAnswer].check) {
-			quiz.countCorrectAnswers++;
+			//quiz.countCorrectAnswers[indexAnswer]++;
+            quiz.countCorrectAnswers[quiz.indexCurrentQuestion-1]=true; 
+            quiz.correctAnswersNumber++;            
 		}
-		quiz.nextQuestion();
+        quiz.nextQuestion();
 	},
 
 	//Nächste Frage abrufen
 	nextQuestion: function () {
-
+        
 		//Haben wir noch eine Frage?
 		if (quiz.indexCurrentQuestion < quiz.numberOfQuestions) {
 
 			//Aktuelle Frage und Antworten aus JSON holen
 			quiz.currentQuestion = quiz.questions[quiz.indexCurrentQuestion];
-
+            
 			//Aktuelle Frage in HTML schreiben
 			document.querySelector('.js-quizfrage').innerHTML = quiz.currentQuestion.fragen;
-
+            
+            //Erstellen eines Arrays mit 4 Zufälligen Zahlen von 1-4 die jeweils einmalig sind
+            //für die zufällige Reihenfolge der Buttons
+            var arr = []
+            while(arr.length < 4){
+                var randomnumber = Math.floor(Math.random()*4)
+                if(arr.indexOf(randomnumber) > -1) continue;
+                arr[arr.length] = randomnumber;
+                }
+                
 			//Antwortbuttons befüllen
 			var answerButtons = document.querySelectorAll('.js-answer');
 			for (var i = 0; i < answerButtons.length; i++) {
-				answerButtons[i].innerHTML = quiz.currentQuestion.antworten[i].text;
+                
+                //Ausgabe der Antwort Buttons in zufälliger Reihenfolge
+                answerButtons[i].setAttribute("data-antwort", arr[i]);
+				answerButtons[i].innerHTML = quiz.currentQuestion.antworten[arr[i]].text;
 			}
 
 			//Counter initialisieren
@@ -144,20 +146,20 @@ var quiz = {
 			clearInterval(quiz.interval);
 
 			//Counter herunterzählen
-//			quiz.interval = setInterval(function () {
-//				counter--;
-//				quiz.counter.innerHTML = counter;
-//
-//				//Ist der Counter abgelaufen?
-//				if (counter === 0) {
-//
-//					//Nächste Frage anzeigen
-//					quiz.nextQuestion();
-//
-//					//Counter clearen
-//					clearInterval(quiz.interval);
-//				}
-//			}, 1000)
+			quiz.interval = setInterval(function () {
+				counter--;
+				quiz.counter.innerHTML = counter;
+
+				//Ist der Counter abgelaufen?
+				if (counter === 0) {
+
+					//Nächste Frage anzeigen
+					quiz.nextQuestion();
+
+					//Counter clearen
+				//	clearInterval(quiz.interval);
+				}
+			}, 1000)
 
 			//Index erhöhen
 			quiz.indexCurrentQuestion++;
@@ -182,7 +184,7 @@ var quiz = {
 
 			//Variablen initialisieren
 			quiz.indexCurrentQuestion = 0;
-			quiz.countCorrectAnswers = 0;
+			quiz.correctAnswersNumber = 0;
 			quiz.numberOfQuestions = jsonData.quizFragen.length;
 			quiz.questions = jsonData.quizFragen;
 			quiz.startTime = Date.now();
@@ -191,7 +193,7 @@ var quiz = {
 			//Eventlistener für Antwortbuttons setzen
 			var answerButtons = document.querySelectorAll('.js-answer');
 			for (var i = 0; i < answerButtons.length; i++) {
-				answerButtons[i].addEventListener('click', quiz.checkAnswer);
+                answerButtons[i].addEventListener('click', quiz.checkAnswer);
 			}
 
 			//Frage und Antworten anzeigen
@@ -201,12 +203,28 @@ var quiz = {
 
 	endQuiz: function () {
 		var currentTime = Date.now();
-		var duration = currentTime - quiz.startTime;
+		var duration = (currentTime - quiz.startTime)/1000;
+        
+        var gesamtZeitSek = parseFloat(duration, 10).toFixed(3);
+        
+        console.log(gesamtZeitSek);
+        var maxMultiplikator = 1.0;
+        var aktMultiplikator = 0;
+            if(gesamtZeitSek <= 30)
+            {aktMultiplikator = 1.0;}
+            else if (gesamtZeitSek >= 80)
+            {aktMultiplikator = 0.5;}
+            else {aktMultiplikator = maxMultiplikator-(gesamtZeitSek*0.01);}
+            
+        var endpunktzahl = quiz.correctAnswersNumber*100*aktMultiplikator;
+        console.log(endpunktzahl);
+        
+
 
 		//QuizID aus URL holen
 		var quizID = getQueryString('quizId', window.location.href);
-		
+
 		//Weiterleiten auf Quizende
-		window.location.href = viewUrls.viewQuizEndeURL + '?quizId=' + quizID + '&duration=' + duration + '&numberOfQuestions=' + quiz.numberOfQuestions + '&countCorrectAnswers=' + quiz.countCorrectAnswers;
+		window.location.href = viewUrls.viewQuizEndeURL + '?quizId=' + quizID + '&duration=' + duration + '&numberOfQuestions=' + quiz.numberOfQuestions + '&countCorrectAnswers=' + quiz.countCorrectAnswers +'&endpunktzahl=' + endpunktzahl;
 	}
 }
