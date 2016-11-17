@@ -4,63 +4,49 @@ var view = {
 	//View Quizübersicht initialisieren
 	initQuizOverview: function () {
 		
-		//JSON via AJAX holen
-		//getAjax(dataUrls.dataQuizOverviewURL, function (data) {
-			
-			//JSON speichern
-			//var jsonData = JSON.parse(data);
-			
-			//View mit Daten füttern
-			
-			/*for (var i = 0; i < jsonData.quiz.length; i++) {
-				var quiz = jsonData.quiz[i];
-				var content = '<li><a href="' + viewUrls.viewQuizStartURL + '?quizId=' + quiz.quizID + '">';
-				content += '<h2>' + quiz.titel + '</h2>';
-				content += '<p>' + quiz.text + '</p>';
-				content += '</a></li>';
-				element.innerHTML += content;*/
-        
-        getQuizView(5);
+		getQuizView(5, 0);
         $(document).on( "onQuizView", function( event, data ) { 
-            console.log(data[3].quizID); 
+
             var element = document.querySelector('.js-quiz-uebersicht');
             for (var i = 0; i < data.length; i++){
-                    var content = '<li><a href="' + data + '">';
+                    var content = '<li><a href="' + viewUrls.viewQuizStartURL + "?quizID=" + data[i].quizID + '">';
                     content += '<h2>' + data[i].titel + '</h2>';
 				    content += '<p>' + data[i].text + '</p>';
 				    content += '</a></li>';
                     element.innerHTML += content;
                 }
             });
-
-        }
-		//}}
+        },
+		
 	
 
 
 	//View Quizstart initialisieren
 	initQuizStart: function () {
 		//JSON via AJAX holen
-		getAjax(dataUrls.dataQuizOverviewURL, function (data) {
+		//getAjax(dataUrls.dataQuizOverviewURL, function (data) {
 
             //JSON speichern
-			var jsonData = JSON.parse(data);
+			//var jsonData = JSON.parse(data);
 
 			//quizID aus URL holen
 			var quizID = getQueryString('quizId', window.location.href);
 
 			//Ausgewähltes Quiz aus JSOn holen
-			var quiz = jsonData.quiz[quizID];
+            
+            getQuizViewByID(quizID);
+            $(document).on( "onQuizViewByID", function( event, data ) {          
 
-			//View mit Daten füttern
-			var element = document.querySelector('.js-quiz-info');
-			var content = '<h1>' + quiz.titel + '</h1>';
-			content += '<p>' + quiz.text + '</p>';
-			element.innerHTML += content;
+                //View mit Daten füttern
+                var element = document.querySelector('.js-quiz-info');
+                var content = '<h1>' + data.titel + '</h1>';
+                content += '<p>' + data.text + '</p>';
+                element.innerHTML += content;
 
-			var element = document.querySelector('.js-quiz-starten');
-			element.setAttribute('href', viewUrls.viewQuizRundeURL + '?quizId=' + quizID);
-		})
+                var element = document.querySelector('.js-quiz-starten');
+                element.setAttribute('href', viewUrls.viewQuizRundeURL + '?quizId=' + quizID);
+            });
+		//})
 	},
 	
 	//View Quizende initialisieren
