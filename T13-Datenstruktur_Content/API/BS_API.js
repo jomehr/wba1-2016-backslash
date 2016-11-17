@@ -27,7 +27,7 @@ json_request.send();
 
 //Holt Quiz mit der passenden ID
 function getQuizByID(quizID){
-    var quizData = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/quiz.json";
+    var quizData = "https://rawgit.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/quiz.json";
     var json_request = new XMLHttpRequest();
 
     json_request.onreadystatechange = function(){
@@ -56,7 +56,7 @@ json_request.send();
 
 //Holt Highscore mit der passenden ID
 function getHighscoreByID(quizID){
-    var highscoreData = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/highscore.json";
+    var highscoreData = "https://rawgit.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/highscore.json";
     var json_request = new XMLHttpRequest();
 
     json_request.onreadystatechange = function(){
@@ -116,7 +116,7 @@ json_request.send();
 
 //Holt 2 Position über und unter den angegebenen Punkten
 function getHighscorePositions(quizID, user, punkte){
-    var highscoreData = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/highscore.json";
+    var highscoreData = "https://rawgit.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/JSON/highscore.json";
     var json_request = new XMLHttpRequest();
 
     json_request.onreadystatechange = function(){
