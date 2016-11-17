@@ -3,6 +3,7 @@
 .ss_box {
 	margin: 20px auto 0px auto;
 	background: #fff;
+	border: 1px solid #929292;
 }
 
 .ss_box header {
@@ -145,6 +146,8 @@
 	cursor: pointer;
 	margin-right: 30px;
 }
+
+
 .ss_slider_menu .ss_slider_bt {
 	background: #ccc;
 	width: 14px;

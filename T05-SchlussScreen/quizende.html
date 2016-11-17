@@ -14,7 +14,7 @@
 	</head>
 	<body style="background: lightgrey; max-width: 1000px; margin: 0 auto;" class="animated fadeInDownBig">
 		<!-- allgemeine Box-->
-		<div class="ss_box">
+		<section class="ss_box">
 			<header class="bg-yellow">
 				<h1>Effzeh - mer wesse alles üvver dich</h1>
 			</header>
@@ -52,18 +52,18 @@
 							<!-- Wird automatisch gefüllt sobald die Breite weniger als 992px. Siehe script.js funktion moveScoreText()  -->
 							<p class="ss_mobile_answer_txt"></p>
 							<!--  Richtig beantwortete Fragen (Punkte rot/grün)  -->
-							<div class="ss_score_points animated slideInLeft">
-								<div class="ss_score_point bg-red animated flash"></div>
-								<div class="ss_score_point bg-green"></div>
-								<div class="ss_score_point bg-green"></div>
-								<div class="ss_score_point bg-red animated flash"></div>
-								<div class="ss_score_point bg-green"></div>
-								<div class="ss_score_point bg-green"></div>
-								<div class="ss_score_point bg-red animated flash"></div>
-								<div class="ss_score_point bg-red animated flash"></div>
-								<div class="ss_score_point bg-green"></div>
-								<div class="ss_score_point bg-green"></div>
-							</div>
+							<ul class="ss_score_points animated slideInLeft">
+								<li><div class="ss_score_point bg-red animated flash"></div></li>
+								<li><div class="ss_score_point bg-green"></div></li>
+								<li><div class="ss_score_point bg-green"></div></li>
+								<li><div class="ss_score_point bg-red animated flash"></div></li>
+								<li><div class="ss_score_point bg-green"></div></li>
+								<li><div class="ss_score_point bg-green"></div></li>
+								<li><div class="ss_score_point bg-red animated flash"></div></li>
+								<li><div class="ss_score_point bg-red animated flash"></div></li>
+								<li><div class="ss_score_point bg-green"></div></li>
+								<li><div class="ss_score_point bg-green"></div></li>
+							</ul>
 						</div>
 						<div class="ss_score_txt col-md-5">
 							<p>600 von 1000 Punkten</p>
@@ -132,10 +132,12 @@
 					<a class="btn" href="">Jetzt spielen!</a>
 				</div>
 			</div>
-		</div>
+		</section>
 		<!--  allgemeine mit Inhalt des Sliders  -->
-		<div class="ss_box">
-			<h2 style="text-align: center; padding-top: 24px;">Das könnte dir auch gefallen</h2>
+		<section class="ss_box">
+			<header style="padding: 0;">
+				<h2 style="text-align: center; padding-top: 24px;">Das könnte dir auch gefallen</h2>
+			</header>
 			<!--  Sliderelement  -->
 			<div class="ss_slider_content row">
 				<!--  linke Seite vom Slider  -->
@@ -252,12 +254,14 @@
 			<!--  Slider Menüpunkte  -->
 			<div class="ss_slider_menu">
 				<div class="ss_slider_menu_elemente">
-					<div class="ss_slider_menu_left font-bold">&lt;</div>
+					<i class="ss_slider_menu_left ico-light-arrow-left"></i>
+					<i class="ss_slider_menu_right ico-light-arrow-right"></i>
+					<div class="ss_slider_menu_left font-bold"></div>
 					<!--<div class="ss_slider_bt "></div>-->
-					<div class="ss_slider_menu_right font-bold">&gt;</div>
+					<div class="ss_slider_menu_right font-bold"></div>
 				</div>
 			</div>
-		</div>
+		</section>
 		<script type="text/javascript" src="js/script.js"></script>
 		<script>
 			Slider.slide();

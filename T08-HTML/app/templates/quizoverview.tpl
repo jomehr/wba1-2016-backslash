@@ -72,13 +72,13 @@
                                 <p><strong>{{spielzahl}}</strong> mal gespielt</p>
                             </div>
                             <div class="col-sm-8 col-md-6 _hidden-xs">
-                                <a data-view=2 href="#" data-quizid="{{this.quizID}}"
+                                <a data-view="1" href="#" data-quizid="{{this.quizID}}"
                                    class="btn qo-button js-change-view">Jetzt spielen!</a>
                             </div>
                         </div>
                         <div class="row qo-quizinfo-box">
                             <div class="col-xs-12 _visible-xs-block">
-                                <a data-view=2 href="#" data-quizid="{{this.quizID}}"
+                                <a data-view="1" href="#" data-quizid="{{this.quizID}}"
                                    class="btn qo-button js-change-view">Jetzt spielen!</a>
                             </div>
                         </div>
