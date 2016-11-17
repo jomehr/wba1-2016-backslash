@@ -86,7 +86,7 @@ var jsonQuizView = "";
 function getQuizView(anzahl, searchString, sort) {
     searchString = searchString || "";
     sort = sort || 0;
-    var quizView = baseURL + extQuiz;
+    var quizView = baseURL + extView;
     var json_request = new XMLHttpRequest();
 
     json_request.onreadystatechange = function () {
@@ -131,7 +131,7 @@ function getQuizView(anzahl, searchString, sort) {
 
 //Holt ein bestimmtes Quiz aus der Uebersicht
 function getQuizViewByID(quizID) {
-    var quizView = baseURL + extQuiz;
+    var quizView = baseURL + extView;
     var json_request = new XMLHttpRequest();
 
     json_request.onreadystatechange = function () {
