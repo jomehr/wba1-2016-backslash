@@ -7,15 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<div class="background">
-</div>
+<div class="background"></div>
 <!--Beginn des Headers -->
 <header id="wa_desktop">
     <!--Dieser Div stellt den schwarzen Balken da-->
     <div class="wa_header">
         <!--Dieser Div stellt den schwarzen Balken da-->
         <div class="wa_Navigation">
-            <!-- Dieses Div beeinhaltet das Logo --><img class="wa_logo" src="T02/logo.png" alt="Fubuizz_Logo">
+            <!-- Dieses Div beeinhaltet das Logo --><img class="wa_logo" src="../old/img/logo.png" alt="Fubuizz_Logo">
             <!-- Dieses Div enthält das Login oben rechts-->
             <nav class="wa_login">
                 <ul>
@@ -46,8 +45,8 @@
         <ul>
             <li><a href="javascript:void(0)" class="wa_closebtn_mobil" onclick="closeNav()">&times;</a></li>
             <!--Einbindung des Close Buttons mit Funktion-->
-            <li><a href="#" class="js-change-view" data-view=0>Übersicht</a></li>
-            <li><a href="#" class="js-change-view" data-view=4>Highscoreliste</a></li>
+            <li><a href="#" class="js-change-view" data-view="0">Übersicht</a></li>
+            <li><a href="#" class="js-change-view" data-view="4">Highscoreliste</a></li>
             <li><a href="#">Teilen</a></li>
             <li><a href="#">Über Fubuizz</a></li>
             <li><a href="#">Einstellungen</a></li>
@@ -56,8 +55,9 @@
     </div>
     <span class="wa_Button_mobil" onclick="openNav()">&#9776;</span>
     <!--Button zum öffnen der Sidenav-->
-    <!--Javascriptfunktion Open und Close Button--><img src="T02/img/Logo_Fubuizz.png" class="wa_logo"
-                                                        alt="Fubuizz_Logo_Mobile"></header>
+    <!--Javascriptfunktion Open und Close Button-->
+    <img src="../old/img/Logo_Fubuizz.png" class="wa_logo" alt="Fubuizz_Logo_Mobile">
+</header>
 
 <div id="templatespaceholder_handlebars">
 </div>
@@ -69,13 +69,32 @@
     <div class="wa_copyright"> © 2016 - Fubuizz</div>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+<!-- ************************************************** -->
+<!--                     SCRIPTS                        -->
+<!-- ************************************************** -->
+
+<!-- libraries -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.2/handlebars.min.js"></script>
+<script type="application/javascript" src="js/lib/flickity.pkgd.min.js"></script>
+
+<!-- data api -->
 <script src="https://rawgit.com/th-koeln/wba1-2016-backslash/master/T13-Datenstruktur_Content/API/BS_API.js"></script>
-<script type="text/javascript" src="js/T02/WebApp_Rahmen_Tablet.js"></script>
-<script src="js/flickity.pkgd.min.js"></script>
+
+<!-- module logic -->
+<script type="application/javascript" src="js/T02/WebApp_Rahmen_Tablet.js"></script>
 <script type="application/javascript" src="js/T06/collapse.js"></script>
 <script type="application/javascript" src="js/T06/quizuebersicht.js"></script>
+
+<!-- main logic -->
+<script type="application/javascript" src="js/main.js"></script>
+
+
+<!-- ************************************************** -->
+<!--                    TEMPLATES                       -->
+<!-- ************************************************** -->
 
 <!-- Quizinfo Template-->
 <script id="quizinfo-template" type="text/x-handlebars-template">
@@ -136,91 +155,96 @@
             <!-- Erstellung der Kopfzeile mit entsprechendem Thema -->
             <div class="qr-head row qr-no-margin">
                 <div class="col-xs-12">
-                <h1>Effzeh - mer wisse alles üvver dich</h1>
+                    <h1>Effzeh - mer wisse alles üvver dich</h1>
                 </div>
             </div>
-        <!-- Platzhalter für den Timer -->
-        <div class="qr-timer row qr-no-margin">
-            <div class="col-xs-12">
-            <p class="qr-text">!Platzhalter Timer!</p>
+            <!-- Platzhalter für den Timer -->
+            <div class="qr-timer row qr-no-margin">
+                <div class="col-xs-12">
+                    <p class="qr-text">!Platzhalter Timer!</p>
+                </div>
             </div>
-        </div>
-        <!-- Hier wird die Frage abgebildet -->
-        <div class="qr-question row qr-no-margin">
-            <div class="col-xs-12">
-            <p class="qr-text">"Welches dieser Zitate wird nicht Werders "Ostfriesen-Alemao" Dieter Eilts zugeschrieben?</p>
+            <!-- Hier wird die Frage abgebildet -->
+            <div class="qr-question row qr-no-margin">
+                <div class="col-xs-12">
+                    <p class="qr-text">"Welches dieser Zitate wird nicht Werders "Ostfriesen-Alemao" Dieter Eilts
+                        zugeschrieben?</p>
+                </div>
             </div>
-        </div>
-        <!-- Erstellung der Antworten-Box -->
-        <div class="qr-inner_box row qr-no-margin">
-        <div class="col-x s-12">
-        <!-- Button-Eigenschaften werden erstellt -->
-        <!-- Farben für kleinen Button werden übergeben -->
-        <!-- Farben für großen Button werden übergeben -->
-        <!-- Schriften werden übergeben -->
-        <div class="qr-answers font-secondary">
-            <button class="qr-fg-black bg-lightgrey">
-                <!-- kleine Box mit Answer-Key wird erstellt -->
-                <span class="qr-short bg-yellow">
+            <!-- Erstellung der Antworten-Box -->
+            <div class="qr-inner_box row qr-no-margin">
+                <div class="col-x s-12">
+                    <!-- Button-Eigenschaften werden erstellt -->
+                    <!-- Farben für kleinen Button werden übergeben -->
+                    <!-- Farben für großen Button werden übergeben -->
+                    <!-- Schriften werden übergeben -->
+                    <div class="qr-answers font-secondary">
+                        <button class="qr-fg-black bg-lightgrey">
+                            <!-- kleine Box mit Answer-Key wird erstellt -->
+                            <span class="qr-short bg-yellow">
                 A
                 </span>
-                <!-- große Box mit Antwort wird erstellt -->
-                <span class="qr-long bg-lightgrey" id="wrongAnswer1" onclick="changeAnswerButtonColor('wrongAnswer1')">
+                            <!-- große Box mit Antwort wird erstellt -->
+                            <span class="qr-long bg-lightgrey" id="wrongAnswer1"
+                                  onclick="changeAnswerButtonColor('wrongAnswer1')">
                 "Das interessiert mich jetzt wie eine geplatzte Currywust im ostfriesischen Wattenmeer."
                  </span>
-            </button>
+                        </button>
 
-            <button class="qr-fg-black bg-lightgrey">
+                        <button class="qr-fg-black bg-lightgrey">
                 <span class="qr-short bg-yellow">
                     B
                 </span>
-                <span class="qr-long bg-lightgrey" id="wrongAnswer2" onclick="changeAnswerButtonColor('wrongAnswer2')">
+                            <span class="qr-long bg-lightgrey" id="wrongAnswer2"
+                                  onclick="changeAnswerButtonColor('wrongAnswer2')">
                     "Wir dürfen jetzt nicht den Sand in den Kopf stecken."
                 </span>
-            </button>
+                        </button>
 
-            <button class="qr-fg-black bg-lightgrey">
+                        <button class="qr-fg-black bg-lightgrey">
                 <span class="qr-short bg-yellow">
                     C
                 </span>
-                <span class="qr-long bg-lightgrey" id="wrongAnswer3" onclick="changeAnswerButtonColor('wrongAnswer3')">
+                            <span class="qr-long bg-lightgrey" id="wrongAnswer3"
+                                  onclick="changeAnswerButtonColor('wrongAnswer3')">
                     "Wenn meine Oma ein Bus wäre, dann könnte sie hupen."
                 </span>
-            </button>
+                        </button>
 
-            <button class="qr-fg-black bg-lightgrey">
+                        <button class="qr-fg-black bg-lightgrey">
                 <span class="qr-short bg-yellow">
                     D
                 </span>
-                <span class="qr-long bg-lightgrey" id="rightAnswer" onclick="changeAnswerButtonColor('rightAnswer')">
+                            <span class="qr-long bg-lightgrey" id="rightAnswer"
+                                  onclick="changeAnswerButtonColor('rightAnswer')">
                     "Moin moin, Gascoigne."
                 </span>
-            </button>
-        </div>
+                        </button>
+                    </div>
 
-        <!-- Feedback-Icons werden erstellt -->
-        <div class="qr-answer_icons">
-            <div class="qr-answer_icon bg-red"></div>
-            <div class="qr-answer_icon bg-red"></div>
-            <div class="qr-answer_icon bg-green"></div>
-            <div class="qr-answer_icon bg-red"></div>
-            <div class="qr-answer_icon bg-green"></div>
-            <div class="qr-answer_icon bg-green"></div>
-            <div class="qr-answer_icon bg-red"></div>
-            <div class="qr-answer_icon bg-mediumgrey"></div>
-            <div class="qr-answer_icon bg-mediumgrey"></div>
-            <div class="qr-answer_icon_last bg-mediumgrey"></div>
+                    <!-- Feedback-Icons werden erstellt -->
+                    <div class="qr-answer_icons">
+                        <div class="qr-answer_icon bg-red"></div>
+                        <div class="qr-answer_icon bg-red"></div>
+                        <div class="qr-answer_icon bg-green"></div>
+                        <div class="qr-answer_icon bg-red"></div>
+                        <div class="qr-answer_icon bg-green"></div>
+                        <div class="qr-answer_icon bg-green"></div>
+                        <div class="qr-answer_icon bg-red"></div>
+                        <div class="qr-answer_icon bg-mediumgrey"></div>
+                        <div class="qr-answer_icon bg-mediumgrey"></div>
+                        <div class="qr-answer_icon_last bg-mediumgrey"></div>
+                    </div>
+                    <!-- Button für das Beenden des Quizzes wird erstellt -->
+                    <div class="qr-button">
+                        <button type="button" id="quiz_beenden">Quizrunde beenden</button>
+                    </div>
+                </div>
+                {{/quiz}}
+            </div>
         </div>
-        <!-- Button für das Beenden des Quizzes wird erstellt -->
-        <div class="qr-button">
-            <button type="button" id="quiz_beenden">Quizrunde beenden</button>
-        </div>
-        </div>
-        {{/quiz}}
     </div>
-    </div>
-    </div>
-    </script>
+</script>
 
 <!-- Quizend Template-->
 <script id="Quizend-template" type="text/x-handlebars-template">
@@ -232,12 +256,13 @@
         </header>
         <div class="ss_erg ss_box_content row">
             <div class="ss_left col-md-8 col-xs-12">
-                <h2 style="margin-top: 0px;">Dein Ergebnis</h2>
+                <h2>Dein Ergebnis</h2>
                 <div class="ss_score row">
                     <div class="ss_score_sp col-md-7 col-xs-12">
                         <p class="ss_mobile_points_txt"></p>
                         <div class="ss_score_balken bg-mediumgrey">
-                            <div class="ss_scale_score" id="JS_ScaleScore" style="width: 10%;">
+                            <!-- 10% as defult value for score, changed by main logic -->
+                            <div class="ss_scale_score" id="JS_ScaleScore" style="width: 10%">
                             </div>
                         </div>
                         <p class="ss_mobile_answer_txt"></p>
@@ -298,7 +323,7 @@
         <h2 style="text-align: center; padding-top: 24px;">Das könnte dir auch gefallen</h2>
 
         <!-- Carousel -->
-    		<div class="js-carousel">
+        <div class="js-carousel">
             {{#each quizes}}
             <!-- Carousel Cell-->
             <div class="js-carousel-cell">
@@ -320,7 +345,8 @@
                     <div class="col-md-2 ss_slider_right">
                         <p><span class="font-bold" id="JS_SliderPlayed">{{this.spielzahl}}</span> mal gespielt</p>
                         <div class="ss_slider_points fg-white bg-darkgrey font-bold">8 / 10 Punkten</div>
-                        <a class="btn js-change-view" data-view=2 data-quizid="{{this.quizID}}" href="">Jetzt spielen!</a>
+                        <a class="btn js-change-view" data-view=2 data-quizid="{{this.quizID}}" href="">Jetzt
+                            spielen!</a>
                     </div>
                 </div>
             </div>
@@ -332,477 +358,247 @@
 
 <!-- Quizoverview // HOME -->
 <script id="Quizoverview-template" type="text/x-handlebars-template">
-  <!-- Quizübersicht -->
-  <main class="container qo-content-box bg-white">
-    <!-- Headline -->
-    <header class="row bg-yellow qo-headline-box">
-      <div class="col-sm-4">
-        <h1 class="qo-headline">Quizzübersicht</h1>
-      </div>
+    <!-- Quizübersicht -->
+    <main class="container qo-content-box bg-white">
+        <!-- Headline -->
+        <header class="row bg-yellow qo-headline-box">
+            <div class="col-sm-4">
+                <h1 class="qo-headline">Quizzübersicht</h1>
+            </div>
 
-      <!-- Dropdown sortieren -->
-      <div class="col-sm-4">
-        <div class="qo-wrapper-select-box">
-          <select class="qo-select-box">
-            <option value="datum">nach Erscheinungsdatum</option>
-            <option value="alphabetisch">alphabetisch</option>
-            <option value="beliebtheit">nach Beliebtheit</option>
-          </select>
+            <!-- Dropdown sortieren -->
+            <div class="col-sm-4">
+                <div class="qo-wrapper-select-box">
+                    <select class="qo-select-box" title="Sortieren">
+                        <option value="datum">nach Erscheinungsdatum</option>
+                        <option value="alphabetisch">alphabetisch</option>
+                        <option value="beliebtheit">nach Beliebtheit</option>
+                    </select>
+                </div>
+            </div>
+            <!-- End Dropdown sortieren -->
+
+            <!-- Suchfeld -->
+            <div class="col-sm-4">
+                <input type="text" class="qo-search-box" maxlength="30" placeholder="suchen">
+            </div>
+            <!-- End Suchfeld -->
+        </header>
+        <!--End Headline -->
+
+        <!-- Auflistung Quizspiele -->
+        <section>
+            <ul>
+                <!-- Quizspiel -->
+                {{#each quizes}}
+                <li class="js-collapse-section">
+                    <div class="row qo-quiz-summary js-quiz-summary">
+
+                        <!-- Headline -->
+                        <div class="col-sm-8">
+                            <a href="#" class="qo-collapse-link js-collapse-link"><i
+                                    class="qo-arrow ico-light-arrow-right"></i>
+                                <h2 class="qo-subheadline">{{titel}}</h2></a>
+                        </div>
+                        <div class="col-sm-4 _hidden-xs">
+                            <p class="qo-infos"><strong>{{spielzahl}}</strong> mal gespielt</p>
+                        </div>
+                    </div>
+
+
+                    <div class="row qo-quiz-details js-collapse-details _same-height-sm">
+                        <!-- Quizbild -->
+                        <div class="col-sm-6 col-md-4">
+                            <img class="qo-image" src="{{bild}}" alt="{{titel}}">
+                        </div>
+                        <!-- End Quizbild -->
+
+                        <!-- Quizinfos -->
+                        <div class="col-sm-6 col-md-8">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-10">
+                                    <p class="qo-text">{{text}}</p>
+                                </div>
+                            </div>
+
+                            <div class="row qo-quizinfo-box _same-height-xs">
+                                <div class="col-xs-6 col-sm-4 col-md-6">
+                                    <p class="qo-time">
+                                        <time>{{datum}}</time>
+                                    </p>
+                                    <p class="qo-author">{{autor}}</p>
+                                </div>
+                                <div class="col-xs-6 _visible-xs-block qo-counter">
+                                    <p><strong>{{spielzahl}}</strong> mal gespielt</p>
+                                </div>
+                                <div class="col-sm-8 col-md-6 _hidden-xs">
+                                    <a data-view=2 href="#" data-quizid="{{this.quizID}}"
+                                       class="btn qo-button js-change-view">Jetzt spielen!</a>
+                                </div>
+                            </div>
+                            <div class="row qo-quizinfo-box">
+                                <div class="col-xs-12 _visible-xs-block">
+                                    <a data-view=2 href="#" data-quizid="{{this.quizID}}"
+                                       class="btn qo-button js-change-view">Jetzt spielen!</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Quizinfos -->
+                    </div>
+                </li>
+                {{/each}}
+                <!-- End Quizspiel -->
+
+            </ul>
+        </section>
+        <!--End Auflistung Quizspiele -->
+    </main>
+    <!-- End Quizübersicht -->
+
+    <!-- Zuletzt gespielt -->
+    <section class="container qo-content-box qo-box-last-played bg-white">
+        <div class="row">
+
+            <!-- Healine -->
+            <div class="col-xs-12">
+                <h1 class="qo-headline -smallcentered font-primary">Zuletzt gespielt</h1>
+            </div>
+            <!-- End Headline -->
         </div>
-      </div>
-      <!-- End Dropdown sortieren -->
 
-      <!-- Suchfeld -->
-      <div class="col-sm-4">
-        <input type="text" class="qo-search-box" maxlength="30" placeholder="suchen">
-      </div>
-      <!-- End Suchfeld -->
-    </header>
-    <!--End Headline -->
+        <!-- Carousel -->
+        <div class="js-carousel">
 
-    <!-- Auflistung Quizspiele -->
-    <section>
-      <ul>
-        <!-- Quizspiel -->
-        {{#each quizes}}
-        <li class="js-collapse-section">
-          <div class="row qo-quiz-summary js-quiz-summary">
+            <!-- Carousel Cell-->
+            <div class="js-carousel-cell">
 
-            <!-- Headline -->
-            <div class="col-sm-8">
-              <a href="#" class="qo-collapse-link js-collapse-link"><i class="qo-arrow ico-light-arrow-right"></i><h2 class="qo-subheadline">{{titel}}</h2></a>
+                <div class="row qo-quiz-summary">
+
+                    <!-- Headline -->
+                    <div class="col-sm-8">
+                        <h2 class="qo-subheadline -withoutmargin">Das Stadion Quizz</h2>
+                    </div>
+                    <div class="col-sm-4 _hidden-xs ">
+                        <p class="qo-infos"><strong>67</strong> mal gespielt</p>
+                    </div>
+
+                    <!-- End Headline -->
+                </div>
+
+
+                <div class="row qo-quiz-details  _same-height-sm">
+                    <!-- Quizbild -->
+                    <div class="col-sm-6 col-md-4">
+                        <img class="qo-image" src="../old/img/stadion.png" alt="Fußballstadion">
+                    </div>
+                    <!--End Quizbild -->
+
+                    <!-- Quizinfos -->
+                    <div class="col-sm-6 col-md-8">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-10">
+                                <p class="qo-text">Die größten, bedeutensten, modernsten und wichtigsten Stadien der
+                                    Welt. Kaum etwas ist bei großen Verienen so bedeutend wie das Stadion. Es ist nicht
+                                    nur ein Statussymbol für jeden erfolgreichen Verein, sondern oft auch ein Denkmal
+                                    für große Ereignisse in der Historie eines Vereiens. Hier findest Fragen zu den
+                                    Stadien der Welt. Auf geht's! </p>
+                            </div>
+                        </div>
+
+                        <div class="row qo-quizinfo-box _same-height-xs">
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                                <p class="qo-time">
+                                    <time>17.06.2016</time>
+                                </p>
+                                <p class="qo-author">Hennes48</p>
+                            </div>
+                            <div class="col-xs-6 _visible-xs-block qo-counter">
+                                <p><strong>37</strong> mal gespielt</p>
+                            </div>
+                            <div class="col-sm-8 col-md-6 _hidden-xs">
+                                <p class="qo-points">8 / 10 Punkten</p>
+                                <a href="#" class="btn qo-button js-change-view" data-view=2 data-quizid="0">Erneut
+                                    spielen!</a>
+                            </div>
+                        </div>
+                        <div class="row qo-quizinfo-box">
+                            <div class="col-xs-12 _visible-xs-block">
+                                <p class="qo-points">beendet mit 8/10 Punkte</p>
+                                <a href="#" class="btn qo-button js-change-view" data-view=2 data-quizid="0">Erneut
+                                    spielen!</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- End Quizinfos -->
+                </div>
             </div>
-            <div class="col-sm-4 _hidden-xs">
-              <p class="qo-infos"><strong>{{spielzahl}}</strong> mal gespielt</p>
+            <!-- End Carousel Cell-->
+            <!-- Carousel Cell-->
+            <div class="js-carousel-cell">
+                <div class="row qo-quiz-summary">
+
+                    <!-- Headline -->
+                    <div class="col-sm-8">
+                        <h2 class="qo-subheadline -withoutmargin">Das Stadion Quizz</h2>
+                    </div>
+                    <div class="col-sm-4 _hidden-xs ">
+                        <p class="qo-infos"><strong>67</strong> mal gespielt</p>
+                    </div>
+
+                    <!-- End Headline -->
+                </div>
+
+
+                <div class="row qo-quiz-details  _same-height-sm">
+                    <!-- Quizbild -->
+                    <div class="col-sm-6 col-md-4">
+                        <img class="qo-image" src="../old/img/stadion.png" alt="Fußballstadion">
+                    </div>
+                    <!--End Quizbild -->
+
+                    <!-- Quizinfos -->
+                    <div class="col-sm-6 col-md-8">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-10">
+                                <p class="qo-text">Die größten, bedeutensten, modernsten und wichtigsten Stadien der
+                                    Welt. Kaum etwas ist bei großen Verienen so bedeutend wie das Stadion. Es ist nicht
+                                    nur ein Statussymbol für jeden erfolgreichen Verein, sondern oft auch ein Denkmal
+                                    für große Ereignisse in der Historie eines Vereiens. Hier findest Fragen zu den
+                                    Stadien der Welt. Auf geht's! </p>
+                            </div>
+                        </div>
+
+                        <div class="row qo-quizinfo-box _same-height-xs">
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                                <p class="qo-time">
+                                    <time>17.06.2016</time>
+                                </p>
+                                <p class="qo-author">Hennes48</p>
+                            </div>
+                            <div class="col-xs-6 _visible-xs-block qo-counter">
+                                <p><strong>37</strong> mal gespielt</p>
+                            </div>
+                            <div class="col-sm-8 col-md-6 _hidden-xs">
+                                <p class="qo-points">8 / 10 Punkten</p>
+                                <a href="#" class="btn qo-button js-change-view" data-view=0>Erneut spielen!</a>
+                            </div>
+                        </div>
+                        <div class="row qo-quizinfo-box">
+                            <div class="col-xs-12 _visible-xs-block">
+                                <p class="qo-points">beendet mit 8/10 Punkte</p>
+                                <a href="#" class="btn qo-button js-change-view" data-view=0>Erneut spielen!</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- End Quizinfos -->
+                </div>
             </div>
-          </div>
-
-
-          <div class="row qo-quiz-details js-collapse-details _same-height-sm">
-            <!-- Quizbild -->
-            <div class="col-sm-6 col-md-4">
-              <img class="qo-image" src="{{bild}}" alt="{{titel}}">
-            </div>
-            <!-- End Quizbild -->
-
-            <!-- Quizinfos -->
-            <div class="col-sm-6 col-md-8">
-              <div class="row">
-                <div class="col-sm-12 col-md-10">
-                  <p class="qo-text">{{text}}</p>
-                </div>
-              </div>
-
-              <div class="row qo-quizinfo-box _same-height-xs">
-                <div class="col-xs-6 col-sm-4 col-md-6">
-                  <p class="qo-time">
-                    <time>{{datum}}</time>
-                  </p>
-                  <p class="qo-author">{{autor}}</p>
-                </div>
-                <div class="col-xs-6 _visible-xs-block qo-counter">
-                  <p><strong>{{spielzahl}}</strong> mal gespielt</p>
-                </div>
-                <div class="col-sm-8 col-md-6 _hidden-xs">
-                  <a data-view=2 href="#" data-quizid="{{this.quizID}}" class="btn qo-button js-change-view">Jetzt spielen!</a>
-                </div>
-              </div>
-              <div class="row qo-quizinfo-box">
-                <div class="col-xs-12 _visible-xs-block">
-                  <a data-view=2 href="#" data-quizid="{{this.quizID}}"  class="btn qo-button js-change-view">Jetzt spielen!</a>
-                </div>
-              </div>
-            </div>
-            <!-- End Quizinfos -->
-          </div>
-        </li>
-        {{/each}}
-        <!-- End Quizspiel -->
-
-      </ul>
+            <!-- End Carousel Cell-->
+        </div>
     </section>
-    <!--End Auflistung Quizspiele -->
-  </main>
-  <!-- End Quizübersicht -->
-
-  <!-- Zuletzt gespielt -->
-  <section class="container qo-content-box qo-box-last-played bg-white">
-    <div class="row">
-
-      <!-- Healine -->
-      <div class="col-xs-12">
-        <h1 class="qo-headline -smallcentered font-primary">Zuletzt gespielt</h1>
-      </div>
-      <!-- End Headline -->
-    </div>
-
-    <!-- Carousel -->
-    <div class="js-carousel">
-
-      <!-- Carousel Cell-->
-      <div class="js-carousel-cell">
-
-        <div class="row qo-quiz-summary">
-
-          <!-- Headline -->
-          <div class="col-sm-8">
-            <h2 class="qo-subheadline -withoutmargin">Das Stadion Quizz</h2>
-          </div>
-          <div class="col-sm-4 _hidden-xs ">
-            <p class="qo-infos"><strong>67</strong> mal gespielt</p>
-          </div>
-
-          <!-- End Headline -->
-        </div>
-
-
-        <div class="row qo-quiz-details  _same-height-sm">
-          <!-- Quizbild -->
-          <div class="col-sm-6 col-md-4">
-            <img class="qo-image" src="T06/assets/img/stadion.png" alt="Fußballstadion">
-          </div>
-          <!--End Quizbild -->
-
-          <!-- Quizinfos -->
-          <div class="col-sm-6 col-md-8">
-            <div class="row">
-              <div class="col-sm-12 col-md-10">
-                <p class="qo-text">Die größten, bedeutensten, modernsten und wichtigsten Stadien der Welt. Kaum etwas ist bei großen Verienen so bedeutend wie das Stadion. Es ist nicht nur ein Statussymbol für jeden erfolgreichen Verein, sondern oft auch ein Denkmal für große Ereignisse in der Historie eines Vereiens. Hier findest Fragen zu den Stadien der Welt. Auf geht's! </p>
-              </div>
-            </div>
-
-            <div class="row qo-quizinfo-box _same-height-xs">
-              <div class="col-xs-6 col-sm-4 col-md-6">
-                <p class="qo-time">
-                  <time>17.06.2016</time>
-                </p>
-                <p class="qo-author">Hennes48</p>
-              </div>
-              <div class="col-xs-6 _visible-xs-block qo-counter">
-                <p><strong>37</strong> mal gespielt</p>
-              </div>
-              <div class="col-sm-8 col-md-6 _hidden-xs">
-                <p class="qo-points">8 / 10 Punkten</p>
-                <a href="#" class="btn qo-button js-change-view" data-view=2 data-quizid="0">Erneut spielen!</a>
-              </div>
-            </div>
-            <div class="row qo-quizinfo-box">
-              <div class="col-xs-12 _visible-xs-block">
-                <p class="qo-points">beendet mit 8/10 Punkte</p>
-                <a href="#" class="btn qo-button js-change-view" data-view=2 data-quizid="0">Erneut spielen!</a>
-              </div>
-            </div>
-
-          </div>
-          <!-- End Quizinfos -->
-        </div>
-      </div>
-      <!-- End Carousel Cell-->
-      <!-- Carousel Cell-->
-      <div class="js-carousel-cell">
-        <div class="row qo-quiz-summary">
-
-          <!-- Headline -->
-          <div class="col-sm-8">
-            <h2 class="qo-subheadline -withoutmargin">Das Stadion Quizz</h2>
-          </div>
-          <div class="col-sm-4 _hidden-xs ">
-            <p class="qo-infos"><strong>67</strong> mal gespielt</p>
-          </div>
-
-          <!-- End Headline -->
-        </div>
-
-
-        <div class="row qo-quiz-details  _same-height-sm">
-          <!-- Quizbild -->
-          <div class="col-sm-6 col-md-4">
-            <img class="qo-image" src="T06/assets/img/stadion.png" alt="Fußballstadion">
-          </div>
-          <!--End Quizbild -->
-
-          <!-- Quizinfos -->
-          <div class="col-sm-6 col-md-8">
-            <div class="row">
-              <div class="col-sm-12 col-md-10">
-                <p class="qo-text">Die größten, bedeutensten, modernsten und wichtigsten Stadien der Welt. Kaum etwas ist bei großen Verienen so bedeutend wie das Stadion. Es ist nicht nur ein Statussymbol für jeden erfolgreichen Verein, sondern oft auch ein Denkmal für große Ereignisse in der Historie eines Vereiens. Hier findest Fragen zu den Stadien der Welt. Auf geht's! </p>
-              </div>
-            </div>
-
-            <div class="row qo-quizinfo-box _same-height-xs">
-              <div class="col-xs-6 col-sm-4 col-md-6">
-                <p class="qo-time">
-                  <time>17.06.2016</time>
-                </p>
-                <p class="qo-author">Hennes48</p>
-              </div>
-              <div class="col-xs-6 _visible-xs-block qo-counter">
-                <p><strong>37</strong> mal gespielt</p>
-              </div>
-              <div class="col-sm-8 col-md-6 _hidden-xs">
-                <p class="qo-points">8 / 10 Punkten</p>
-                <a href="#" class="btn qo-button js-change-view" data-view=0>Erneut spielen!</a>
-              </div>
-            </div>
-            <div class="row qo-quizinfo-box">
-              <div class="col-xs-12 _visible-xs-block">
-                <p class="qo-points">beendet mit 8/10 Punkte</p>
-                <a href="#" class="btn qo-button js-change-view" data-view=0>Erneut spielen!</a>
-              </div>
-            </div>
-
-          </div>
-          <!-- End Quizinfos -->
-        </div>
-      </div>
-      <!-- End Carousel Cell-->
-    </div>
-  </section>
-  <!--End Zuletzt gespielt -->
-</script>
-
-
-<!--
-Highscore fill Funktion & Quiz Info
--->
-<script type="text/javascript">
-    $(function () {
-        var Quizobject = {};
-        //Userdaten rand generieren solange keine bestehen!!!
-        var rand1 = Math.random(); //Punkte
-        var rand2 = 1000; //maxPunkte
-        var rand3 = Math.random(); //richtige antworten
-        var rand4 = 10; //anzahl Fragen
-        rand1 = Math.round(1000 * rand1);
-        rand3 = Math.round(10 * rand3);
-        sessionStorage.setItem('points', rand1);
-        sessionStorage.setItem('maxpoints', rand2);
-        sessionStorage.setItem('correctanswers', rand3);
-        sessionStorage.setItem('amountquestions', rand4);
-        sessionStorage.setItem('quizid', 0);
-        sessionStorage.setItem('username', "waaaow");
-        //Hier kommen die User Quiz Data
-        var sessionobject = {
-            "points": sessionStorage.getItem('points'),
-            "maxpoints": sessionStorage.getItem('maxpoints'),
-            "countright": sessionStorage.getItem('correctanswers'),
-            "countquestions": sessionStorage.getItem('amountquestions'),
-            "quizID": sessionStorage.getItem('quizid'),
-            "username": sessionStorage.getItem('username'),
-            "view": sessionStorage.getItem('view')
-        };
-        if (sessionobject.view === undefined) {
-            sessionobject.view = 0;
-        }
-
-
-        // Switch view
-        // 0 default (startseite)
-        // 1 quizInfo
-        // 2 quiz
-        // 3 Quizend
-        // 4 Quiz Highscore
-        function viewSite() {
-            console.log($("#templatespaceholder_handlebars"));
-            $('#templatespaceholder_handlebars').empty();
-
-            switch (sessionobject.view) {
-                case "1":
-                    quizinfo();
-                    break;
-                case "2":
-                    quiz();
-                    break;
-                case "3":
-                    quizend();
-                    break;
-                case "4":
-                    break;
-                default:
-                    quizoverview();
-                    console.log("Bitte sessionStorage.setItem('view','id') in die Console eingeben. \n id info : \n 0 = default \n 1 = quizinfo \n 2 = quiz(undefined) \n 3 = quizend \n 4 = highscore(undefined)");
-                    break;
-            }
-        }
-        function clicklistener (){
-          var elements = document.querySelectorAll('.js-change-view');
-          console.log(elements);
-          //Eventlistener zu jedem Link hinzuf�gen
-          for (i = 0; i < elements.length; i++) {
-              var click_eventcheck = elements[i].getAttribute('events');
-
-              if(click_eventcheck === null) {
-                elements[i].setAttribute('events',"true");
-                elements[i].removeEventListener('click',handleClick);
-                elements[i].addEventListener('click', handleClick);
-              }
-
-          }
-
-          function handleClick(e) {
-
-            //Standardverhalten preventen
-            e.preventDefault();
-
-            //data auslesen
-            var click_quizid = e.currentTarget.getAttribute('data-quizID');
-            var click_view = e.currentTarget.getAttribute('data-view');
-            if(click_quizid === null || click_quizid === undefined) {
-              sessionobject.quizID=0;
-            } else {
-              sessionobject.quizID=click_quizid;
-            }
-            sessionStorage.setItem('quizid', sessionobject.quizID);
-            if(click_view !== sessionobject.view) {
-              sessionobject.view=click_view;
-              sessionStorage.setItem('view',sessionobject.view);
-            }
-            viewSite();
-        }
-      }
-         function quiz() {
-             getQuizByID(sessionobject.quizID);
-             $(document).on("onQuizData", function (event, data) {
-              Quizobject.quiz = data;
-              Quizobject.sessionobject = sessionobject;
-              var source = $("#quiz-template").html();
-              var template = Handlebars.compile(source);
-              $('#templatespaceholder_handlebars').append(template(Quizobject));
-              clicklistener();
-            });
-       }
-
-        function quizend() {
-            getQuizViewByID(sessionobject.quizID);
-            $(document).on("onQuizViewByID", function (event, data) {
-                getHighscorePositions(sessionobject.quizID, sessionobject.username, sessionobject.points);
-                var quizInfo = {};
-                if (quizInfo.bild === "/URL") {
-                    quizInfo.bild = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Stadion3-Klein.jpg";
-                }
-                Quizobject.datquiz = data;
-            });
-
-            // HIGHSCORE info
-
-            $(document).on("onHighscorePositions", function (event, data) {
-                getQuizView(7);
-                $.extend(Quizobject.datquiz, data);
-            });
-
-
-            //Random Quiz Vorschlag
-
-            $(document).on("onQuizView", function (event, data) {
-                var nQuizObject = data; //copy object
-                var quizInfo = data;
-                var icount = 0;
-                var ARQused = [];
-                ARQused[0] = sessionobject.quizID;
-                var iRand = Math.random();
-
-                //RAND Quiz außer aufgerufene Quiz.
-                for (var i = 0; icount < 4; i++) {
-                    var iRand = Math.round(Math.random() * ( quizInfo.length - 0 ));
-                    if (iRand !== 0) {
-                        iRand--;
-                    }
-                    while ((ARQused.indexOf("" + iRand) > -1)) {
-                        iRand = Math.round(Math.random() * ( quizInfo.length - 0 ));
-                        if (iRand !== 0) {
-                            iRand--;
-                        }
-                    }
-
-                    if (quizInfo[iRand].quizID !== sessionobject.quizID) { // <- Abfrage ob QuizID == Random ID ist wenn true neu generieren
-                        icount++;
-                        ARQused[icount] = quizInfo[iRand].quizID;
-                        nQuizObject[icount - 1] = quizInfo[iRand];
-                        if (quizInfo[iRand].bild === "/URL") {
-                            quizInfo[iRand].bild = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Stadion3-Klein.jpg";
-                        }
-                    }
-                }
-
-                Quizobject.quizes = nQuizObject;
-                Quizobject.quizes = Quizobject.quizes.slice(0, 4);
-                $.extend(Quizobject.datquiz, sessionobject);
-                var source = $("#Quizend-template").html();
-                var template = "";
-                template = Handlebars.compile(source);
-                $('#templatespaceholder_handlebars').append(template(Quizobject));
-                //Aktualisieren der richtig Falsch antworten & Scalebar füllen
-                var percent = Math.round((sessionobject.points / sessionobject.maxpoints) * 100);
-                document.getElementById("JS_ScaleScore").style.width = percent + "%";
-                //Red/Green Icons füllen
-                item = document.getElementById('JS_Score');
-                var redicon = '<div class="ss_score_point bg-red" ></div>';
-                var greenicon = '<div class="ss_score_point bg-green" ></div>';
-                var length = sessionobject.countquestions;
-                for (var i = 0; i < length; i++) {
-                    var random = Math.random();
-                    if (random >= 0.5) {
-                        item.innerHTML += redicon;
-                    } else {
-                        item.innerHTML += greenicon;
-                    }
-                }
-                var flickityConfig = {
-                  // options
-                  cellAlign: 'left',
-                  cellSelector: '.js-carousel-cell',
-                  contain: true,
-                  imagesLoaded: true,
-                  prevNextButtons: false,
-                  setGallerySize: true,
-                }
-                var $carousel = $('.js-carousel').flickity(flickityConfig)
-                slideshowNavi.init($carousel);
-                clicklistener();
-            });
-        }
-
-        function quizoverview() {
-            getQuizView(10);
-            //Random Quiz Vorschlag
-            $(document).on("onQuizView", function (event, data) {
-                Quizobject.quizes = data; //copy object
-                var source = $("#Quizoverview-template").html();
-                var template = Handlebars.compile(source);
-                var templatehtml=template(Quizobject);
-                console.log(templatehtml);
-                debugger;
-                $('#templatespaceholder_handlebars').append(templatehtml);
-                collapse.init();
-                var flickityConfig = {
-                  // options
-                  cellAlign: 'left',
-                  cellSelector: '.js-carousel-cell',
-                  contain: true,
-                  imagesLoaded: true,
-                  prevNextButtons: false,
-                  setGallerySize: true,
-                }
-                var $carousel = $('.js-carousel').flickity(flickityConfig)
-                slideshowNavi.init($carousel);
-                clicklistener ();
-            });
-        }
-
-        function quizinfo() {
-            getQuizViewByID(sessionobject.quizID);
-            $(document).on("onQuizViewByID", function (event, data) {
-                Quizobject.quizinfo = data;
-                Quizobject.sessionobject = sessionobject;
-                var source = $("#quizinfo-template").html();
-                var template = Handlebars.compile(source);
-                $('#templatespaceholder_handlebars').append(template(Quizobject));
-                clicklistener();
-            });
-        }
-        viewSite();
-    });
-
+    <!--End Zuletzt gespielt -->
 </script>
 </body>
 </html>
