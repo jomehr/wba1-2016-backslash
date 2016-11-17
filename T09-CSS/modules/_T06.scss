@@ -113,7 +113,7 @@ $grid-gutter-width: 15px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-image: url(../svg/dropdown-style.svg);
+    background-image: url(assets/ico/dropdown-style.svg);
     background-repeat: no-repeat, repeat;
     background-position: 100% 50%, 0 0;
     border: none;
@@ -134,7 +134,7 @@ $grid-gutter-width: 15px;
   }
   .qo-search-box {
     color: black;
-    background-image: url(../svg/input-style.svg);
+    background-image: url(assets/ico/input-style.svg);
     background-repeat: no-repeat, repeat;
     background-position: 100% 50%, 0 0;
     margin-top: $grid-gutter-width;
