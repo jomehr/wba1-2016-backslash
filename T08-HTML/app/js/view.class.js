@@ -55,19 +55,20 @@ var view = {
             }
         });
     },
-    pre_quizinfo: function () {
+    pre_quizinfo: function (callback) {
         getQuizViewByID(sessionobject.quizID);
 
         $(document).on("onQuizViewByID", function (event, data) {
+
             Quizobject.quizinfo = data;
             Quizobject.sessionobject = sessionobject;
-
+            console.log(Quizobject);
             if (typeof callback == "function") {
                 callback(Quizobject);
             }
         });
     },
-    pre_quizround: function () {
+    pre_quizround: function (callback) {
         getQuizByID(sessionobject.quizID);
 
         $(document).on("onQuizData", function (event, data) {
@@ -79,7 +80,7 @@ var view = {
             }
         });
     },
-    pre_quizend: function () {
+    pre_quizend: function (callback) {
         getQuizViewByID(sessionobject.quizID);
 
         $(document).on("onQuizViewByID", function (event, data) {
@@ -138,7 +139,7 @@ var view = {
             }
         });
     },
-    pre_highscore: function () {
+    pre_highscore: function (callback) {
         getHighscoreByID(sessionobject.quizID);
 
         $(document).on("onHighscoreData", function (event, data) {

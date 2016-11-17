@@ -30,19 +30,20 @@ $(function () {
 
 
     function viewSite() {
+      console.log(sessionobject);
         //console.log("Bitte sessionStorage.setItem('view','id') in die Console eingeben. \n id info : \n 0 = default \n 1 = quizinfo \n 2 = quiz(undefined) \n 3 = quizend \n 4 = highscore(undefined)");
         switch (sessionobject.view) {
-            case "1":
+            case 1:
                 view.render("quizinfo", function () {
                     clicklistener();
                 });
                 break;
-            case "2":
+            case 2:
                 view.render("quizround", function () {
                     clicklistener();
                 });
                 break;
-            case "3":
+            case 3:
                 view.render("quizend", function () {
                     //Aktualisieren der richtig Falsch antworten & Scalebar füllen
                     var percent = Math.round((sessionobject.points / sessionobject.maxpoints) * 100);
@@ -75,7 +76,7 @@ $(function () {
                     clicklistener();
                 });
                 break;
-            case "4":
+            case 4:
                 view.render("highscore", function () {
                     clicklistener();
                 });
@@ -94,7 +95,6 @@ $(function () {
                     };
                     var $carousel = $('.js-carousel').flickity(flickityConfig);
                     slideshowNavi.init($carousel);
-
                     clicklistener();
                 });
                 break;
@@ -124,6 +124,7 @@ $(function () {
             //data auslesen
             var click_quizid = e.currentTarget.getAttribute('data-quizID');
             var click_view = parseInt(e.currentTarget.getAttribute('data-view'));
+            console.log(click_view);
             if (click_quizid === null || click_quizid === undefined) {
                 sessionobject.quizID = 0;
             } else {
