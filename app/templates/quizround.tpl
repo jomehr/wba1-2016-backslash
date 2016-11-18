@@ -72,7 +72,7 @@
                 </div>
                 <!-- Button für das Beenden des Quizzes wird erstellt -->
                 <div class="qr-button">
-                    <button type="button" id="quiz_beenden">Quizrunde beenden</button>
+                    <button type="button" class="js-change-view" id="quiz_beenden" data-view="3">Quizrunde beenden</button>
                 </div>
             </div>
         </div>
