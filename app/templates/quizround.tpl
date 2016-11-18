@@ -35,25 +35,25 @@
                     <button class="qr-fg-black bg-lightgrey">
                         <span class="qr-short bg-yellow">A</span>
                         <span class="qr-long bg-lightgrey js-answer"
-                              onclick="changeAnswerButtonColor('wrongAnswer1')">BLABLA??</span>
+                              onclick=""</span>
                     </button>
 
                     <button class="qr-fg-black bg-lightgrey">
                         <span class="qr-short bg-yellow">B</span>
                         <span class="qr-long bg-lightgrey js-answer"
-                              onclick="changeAnswerButtonColor('wrongAnswer2')"></span>
+                              onclick=""></span>
                     </button>
 
                     <button class="qr-fg-black bg-lightgrey">
                         <span class="qr-short bg-yellow">C</span>
                         <span class="qr-long bg-lightgrey js-answer"
-                              onclick="changeAnswerButtonColor('wrongAnswer3')"></span>
+                              onclick=""></span>
                     </button>
 
                     <button class="qr-fg-black bg-lightgrey">
                         <span class="qr-short bg-yellow">D</span>
                         <span class="qr-long bg-lightgrey js-answer"
-                              onclick="changeAnswerButtonColor('rightAnswer')"></span>
+                              onclick=""></span>
                     </button>
                 </div>
 
