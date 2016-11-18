@@ -53,9 +53,7 @@ $(function () {
                       var greenicon = '<div class="ss_score_point bg-green" ></div>';
                       var length = sessionobject.countquestions;
                       var fragencount = JSON.parse(sessionStorage.getItem('rs_fragen'));
-                      console.log(fragencount);
                       for (var i = 0; i < fragencount.length; i++) {
-                          var random = Math.random();
                           if (fragencount[i] === false) {
                               item.innerHTML += redicon;
                           } else {

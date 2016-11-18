@@ -93,8 +93,9 @@ var view = {
         });
     },
     pre_quizend: function (callback) {
+      fnc_reloadssobject(function(ready){
         getQuizViewByID(sessionobject.quizID);
-
+      };
         $(document).on("onQuizViewByID", function (event, data) {
             getHighscorePositions(sessionobject.quizID, sessionobject.username, sessionobject.points);
             var quizInfo = {};
@@ -144,9 +145,8 @@ var view = {
 
             Quizobject.quizes = nQuizObject;
             Quizobject.quizes = Quizobject.quizes.slice(0, 4);
-            fnc_reloadssobject(function(ready){
-              $.extend(Quizobject.datquiz, sessionobject);
-            });
+            $.extend(Quizobject.datquiz, sessionobject);
+
 
 
             if (typeof callback == "function") {
