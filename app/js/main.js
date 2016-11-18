@@ -54,9 +54,9 @@ $(function () {
                       var length = sessionobject.countquestions;
                       var fragencount = JSON.parse(sessionStorage.getItem('rs_fragen'));
                       console.log(fragencount);
-                      for (var i = 0; i < length; i++) {
+                      for (var i = 0; i < fragencount.length; i++) {
                           var random = Math.random();
-                          if (random >= 0.5) {
+                          if (fragencount[i] === false) {
                               item.innerHTML += redicon;
                           } else {
                               item.innerHTML += greenicon;
