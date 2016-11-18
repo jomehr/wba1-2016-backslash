@@ -1,6 +1,21 @@
 var Quizobject = {};
 var sessionobject = {};
 
+function fnc_reloadssobject(callback) {
+  sessionobject = {
+      "points": sessionStorage.getItem('points'),
+      "maxpoints": sessionStorage.getItem('maxpoints'),
+      "countright": sessionStorage.getItem('correctanswers'),
+      "countquestions": sessionStorage.getItem('amountquestions'),
+      "quizID": sessionStorage.getItem('quizid'),
+      "username": sessionStorage.getItem('username'),
+      "view": sessionStorage.getItem('view')
+  };
+  if (typeof callback == "function") {
+      callback("justheretosayimready");
+  }
+}
+
 var view = {
     availableViews: [
         "quizoverview", //0
@@ -129,7 +144,10 @@ var view = {
 
             Quizobject.quizes = nQuizObject;
             Quizobject.quizes = Quizobject.quizes.slice(0, 4);
-            $.extend(Quizobject.datquiz, sessionobject);
+            fnc_reloadssobject(function(ready){
+              $.extend(Quizobject.datquiz, sessionobject);
+            });
+
 
             if (typeof callback == "function") {
                 callback(Quizobject);

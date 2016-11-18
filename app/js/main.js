@@ -1,6 +1,4 @@
-var sessionobject = {};
-function fnc_reloadssobject() {
-  sessionobject = {
+sessionobject = {
       "points": sessionStorage.getItem('points'),
       "maxpoints": sessionStorage.getItem('maxpoints'),
       "countright": sessionStorage.getItem('correctanswers'),
@@ -8,11 +6,7 @@ function fnc_reloadssobject() {
       "quizID": sessionStorage.getItem('quizid'),
       "username": sessionStorage.getItem('username'),
       "view": sessionStorage.getItem('view')
-  };
-  if (typeof callback == "function") {
-      callback("justheretosayimready");
-  }
-}
+};
 
 
 $(function () {
@@ -28,7 +22,6 @@ $(function () {
     }
 
     function viewSite() {
-        fnc_reloadssobject(function(ready){
           switch (sessionobject.view) {
               case 1:
                   view.render("quizinfo", function () {
@@ -104,7 +97,7 @@ $(function () {
                   });
                   break;
           }
-        });
+
         //console.log("Bitte sessionStorage.setItem('view','id') in die Console eingeben. \n id info : \n 0 = default \n 1 = quizinfo \n 2 = quiz(undefined) \n 3 = quizend \n 4 = highscore(undefined)");
 
 
