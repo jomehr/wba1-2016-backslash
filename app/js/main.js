@@ -9,6 +9,9 @@ function fnc_reloadssobject() {
       "username": sessionStorage.getItem('username'),
       "view": sessionStorage.getItem('view')
   };
+  if (typeof callback == "function") {
+      callback("justheretosayimready");
+  }
 }
 
 
@@ -25,83 +28,86 @@ $(function () {
     }
 
     function viewSite() {
-        //console.log("Bitte sessionStorage.setItem('view','id') in die Console eingeben. \n id info : \n 0 = default \n 1 = quizinfo \n 2 = quiz(undefined) \n 3 = quizend \n 4 = highscore(undefined)");
-        //fnc_reloadssobject(); // reload des sessionstorage objectes
-        switch (sessionobject.view) {
-            case 1:
-                view.render("quizinfo", function () {
-                    clicklistener();
-                });
-                break;
-            case 2:
-                view.render("quizround", function (quizrounddata) {
-                    clicklistener();
-                    quiz.startQuiz(quizrounddata);
-                    //hier muss noch eine art callback rein.
-                      //viewSite();
-                    fnc_reloadssobject();
-                    $("#templatespaceholder").on("transitionend", function () {
-                        console.log("sth");
+        fnc_reloadssobject(function(ready){
+          switch (sessionobject.view) {
+              case 1:
+                  view.render("quizinfo", function () {
+                      clicklistener();
+                  });
+                  break;
+              case 2:
+                  view.render("quizround", function (quizrounddata) {
+                      clicklistener();
+                      quiz.startQuiz(quizrounddata);
+                      //hier muss noch eine art callback rein.
+                        //viewSite();
 
-                    });
-                });
-                break;
-            case 3:
-                view.render("quizend", function () {
-                    //Aktualisieren der richtig Falsch antworten & Scalebar füllen
-                    var percent = Math.round((sessionobject.points / sessionobject.maxpoints) * 100);
-                    document.getElementById("JS_ScaleScore").style.width = percent + "%";
-                    document.getElementsByClassName("ss_score_balken")[0].setAttribute("data-value", "" + percent);
-                    //Red/Green Icons füllen
-                    var item = document.getElementById('JS_Score');
-                    var redicon = '<div class="ss_score_point bg-red animated flash" ></div>';
-                    var greenicon = '<div class="ss_score_point bg-green" ></div>';
-                    var length = sessionobject.countquestions;
-                    for (var i = 0; i < length; i++) {
-                        var random = Math.random();
-                        if (random >= 0.5) {
-                            item.innerHTML += redicon;
-                        } else {
-                            item.innerHTML += greenicon;
-                        }
-                    }
-                    var flickityConfig = {
-                        // options
-                        cellAlign: 'left',
-                        cellSelector: '.js-carousel-cell',
-                        contain: true,
-                        imagesLoaded: true,
-                        prevNextButtons: false,
-                        setGallerySize: true
-                    };
-                    var $carousel = $('.js-carousel').flickity(flickityConfig);
-                    slideshowNavi.init($carousel);
-                    clicklistener();
-                });
-                break;
-            case 4:
-                view.render("highscore", function () {
-                    clicklistener();
-                });
-                break;
-            default:
-                view.render("quizoverview", function () {
-                    collapse.init();
-                    var flickityConfig = {
-                        // options
-                        cellAlign: 'left',
-                        cellSelector: '.js-carousel-cell',
-                        contain: true,
-                        imagesLoaded: true,
-                        prevNextButtons: false,
-                        setGallerySize: true
-                    };
-                    var $carousel = $('.js-carousel').flickity(flickityConfig);
-                    slideshowNavi.init($carousel);
-                    clicklistener();
-                });
-                break;
-        }
+                      $("#templatespaceholder").on("transitionend", function () {
+                          console.log("sth");
+
+                      });
+                  });
+                  break;
+              case 3:
+                  view.render("quizend", function () {
+                      //Aktualisieren der richtig Falsch antworten & Scalebar füllen
+                      var percent = Math.round((sessionobject.points / sessionobject.maxpoints) * 100);
+                      document.getElementById("JS_ScaleScore").style.width = percent + "%";
+                      document.getElementsByClassName("ss_score_balken")[0].setAttribute("data-value", "" + percent);
+                      //Red/Green Icons füllen
+                      var item = document.getElementById('JS_Score');
+                      var redicon = '<div class="ss_score_point bg-red animated flash" ></div>';
+                      var greenicon = '<div class="ss_score_point bg-green" ></div>';
+                      var length = sessionobject.countquestions;
+                      for (var i = 0; i < length; i++) {
+                          var random = Math.random();
+                          if (random >= 0.5) {
+                              item.innerHTML += redicon;
+                          } else {
+                              item.innerHTML += greenicon;
+                          }
+                      }
+                      var flickityConfig = {
+                          // options
+                          cellAlign: 'left',
+                          cellSelector: '.js-carousel-cell',
+                          contain: true,
+                          imagesLoaded: true,
+                          prevNextButtons: false,
+                          setGallerySize: true
+                      };
+                      var $carousel = $('.js-carousel').flickity(flickityConfig);
+                      slideshowNavi.init($carousel);
+                      clicklistener();
+                  });
+                  break;
+              case 4:
+                  view.render("highscore", function () {
+                      clicklistener();
+                  });
+                  break;
+              default:
+                  view.render("quizoverview", function () {
+                      collapse.init();
+                      var flickityConfig = {
+                          // options
+                          cellAlign: 'left',
+                          cellSelector: '.js-carousel-cell',
+                          contain: true,
+                          imagesLoaded: true,
+                          prevNextButtons: false,
+                          setGallerySize: true
+                      };
+                      var $carousel = $('.js-carousel').flickity(flickityConfig);
+                      slideshowNavi.init($carousel);
+                      clicklistener();
+                  });
+                  break;
+          }
+        });
+        //console.log("Bitte sessionStorage.setItem('view','id') in die Console eingeben. \n id info : \n 0 = default \n 1 = quizinfo \n 2 = quiz(undefined) \n 3 = quizend \n 4 = highscore(undefined)");
+
+
     }
 
     function clicklistener() {
