@@ -1,3 +1,9 @@
+var Quizobject = {};
+//Basis Configs
+var base = {
+	quizDuration: 15
+};
+
 var quiz = {
 
     //Anzahl der richtig beantworteten Fragen
@@ -27,12 +33,15 @@ var quiz = {
     //Antwort prüfen
     checkAnswer: function (e) {
         var indexAnswer = e.target.getAttribute('data-antwort');
-
+        var feedbackicons = document.querySelectorAll('.bg-mediumgrey');
         //Wurde die Frage richtig beantwortet?
         if (quiz.currentQuestion.antworten[indexAnswer].check) {
             //quiz.countCorrectAnswers[indexAnswer]++;
             quiz.countCorrectAnswers[quiz.indexCurrentQuestion - 1] = true;
             quiz.correctAnswersNumber++;
+            feedbackicons[0].className = "qr-answer_icon bg-green";
+        } else {
+          feedbackicons[0].className = "qr-answer_icon bg-red";
         }
         quiz.nextQuestion();
     },
@@ -45,10 +54,9 @@ var quiz = {
 
             //Aktuelle Frage und Antworten aus JSON holen
             quiz.currentQuestion = quiz.questions[quiz.indexCurrentQuestion];
-
             //Aktuelle Frage in HTML schreiben
-            document.querySelector('.js-quizfrage').innerHTML = quiz.currentQuestion.frage;
 
+            $(".js-quizfrage" ).text(quiz.currentQuestion.frage);
             //Erstellen eines Arrays mit 4 Zufälligen Zahlen von 1-4 die jeweils einmalig sind
             //für die zufällige Reihenfolge der Buttons
             var arr = []
@@ -69,6 +77,7 @@ var quiz = {
 
             //Counter initialisieren
             var counter = base.quizDuration;
+
             quiz.counter.innerHTML = counter;
 
             //Counter clearen
@@ -81,12 +90,10 @@ var quiz = {
 
                 //Ist der Counter abgelaufen?
                 if (counter === 0) {
-
                     //Nächste Frage anzeigen
                     quiz.nextQuestion();
-
-                    //Counter clearen
-                    //	clearInterval(quiz.interval);
+                    var feedbackicons = document.querySelectorAll('.bg-mediumgrey');
+                    feedbackicons[0].className = "qr-answer_icon bg-red";
                 }
             }, 1000)
 
@@ -95,22 +102,17 @@ var quiz = {
         } else {
 
             //Quizrunde beenden
+            clearInterval(quiz.interval);
             quiz.endQuiz();
         }
     },
 
     //Quiz starten
-    startQuiz: function () {
+    startQuiz: function (data) {
 
-        //Fragen holen
-        getAjax(dataUrls.dataQuestionsURL, function (data) {
-
-            //Daten speichern
-            var jsonData = JSON.parse(data);
-
+        //Fragen kommen via data
+        Quizobject = data;
             //QuizID aus URL holen
-            var quizID = getQueryString('quizId', window.location.href);
-
             //Variablen initialisieren
             quiz.indexCurrentQuestion = 0;
             quiz.correctAnswersNumber = 0;
@@ -121,10 +123,10 @@ var quiz = {
             //Erstellen eines Arrays mit 10 Zufälligen Zahlen von 1-30 die jeweils einmalig sind für die zufällige Reihenfolge der Fragen
             var arr = []
             while (arr.length < 10) {
-                var randomnumber = Math.floor(Math.random() * 30)
+                var randomnumber = Math.floor(Math.random() * Quizobject.quiz.quizFragen.length)
                 if (arr.indexOf(randomnumber) > -1) continue;
                 arr[arr.length] = randomnumber;
-                quiz.questions.push(jsonData[quizID].quizFragen[randomnumber]);
+                quiz.questions.push(Quizobject.quiz.quizFragen[randomnumber]);
             }
 
             quiz.startTime = Date.now();
@@ -138,16 +140,15 @@ var quiz = {
 
             //Frage und Antworten anzeigen
             quiz.nextQuestion();
-        });
+
     },
 
     endQuiz: function () {
         var currentTime = Date.now();
         var duration = (currentTime - quiz.startTime) / 1000;
-
+        //Quiz counter stoppen
+        quiz.counter.innerHTML = 0;
         var gesamtZeitSek = parseFloat(duration, 10).toFixed(3);
-
-        console.log(gesamtZeitSek);
         var maxMultiplikator = 1.0;
         var aktMultiplikator = 0;
         if (gesamtZeitSek <= 30) {
@@ -161,13 +162,15 @@ var quiz = {
         }
 
         var endpunktzahl = parseInt(quiz.correctAnswersNumber * 100 * aktMultiplikator);
-        console.log(endpunktzahl);
-
-
-        //QuizID aus URL holen
-        var quizID = getQueryString('quizId', window.location.href);
-
+        console.log(quiz);
+        sessionStorage.setItem('points', endpunktzahl);
+        sessionStorage.setItem('maxpoints', "1000");
+        sessionStorage.setItem('correctanswers', quiz.correctAnswersNumber);
+        sessionStorage.setItem('amountquestions', quiz.numberOfQuestions );
+        sessionStorage.setItem('view','3');
+        sessionStorage.setItem('rs_fragen',JSON.stringify(quiz.countCorrectAnswers));
+        sessionStorage.setItem('time_needed',gesamtZeitSek);
+        viewSite();
         //Weiterleiten auf Quizende
-        window.location.href = viewUrls.viewQuizEndeURL + '?quizId=' + quizID + '&duration=' + duration + '&numberOfQuestions=' + quiz.numberOfQuestions + '&countCorrectAnswers=' + quiz.countCorrectAnswers + '&endpunktzahl=' + endpunktzahl;
     }
 };

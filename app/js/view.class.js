@@ -10,7 +10,6 @@ var view = {
         "highscore"     //4
     ],
     name: "quizoverview",
-    sessionobject: {},
     render: function (view, callback) {
         if (this.availableViews.indexOf(view) > -1) {
             var pre_function = this["pre_" + view];
@@ -24,7 +23,7 @@ var view = {
                         this.name = view;
 
                         if (typeof callback == "function") {
-                            callback();
+                            callback(data);
                         }
                     });
                 });
@@ -37,7 +36,7 @@ var view = {
                     this.name = view;
 
                     if (typeof callback == "function") {
-                        callback();
+                        callback(data);
                     }
                 });
             }
@@ -73,9 +72,6 @@ var view = {
         $(document).on("onQuizData", function (event, data) {
             Quizobject.quiz = data;
             Quizobject.sessionobject = sessionobject;
-
-            console.log(Quizobject);
-
             if (typeof callback == "function") {
                 callback(Quizobject);
             }

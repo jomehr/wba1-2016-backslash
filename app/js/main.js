@@ -1,29 +1,22 @@
+var sessionobject = {};
+function fnc_reloadssobject() {
+  sessionobject = {
+      "points": sessionStorage.getItem('points'),
+      "maxpoints": sessionStorage.getItem('maxpoints'),
+      "countright": sessionStorage.getItem('correctanswers'),
+      "countquestions": sessionStorage.getItem('amountquestions'),
+      "quizID": sessionStorage.getItem('quizid'),
+      "username": sessionStorage.getItem('username'),
+      "view": sessionStorage.getItem('view')
+  };
+}
+
+
 $(function () {
     //Userdaten rand generieren solange keine bestehen!!!
-    var rand1 = Math.random(); //Punkte
-    var rand2 = 1000; //maxPunkte
-    var rand3 = Math.random(); //richtige antworten
-    var rand4 = 10; //anzahl Fragen
-    rand1 = Math.round(1000 * rand1);
-    rand3 = Math.round(10 * rand3);
-
-    sessionStorage.setItem('points', rand1);
-    sessionStorage.setItem('maxpoints', rand2);
-    sessionStorage.setItem('correctanswers', rand3);
-    sessionStorage.setItem('amountquestions', rand4);
-    sessionStorage.setItem('quizid', 0);
     sessionStorage.setItem('username', "waaaow");
 
-    //Hier kommen die User Quiz Data
-    sessionobject = {
-        "points": sessionStorage.getItem('points'),
-        "maxpoints": sessionStorage.getItem('maxpoints'),
-        "countright": sessionStorage.getItem('correctanswers'),
-        "countquestions": sessionStorage.getItem('amountquestions'),
-        "quizID": sessionStorage.getItem('quizid'),
-        "username": sessionStorage.getItem('username'),
-        "view": sessionStorage.getItem('view')
-    };
+
 
     if (sessionobject.view === undefined) {
         sessionobject.view = 0;
@@ -33,6 +26,7 @@ $(function () {
 
     function viewSite() {
         //console.log("Bitte sessionStorage.setItem('view','id') in die Console eingeben. \n id info : \n 0 = default \n 1 = quizinfo \n 2 = quiz(undefined) \n 3 = quizend \n 4 = highscore(undefined)");
+        fnc_reloadssobject(); // reload des sessionstorage objectes
         switch (sessionobject.view) {
             case 1:
                 view.render("quizinfo", function () {
@@ -40,11 +34,14 @@ $(function () {
                 });
                 break;
             case 2:
-                view.render("quizround", function () {
+                view.render("quizround", function (quizrounddata) {
                     clicklistener();
-
+                    quiz.startQuiz(quizrounddata);
+                    //hier muss noch eine art callback rein.
+                      //viewSite();
                     $("#templatespaceholder").on("transitionend", function () {
                         console.log("sth");
+
                     });
                 });
                 break;

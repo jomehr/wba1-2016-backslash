@@ -11,7 +11,7 @@
         <div class="qr-timer row qr-no-margin">
             <div class="col-xs-12">
                 <div class="qr-timer-item">
-                    <h2>15</h2>
+                    <h2 class="js-counter">15</h2>
                     <svg width="160" height="160">
                         <g>
                             <title>Layer 1</title>
@@ -25,7 +25,7 @@
         <!-- Hier wird die Frage abgebildet -->
         <div class="qr-question row qr-no-margin">
             <div class="col-xs-12">
-                <p class="qr-text"></p>
+                <p class="qr-text js-quizfrage">asdasd</p>
             </div>
         </div>
         <!-- Erstellung der Antworten-Box -->
@@ -34,38 +34,38 @@
                 <div class="qr-answers font-secondary">
                     <button class="qr-fg-black bg-lightgrey">
                         <span class="qr-short bg-yellow">A</span>
-                        <span class="qr-long bg-lightgrey" id="wrongAnswer1"
-                              onclick="changeAnswerButtonColor('wrongAnswer1')"></span>
+                        <span class="qr-long bg-lightgrey js-answer"
+                              onclick="changeAnswerButtonColor('wrongAnswer1')">BLABLA??</span>
                     </button>
 
                     <button class="qr-fg-black bg-lightgrey">
                         <span class="qr-short bg-yellow">B</span>
-                        <span class="qr-long bg-lightgrey" id="wrongAnswer2"
+                        <span class="qr-long bg-lightgrey js-answer"
                               onclick="changeAnswerButtonColor('wrongAnswer2')"></span>
                     </button>
 
                     <button class="qr-fg-black bg-lightgrey">
                         <span class="qr-short bg-yellow">C</span>
-                        <span class="qr-long bg-lightgrey" id="wrongAnswer3"
+                        <span class="qr-long bg-lightgrey js-answer"
                               onclick="changeAnswerButtonColor('wrongAnswer3')"></span>
                     </button>
 
                     <button class="qr-fg-black bg-lightgrey">
                         <span class="qr-short bg-yellow">D</span>
-                        <span class="qr-long bg-lightgrey" id="rightAnswer"
+                        <span class="qr-long bg-lightgrey js-answer"
                               onclick="changeAnswerButtonColor('rightAnswer')"></span>
                     </button>
                 </div>
 
                 <!-- Feedback-Icons werden erstellt -->
                 <div class="qr-answer_icons">
-                    <div class="qr-answer_icon bg-red"></div>
-                    <div class="qr-answer_icon bg-red"></div>
-                    <div class="qr-answer_icon bg-green"></div>
-                    <div class="qr-answer_icon bg-red"></div>
-                    <div class="qr-answer_icon bg-green"></div>
-                    <div class="qr-answer_icon bg-green"></div>
-                    <div class="qr-answer_icon bg-red"></div>
+                    <div class="qr-answer_icon bg-mediumgrey"></div>
+                    <div class="qr-answer_icon bg-mediumgrey"></div>
+                    <div class="qr-answer_icon bg-mediumgrey"></div>
+                    <div class="qr-answer_icon bg-mediumgrey"></div>
+                    <div class="qr-answer_icon bg-mediumgrey"></div>
+                    <div class="qr-answer_icon bg-mediumgrey"></div>
+                    <div class="qr-answer_icon bg-mediumgrey"></div>
                     <div class="qr-answer_icon bg-mediumgrey"></div>
                     <div class="qr-answer_icon bg-mediumgrey"></div>
                     <div class="qr-answer_icon_last bg-mediumgrey"></div>
@@ -78,6 +78,5 @@
         </div>
     </div>
 </div>
-
 <script type="application/javascript" src="js/lib/timerScript.min.js"></script>
 <script type="application/javascript" src="js/quiz.class.js"></script>
