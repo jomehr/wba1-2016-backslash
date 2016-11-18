@@ -30,6 +30,7 @@
 .st_right2{
     margin-top:20px;
     line-height:1.2;
+    margin-left:0px;
 }
 
 .container{
@@ -45,7 +46,7 @@
 }
 
 /*  */
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   .st_right2 {
     text-align:right;
     align-content:right;
@@ -64,6 +65,7 @@
 /*  */
 .st_rightdown{
     margin-bottom:20px;
+    padding-left:0px;
 }
 
 /*  */
@@ -85,7 +87,7 @@
 }
 
 body {
-    background-image:url(../../T10-Asset/Bilder/Header/Headerimage-schraeg.png);
+    background-image:url(../../T10-Asset/Bilder/Header/Headerimage_schraeg.jpg);
     background-size:cover;
     background-position:50% 50%;
     display:block;
