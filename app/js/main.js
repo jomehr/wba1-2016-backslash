@@ -26,7 +26,7 @@ $(function () {
 
     function viewSite() {
         //console.log("Bitte sessionStorage.setItem('view','id') in die Console eingeben. \n id info : \n 0 = default \n 1 = quizinfo \n 2 = quiz(undefined) \n 3 = quizend \n 4 = highscore(undefined)");
-        fnc_reloadssobject(); // reload des sessionstorage objectes
+        //fnc_reloadssobject(); // reload des sessionstorage objectes
         switch (sessionobject.view) {
             case 1:
                 view.render("quizinfo", function () {
