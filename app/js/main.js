@@ -60,6 +60,7 @@ $(function () {
                               item.innerHTML += greenicon;
                           }
                       }
+                      /*
                       var flickityConfig = {
                           // options
                           cellAlign: 'left',
@@ -71,6 +72,7 @@ $(function () {
                       };
                       var $carousel = $('.js-carousel').flickity(flickityConfig);
                       slideshowNavi.init($carousel);
+                      */
                       clicklistener();
                   });
                   break;

@@ -170,7 +170,7 @@ var quiz = {
         sessionStorage.setItem('view','3');
         sessionStorage.setItem('rs_fragen',JSON.stringify(quiz.countCorrectAnswers));
         sessionStorage.setItem('time_needed',gesamtZeitSek);
-        viewSite();
         //Weiterleiten auf Quizende
+				document.getElementById('quiz_beenden').click();
     }
 };
