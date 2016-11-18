@@ -39,6 +39,7 @@ $(function () {
                     quiz.startQuiz(quizrounddata);
                     //hier muss noch eine art callback rein.
                       //viewSite();
+                    fnc_reloadssobject();
                     $("#templatespaceholder").on("transitionend", function () {
                         console.log("sth");
 
