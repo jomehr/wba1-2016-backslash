@@ -52,6 +52,8 @@ $(function () {
                       var redicon = '<div class="ss_score_point bg-red animated flash" ></div>';
                       var greenicon = '<div class="ss_score_point bg-green" ></div>';
                       var length = sessionobject.countquestions;
+                      var fragencount = JSON.parse(sessionStorage.getItem('rs_fragen'));
+                      console.log(fragencount);
                       for (var i = 0; i < length; i++) {
                           var random = Math.random();
                           if (random >= 0.5) {
