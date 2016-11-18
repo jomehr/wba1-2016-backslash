@@ -95,7 +95,7 @@ var view = {
     pre_quizend: function (callback) {
       fnc_reloadssobject(function(ready){
         getQuizViewByID(sessionobject.quizID);
-      };
+      });
         $(document).on("onQuizViewByID", function (event, data) {
             getHighscorePositions(sessionobject.quizID, sessionobject.username, sessionobject.points);
             var quizInfo = {};
