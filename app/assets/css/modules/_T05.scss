@@ -1,5 +1,4 @@
 .ss_box {
-  background: #fff;
   border: 1px ridge lightgrey;
   margin: 20px auto 0 auto;
 }
@@ -32,13 +31,12 @@
 .ss_score_balken {
   width: 100%;
   height: 20px;
-  background: #ccc;
+  background: #ccc; //ok, #ccc not in basic styles
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
 .ss_scale_score {
-  background: #E8C10B;
   height: 20px;
 }
 
@@ -67,12 +65,11 @@
 }
 
 .ss_scoreboard table tr:nth-child(odd) {
-  background: #f8f5e4;
-
+  background: #f8f5e4; //ok, general
 }
 
 .ss_scoreboard table tr.ss_sb_user {
-  background-color: #929292;
+  background-color: #929292; //ok, general
 }
 
 .ss_scoreboard table tr td {
@@ -149,7 +146,7 @@
 }
 
 .ss_slider_menu .ss_slider_bt {
-  background: #ccc;
+  background: #ccc; //ok, #ccc not in basic styles
   width: 14px;
   height: 14px;
   border-radius: 20px;

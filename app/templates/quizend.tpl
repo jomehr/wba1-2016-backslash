@@ -1,5 +1,5 @@
 {{#datquiz}}
-<section class="container ss_box">
+<section class="container ss_box bg-white">
     <header class="bg-yellow">
         <h1 id="JS_Titel">{{titel}}</h1>
     </header>
@@ -11,7 +11,7 @@
                     <p class="ss_mobile_points_txt"></p>
                     <div class="ss_score_balken bg-mediumgrey">
                         <!-- 10% as defult value for score, changed by main logic -->
-                        <div class="ss_scale_score" id="JS_ScaleScore">
+                        <div class="ss_scale_score bg-yellow" id="JS_ScaleScore">
                         </div>
                     </div>
                     <p class="ss_mobile_answer_txt"></p>
@@ -66,7 +66,7 @@
     {{/datquiz}}
 </section>
 
-<section class="container ss_box ss_slider">
+<section class="container ss_box bg-white ss_slider">
     <header>
         <h2>Das könnte dir auch gefallen</h2>
     </header>

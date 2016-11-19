@@ -1,7 +1,5 @@
-<!-- body with title, information text, username -->
 {{#quizinfo}}
-<div class="container st_box">
-    <!-- <section class="st_box bg-white"> -->
+<div class="container st_box bg-white">
     <div class="row bg-yellow" id="header">
         <div class="col-xs-12">
             <h1>{{titel}}</h1>
@@ -28,7 +26,6 @@
         </div>
     </div>
 
-    <!-- buttons  -->
     <div class="row st_buttons">
         <div class="col-md-4">
             <a class="btn js-change-view" data-view=”0” href="">Übersicht</a>
@@ -41,5 +38,4 @@
         </div>
     </div>
     {{/quizinfo}}
-    <!-- </section> -->
 </div>

@@ -20,7 +20,7 @@
 
         <!-- Suchfeld -->
         <div class="col-sm-4">
-            <input type="text" class="qo-search-box" maxlength="30" placeholder="suchen">
+            <input type="text" class="qo-search-box fg-black" maxlength="30" placeholder="suchen">
         </div>
         <!-- End Suchfeld -->
     </header>
@@ -36,7 +36,7 @@
 
                     <!-- Headline -->
                     <div class="col-sm-8">
-                        <a href="#" class="qo-collapse-link js-collapse-link"><i
+                        <a href="#" class="qo-collapse-link js-collapse-link fg-black"><i
                                     class="qo-arrow ico-light-arrow-right"></i>
                             <h2 class="qo-subheadline">{{titel}}</h2></a>
                     </div>

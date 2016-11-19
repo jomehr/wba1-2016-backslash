@@ -133,7 +133,6 @@ $grid-gutter-width: 15px;
     }
   }
   .qo-search-box {
-    color: black;
     background-image: url(../ico/input-style.svg);
     background-repeat: no-repeat, repeat;
     background-position: 100% 50%, 0 0;
@@ -225,10 +224,10 @@ $grid-gutter-width: 15px;
     margin-top: $grid-gutter-width;
   }
   .qo-time {
-    //		margin-top: $grid-gutter-width*2;
+    //margin-top: $grid-gutter-width*2;
   }
   .qo-points {
-    background-color: #504f48;
+    background-color: #504f48; //ok, general
     color: white;
     display: inline-block;
     margin-bottom: $grid-gutter-width/2;
@@ -248,7 +247,6 @@ $grid-gutter-width: 15px;
 }
 
 .qo-collapse-link {
-  color: black;
   display: inline-block;
   &:hover, &:focus {
     color: black;
@@ -293,7 +291,7 @@ $grid-gutter-width: 15px;
   > .button {
     padding: 0;
     margin: 0 !important;
-    color: black;
+    color: black; //ok, nested
     background: none;
   }
 }
