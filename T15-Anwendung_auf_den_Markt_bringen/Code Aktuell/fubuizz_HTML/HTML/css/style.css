@@ -18,6 +18,11 @@ ol, ul {
     list-style: none; }
 
 
+
+
+
+/*fonts*/
+
 html * {
     font-family: "Noto Sans", sans-serif; }
 
@@ -73,10 +78,35 @@ h3 {
     margin: 10px; !important; }
 
 
+h3 a[name] {
+    display:block;
+    height: 110px;
+    color:transparent;} 
+
+
+h3 [id] {
+     margin-top:0; 
+     padding-top:0;}
+
+
 h4 {
     font-size: 25px;
     text-align: center;
     color:#504f48;
+    margin: 10px; !important; }
+
+
+h5 {
+    font-size: 35px;
+    text-align: center;
+    color:#ffffff;
+    margin: 10px; !important; }
+
+
+h6 {
+    font-size: 25px;
+    text-align: center;
+    color:#ffffff;
     margin: 10px; !important; }
 
 
@@ -88,14 +118,55 @@ p {
     font-size: 14px !important; }
 
 
+p2 {
+    font-family: "Noto Sans", sans-serif  !important;
+    text-align: center;
+    line-height: 1.5;
+    color:#ffffff;
+    font-size: 20px !important; }
+
+
+p3 {
+    font-family: "Noto Sans", sans-serif  !important;
+    text-align: center;
+    line-height: 1.5;
+    color:#ffffff;
+    font-size: 14px !important; }
+
+
+
+
 
 /*Parallax Effekt*/
 .parallax{
-    background: url(../images/weedBackground.jpg) repeat fixed 100%; }
+    background: url(../images/weedBackground.jpg) repeat fixed 100%;
+    background-size: cover !important;}
 
 
 .parallaxHeader{
-    background: url(../images/bgTop.jpg) repeat fixed 100%; }
+    background: url(../images/bgTop.jpg) repeat fixed 100%;
+    background-size: cover !important;}
+
+
+.image-wrapper{
+max-width:100%;
+height:auto;
+position: relative;
+display:block;
+margin:0 auto;
+}
+
+.image-wrapper img{
+width:100% !important;
+height:auto !important;
+display:block;
+}
+
+.full-width {
+    width: 100%;
+}
+
+
 
 
 
@@ -117,6 +188,8 @@ p {
 .cBtn .start:hover{
 	background:#e9c20c;
 }
+
+
 /*Kauf Button*/
 .cBtn .buy{
 	padding: 25px;
@@ -133,12 +206,4 @@ p {
 }
 .cBtn .buy:hover{
 	background:#e9c20c;
-}
-
-
-
-/*Weiße Boxen*/
-.about_box{
-    background-color: #ffffff;
-    height: 300px;
 }
