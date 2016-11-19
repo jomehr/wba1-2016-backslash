@@ -193,7 +193,7 @@
 /* Internet Explorer und Edge anpassungen */
 @supports (-ms-accelerator:true) {
   .ss_scoreboard table {
-    font-family: "Oswald", sans-serif;
+    font-family: "Oswald", sans-serif; //ok, special
   }
 }
 
