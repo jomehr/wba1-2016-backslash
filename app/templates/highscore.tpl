@@ -1,27 +1,27 @@
-<div id="hs-highscore" class="container font-secondary">
+<div id="hs-highscore" class="container font-secondary bg-white">
     <header id="hs-title" class="bg-yellow fg-black">
         <div class="hs-ueberschriften">Effzeh - mer wesse alles üvver dich</div>
     </header>
-    <article id="hs-search" class="row">
+    <article id="hs-search" class="row bg-darkgrey">
         <div class="col-sm-4 col-xs-12">
-            <div class="hs-search-element">
+            <div class="hs-search-element fg-white">
                 <p>Highscore</p>
             </div>
         </div>
         <div class="col-sm-4 col-xs-12">
-            <select class="hs-search-feld" name="sortieren nach" title="Sortierung">
+            <select class="hs-search-feld fg-darkgrey" name="sortieren nach" title="Sortierung">
                 <option>Position</option>
                 <option>Punkte</option>
                 <option>Spieler</option>
             </select>
         </div>
         <div class="col-sm-4 col-xs-12">
-            <input class="hs-search-element" id="hs-search-input" name="suche" placeholder="Spieler suche"/>
+            <input class="hs-search-element fg-darkgrey" id="hs-search-input" name="suche" placeholder="Spieler suche"/>
         </div>
     </article>
     <article>
         <table class="hs_fixed_headers">
-            <thead>
+            <thead class="fg-black">
             <tr class="hs-fixed-headers-title">
                 <th class="font-primary">Position</th>
                 <th class="font-primary">Spieler</th>

@@ -11,7 +11,6 @@
 }
 
 .qr-head {
-  background-color: #e9c20c;
   padding: 10px 0 10px 10px;
 }
 
@@ -48,7 +47,7 @@
 }
 
 .qr-answers button:hover {
-  background-color: #f8f5e4;
+  background-color: #f8f5e4; //ok, hover
 }
 
 .qr-answers button span {
@@ -70,10 +69,8 @@
   width: calc(100% - 50px);
 }
 
-/*Schriftfarbe in Antwort wird übergeben, da durch Teamkürzel die vordifinierte Klasse überschrieben wird*/
 .qr-fg-black {
   margin-bottom: 10px;
-  color: black;
 }
 
 .qr-answer_icons {
@@ -130,10 +127,6 @@
     width: calc(100% - 50px);
     line-height: 1.7;
     padding: 0 10px 0 10px;
-  }
-
-  .qr-answers button:hover {
-    background-color: #f8f5e4; //TODO: warum nur im media query
   }
 }
 

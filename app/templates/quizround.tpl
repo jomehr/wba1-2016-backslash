@@ -2,7 +2,7 @@
     <!-- Erstellung der Content-Box mit weißem Hintergrund -->
     <div class="qr-content bg-white">
         <!-- Erstellung der Kopfzeile mit entsprechendem Thema -->
-        <div class="qr-head row qr-no-margin">
+        <div class="qr-head row qr-no-margin bg-yellow">
             <div class="col-xs-12">
                 <h1></h1>
             </div>
@@ -32,25 +32,25 @@
         <div class="qr-inner_box row qr-no-margin">
             <div class="col-x s-12">
                 <div class="qr-answers font-secondary">
-                    <button class="qr-fg-black bg-lightgrey">
+                    <button class="qr-fg-black bg-lightgrey fg-black">
                         <span class="qr-short bg-yellow">A</span>
                         <span class="qr-long bg-lightgrey js-answer"
                               onclick=""</span>
                     </button>
 
-                    <button class="qr-fg-black bg-lightgrey">
+                    <button class="qr-fg-black bg-lightgrey fg-black">
                         <span class="qr-short bg-yellow">B</span>
                         <span class="qr-long bg-lightgrey js-answer"
                               onclick=""></span>
                     </button>
 
-                    <button class="qr-fg-black bg-lightgrey">
+                    <button class="qr-fg-black bg-lightgrey fg-black">
                         <span class="qr-short bg-yellow">C</span>
                         <span class="qr-long bg-lightgrey js-answer"
                               onclick=""></span>
                     </button>
 
-                    <button class="qr-fg-black bg-lightgrey">
+                    <button class="qr-fg-black bg-lightgrey fg-black">
                         <span class="qr-short bg-yellow">D</span>
                         <span class="qr-long bg-lightgrey js-answer"
                               onclick=""></span>
@@ -72,7 +72,8 @@
                 </div>
                 <!-- Button für das Beenden des Quizzes wird erstellt -->
                 <div class="qr-button">
-                    <button type="button" class="js-change-view" id="quiz_beenden" data-view="3">Quizrunde beenden</button>
+                    <button type="button" class="js-change-view" id="quiz_beenden" data-view="3">Quizrunde beenden
+                    </button>
                 </div>
             </div>
         </div>
