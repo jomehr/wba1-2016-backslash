@@ -2,18 +2,18 @@ var Quizobject = {};
 var sessionobject = {};
 
 function fnc_reloadssobject(callback) {
-  sessionobject = {
-      "points": sessionStorage.getItem('points'),
-      "maxpoints": sessionStorage.getItem('maxpoints'),
-      "countright": sessionStorage.getItem('correctanswers'),
-      "countquestions": sessionStorage.getItem('amountquestions'),
-      "quizID": sessionStorage.getItem('quizid'),
-      "username": sessionStorage.getItem('username'),
-      "view": sessionStorage.getItem('view')
-  };
-  if (typeof callback == "function") {
-      callback("justheretosayimready");
-  }
+    sessionobject = {
+        "points": sessionStorage.getItem('points'),
+        "maxpoints": sessionStorage.getItem('maxpoints'),
+        "countright": sessionStorage.getItem('correctanswers'),
+        "countquestions": sessionStorage.getItem('amountquestions'),
+        "quizID": sessionStorage.getItem('quizid'),
+        "username": sessionStorage.getItem('username'),
+        "view": sessionStorage.getItem('view')
+    };
+    if (typeof callback == "function") {
+        callback("justheretosayimready");
+    }
 }
 
 var view = {
@@ -98,9 +98,9 @@ var view = {
         });
     },
     pre_quizend: function (callback) {
-      fnc_reloadssobject(function(ready){
-        getQuizViewByID(sessionobject.quizID);
-      });
+        fnc_reloadssobject(function (ready) {
+            getQuizViewByID(sessionobject.quizID);
+        });
         $(document).on("onQuizViewByID", function (event, data) {
             getHighscorePositions(sessionobject.quizID, sessionobject.username, sessionobject.points);
             var quizInfo = {};
