@@ -203,16 +203,27 @@ p4 {
 	list-style:none;}
 
 .soc {
-	text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-top: 20px;}
+    margin-top: 20px;
+	text-align:center;
+}
 
 .soc ul{
-	margin-left: 24px;
-	padding-left: 0;
-    margin-bottom: 25px;}
+	display:inline-block;
+	padding-left: 0px;
+}
+
+.socIn{
+	width: 52px;
+	height: 52px;
+	border-radius: 50px;
+    background:#cb0727;
+	display: block !important;
+}
+
+.socIn:hover{
+	cursor:pointer;
+	background:#e9c20c;
+}
 
 .soc1 a{
 	display: inline-block;
@@ -222,21 +233,11 @@ p4 {
 	margin-top: 15px;
 	margin-left: 2px;}
 
-.soc1{
-	width: 52px;
-	height: 52px;
-	border-radius: 50px;
-    background:#cb0727;}
-
 .soc1 a:hover{
 	border:0;
 	background: url(../images/socIcons.png)no-repeat;
 	box-shadow: none;}
-
-.soc1:hover{
-	cursor:pointer;
-	background:#e9c20c;}
-
+	
 .soc2 a{
 	display: inline-block;
 	height: 17px;
@@ -245,20 +246,10 @@ p4 {
 	margin-top: 15px;
 	margin-left: 2px;}
 
-.soc2{
-	width: 52px;
-	height: 52px;
-	border-radius: 50px;
-    background:#cb0727;}
-
 .soc2 a:hover{
 	border:0;
 	background: url(../images/socIcons.png) -74px 0 no-repeat;
 	box-shadow: none;}
-
-.soc2:hover{
-	cursor:pointer;
-	background:#e9c20c;}
 
 .soc3 a{
 	display: inline-block;
@@ -268,20 +259,10 @@ p4 {
 	margin-top: 15px;
 	margin-left: 0px;}
 
-.soc3{
-	width: 52px;
-	height: 52px;
-	border-radius: 50px;
-    background:#cb0727;}
-
 .soc3 a:hover{
 	border:0;
 	background: url(../images/socIcons.png) -147px 0 no-repeat;
 	box-shadow: none;}
-
-.soc3:hover{
-	cursor:pointer;
-	background:#e9c20c;}
 
 .soc4 a{
 	display: inline-block;
@@ -291,20 +272,10 @@ p4 {
 	margin-top: 15px;
 	margin-left: 0px;}
 
-.soc4{
-	width: 52px;
-	height: 52px;
-	border-radius: 50px;
-    background:#cb0727;}
-
 .soc4 a:hover{
 	border:0;
 	background: url(../images/socIcons.png) -221px 0 no-repeat;
 	box-shadow: none;}
-
-.soc4:hover{
-	cursor:pointer;
-	background:#e9c20c;}
 
 .soc5 a{
 	display: inline-block;
@@ -314,20 +285,10 @@ p4 {
 	margin-top: 15px;
 	margin-left: 0px;}
 
-.soc5{
-	width: 52px;
-	height: 52px;
-	border-radius: 50px;
-    background:#cb0727;}
-
 .soc5 a:hover{
 	border:0;
 	background: url(../images/socIcons.png) -293px 0 no-repeat;
 	box-shadow: none;}
-
-.soc5:hover{
-	cursor:pointer;
-	background:#e9c20c;}
 
 .soc6 a{
 	display: inline-block;
@@ -337,20 +298,13 @@ p4 {
 	margin-top: 15px;
 	margin-left: 0px;}
 
-.soc6{
-	width: 52px;
-	height: 52px;
-	border-radius: 50px;
-    background:#cb0727;;}
-
 .soc6 a:hover{
 	border:0;
 	background: url(../images/socIcons.png) -368px 0 no-repeat;
 	box-shadow: none;}
 
-.soc6:hover{
-	cursor:pointer;
-	background:#e9c20c;}
+.soc7{
+	margin-right:0px !important;}
 
 .soc7 a{
 	display: inline-block;
@@ -360,20 +314,10 @@ p4 {
 	margin-top: 15px;
 	margin-left: 0px;}
 
-.soc7{
-	width: 52px;
-	height: 52px;
-	border-radius: 50px;
-    background:#cb0727;}
-
 .soc7 a:hover{
 	border:0;
 	background: url(../images/socIcons.png) -442px 0 no-repeat;
 	box-shadow: none;}
-
-.soc7:hover{
-	cursor:pointer;
-	background:#e9c20c;}
 
 .soc8 a{
 	display: inline-block;
@@ -383,20 +327,10 @@ p4 {
 	margin-top: 15px;
 	margin-left: 0px;}
 
-.soc8{
-	width: 50px;
-	height: 50px;
-	border-radius: 50px;
-    background:#cb0727;}
-
 .soc8 a:hover{
 	border:0;
 	background: url(../images/socIcons.png) -516px 0 no-repeat;
 	box-shadow: none;}
-
-.soc8:hover{
-	cursor:pointer;
-	background:#e9c20c;}
 
 #copy{
     text-align: center;
