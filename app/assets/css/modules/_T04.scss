@@ -212,3 +212,19 @@
     width: 200px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .qr-mobile-body {
+    .background {
+      top: 0;
+    }
+
+    .wa_header_mobil {
+      display: none;
+    }
+
+    #templatespaceholder {
+      margin-top: -40px;
+    }
+  }
+}

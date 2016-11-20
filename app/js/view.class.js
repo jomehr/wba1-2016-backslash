@@ -26,6 +26,9 @@ var view = {
     ],
     name: "quizoverview",
     render: function (view, callback) {
+        //reset quizround mobile optimizations for all views
+        $("body").removeClass("qr-mobile-body");
+
         if (this.availableViews.indexOf(view) > -1) {
             var pre_function = this["pre_" + view];
             if (typeof pre_function == "function") {

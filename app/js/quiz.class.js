@@ -48,6 +48,7 @@ var quiz = {
 
     //Nächste Frage abrufen
     nextQuestion: function () {
+        $("body").addClass("qr-mobile-body");
 
         //Haben wir noch eine Frage?
         if (quiz.indexCurrentQuestion < quiz.numberOfQuestions) {
