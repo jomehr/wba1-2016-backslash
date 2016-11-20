@@ -1,7 +1,7 @@
 <!-- Quizübersicht -->
 <main class="container qo-content-box bg-white">
     <!-- Headline -->
-    <header class="row bg-yellow qo-headline-box">
+    <header class="row bg-yellow fg-black qo-headline-box">
         <div class="col-sm-4">
             <h1 class="qo-headline">Quizzübersicht</h1>
         </div>

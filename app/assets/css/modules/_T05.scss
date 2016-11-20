@@ -1,18 +1,9 @@
-.ss_box {
-  border: 1px ridge lightgrey;
-  margin: 20px auto 0 auto;
-}
-
 .ss_box header {
-  padding: 24px;
-}
+  padding: 24px 0;
 
-.ss_box header h1 {
-  margin: 0;
-}
-
-.ss_box .ss_box_content {
-  padding: 24px;
+  h1 {
+    margin-left: 15px;
+  }
 }
 
 .ss_erg {
@@ -86,11 +77,11 @@
 
 .ss_buttons a.btn {
   width: 100%;
-  margin-bottom: 10px;
+  margin-top: 15px;
 }
 
-.ss_slider_content {
-  padding: 24px;
+.ss_slider_content{
+  display: none;
 }
 
 .ss_slider_content h2 {
@@ -129,7 +120,7 @@
   display: table;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 24px;
+  padding-top: 15px;
 }
 
 .ss_slider_menu .ss_slider_menu_elemente {
@@ -198,15 +189,6 @@
 }
 
 /* old inline styles */
-.ss_slider {
-  padding-bottom: 80px
-}
-
-.ss_slider header {
-  padding: 0;
-}
-
 .ss_slider h2 {
-  padding-top: 24px;
   text-align: center;
 }

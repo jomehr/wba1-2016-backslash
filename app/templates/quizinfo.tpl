@@ -1,8 +1,8 @@
 {{#quizinfo}}
 <div class="container st_box bg-white">
-    <div class="row bg-yellow" id="header">
+    <header class="row bg-yellow fg-black st_header" id="header">
         <h1>{{titel}}</h1>
-    </div>
+    </header>
     <div class="row" id="pic">
         <img src="{{bild}}" alt="teaserbild" class="st-teaserbild">
     </div>

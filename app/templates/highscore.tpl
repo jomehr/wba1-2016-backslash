@@ -1,6 +1,6 @@
 <div id="hs-highscore" class="container font-secondary bg-white">
     <header id="hs-title" class="bg-yellow fg-black row">
-        <div class="hs-ueberschriften">Effzeh - mer wesse alles üvver dich</div>
+        <h1>Effzeh - mer wesse alles üvver dich</h1>
     </header>
     <article id="hs-search" class="row bg-darkgrey">
         <div class="col-sm-4 col-xs-12">
@@ -19,8 +19,8 @@
             <input class="hs-search-element fg-darkgrey" id="hs-search-input" name="suche" placeholder="Spieler suche"/>
         </div>
     </article>
-    <article>
-        <table class="hs_fixed_headers">
+    <article class="hs-table">
+        <table>
             <thead class="fg-black">
             <tr class="hs-fixed-headers-title">
                 <th class="font-primary">Position</th>

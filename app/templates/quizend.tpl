@@ -1,6 +1,6 @@
 {{#datquiz}}
 <section class="container ss_box bg-white">
-    <header class="bg-yellow">
+    <header class="row bg-yellow">
         <h1 id="JS_Titel">{{titel}}</h1>
     </header>
     <div class="ss_erg ss_box_content row">

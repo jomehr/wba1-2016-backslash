@@ -18,11 +18,6 @@
   line-height: 1.2;
 }
 
-.st_box {
-  border: 1px ridge lightgrey;
-  padding: 0 15px 15px 15px;
-}
-
 @media (min-width: 992px) {
   .st_right2 {
     text-align: right;
@@ -57,9 +52,12 @@
 }
 
 /* size for the headlines */
-.st_box h1 {
-  margin-left: 15px;
-  padding: 16px 0;
+.st_header {
+  padding: 24px 0;
+
+  h1 {
+    margin-left: 15px;
+  }
 }
 
 /* old inline styles */
