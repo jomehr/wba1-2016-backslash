@@ -10,7 +10,6 @@ sessionobject = {
 
 
 $(function () {
-    //Userdaten rand generieren solange keine bestehen!!!
     var username = sessionStorage.getItem('username');
     if (!username) {
       sessionStorage.setItem('username', "unbekannt");
