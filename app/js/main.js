@@ -33,11 +33,10 @@ $(function () {
                       clicklistener();
                       quiz.startQuiz(quizrounddata);
                       //hier muss noch eine art callback rein.
-                        //viewSite();
+                      //viewSite();
 
                       $("#templatespaceholder").on("transitionend", function () {
-                          console.log("sth");
-
+                          //console.log("sth");
                       });
                   });
                   break;

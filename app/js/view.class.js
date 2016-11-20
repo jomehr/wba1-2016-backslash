@@ -90,6 +90,8 @@ var view = {
         $(document).on("onQuizData", function (event, data) {
             Quizobject.quiz = data;
             Quizobject.sessionobject = sessionobject;
+            Quizobject.quiz.titel = "Quiztitel"; //TODO: get from API
+
             if (typeof callback == "function") {
                 callback(Quizobject);
             }
@@ -149,8 +151,6 @@ var view = {
             Quizobject.quizes = nQuizObject;
             Quizobject.quizes = Quizobject.quizes.slice(0, 4);
             $.extend(Quizobject.datquiz, sessionobject);
-
-
 
             if (typeof callback == "function") {
                 callback(Quizobject);

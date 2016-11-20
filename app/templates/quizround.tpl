@@ -4,7 +4,7 @@
         <!-- Erstellung der Kopfzeile mit entsprechendem Thema -->
         <div class="qr-head row qr-no-margin bg-yellow">
             <div class="col-xs-12">
-                <h1></h1>
+                <h1>{{quiz.titel}}</h1>
             </div>
         </div>
         <!-- Platzhalter für den Timer -->
@@ -25,7 +25,7 @@
         <!-- Hier wird die Frage abgebildet -->
         <div class="qr-question row qr-no-margin">
             <div class="col-xs-12">
-                <p class="qr-text js-quizfrage">asdasd</p>
+                <p class="qr-text js-quizfrage"></p>
             </div>
         </div>
         <!-- Erstellung der Antworten-Box -->
