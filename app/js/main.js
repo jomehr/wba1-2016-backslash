@@ -119,6 +119,9 @@ $(function () {
         function handleClick(e) {
             //Standardverhalten preventen
             e.preventDefault();
+            if (document.getElementById("wa_Sidenav_mobil").getAttribute("data-navState") === "true") {
+                $("#nav-icon4").trigger("click");
+            }
 
             //data auslesen
             var click_quizid = e.currentTarget.getAttribute('data-quizID');

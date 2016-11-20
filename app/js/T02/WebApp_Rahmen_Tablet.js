@@ -1,14 +1,19 @@
-var id = 0;
+var navState = false;
 
 function openNav() {
-    if (id == 0) {
-        document.getElementById("wa_Sidenav_mobil").style.width = "264px";
-        id = 1;
+    var nav = document.getElementById("wa_Sidenav_mobil");
+
+    if (navState === false) {
+        nav.style.width = "264px";
+        navState = true;
+    } else {
+        closeNav(nav);
     }
-    else closeNav();
+
+    nav.setAttribute("data-navState", "" + navState);
 }
 
-function closeNav() {
-    document.getElementById("wa_Sidenav_mobil").style.width = "0";
-    id = 0;
+function closeNav(nav) {
+    nav.style.width = "0";
+    navState = false;
 }
