@@ -1,7 +1,7 @@
 var Quizobject = {};
 //Basis Configs
 var base = {
-	quizDuration: 15
+    quizDuration: 15
 };
 
 var quiz = {
@@ -41,7 +41,7 @@ var quiz = {
             quiz.correctAnswersNumber++;
             feedbackicons[0].className = "qr-answer_icon bg-green";
         } else {
-          feedbackicons[0].className = "qr-answer_icon bg-red";
+            feedbackicons[0].className = "qr-answer_icon bg-red";
         }
         quiz.nextQuestion();
     },
@@ -56,12 +56,12 @@ var quiz = {
             quiz.currentQuestion = quiz.questions[quiz.indexCurrentQuestion];
             //Aktuelle Frage in HTML schreiben
 
-            $(".js-quizfrage" ).text(quiz.currentQuestion.frage);
+            $(".js-quizfrage").text(quiz.currentQuestion.frage);
             //Erstellen eines Arrays mit 4 Zufälligen Zahlen von 1-4 die jeweils einmalig sind
             //für die zufällige Reihenfolge der Buttons
-            var arr = []
+            var arr = [];
             while (arr.length < 4) {
-                var randomnumber = Math.floor(Math.random() * 4)
+                var randomnumber = Math.floor(Math.random() * 4);
                 if (arr.indexOf(randomnumber) > -1) continue;
                 arr[arr.length] = randomnumber;
             }
@@ -95,7 +95,7 @@ var quiz = {
                     var feedbackicons = document.querySelectorAll('.bg-mediumgrey');
                     feedbackicons[0].className = "qr-answer_icon bg-red";
                 }
-            }, 1000)
+            }, 1000);
 
             //Index erhöhen
             quiz.indexCurrentQuestion++;
@@ -112,34 +112,34 @@ var quiz = {
 
         //Fragen kommen via data
         Quizobject = data;
-            //QuizID aus URL holen
-            //Variablen initialisieren
-            quiz.indexCurrentQuestion = 0;
-            quiz.correctAnswersNumber = 0;
+        //QuizID aus URL holen
+        //Variablen initialisieren
+        quiz.indexCurrentQuestion = 0;
+        quiz.correctAnswersNumber = 0;
 
-            quiz.numberOfQuestions = 10;
-            quiz.questions = new Array;
+        quiz.numberOfQuestions = 10;
+        quiz.questions = [];
 
-            //Erstellen eines Arrays mit 10 Zufälligen Zahlen von 1-30 die jeweils einmalig sind für die zufällige Reihenfolge der Fragen
-            var arr = []
-            while (arr.length < 10) {
-                var randomnumber = Math.floor(Math.random() * Quizobject.quiz.quizFragen.length)
-                if (arr.indexOf(randomnumber) > -1) continue;
-                arr[arr.length] = randomnumber;
-                quiz.questions.push(Quizobject.quiz.quizFragen[randomnumber]);
-            }
+        //Erstellen eines Arrays mit 10 Zufälligen Zahlen von 1-30 die jeweils einmalig sind für die zufällige Reihenfolge der Fragen
+        var arr = [];
+        while (arr.length < 10) {
+            var randomnumber = Math.floor(Math.random() * Quizobject.quiz.quizFragen.length);
+            if (arr.indexOf(randomnumber) > -1) continue;
+            arr[arr.length] = randomnumber;
+            quiz.questions.push(Quizobject.quiz.quizFragen[randomnumber]);
+        }
 
-            quiz.startTime = Date.now();
-            quiz.counter = document.querySelector('.js-counter');
+        quiz.startTime = Date.now();
+        quiz.counter = document.querySelector('.js-counter');
 
-            //Eventlistener für Antwortbuttons setzen
-            var answerButtons = document.querySelectorAll('.js-answer');
-            for (var i = 0; i < answerButtons.length; i++) {
-                answerButtons[i].addEventListener('click', quiz.checkAnswer);
-            }
+        //Eventlistener für Antwortbuttons setzen
+        var answerButtons = document.querySelectorAll('.js-answer');
+        for (var i = 0; i < answerButtons.length; i++) {
+            answerButtons[i].addEventListener('click', quiz.checkAnswer);
+        }
 
-            //Frage und Antworten anzeigen
-            quiz.nextQuestion();
+        //Frage und Antworten anzeigen
+        quiz.nextQuestion();
 
     },
 
@@ -166,11 +166,11 @@ var quiz = {
         sessionStorage.setItem('points', endpunktzahl);
         sessionStorage.setItem('maxpoints', "1000");
         sessionStorage.setItem('correctanswers', quiz.correctAnswersNumber);
-        sessionStorage.setItem('amountquestions', quiz.numberOfQuestions );
-        sessionStorage.setItem('view','3');
-        sessionStorage.setItem('rs_fragen',JSON.stringify(quiz.countCorrectAnswers));
-        sessionStorage.setItem('time_needed',gesamtZeitSek);
+        sessionStorage.setItem('amountquestions', quiz.numberOfQuestions);
+        sessionStorage.setItem('view', '3');
+        sessionStorage.setItem('rs_fragen', JSON.stringify(quiz.countCorrectAnswers));
+        sessionStorage.setItem('time_needed', gesamtZeitSek);
         //Weiterleiten auf Quizende
-				document.getElementById('quiz_beenden').click();
+        document.getElementById('quiz_beenden').click();
     }
 };
