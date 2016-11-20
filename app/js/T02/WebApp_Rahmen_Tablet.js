@@ -32,7 +32,9 @@ document.addEventListener('DOMContentLoaded', function () {
     inputUsernameMobile = document.querySelector('.js-input-username-mobile'),
     saveButtonMobile = document.querySelector('.js-save-username-mobile'),
     timer = null;
-
+  
+  var username = sessionStorage.getItem('username');
+  
   function showUsernameBox(element) {
     //display: block setzen
     element.classList.add('-displayblock');
@@ -75,10 +77,11 @@ document.addEventListener('DOMContentLoaded', function () {
   saveButton.addEventListener('click', function () {
     var username = inputUsername.value;
     username = username.trim();
-
+    
     if (username !== '') {
       sessionStorage.setItem('username', username);
       hideUsernameBox(userNameBox);
+
     }
   });
   
@@ -90,7 +93,6 @@ document.addEventListener('DOMContentLoaded', function () {
       inputUsernameMobile.value = username;
     }
     showUsernameBox(userNameBoxMobile);
-    console.log('test');
 
   });
 
@@ -102,6 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (username !== '') {
       sessionStorage.setItem('username', username);
       hideUsernameBox(userNameBoxMobile);
+      console.log(sessionStorage.get('username'));
     }
   });
 });

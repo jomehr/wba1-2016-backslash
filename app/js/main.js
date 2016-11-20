@@ -11,9 +11,10 @@ sessionobject = {
 
 $(function () {
     //Userdaten rand generieren solange keine bestehen!!!
-    sessionStorage.setItem('username', "unbekannt");
-
-
+    var username = sessionStorage.getItem('username');
+    if (!username) {
+      sessionStorage.setItem('username', "unbekannt");
+    }
     if (sessionobject.view === undefined) {
         sessionobject.view = 0;
     } else {
