@@ -1,9 +1,7 @@
 {{#quizinfo}}
 <div class="container st_box bg-white">
     <div class="row bg-yellow" id="header">
-        <div class="col-xs-12">
-            <h1>{{titel}}</h1>
-        </div>
+        <h1>{{titel}}</h1>
     </div>
     <div class="row" id="pic">
         <img src="{{bild}}" alt="teaserbild" class="st-teaserbild">

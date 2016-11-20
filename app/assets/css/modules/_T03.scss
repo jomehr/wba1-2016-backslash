@@ -1,12 +1,6 @@
-#btn-play {
-  float: right;
-}
-
 #hs-highscore {
-  margin-top: 75px;
-  align-content: center;
-  height: auto;
-  border: 1px solid black;
+  border: 1px solid #929292;
+  padding: 0 15px 15px 15px;
 }
 
 #player_table {
@@ -22,9 +16,6 @@
 
 #hs-search {
   overflow: auto;
-  margin-left: 0;
-  margin-right: 0;
-  width: 100%
 }
 
 #hs-search-input {
@@ -38,6 +29,7 @@
 
 #hs-title {
   height: auto;
+  padding: 4px 0;
 }
 
 #hs-highscore td:nth-child(1), th:nth-child(1) {
@@ -77,14 +69,6 @@
   display: block;
   overflow: auto;
   height: 300px;
-  margin: 10px;
-}
-
-#hs-highscore a:link {
-  color: white; //ok, general
-  text-decoration: none;
-  font-size: 18px;
-  text-align: center;
 }
 
 .hs_fixed_headers {
@@ -99,12 +83,12 @@
 }
 
 .hs-option_button {
-  align-content: center;
-  height: 35px;
-  margin: 20px 10px 20px 15px;
-  padding: 10px;
-  text-decoration: none;
-  text-align: center;
+  //align-content: center;
+  //height: 35px;
+  //margin: 20px 10px 20px 15px;
+  //padding: 10px;
+  //text-decoration: none;
+  //text-align: center;
   width: 100%;
 }
 
@@ -145,6 +129,10 @@
 }
 
 .hs-ueberschriften {
-  padding: 20px;
+  padding: 20px 15px;
   font-size: 22px;
+}
+
+.hs-buttons .btn {
+  margin-top: 15px;
 }

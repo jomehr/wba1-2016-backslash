@@ -20,11 +20,7 @@
 
 .st_box {
   border: 1px ridge lightgrey;
-  padding-bottom: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding: 0 15px 15px 15px;
 }
 
 @media (min-width: 992px) {
@@ -57,18 +53,13 @@
 
 .st_buttons .btn {
   width: 100%;
-  margin-right: 15px;
-  margin-bottom: 10px;
   margin-top: 15px;
 }
 
 /* size for the headlines */
 .st_box h1 {
-  margin-bottom: 0;
-  margin-top: 0;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 8px;
+  margin-left: 15px;
+  padding: 16px 0;
 }
 
 /* old inline styles */

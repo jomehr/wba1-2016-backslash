@@ -1,5 +1,5 @@
 <div id="hs-highscore" class="container font-secondary bg-white">
-    <header id="hs-title" class="bg-yellow fg-black">
+    <header id="hs-title" class="bg-yellow fg-black row">
         <div class="hs-ueberschriften">Effzeh - mer wesse alles üvver dich</div>
     </header>
     <article id="hs-search" class="row bg-darkgrey">
@@ -37,16 +37,12 @@
             {{/each}}
         </table>
     </article>
-    <article class="row">
-        <div id="btn-uebersicht" class="col-sm-4 col-xs-12 col-sm-offset-4">
-            <div>
-                <a href="#" class="btn hs-option_button js-change-view" data-view=0> Übersicht</a>
-            </div>
+    <article class="row hs-buttons">
+        <div id="btn-uebersicht" class="col-md-4 col-md-offset-4">
+            <a href="javascript:void(0)" class="btn hs-option_button js-change-view" data-view=0> Übersicht</a>
         </div>
-        <div id="btn-play" class="col-sm-4 col-xs-12">
-            <div>
-                <a href="#" class="btn hs-option_button js-change-view" data-view=2> Dieses Quiz spielen !</a>
-            </div>
+        <div id="btn-play" class="col-md-4">
+            <a href="javascript:void(0)" class="btn hs-option_button js-change-view" data-view=2> Dieses Quiz spielen!</a>
         </div>
     </article>
 </div>
