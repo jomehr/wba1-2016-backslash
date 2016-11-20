@@ -48,7 +48,6 @@
     
   }
 }
-
 .wa_login ul {
   float: right;
 }
@@ -155,6 +154,7 @@
     line-height: 1.7;
     width: 0;
     height: 100%;
+    transition: all 200ms;
   }
   .wa_sidenav_mobil a {
     padding: 8px 8px 8px 32px;

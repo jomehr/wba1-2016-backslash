@@ -1,27 +1,37 @@
-var id = 0;
+var navState = false;
 
 function openNav() {
-  if (id == 0) {
-    document.getElementById("wa_Sidenav_mobil").style.width = "264px";
-    id = 1;
-  } else closeNav();
+    var nav = document.getElementById("wa_Sidenav_mobil");
+
+    if (navState === false) {
+        nav.style.width = "264px";
+        navState = true;
+    } else {
+        closeNav(nav);
+    }
+
+    nav.setAttribute("data-navState", "" + navState);
 }
 
-function closeNav() {
-  document.getElementById("wa_Sidenav_mobil").style.width = "0";
-  id = 0;
+function closeNav(nav) {
+    nav.style.width = "0";
+    navState = false;
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+  
+  //desktop
   var loginButton = document.querySelector('.js-login'),
     userNameBox = document.querySelector('.js-username-box'),
     inputUsername = document.querySelector('.js-input-username'),
     saveButton = document.querySelector('.js-save-username'),
-    timer = null,
+      
+  //mobile
     loginButtonMobile = document.querySelector('.js-login-mobile'),
     userNameBoxMobile = document.querySelector('.js-username-box-mobile'),
     inputUsernameMobile = document.querySelector('.js-input-username-mobile'),
-    saveButtonMobile = document.querySelector('.js-save-username-mobile');
+    saveButtonMobile = document.querySelector('.js-save-username-mobile'),
+    timer = null;
 
   function showUsernameBox(element) {
     //display: block setzen
@@ -54,13 +64,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   //Blendet Username Box ein
   loginButton.addEventListener('click', function () {
-
     var username = sessionStorage.getItem('username');
     if (username) {
       inputUsername.value = username;
     }
     showUsernameBox(userNameBox);
-
   });
 
   //Speichert Username in Local Storage
@@ -70,12 +78,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (username !== '') {
       sessionStorage.setItem('username', username);
-
       hideUsernameBox(userNameBox);
-
     }
   });
-  
   
   //Blendet Username Box ein
   loginButtonMobile.addEventListener('click', function () {
@@ -96,25 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (username !== '') {
       sessionStorage.setItem('username', username);
-
       hideUsernameBox(userNameBoxMobile);
-
     }
   });
-  
 });
-
-
-
-
-
-
-
-
-
-//Polyfill für Trimfunktion
-if (!String.prototype.trim) {
-  String.prototype.trim = function () {
-    return this.replace(/^\s+|\s+$/g, '');
-  };
-}

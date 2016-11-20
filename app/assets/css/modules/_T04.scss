@@ -29,6 +29,7 @@
 .qr-question {
   text-align: center;
   padding: 50px 0 20px 0;
+  line-height: 1.3;
 }
 
 /*Padding für Abstand zu den inneren Elementen*/
@@ -198,9 +199,9 @@
   }
 
   .qr-answers button .qr-long {
-    font-size: 11px;
+    font-size: 14px;
     width: calc(100% - 50px);
-    line-height: 2.8;
+    line-height: 1.5;
   }
 
   .qr-button {
@@ -226,5 +227,11 @@
     #templatespaceholder {
       margin-top: -40px;
     }
+  }
+
+  .qr-timer .qr-timer-item {
+    margin-bottom: -20px;
+    margin-top: -20px;
+    transform: scale(0.5);
   }
 }

@@ -2,18 +2,18 @@ var Quizobject = {};
 var sessionobject = {};
 
 function fnc_reloadssobject(callback) {
-  sessionobject = {
-      "points": sessionStorage.getItem('points'),
-      "maxpoints": sessionStorage.getItem('maxpoints'),
-      "countright": sessionStorage.getItem('correctanswers'),
-      "countquestions": sessionStorage.getItem('amountquestions'),
-      "quizID": sessionStorage.getItem('quizid'),
-      "username": sessionStorage.getItem('username'),
-      "view": sessionStorage.getItem('view')
-  };
-  if (typeof callback == "function") {
-      callback("justheretosayimready");
-  }
+    sessionobject = {
+        "points": sessionStorage.getItem('points'),
+        "maxpoints": sessionStorage.getItem('maxpoints'),
+        "countright": sessionStorage.getItem('correctanswers'),
+        "countquestions": sessionStorage.getItem('amountquestions'),
+        "quizID": sessionStorage.getItem('quizid'),
+        "username": sessionStorage.getItem('username'),
+        "view": sessionStorage.getItem('view')
+    };
+    if (typeof callback == "function") {
+        callback("justheretosayimready");
+    }
 }
 
 var view = {
@@ -90,15 +90,17 @@ var view = {
         $(document).on("onQuizData", function (event, data) {
             Quizobject.quiz = data;
             Quizobject.sessionobject = sessionobject;
+            Quizobject.quiz.titel = "Quiztitel"; //TODO: get from API
+
             if (typeof callback == "function") {
                 callback(Quizobject);
             }
         });
     },
     pre_quizend: function (callback) {
-      fnc_reloadssobject(function(ready){
-        getQuizViewByID(sessionobject.quizID);
-      });
+        fnc_reloadssobject(function (ready) {
+            getQuizViewByID(sessionobject.quizID);
+        });
         $(document).on("onQuizViewByID", function (event, data) {
             getHighscorePositions(sessionobject.quizID, sessionobject.username, sessionobject.points);
             var quizInfo = {};
@@ -149,8 +151,6 @@ var view = {
             Quizobject.quizes = nQuizObject;
             Quizobject.quizes = Quizobject.quizes.slice(0, 4);
             $.extend(Quizobject.datquiz, sessionobject);
-
-
 
             if (typeof callback == "function") {
                 callback(Quizobject);
