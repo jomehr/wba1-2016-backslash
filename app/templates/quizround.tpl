@@ -35,7 +35,7 @@
                     <button class="qr-fg-black bg-lightgrey fg-black">
                         <span class="qr-short bg-yellow">A</span>
                         <span class="qr-long bg-lightgrey js-answer"
-                              onclick=""</span>
+                              onclick=""></span>
                     </button>
 
                     <button class="qr-fg-black bg-lightgrey fg-black">
