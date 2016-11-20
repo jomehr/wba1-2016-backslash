@@ -25,13 +25,18 @@
         <div class="wa_Navigation bg-black">
             <!-- Dieses Div beeinhaltet das Logo --><img class="wa_logo" src="old/img/logo.png" alt="Fubuizz_Logo">
             <!-- Dieses Div enthält das Login oben rechts-->
-            <nav class="wa_login">
+            <div class="wa_login">
                 <ul>
-                    <li><a href="javascript:void(0)" class="fg-white">Login</a></li>
+                    <li><a href="javascript:void(0)" class="fg-white js-login">Login</a></li>
                     <li><a>|</a></li>
                     <li><a href="javascript:void(0)" class="fg-white">Registrierung</a></li>
                 </ul>
-            </nav>
+                <div class="wa-username-box -desktop bg-black js-username-box">
+                  <input type="text" class="wa-input font-primary fg-black js-input-username" maxlength="30" placeholder="Benutzername eingeben">
+                  <a href="javascript:void(0)" class="btn js-save-username wa-button" data-view="2" data-quizid="0" events="true">speichern</a>
+                </div>
+            </div>
+            
         </div>
     </div>
     <!-- Dieses Div stellt den durchsichtigen Balken da-->
@@ -58,8 +63,13 @@
             <li><a href="javascript:void(0)">Teilen</a></li>
             <li><a href="javascript:void(0)">Über Fubuizz</a></li>
             <li><a href="javascript:void(0)">Einstellungen</a></li>
-            <li><a href="javascript:void(0)">Login | Registrierung</a></li>
+            <li><a href="javascript:void(0)" class="js-login-mobile">Login | Registrierung</a></li>
         </ul>
+        <div class="wa-username-box -mobile js-username-box-mobile">
+          <input type="text" class="wa-input font-primary fg-black js-input-username-mobile" maxlength="30" placeholder="Benutzername eingeben">
+          <a href="javascript:void(0)" class="btn js-save-username-mobile wa-button" data-view="2" data-quizid="0" events="true">speichern</a>
+        </div>
+        
     </div>
     <div id="nav-icon4" class="wa_Button_mobil fg-white" onclick="openNav()">
         <span></span>

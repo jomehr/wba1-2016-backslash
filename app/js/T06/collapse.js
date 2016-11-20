@@ -1,3 +1,4 @@
+var GRIDGUTTER_WIDTH = 15;
 var collapse = {
 	init: function () {
 		var elements = document.querySelectorAll('.js-collapse-section');
@@ -30,14 +31,15 @@ var collapse = {
 			summary.classList.add('-active');
 
 			var prevHeight = details.style.height;
-			details.style.transition = 'height .3s ease-in-out';
 			details.style.height = 'auto';
 
 			var endHeight = getComputedStyle(details).height;
 			details.style.height = prevHeight;
+			details.style.transition = 'height .3s ease-in-out';
 			details.offsetHeight // force repaint
 			details.style.height = endHeight;
 			details.addEventListener('transitionend', handleTransitionEnd);
+			
 		} else {
 			
 			link.classList.add('-collapsed');
