@@ -9,14 +9,14 @@
             </h2>
         </div>
         <div class="col-sm-4">
-            <select class="hs-select-box" title="Sortierung">
+            <select class="hs-select-box bg-white" title="Sortierung">
                 <option>Position</option>
                 <option>Punkte</option>
                 <option>Spieler</option>
             </select>
         </div>
         <div class="col-sm-4">
-            <input type="text" class="hs-search-box fg-black" maxlength="30" placeholder="suchen" id="hs-search-input"/>
+            <input type="text" class="hs-search-box bg-white fg-black" maxlength="30" placeholder="suchen" id="hs-search-input"/>
         </div>
     </article>
     <article class="hs-table">

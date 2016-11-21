@@ -29,11 +29,17 @@
 .wa_header a, .wa_menue a {
   color: white; //ok, general
   text-decoration: none;
+  transition: all 200ms;
 
   &:hover {
     border-bottom: 1px solid white;
     color: white; //ok, hover
+    padding-bottom: 4px;
     text-decoration: none;
+
+    &.no-hover {
+      border-bottom: 0;
+    }
   }
 }
 
