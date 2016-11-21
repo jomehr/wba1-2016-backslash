@@ -256,7 +256,9 @@ $grid-gutter-width: 15px;
 /* Styles für Flickity
 ============================================================*/
 .js-carousel-cell {
+  box-sizing: content-box;
   height: auto;
+  padding: 0 15px;
   width: 100%;
 }
 
