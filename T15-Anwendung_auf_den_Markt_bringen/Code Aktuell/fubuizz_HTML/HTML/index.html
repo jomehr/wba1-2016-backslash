@@ -644,9 +644,20 @@
 		
 		$(document).ready(function(){
 			calculateScroll();
-			$(window).scroll(function(event) {
-				calculateScroll();
-			});
+          
+        var timer;
+
+            $(window).scroll(function() {
+                if(timer) {
+                    window.clearTimeout(timer);
+                }
+				
+				//Scroll Funktion verzögern
+                timer = window.setTimeout(function() {
+                    // actual callback
+                    calculateScroll();
+                }, 100);
+            });          
 			$('.navmenu ul li a').click(function() {  
 				$('html, body').animate({scrollTop: $(this.hash).offset().top - 80}, 800);
 				return false;
