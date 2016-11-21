@@ -1,11 +1,9 @@
 <div class="container">
     <!-- Erstellung der Content-Box mit weißem Hintergrund -->
-    <div class="qr-content bg-white">
+    <div class="row qr-content bg-white">
         <!-- Erstellung der Kopfzeile mit entsprechendem Thema -->
-        <div class="qr-head row qr-no-margin bg-yellow">
-            <div class="col-xs-12">
-                <h1>{{quiz.titel}}</h1>
-            </div>
+        <div class="row qr-head qr-no-margin bg-yellow fg-black">
+            <h1>{{quiz.titel}}</h1>
         </div>
         <!-- Platzhalter für den Timer -->
         <div class="qr-timer row qr-no-margin">
