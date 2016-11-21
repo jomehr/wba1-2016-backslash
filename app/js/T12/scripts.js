@@ -1,38 +1,32 @@
 /*var time = 15; /!* how long the timer runs for *!/
-var initialOffset = '440';
-var i = 1;
-var interval = setInterval(function() {
-	$('.circle_animation').css('stroke-dashoffset', initialOffset-((-(time+i))*(initialOffset/time)));
-	$('.js-counter').text(15-i);
-	if (i == time) {
-		clearInterval(interval);
-		quiz.nextQuestion();
-	}
-	i++;
-}, 1000);*/
+ var initialOffset = '440';
+ var i = 1;
+ var interval = setInterval(function() {
+ $('.circle_animation').css('stroke-dashoffset', initialOffset-((-(time+i))*(initialOffset/time)));
+ $('.js-counter').text(15-i);
+ if (i == time) {
+ clearInterval(interval);
+ quiz.nextQuestion();
+ }
+ i++;
+ }, 1000);*/
 
-$(document).ready(function(){
-	var elem = document.getElementById("myScore");
+$(document).ready(function () {
+    var elem = document.getElementById("myScore");
 
-	var width = 0;
-	var id = setInterval(frame, 50);
-	function frame() {
-		/!*Übergabe der Data_Value nach score*!/
-		var score = document.getElementById("myScore").getAttribute("data-value");
-		if (width >= score) {
-			clearInterval(id);
-		} else {
-			width++;
-			document.getElementById("JS_ScaleScore").style.width = width + '%';
-		}
-	}
-});
+    var width = 0;
+    var id = setInterval(frame, 50);
 
-$(document).ready(function(){
-	$("#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4").click(function(){
-        openNav();
-		$(this).toggleClass("open");
-	});
+    function frame() {
+        /!*Übergabe der Data_Value nach score*!/
+        var score = document.getElementById("myScore").getAttribute("data-value");
+        if (width >= score) {
+            clearInterval(id);
+        } else {
+            width++;
+            document.getElementById("JS_ScaleScore").style.width = width + '%';
+        }
+    }
 });
 
 
