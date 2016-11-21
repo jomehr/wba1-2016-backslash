@@ -1,7 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-	collapse.init();
-});
-
 	/* Zur Initialisierung von zusätzlichen Schaltflächen
 	   in Slideshows
 	============================================================*/
