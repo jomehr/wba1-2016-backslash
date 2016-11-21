@@ -3,34 +3,30 @@ var initialOffset = '440';
 var i = 1;
 var interval = setInterval(function() {
 	$('.circle_animation').css('stroke-dashoffset', initialOffset-((-(time+i))*(initialOffset/time)));
-	$('.qr-timer-item').text(15-i);
+	$('.js-counter').text(15-i);
 	if (i == time) {
 		clearInterval(interval);
+		quiz.nextQuestion();
 	}
 	i++;
-}, 1000);
+}, 1000);*/
 
 $(document).ready(function(){
-	var elem = document.getElementById("myBar");
+	var elem = document.getElementById("myScore");
 
 	var width = 0;
-	var id = setInterval(frame, 30);
+	var id = setInterval(frame, 50);
 	function frame() {
 		/!*Übergabe der Data_Value nach score*!/
-		var score = document.getElementById("myBar").getAttribute("data-value");
-		/!*Testing
-		 var score = 60;
-		 *!/
+		var score = document.getElementById("myScore").getAttribute("data-value");
 		if (width >= score) {
 			clearInterval(id);
 		} else {
 			width++;
-			elem.style.width = width + '%';
-			document.getElementById("label").innerHTML = width * 1  + '%';
+			document.getElementById("JS_ScaleScore").style.width = width + '%';
 		}
 	}
-	window.setTimeout(move,1000);
-});*/
+});
 
 $(document).ready(function(){
 	$("#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4").click(function(){
