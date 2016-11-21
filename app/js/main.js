@@ -84,7 +84,7 @@ $(function () {
                     collapse.init();
                     var flickityConfig = {
                         // options
-                        cellAlign: 'left',
+                        cellAlign: 'center',
                         cellSelector: '.js-carousel-cell',
                         contain: true,
                         imagesLoaded: true,
