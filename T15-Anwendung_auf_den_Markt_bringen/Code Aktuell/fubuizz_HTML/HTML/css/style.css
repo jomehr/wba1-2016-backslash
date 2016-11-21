@@ -91,7 +91,7 @@ h6{
     margin: 10px; !important;}
 
 /*IMPRESSUM*/
-h7{
+.h7{
     font-size: 35px;
     text-align: left;
     color:#504f48;
@@ -120,7 +120,7 @@ p{
     font-size: 14px !important;}
 
 /*IMPRESSUM*/
-p4 {
+.p4 {
     font-family: "Noto Sans", sans-serif  !important;
     text-align: left;
     line-height: 1.5;
@@ -210,6 +210,19 @@ p4 {
     border:none;
     outline:none;
     color:#e9c20c;}
+
+
+/*MEDIA SCREEN 991px*/
+@media screen and (max-width: 991px){
+.project{
+	margin-top: 40px;}
+    
+.project2{
+	margin-bottom: 30px}
+    
+.chart {
+    margin-top: 40px;}
+}
 
 
 /*ICONS*/
@@ -437,9 +450,12 @@ h1{
     margin-left: auto}
 }
 
-/* PADDINGS AND MARGINS */
+/*PADDINGS AND MARGINS*/
 .whitewindow{
 	margin-top: -80px;}
+
+.downMenuMarg{
+	margin-top: 30px;}
 
 .expandbutton{
 text-align: center; 
@@ -448,7 +464,7 @@ text-align: center;
 
 .contactrow {
 	text-align: center; 
-	margin-top:30px;}
+	margin-top:40px;}
 
 .spielrow{
 	text-align: center; 
@@ -463,3 +479,10 @@ text-align: center;
 
 .createquiz {
   text-align: center;}
+
+/*PASSWORT.html*/
+#input form{
+    width:150px; margin:auto;}
+
+.pwbody{
+    padding-top: 200px;}

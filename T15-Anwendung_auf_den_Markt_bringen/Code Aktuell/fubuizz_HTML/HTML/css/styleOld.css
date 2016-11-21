@@ -280,6 +280,10 @@ body{
 	margin-top: 12px;
 	text-align:center;}
 
+.project2{
+	margin-top: 12px;
+	text-align:center;}
+
 .project p{
 	font-family: "Noto Sans", sans-serif;
 	font-size:13px;
@@ -930,7 +934,7 @@ body{
 	.downMenu{
     font-family: "Noto Sans", sans-serif !important;
     color:#ffffff;
-    margin-top: 50px;
+    margin-top: 70px;
 	padding-left:0px;
 	text-align:left;
 	}
