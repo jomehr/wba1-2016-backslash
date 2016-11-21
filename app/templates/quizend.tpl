@@ -9,7 +9,7 @@
             <div class="ss_score row">
                 <div class="ss_score_sp col-md-7 col-xs-12">
                     <p class="ss_mobile_points_txt"></p>
-                    <div class="ss_score_balken bg-mediumgrey">
+                    <div class="ss_score_balken bg-mediumgrey" id="myScore">
                         <!-- 10% as defult value for score, changed by main logic -->
                         <div class="ss_scale_score bg-yellow" id="JS_ScaleScore">
                         </div>
