@@ -44,7 +44,7 @@
                 <img src="{{bild}}" alt="Fan1.jpg" class="img-responsive" id="{{bild}}"/>
                 <figcaption>
 
-                    <p id="JS_Text">{{text}}</p>
+                    <p class="ss_longtext" id="JS_Text">{{text}}</p>
 
                 </figcaption>
             </figure>

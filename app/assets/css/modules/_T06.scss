@@ -173,7 +173,7 @@ $grid-gutter-width: 15px;
 
 .qo-quiz-details {
   transition: background-color 0ms;
-  padding-bottom:  0;
+  padding-bottom: 0;
   .qo-text {
     line-height: 1.2;
     margin-top: $grid-gutter-width;
@@ -184,8 +184,8 @@ $grid-gutter-width: 15px;
   &.-active {
     transition: all 0.5s;
     background-color: #f8f5e4;
-    padding-bottom:  $grid-gutter-width;
-    
+    padding-bottom: $grid-gutter-width;
+
   }
 }
 
