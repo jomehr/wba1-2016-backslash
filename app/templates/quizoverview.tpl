@@ -239,3 +239,5 @@
     </div>
 </section>
 <!--End Zuletzt gespielt -->
+<script type="application/javascript" src="js/T06/collapse.js"></script>
+<script type="application/javascript" src="js/lib/flickity.pkgd.min.js"></script>
