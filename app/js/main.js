@@ -157,7 +157,6 @@ $(function () {
 */
 
         var elements = document.querySelectorAll('.js_sort');
-        console.log(elements);
         //Eventlistener zu jedem Link hinzufügen
         for (i = 0; i < elements.length; i++) {
             var sort_eventcheck = elements[i].getAttribute('sortevent');
@@ -188,7 +187,7 @@ $(function () {
             }
             getQuizView(10, searchString, sortoption);
             $(document).on("onQuizView", function( event, data ) {
-              console.log(data);
+
             });
         }
 
