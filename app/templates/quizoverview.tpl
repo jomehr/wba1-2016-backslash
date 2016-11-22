@@ -20,7 +20,7 @@
 
         <!-- Suchfeld -->
         <div class="col-sm-4">
-            <input type="text" id="js_sort_text" class="qo-search-box bg-white fg-black js_sort" maxlength="30" placeholder="suchen">
+            <input type="text" id="js_sort_text" class="qo-search-box bg-white fg-black js_sort_select" maxlength="30" placeholder="suchen">
         </div>
         <!-- End Suchfeld -->
     </header>
