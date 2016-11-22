@@ -1,8 +1,9 @@
+var interval;
+
 function startTimer() {
     var time = 13,
         timeOffset = 13,
-        initialOffset = 440,
-        interval;
+        initialOffset = 440;
 
     clearInterval(interval);
     interval = setInterval(function () {
