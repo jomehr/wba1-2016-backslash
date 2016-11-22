@@ -39,12 +39,11 @@ $(function () {
         switch (sessionobject.view) {
             case 1:
                 view.render("quizinfo", function () {
-                    clicklistener();
+
                 });
                 break;
             case 2:
                 view.render("quizround", function (quizrounddata) {
-                    clicklistener();
                     quiz.startQuiz(quizrounddata);
                     //hier muss noch eine art callback rein.
                     //viewSite();
@@ -73,12 +72,11 @@ $(function () {
                             item.innerHTML += greenicon;
                         }
                     }
-                    //clicklistener();
                 });
                 break;
             case 4:
                 view.render("highscore", function () {
-                    //clicklistener();
+
                 });
                 break;
             default:
@@ -95,59 +93,15 @@ $(function () {
                     };
                     var $carousel = $('.js-carousel').flickity(flickityConfig);
                     slideshowNavi.init($carousel);
-                    //clicklistener();
                     sortonchange();
                 });
                 break;
         }
 
         //console.log("Bitte sessionStorage.setItem('view','id') in die Console eingeben. \n id info : \n 0 = default \n 1 = quizinfo \n 2 = quiz(undefined) \n 3 = quizend \n 4 = highscore(undefined)");
-
-
     }
 
-//    function clicklistener() {
-//        var elements = document.querySelectorAll('.js-change-view');
-//        //Eventlistener zu jedem Link hinzufügen
-//        for (i = 0; i < elements.length; i++) {
-//            var click_eventcheck = elements[i].getAttribute('events');
-//            if (click_eventcheck === null) {
-//                elements[i].setAttribute('events', "true");
-//                elements[i].removeEventListener('click', handleClick);
-//                elements[i].addEventListener('click', handleClick);
-//            }
-//
-//        }
-//
-//        function handleClick(e) {
-//            //Standardverhalten preventen
-//            e.preventDefault();
-//            if (document.getElementById("wa_Sidenav_mobil").getAttribute("data-navState") === "true") {
-//                $("#nav-icon4").trigger("click");
-//            }
-//
-//            //data auslesen
-//            var click_quizid = e.currentTarget.getAttribute('data-quizID');
-//            var click_view = parseInt(e.currentTarget.getAttribute('data-view'));
-//            if (click_quizid === null || click_quizid === undefined) {
-//                sessionobject.quizID = 0;
-//            } else {
-//                sessionobject.quizID = click_quizid;
-//            }
-//            sessionStorage.setItem('quizid', sessionobject.quizID);
-//            if (click_view !== sessionobject.view) {
-//                sessionobject.view = click_view;
-//                sessionStorage.setItem('view', sessionobject.view);
-//            }
-//            viewSite();
-//        }
-//    }
-
-
-
-    }
 	function handleClick(e) {
-		console.log(e.target);
 		//Standardverhalten preventen
 		e.preventDefault();
 		if (document.getElementById("wa_Sidenav_mobil").getAttribute("data-navState") === "true") {
@@ -171,31 +125,6 @@ $(function () {
 	}	
 
     function sortonchange() {
-/*
-      var elem = $('.js_sort_text');
-      // Save current value of element
-      elem.data('oldVal', elem.val());
-      // Look for changes in the value
-      elem.on("propertychange change click keyup input paste", function(event){
-        // If value has changed...
-        if (elem.data('oldVal') != elem.val()) {
-          // Updated stored value
-          elem.data('oldVal', elem.val());
-          var time = Date.now();
-          console.log(gtime+" waaaaow "+ time)
-          if(gtime+4000 <= time || gtime === 0) {
-            gtime = Date.now();
-            var sortoption = document.getElementById('js_sort').value;
-            var searchString = elem.val();
-            getQuizView(10, searchString);
-            $(document).on("onQuizView", function( event, data ) {
-              console.log(data);
-            });
-          }
-       }
-      });
-*/
-
         var elements = document.querySelectorAll('.js_sort');
         //Eventlistener zu jedem Link hinzufügen
         for (i = 0; i < elements.length; i++) {
@@ -230,7 +159,6 @@ $(function () {
 
             });
         }
-
     }
 
     viewSite();

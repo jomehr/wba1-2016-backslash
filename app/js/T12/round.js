@@ -3,7 +3,7 @@ var timeOffset = 13,
     initialOffset = 440;
 
 var interval = setInterval(function () {
-    $(".circle_animation").css("stroke-dashoffset", initialOffset - (i * initialOffset / timeOffset));
+    $(".circle_animation").css("stroke-dashoffset", initialOffset - (time * initialOffset / timeOffset));
 
     if (time === 0) {
         time = 15;
