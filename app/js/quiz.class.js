@@ -52,6 +52,7 @@ var quiz = {
 
         //Haben wir noch eine Frage?
         if (quiz.indexCurrentQuestion < quiz.numberOfQuestions) {
+            startTimer();
 
             //Aktuelle Frage und Antworten aus JSON holen
             quiz.currentQuestion = quiz.questions[quiz.indexCurrentQuestion];
@@ -163,7 +164,6 @@ var quiz = {
         }
 
         var endpunktzahl = parseInt(quiz.correctAnswersNumber * 100 * aktMultiplikator);
-        console.log(quiz);
         sessionStorage.setItem('points', endpunktzahl);
         sessionStorage.setItem('maxpoints', "1000");
         sessionStorage.setItem('correctanswers', quiz.correctAnswersNumber);
