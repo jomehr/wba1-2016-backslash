@@ -164,7 +164,6 @@ var quiz = {
         }
 
         var endpunktzahl = parseInt(quiz.correctAnswersNumber * 100 * aktMultiplikator);
-        console.log(quiz);
         sessionStorage.setItem('points', endpunktzahl);
         sessionStorage.setItem('maxpoints', "1000");
         sessionStorage.setItem('correctanswers', quiz.correctAnswersNumber);

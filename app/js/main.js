@@ -35,7 +35,6 @@ $(function () {
 	});
 	
     function viewSite() {
-		console.log('view');
         switch (sessionobject.view) {
             case 1:
                 view.render("quizinfo", function () {
