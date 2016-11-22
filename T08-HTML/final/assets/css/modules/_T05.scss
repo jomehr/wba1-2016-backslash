@@ -1,0 +1,198 @@
+.ss_box header {
+  padding: 24px 0;
+
+  h1 {
+    margin-left: 15px;
+  }
+}
+
+.ss_erg {
+  overflow: hidden;
+}
+
+.ss_right figcaption {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.ss_score {
+  overflow: hidden;
+}
+
+.ss_score_balken {
+  width: 100%;
+  height: 20px;
+  background: #ccc; //ok, #ccc not in basic styles
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.ss_scale_score {
+  height: 20px;
+}
+
+.ss_score_points {
+  overflow: hidden;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.ss_score_points .ss_score_point {
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.ss_scoreboard {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.ss_scoreboard table {
+  width: 100%;
+}
+
+.ss_scoreboard table tr:nth-child(odd) {
+  background: #f8f5e4; //ok, general
+}
+
+.ss_scoreboard table tr.ss_sb_user {
+  background-color: #929292; //ok, general
+}
+
+.ss_scoreboard table tr td {
+  padding: 5px;
+}
+
+.ss_scoreboard table tr td:nth-child(3) {
+  text-align: right;
+}
+
+.ss_scoreboard table tr td:nth-child(3) span {
+  margin-right: 15px;
+}
+
+.ss_buttons a.btn {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.ss_slider_content{
+  display: none;
+}
+
+.ss_slider_content h2 {
+  margin-top: 0;
+}
+
+.ss_slider_content .ss_slider_text {
+  margin-top: 25px;
+  height: 100%;
+}
+
+.ss_slider_content .ss_slider_right .ss_slider_points {
+  padding: 10px;
+  margin-top: 5px;
+  max-width: 130px;
+  float: right;
+}
+
+.ss_slider_content .ss_slider_right .btn {
+  float: right;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.ss_slider_content .ss_slider_right {
+  text-align: right;
+  overflow: hidden;
+}
+
+.ss_slider_content .ss_slider_right p {
+  float: right;
+  width: 100%;
+}
+
+.ss_slider_menu {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+}
+
+.ss_slider_menu .ss_slider_menu_elemente {
+  overflow: hidden;
+  display: table-cell;
+}
+
+.ss_slider_menu .ss_slider_bt,
+.ss_slider_menu .ss_slider_menu_left,
+.ss_slider_menu .ss_slider_menu_right {
+  float: left;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.ss_slider_menu .ss_slider_bt {
+  background: #ccc; //ok, #ccc not in basic styles
+  width: 14px;
+  height: 14px;
+  border-radius: 20px;
+}
+
+.ss_mobile_points_txt,
+.ss_mobile_answer_txt,
+.ss_score_txt p {
+  text-align: right;
+  margin-top: 8px;
+}
+
+/* MOBIL ANPASSUNGEN */
+@media only screen and (min-width: 992px) {
+  .ss_slider_content .ss_slider_text {
+    height: 170px;
+    position: relative;
+  }
+
+  .ss_slider_content .ss_slider_text .ss_slider_author {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .ss_slider_content .ss_slider_right {
+    height: 195px;
+    position: relative;
+  }
+
+  .ss_slider_content .ss_slider_right .btn {
+    position: absolute;
+    bottom: 0;
+    width: 120px !important;
+    right: 13px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .ss_slider_content .ss_slider_right {
+    margin-top: -13px;
+  }
+}
+
+/* Internet Explorer und Edge anpassungen */
+@supports (-ms-accelerator:true) {
+  .ss_scoreboard table {
+    font-family: "Oswald", sans-serif; //ok, special
+  }
+}
+
+/* old inline styles */
+.ss_slider h2 {
+  text-align: center;
+}
+
+.ss_longtext {
+  line-height: 1.3;
+}

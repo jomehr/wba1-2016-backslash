@@ -1,0 +1,304 @@
+#wa_desktop {
+  position: relative;
+  z-index: 20;
+}
+
+.wa_header_mobil {
+  display: none;
+}
+
+.wa_header {
+  width: 100%;
+  height: 64px;
+  top: 0;
+}
+
+.wa_Navigation {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 64px;
+}
+
+.wa_logo {
+  margin-top: 10px;
+  height: 50px;
+  padding-left: 12px;
+}
+
+.wa_header a, .wa_menue a {
+  color: white; //ok, general
+  text-decoration: none;
+
+  &:hover {
+    border-bottom: 1px solid white;
+    color: white; //ok, hover
+    text-decoration: none;
+  }
+}
+
+.wa_login {
+  display: inline-block;
+  float: right;
+  margin-top: 20px;
+  padding-right: 15px;
+  position: relative;
+  width: 350px;
+
+  @media screen and (min-width: 1200px) {
+    padding-right: 0px;
+
+  }
+}
+
+.wa_login ul {
+  float: right;
+}
+
+.wa_login li {
+  float: left;
+  list-style: none;
+}
+
+.wa_login a {
+  font-size: 20px;
+  padding: 2px;
+}
+
+#wa_Navigation2 {
+  background-color: rgba(0, 0, 0, 0.5); //ok, opacity
+  width: 100%;
+  margin-top: 0;
+  height: 40px;
+  padding-left: 15px;
+}
+
+.wa_menue {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.wa_menue li {
+  float: left;
+  list-style: none;
+  padding-right: 60px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.wa_footer {
+  width: 100%;
+  position: relative;
+  margin-bottom: auto;
+  line-height: 80px;
+}
+
+.wa_copyright {
+  text-align: center;
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  #wa_desktop {
+    display: none;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+    padding-top: 64px;
+  }
+  .wa_header_mobil {
+    display: block;
+    width: 100%;
+    height: 64px;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+  }
+  .wa_Button_mobil {
+    font-size: 35px;
+    cursor: pointer;
+    float: left;
+    margin-left: 20px;
+    margin-top: 14px;
+  }
+  .wa_logo {
+    height: 50px;
+    display: block;
+    margin-left: -58px;
+    left: 50%;
+    position: fixed;
+  }
+  .wa_sidenav_mobil {
+    position: fixed;
+    overflow-x: hidden;
+    z-index: 1;
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.8); //ok, opacity
+    margin-top: 64px;
+    line-height: 1.7;
+    width: 0;
+    height: 100%;
+    transition: all 200ms;
+  }
+  .wa_sidenav_mobil a {
+    padding: 8px 8px 8px 32px;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 80px;
+    font-size: 25px;
+    text-align: left;
+    margin-left: -10px;
+    text-decoration: none;
+  }
+  .wa_sidenav_mobil .wa_closebtn_mobil {
+    text-decoration: none;
+    position: absolute;
+    top: -90px;
+    right: 10px;
+    line-height: 50px;
+    font-size: 100px;
+  }
+  #text {
+    padding-top: 1000px;
+    margin-left: 0;
+  }
+  .wa_sidenav_mobil a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  .wa_footer {
+    width: 100%;
+    position: relative;
+    line-height: 80px;
+  }
+  .wa_copyright {
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+
+$screen-sm-min: 768px;
+$grid-gutter-width: 15px;
+.wa-username-box {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+  &.-active {
+    opacity: 1;
+  }
+
+  &.-displayblock {
+    display: block;
+  }
+
+  &.-desktop {
+    float: right;
+    margin-top: -3px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    > .wa-input {
+      margin-right: 3px;
+      padding: 4px 0 4px 8px;
+      vertical-align: top;
+
+    }
+    > .wa-button {
+      vertical-align: top;
+    }
+  }
+
+  &.-mobile {
+    margin: 10px 24px 0 24px;
+    > .wa-input {
+      padding-top: 2px;
+      text-indent: 6px;
+      width: 100%;
+
+      //noinspection CssInvalidPseudoSelector
+      &::input-placeholder {
+        line-height: 1.0;
+      }
+      &::-webkit-input-placeholder {
+        line-height: 1.0;
+      }
+      //Firefox 18-
+      &:-moz-placeholder {
+        line-height: 1.0;
+      }
+      //Firefox 19+
+      &::-moz-placeholder {
+        line-height: 1.0;
+      }
+      //noinspection CssInvalidPseudoSelector
+      &::-ms-input-placeholder {
+        line-height: 1.0;
+      }
+
+    }
+    > .wa-button {
+      padding-top: 3px;
+      margin-top: 15px;
+      margin-left: 0;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  > .wa-input {
+    border: none;
+    text-indent: 4px;
+    width: 200px;
+    @media(min-width: $screen-sm-min) {
+      margin-top: 0;
+    }
+    //noinspection CssInvalidPseudoSelector
+    &::input-placeholder {
+      line-height: 1.3;
+    }
+    &::-webkit-input-placeholder {
+      line-height: 1.3;
+    }
+    //Firefox 18-
+    &:-moz-placeholder {
+      line-height: 1.3;
+    }
+    //Firefox 19+
+    &::-moz-placeholder {
+      line-height: 1.3;
+    }
+    //noinspection CssInvalidPseudoSelector
+    &::-ms-input-placeholder {
+      line-height: 1.3;
+    }
+  }
+
+  /* Bugfix - Höhe von Eingabefeldern und Dropdowns
+ * wird vom Firefox falsch berechnet
+ */
+  @-moz-document url-prefix() {
+    .qo-username-box {
+      height: 30px;
+      padding: 6px 0 2px 8px !important;
+      text-indent: 3px !important;
+    }
+  }
+
+  > .wa-button {
+    display: inline-block;
+    font-size: 14px;
+    height: 30px;
+    padding: 7px 8px 0 7px;
+
+  }
+}
+
+.wa_divider {
+  border-right: 1px solid white;
+  display: inline-block;
+  height: 20px;
+  margin: 0 5px;
+}

@@ -1,0 +1,78 @@
+//bootstrap normalizer and grid system
+@import "lib/bootstrap.min.scss"
+
+//slider
+@import "lib/flickity.css"
+
+//reset css
+@import "partials/reset.sass"
+
+$font-primary: "Noto Sans", sans-serif
+$font-secondary: "Oswald", sans-serif
+
+$color-yellow: #e9c20c
+$color-red: #cb0727
+$color-green: #4ac725
+$color-darkgrey: #504f48
+$color-mediumgrey: #929292
+$color-lightgrey: #f8f5e4
+$color-white: #ffffff
+$color-black: #000000
+$color-red-light: #ed1335
+
+$image-background: "../img/background.jpg"
+
+//general styles
+html *
+  font-family: $font-primary
+
+
+//fonts (external, not final solution)
+@import "partials/fonts.sass"
+
+//standard elements
+@import "partials/base.sass"
+
+//color classes (fg=foreground, bg=background)
+@import "partials/colors.sass"
+
+//icon classes
+@import "partials/icons.sass"
+
+//layout corrections
+@import "partials/layout.sass"
+
+/*!
+ * T02 WebApp Rahmen
+ */
+@import "modules/T02.scss"
+
+/*!
+ * T03 Highscore
+ */
+@import "modules/T03.scss"
+
+/*!
+ * T04 Quizround
+ */
+@import "modules/T04.scss"
+
+/*!
+ * T05 SchlussScreen
+ */
+@import "modules/T05.scss"
+
+/*!
+ * T06 Quizoverview
+ */
+@import "modules/T06.scss"
+
+/*!
+ * T07 StartScreen
+ */
+@import "modules/T07.scss"
+
+/*!
+ * T12 Animationen
+ */
+@import "modules/T12.scss"

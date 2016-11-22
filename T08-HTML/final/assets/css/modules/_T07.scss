@@ -1,0 +1,66 @@
+.st_left_col {
+  line-height: 1.25;
+  padding-left: 0;
+}
+
+.st_right_col {
+  padding-right: 0;
+}
+
+.st_right1 {
+  text-align: right;
+  align-content: right;
+  margin-top: 35px;
+}
+
+.st_right2 {
+  margin-top: 20px;
+  line-height: 1.2;
+}
+
+@media (min-width: 992px) {
+  .st_right2 {
+    text-align: right;
+    align-content: right;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .st_right1 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.st_rightdown {
+  margin-bottom: 20px;
+  padding-left: 0;
+}
+
+.st_erg {
+  overflow: hidden;
+  margin-top: 20px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.st_buttons .btn {
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* size for the headlines */
+.st_header {
+  padding: 24px 0;
+
+  h1 {
+    margin-left: 15px;
+  }
+}
+
+/* old inline styles */
+.st-teaserbild {
+  width: 100%;
+}

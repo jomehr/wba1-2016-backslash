@@ -1,0 +1,43 @@
+$screen-sm-min: 769px
+$grid-gutter-width: 15px
+
+html
+  background-color: white
+
+// stretch body to full viewport
+body
+  width: 100%
+  height: 100%
+
+// background image
+.background
+  position: absolute
+  top: 64px
+  width: 100%
+  height: 600px
+  background-size: cover
+  background: url($image-background) no-repeat bottom
+
+// main content container in front of background image
+#templatespaceholder
+  margin-top: 105px
+  position: relative
+  z-index: 10
+
+  @media (max-width: 768px)
+    margin-top: 65px
+
+.container
+  border: 1px solid #929292
+  margin-bottom: $grid-gutter-width
+  padding: 0 $grid-gutter-width $grid-gutter-width $grid-gutter-width
+
+  //margin-left: $grid-gutter-width
+  //margin-right: $grid-gutter-width
+
+  @media(min-width: $screen-sm-min)
+    margin-left: auto
+    margin-right: auto
+
+  @media(width: 768px)
+    width: auto
