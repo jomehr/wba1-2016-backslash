@@ -4,6 +4,7 @@
 	margin: 20px auto 0px auto;
 	background: #fff;
 	border: 1px solid #929292;
+	line-height: 17px;
 }
 
 .ss_box header {
@@ -147,6 +148,9 @@
 	margin-right: 30px;
 }
 
+.ss_slider_menu .ss_slider_menu_right {
+	margin-right: 0;
+}
 
 .ss_slider_menu .ss_slider_bt {
 	background: #ccc;
