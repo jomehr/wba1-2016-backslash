@@ -38,7 +38,7 @@ var view = {
             if (typeof pre_function == "function") {
                 pre_function(function (data) {
                     $.get("templates/" + view + ".tpl", function (source) {
-						
+
                         var template = Handlebars.compile(source);
                         that.templatespaceholder.empty();
                         that.templatespaceholder.append(template(data));
@@ -55,7 +55,7 @@ var view = {
                         var template = Handlebars.compile(source);
                         that.templatespaceholder.empty();
                         that.templatespaceholder.append(template(data));
-                    this.name = view;
+                        this.name = view;
 
                     if (typeof callback == "function") {
                         callback(data);
@@ -65,112 +65,134 @@ var view = {
         }
     },
     pre_quizoverview: function (callback) {
-        //Random Quiz Vorschlag
-        getQuizView(10);
+      view.dat_QuizView(function(data){
+        Quizobject.quizsuggestion = data; //copy object
 
-        $(document).on("onQuizView", function (event, data) {
-            Quizobject.quizes = data; //copy object
-
-            if (typeof callback == "function") {
-                callback(Quizobject);
-            }
-        });
+        if (typeof callback == "function") {
+          callback(Quizobject);
+        }
+      });
     },
     pre_quizinfo: function (callback) {
-        getQuizViewByID(sessionobject.quizID);
+      view.dat_QuizViewByID(sessionobject.quizID,function(data){
+        Quizobject.quizinfo = data;
+        Quizobject.sessionobject = sessionobject;
 
-        $(document).on("onQuizViewByID", function (event, data) {
-            Quizobject.quizinfo = data;
-            Quizobject.sessionobject = sessionobject;
-
-            if (typeof callback == "function") {
-                callback(Quizobject);
-            }
-        });
+        if (typeof callback == "function") {
+            callback(Quizobject);
+        }
+      });
     },
     pre_quizround: function (callback) {
-        getQuizByID(sessionobject.quizID);
+        view.dat_QuizByID(sessionobject.quizID,function(data){
+          Quizobject.quiz = data;
+          Quizobject.sessionobject = sessionobject;
+          Quizobject.quiz.titel = "Quiztitel"; //TODO: get from API
 
-        $(document).on("onQuizData", function (event, data) {
-            Quizobject.quiz = data;
-            Quizobject.sessionobject = sessionobject;
-            Quizobject.quiz.titel = "Quiztitel"; //TODO: get from API
-
-            if (typeof callback == "function") {
-                callback(Quizobject);
-            }
+          if (typeof callback == "function") {
+              callback(Quizobject);
+          }
         });
     },
     pre_quizend: function (callback) {
         fnc_reloadssobject(function (ready) {
-            getQuizViewByID(sessionobject.quizID);
-        });
-        $(document).on("onQuizViewByID", function (event, data) {
-            getHighscorePositions(sessionobject.quizID, sessionobject.username, sessionobject.points);
-            var quizInfo = {};
-            if (quizInfo.bild === "/URL") {
-                quizInfo.bild = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Stadion3-Klein.jpg";
-            }
-            Quizobject.datquiz = data;
-        });
+            view.dat_QuizViewByID(sessionobject.quizID,function(data){
+              Quizobject.datquiz = data;
+              var quizInfo = {};
+              view.dat_getHighscorePositions(sessionobject.quizID, sessionobject.username, sessionobject.points, function(data){
+                $.extend(Quizobject.datquiz, data);
+                view.dat_QuizView(function(data){
+                  var nQuizObject = data; //copy object
+                  var quizInfo = data;
+                  var icount = 0;
+                  var ARQused = [];
+                  ARQused[0] = sessionobject.quizID;
+                  var iRand = Math.random();
 
-        // HIGHSCORE info
-        $(document).on("onHighscorePositions", function (event, data) {
-            getQuizView(7);
-            $.extend(Quizobject.datquiz, data);
-        });
+                  //RAND Quiz außer aufgerufene Quiz.
+                  for (var i = 0; icount < 4; i++) {
+                      iRand = Math.round(Math.random() * ( quizInfo.length - 0 ));
+                      if (iRand !== 0) {
+                          iRand--;
+                      }
+                      while ((ARQused.indexOf("" + iRand) > -1)) {
+                          iRand = Math.round(Math.random() * ( quizInfo.length - 0 ));
+                          if (iRand !== 0) {
+                              iRand--;
+                          }
+                      }
 
-        //Random Quiz Vorschlag
-        $(document).on("onQuizView", function (event, data) {
-            var nQuizObject = data; //copy object
-            var quizInfo = data;
-            var icount = 0;
-            var ARQused = [];
-            ARQused[0] = sessionobject.quizID;
-            var iRand = Math.random();
+                      if (quizInfo[iRand].quizID !== sessionobject.quizID) { // <- Abfrage ob QuizID == Random ID ist wenn true neu generieren
+                          icount++;
+                          ARQused[icount] = quizInfo[iRand].quizID;
+                          nQuizObject[icount - 1] = quizInfo[iRand];
+                          if (quizInfo[iRand].bild === "/URL") {
+                              quizInfo[iRand].bild = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Stadion3-Klein.jpg";
+                          }
+                      }
+                  }
+                  Quizobject.quizes = nQuizObject;
+                  Quizobject.quizes = Quizobject.quizes.slice(0, 4);
+                  $.extend(Quizobject.datquiz, sessionobject);
+                  if (typeof callback == "function") {
+                      callback(Quizobject);
+                  }
 
-            //RAND Quiz außer aufgerufene Quiz.
-            for (var i = 0; icount < 4; i++) {
-                iRand = Math.round(Math.random() * ( quizInfo.length - 0 ));
-                if (iRand !== 0) {
-                    iRand--;
-                }
-                while ((ARQused.indexOf("" + iRand) > -1)) {
-                    iRand = Math.round(Math.random() * ( quizInfo.length - 0 ));
-                    if (iRand !== 0) {
-                        iRand--;
-                    }
-                }
-
-                if (quizInfo[iRand].quizID !== sessionobject.quizID) { // <- Abfrage ob QuizID == Random ID ist wenn true neu generieren
-                    icount++;
-                    ARQused[icount] = quizInfo[iRand].quizID;
-                    nQuizObject[icount - 1] = quizInfo[iRand];
-                    if (quizInfo[iRand].bild === "/URL") {
-                        quizInfo[iRand].bild = "https://raw.githubusercontent.com/th-koeln/wba1-2016-backslash/master/T10-Asset/Bilder/Bilder%20Klein/Stadion3-Klein.jpg";
-                    }
-                }
-            }
-
-            Quizobject.quizes = nQuizObject;
-            Quizobject.quizes = Quizobject.quizes.slice(0, 4);
-            $.extend(Quizobject.datquiz, sessionobject);
-
-            if (typeof callback == "function") {
-                callback(Quizobject);
-            }
+                });
+              });
+            });
         });
     },
     pre_highscore: function (callback) {
-        getHighscoreByID(sessionobject.quizID);
-
-        $(document).on("onHighscoreData", function (event, data) {
+          view.dat_HighscoreByID(sessionobject.quizID, function(data) {
             Quizobject = data;
             Quizobject.sessionobject = sessionobject;
 
             if (typeof callback == "function") {
                 callback(Quizobject);
             }
-        });
+          });
+    },
+    dat_QuizViewByID: function(quizID,callback){
+      console.log(quizID);
+      getQuizViewByID(quizID);
+      $(document).on("onQuizViewByID", function (event, data) {
+          console.log(data);
+          if (typeof callback == "function") {
+              callback(data);
+          }
+      });
+    },
+    dat_QuizByID: function(quizID,callback){
+      getQuizByID(quizID);
+      $(document).on("onQuizData", function (event, data) {
+          if (typeof callback == "function") {
+              callback(data);
+          }
+      });
+    },
+    dat_QuizView: function(callback){
+      getQuizView(10);
+      $(document).on("onQuizView", function (event, data) {
+          if (typeof callback == "function") {
+              callback(data);
+          }
+      });
+    },
+    dat_HighscoreByID: function(quizID,callback){
+      getHighscoreByID(quizID);
+        $(document).on("onHighscoreData", function (event, data) {
+          if (typeof callback == "function") {
+              callback(data);
+          }
+      });
+    },
+    dat_getHighscorePositions: function(quizID,username,points,callback){
+      getHighscorePositions(quizID, username, points);
+      $(document).on("onHighscorePositions", function (event, data) {
+          if (typeof callback == "function") {
+              callback(data);
+          }
+      });
     }
 };

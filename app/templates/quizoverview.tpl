@@ -11,7 +11,7 @@
             <div class="qo-wrapper-select-box">
                 <select id="js_sort" class="qo-select-box bg-white js_sort" title="Sortieren">
                     <option value="datum">nach Erscheinungsdatum</option>
-                    <option value="alphabetisch">alphabetisch</option> 
+                    <option value="alphabetisch">alphabetisch</option>
                     <option value="beliebtheit">nach Beliebtheit</option>
                 </select>
             </div>
@@ -30,7 +30,7 @@
     <section>
         <ul>
             <!-- Quizspiel -->
-            {{#each quizes}}
+            {{#each quizsuggestion}}
             <li class="js-collapse-section">
                 <div class="row qo-quiz-summary js-quiz-summary">
 
