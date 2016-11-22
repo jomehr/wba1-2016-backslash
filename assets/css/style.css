@@ -165,8 +165,6 @@ p {
 	background-size: cover;
 	
 }
-.mobile-device .parallax {
-}
 
 .parallaxHeader {
     background: url(../images/bgTop.jpg) 100%;
@@ -178,8 +176,6 @@ p {
 	background-attachment: fixed;
 	background-size: cover;
 	
-}
-.mobile-device .parallaxHeader {
 }
 
 
