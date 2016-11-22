@@ -532,10 +532,22 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.slicknav.js"></script>
 <script type="text/javascript" src="assets/js/smoothscroll.js"></script>
+<script type="text/javascript" src="assets/js/helper.js"></script>
 
 <script>
 	$(document).ready(function () {
 		jQuery('#menu').slicknav();
+		
+		//Device abfragen
+		media.device.refreshValue();
+		
+		//Befinden wir uns auf deinem Desktop Device?
+		if(media.device.value === media.device.DESKTOP )
+			document.body.classList.add('desktop-device');
+		else
+			//Befinden wir uns auf einem mobilen Device?
+			document.body.classList.add('mobile-device');
+		
 
 		$(".bhide").click(function () {
 			$(".hideObj").slideDown();

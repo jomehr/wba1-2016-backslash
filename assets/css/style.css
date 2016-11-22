@@ -155,16 +155,33 @@ p {
 
 /*Parallax Effekt*/
 .parallax {
-    background: url(../images/weedBackground.jpg) repeat fixed 100%;
-    background-size: cover !important;
+    background: url(../images/weedBackground.jpg) 100%;
 	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.desktop-device .parallax {
+	background-attachment: fixed;
+	background-size: cover;
+	
+}
+.mobile-device .parallax {
 }
 
 .parallaxHeader {
-    background: url(../images/bgTop.jpg) repeat fixed 100%;
-    background-size: cover !important;
+    background: url(../images/bgTop.jpg) 100%;
 	background-position: center;
+	background-repeat: no-repeat;
 }
+
+.desktop-device .parallaxHeader {
+	background-attachment: fixed;
+	background-size: cover;
+	
+}
+.mobile-device .parallaxHeader {
+}
+
 
 .image-wrapper {
     max-width: 100%;
