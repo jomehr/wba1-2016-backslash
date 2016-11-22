@@ -157,11 +157,13 @@ p {
 .parallax {
     background: url(../images/weedBackground.jpg) repeat fixed 100%;
     background-size: cover !important;
+	background-position: center;
 }
 
 .parallaxHeader {
     background: url(../images/bgTop.jpg) repeat fixed 100%;
     background-size: cover !important;
+	background-position: center;
 }
 
 .image-wrapper {
