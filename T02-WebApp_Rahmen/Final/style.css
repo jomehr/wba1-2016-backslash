@@ -6,12 +6,9 @@ body {
     /*Grundsätzlich erstmal auf 100%*/
     width: 100%;
     height: 100%;
-    
 }
 
-.background{
-    position: absolute;
-    top: 64px;
+.background {
     width: 100%;
     height: 500px;
     background-image: url(img/background.png);

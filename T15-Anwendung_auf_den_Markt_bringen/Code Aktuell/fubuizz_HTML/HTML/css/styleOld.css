@@ -240,7 +240,6 @@ body{
 }
 
 
-
 /*MEDIA SCREEN 323px*/
 @media screen and (max-width: 323px){
     
@@ -251,7 +250,6 @@ body{
 	.news p{
 		text-align: justify;}
 }
-
 
 
 /*MEDIA SCREEN 1229px*/
@@ -266,7 +264,6 @@ body{
 	.news p{
 		text-align:justify;}
 }
-
 
 
 .sl{
@@ -934,7 +931,7 @@ body{
 	.downMenu{
     font-family: "Noto Sans", sans-serif !important;
     color:#ffffff;
-    margin-top: 70px;
+    margin-top: 40px;
 	padding-left:0px;
 	text-align:left;
 	}
@@ -980,6 +977,9 @@ body{
     
 	.team ul{
 		margin-bottom: 35px;}
+    
+    .team{
+		margin-bottom: -35px;}
     
 	.cont {
 	   margin-top: 124px;}
