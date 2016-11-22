@@ -35,7 +35,6 @@ $(function () {
 	});
 	
     function viewSite() {
-		console.log('view');
         switch (sessionobject.view) {
             case 1:
                 view.render("quizinfo", function () {
@@ -147,7 +146,6 @@ $(function () {
 
     }
 	function handleClick(e) {
-		console.log(e.target);
 		//Standardverhalten preventen
 		e.preventDefault();
 		if (document.getElementById("wa_Sidenav_mobil").getAttribute("data-navState") === "true") {
