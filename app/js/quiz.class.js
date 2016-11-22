@@ -54,6 +54,10 @@ var quiz = {
         if (quiz.indexCurrentQuestion < quiz.numberOfQuestions) {
             startTimer();
 
+            document.querySelectorAll('[data-antwort]').forEach(function (elem) {
+                elem.addEventListener('click', changeAnswerButtonColor);
+            });
+
             //Aktuelle Frage und Antworten aus JSON holen
             quiz.currentQuestion = quiz.questions[quiz.indexCurrentQuestion];
             //Aktuelle Frage in HTML schreiben

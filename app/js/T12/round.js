@@ -20,4 +20,45 @@ function startTimer() {
     }, 1000);
 }
 
-startTimer();
+function checkAnswer(index) {
+    switch (index) {
+        case 0:
+        case 1:
+        case 2:
+            return false;
+        case 3:
+            return true;
+    }
+}
+
+function changeAnswerButtonColor(e) {
+
+    var clickedElem = e.target;
+
+    var indexToCheck = parseInt(clickedElem.dataset.antwort);
+    var correct = checkAnswer(indexToCheck);
+
+    document.querySelectorAll('[data-antwort]').forEach(function (elem) {
+        elem.classList.add('animated');
+        elem.classList.add('flashshort');
+
+        var indexToCheck = parseInt(elem.dataset.antwort);
+
+        if (checkAnswer(indexToCheck))
+            elem.parentNode.classList.add('answer--correct');
+        else
+            elem.parentNode.classList.add('answer--wrong');
+    });
+
+    var answer_status_class = (correct) ? 'green' : 'red';
+    //document.querySelector('#currentQuestionProgress').classList.add(answer_status_class);
+
+    console.log(correct ? 'Richtig!' : 'Falsch!');
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    console.log("sth");
+    document.querySelectorAll('[data-antwort]').forEach(function (elem) {
+        elem.addEventListener('click', changeAnswerButtonColor);
+    });
+});

@@ -228,3 +228,16 @@
     transform: scale(0.5);
   }
 }
+
+.answer--correct {
+  background-color: #4ac725 !important;
+}
+
+.answer--wrong {
+  background-color: #cb0727 !important;
+}
+
+.answer--correct span:last-child,
+.answer--wrong span:last-child {
+  background-color: transparent !important;
+}
