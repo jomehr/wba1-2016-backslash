@@ -11,6 +11,7 @@ sessionobject = {
 
 $(function () {
     var username = sessionStorage.getItem('username');
+	var clickElements = document.querySelectorAll('.js-change-view');
     if (!username) {
       sessionStorage.setItem('username', "unbekannt");
     }
@@ -19,8 +20,20 @@ $(function () {
     } else {
         sessionobject.view = parseInt(sessionobject.view);
     }
-
+	view.init();
+	
+	// Klicklistener via Event Delgation initialisieren
+	document.querySelector("body").addEventListener("click", function (e) {
+		
+		//Haben wir auf ein Element geklickt und enthält das Element die Klasse 'js-change-view'
+		if (e.target && e.target.classList.contains('js-change-view')) {
+			handleClick(e);
+			
+		}
+	});
+	
     function viewSite() {
+		console.log('view');
         switch (sessionobject.view) {
             case 1:
                 view.render("quizinfo", function () {
@@ -71,12 +84,12 @@ $(function () {
                      var $carousel = $('.js-carousel').flickity(flickityConfig);
                      slideshowNavi.init($carousel);
                      */
-                    clicklistener();
+                    //clicklistener();
                 });
                 break;
             case 4:
                 view.render("highscore", function () {
-                    clicklistener();
+                    //clicklistener();
                 });
                 break;
             default:
@@ -93,7 +106,7 @@ $(function () {
                     };
                     var $carousel = $('.js-carousel').flickity(flickityConfig);
                     slideshowNavi.init($carousel);
-                    clicklistener();
+                    //clicklistener();
                 });
                 break;
         }
@@ -103,42 +116,69 @@ $(function () {
 
     }
 
-    function clicklistener() {
-        var elements = document.querySelectorAll('.js-change-view');
-        //Eventlistener zu jedem Link hinzufügen
-        for (i = 0; i < elements.length; i++) {
-            var click_eventcheck = elements[i].getAttribute('events');
-            if (click_eventcheck === null) {
-                elements[i].setAttribute('events', "true");
-                elements[i].removeEventListener('click', handleClick);
-                elements[i].addEventListener('click', handleClick);
-            }
+//    function clicklistener() {
+//        var elements = document.querySelectorAll('.js-change-view');
+//        //Eventlistener zu jedem Link hinzufügen
+//        for (i = 0; i < elements.length; i++) {
+//            var click_eventcheck = elements[i].getAttribute('events');
+//            if (click_eventcheck === null) {
+//                elements[i].setAttribute('events', "true");
+//                elements[i].removeEventListener('click', handleClick);
+//                elements[i].addEventListener('click', handleClick);
+//            }
+//
+//        }
+//
+//        function handleClick(e) {
+//            //Standardverhalten preventen
+//            e.preventDefault();
+//            if (document.getElementById("wa_Sidenav_mobil").getAttribute("data-navState") === "true") {
+//                $("#nav-icon4").trigger("click");
+//            }
+//
+//            //data auslesen
+//            var click_quizid = e.currentTarget.getAttribute('data-quizID');
+//            var click_view = parseInt(e.currentTarget.getAttribute('data-view'));
+//            if (click_quizid === null || click_quizid === undefined) {
+//                sessionobject.quizID = 0;
+//            } else {
+//                sessionobject.quizID = click_quizid;
+//            }
+//            sessionStorage.setItem('quizid', sessionobject.quizID);
+//            if (click_view !== sessionobject.view) {
+//                sessionobject.view = click_view;
+//                sessionStorage.setItem('view', sessionobject.view);
+//            }
+//            viewSite();
+//        }
+//    }
 
-        }
 
-        function handleClick(e) {
-            //Standardverhalten preventen
-            e.preventDefault();
-            if (document.getElementById("wa_Sidenav_mobil").getAttribute("data-navState") === "true") {
-                $("#nav-icon4").trigger("click");
-            }
 
-            //data auslesen
-            var click_quizid = e.currentTarget.getAttribute('data-quizID');
-            var click_view = parseInt(e.currentTarget.getAttribute('data-view'));
-            if (click_quizid === null || click_quizid === undefined) {
-                sessionobject.quizID = 0;
-            } else {
-                sessionobject.quizID = click_quizid;
-            }
-            sessionStorage.setItem('quizid', sessionobject.quizID);
-            if (click_view !== sessionobject.view) {
-                sessionobject.view = click_view;
-                sessionStorage.setItem('view', sessionobject.view);
-            }
-            viewSite();
-        }
     }
+	function handleClick(e) {
+		console.log(e.target);
+		//Standardverhalten preventen
+		e.preventDefault();
+		if (document.getElementById("wa_Sidenav_mobil").getAttribute("data-navState") === "true") {
+			$("#nav-icon4").trigger("click");
+		}
+
+		//data auslesen
+		var click_quizid = e.target.getAttribute('data-quizID');
+		var click_view = parseInt(e.target.getAttribute('data-view'));
+		if (click_quizid === null || click_quizid === undefined) {
+			sessionobject.quizID = 0;
+		} else {
+			sessionobject.quizID = click_quizid;
+		}
+		sessionStorage.setItem('quizid', sessionobject.quizID);
+		if (click_view !== sessionobject.view) {
+			sessionobject.view = click_view;
+			sessionStorage.setItem('view', sessionobject.view);
+		}
+		viewSite();
+	}	
 
     viewSite();
 });

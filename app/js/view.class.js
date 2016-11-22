@@ -17,6 +17,7 @@ function fnc_reloadssobject(callback) {
 }
 
 var view = {
+	templatespaceholder: null,
     availableViews: [
         "quizoverview", //0
         "quizinfo",     //1
@@ -24,20 +25,23 @@ var view = {
         "quizend",      //3
         "highscore"     //4
     ],
+	init: function () {
+		view.templatespaceholder = $("#templatespaceholder");
+	},
     name: "quizoverview",
     render: function (view, callback) {
         //reset quizround mobile optimizations for all views
         $("body").removeClass("qr-mobile-body");
-
+		var that = this;
         if (this.availableViews.indexOf(view) > -1) {
             var pre_function = this["pre_" + view];
             if (typeof pre_function == "function") {
                 pre_function(function (data) {
                     $.get("templates/" + view + ".tpl", function (source) {
+						
                         var template = Handlebars.compile(source);
-                        var templatespaceholder = $("#templatespaceholder");
-                        templatespaceholder.empty();
-                        templatespaceholder.append(template(data));
+                        that.templatespaceholder.empty();
+                        that.templatespaceholder.append(template(data));
                         this.name = view;
 
                         if (typeof callback == "function") {
@@ -48,9 +52,9 @@ var view = {
             } else {
                 $.get("templates/" + view + ".tpl", function (source) {
                     var template = Handlebars.compile(source);
-                    var templatespaceholder = $("#templatespaceholder");
-                    templatespaceholder.empty();
-                    templatespaceholder.append(template());
+                        var template = Handlebars.compile(source);
+                        that.templatespaceholder.empty();
+                        that.templatespaceholder.append(template(data));
                     this.name = view;
 
                     if (typeof callback == "function") {
