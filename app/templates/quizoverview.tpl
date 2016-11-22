@@ -9,9 +9,9 @@
         <!-- Dropdown sortieren -->
         <div class="col-sm-4">
             <div class="qo-wrapper-select-box">
-                <select id="js_sort" class="qo-select-box bg-white js_sort_select" title="Sortieren">
+                <select id="js_sort" class="qo-select-box bg-white js_sort" title="Sortieren">
                     <option value="datum">nach Erscheinungsdatum</option>
-                    <option value="alphabetisch">alphabetisch</option>
+                    <option value="alphabetisch">alphabetisch</option> 
                     <option value="beliebtheit">nach Beliebtheit</option>
                 </select>
             </div>
@@ -20,7 +20,7 @@
 
         <!-- Suchfeld -->
         <div class="col-sm-4">
-            <input type="text" id="js_sort_text" class="qo-search-box bg-white fg-black js_sort_text" maxlength="30" placeholder="suchen">
+            <input type="text" id="js_sort_text" class="qo-search-box bg-white fg-black js_sort" maxlength="30" placeholder="suchen">
         </div>
         <!-- End Suchfeld -->
     </header>

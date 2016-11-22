@@ -7,6 +7,8 @@ sessionobject = {
     "username": sessionStorage.getItem('username'),
     "view": sessionStorage.getItem('view')
 };
+//zeitvariable zum limit der suchleiste
+var gtime = 0;
 
 
 $(function () {
@@ -58,19 +60,6 @@ $(function () {
                             item.innerHTML += greenicon;
                         }
                     }
-                    /*
-                     var flickityConfig = {
-                     // options
-                     cellAlign: 'left',
-                     cellSelector: '.js-carousel-cell',
-                     contain: true,
-                     imagesLoaded: true,
-                     prevNextButtons: false,
-                     setGallerySize: true
-                     };
-                     var $carousel = $('.js-carousel').flickity(flickityConfig);
-                     slideshowNavi.init($carousel);
-                     */
                     clicklistener();
                 });
                 break;
@@ -94,6 +83,7 @@ $(function () {
                     var $carousel = $('.js-carousel').flickity(flickityConfig);
                     slideshowNavi.init($carousel);
                     clicklistener();
+                    sortonchange();
                 });
                 break;
         }
@@ -138,6 +128,70 @@ $(function () {
             }
             viewSite();
         }
+    }
+
+    function sortonchange() {
+/*
+      var elem = $('.js_sort_text');
+      // Save current value of element
+      elem.data('oldVal', elem.val());
+      // Look for changes in the value
+      elem.on("propertychange change click keyup input paste", function(event){
+        // If value has changed...
+        if (elem.data('oldVal') != elem.val()) {
+          // Updated stored value
+          elem.data('oldVal', elem.val());
+          var time = Date.now();
+          console.log(gtime+" waaaaow "+ time)
+          if(gtime+4000 <= time || gtime === 0) {
+            gtime = Date.now();
+            var sortoption = document.getElementById('js_sort').value;
+            var searchString = elem.val();
+            getQuizView(10, searchString);
+            $(document).on("onQuizView", function( event, data ) {
+              console.log(data);
+            });
+          }
+       }
+      });
+*/
+
+        var elements = document.querySelectorAll('.js_sort');
+        console.log(elements);
+        //Eventlistener zu jedem Link hinzufügen
+        for (i = 0; i < elements.length; i++) {
+            var sort_eventcheck = elements[i].getAttribute('sortevent');
+            if (sort_eventcheck === null) {
+                elements[i].setAttribute('sortevent', "true");
+                elements[i].removeEventListener('change', handleSort);
+                elements[i].addEventListener('change', handleSort);
+            }
+
+        }
+
+        function handleSort(e) {
+            var sortoption = document.getElementById('js_sort').value;
+            var searchString = document.getElementById('js_sort_text').value;
+            switch (sortoption) {
+              case "beliebtheit":
+                sortoption = 2;
+                break;
+              case "alphabetisch":
+                sortoption = 1;
+                break;
+              case "datum":
+                sortoption = 0;
+                break;
+              default:
+                sortoption = "";
+                break;
+            }
+            getQuizView(10, searchString, sortoption);
+            $(document).on("onQuizView", function( event, data ) {
+              console.log(data);
+            });
+        }
+
     }
 
     viewSite();
