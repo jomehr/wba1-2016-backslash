@@ -20,68 +20,49 @@ $(function () {
         sessionobject.view = parseInt(sessionobject.view);
     }
 
-    function viewSite() {
-        switch (sessionobject.view) {
-            case 1:
-                view.render("quizinfo", function () {
-                    clicklistener();
+    function viewSite() {   //function to switch views
+        switch (sessionobject.view) {//switch sessionobject
+            case 1:   // case1 quizinfo
+                view.render("quizinfo", function () {   //viewclass render quizinfo
+                    clicklistener();    //add eventlistner
                 });
                 break;
-            case 2:
-                view.render("quizround", function (quizrounddata) {
-                    clicklistener();
-                    quiz.startQuiz(quizrounddata);
-                    //hier muss noch eine art callback rein.
-                    //viewSite();
-
-                    $("#templatespaceholder").on("transitionend", function () {
-                        //console.log("sth");
-                    });
+            case 2:  //case2 quizround
+                view.render("quizround", function (quizrounddata) { //viewclass function render call, callback data
+                    clicklistener();    //add eventlistener
+                    quiz.startQuiz(quizrounddata);    //call quizstart with quizdata
                 });
                 break;
             case 3:
-                view.render("quizend", function () {
+                view.render("quizend", function () {    //case3 quizend
                     //Aktualisieren der richtig Falsch antworten & Scalebar füllen
                     var percent = Math.round((sessionobject.points / sessionobject.maxpoints) * 100);
-                    document.getElementById("JS_ScaleScore").style.width = percent + "%";
-                    document.getElementsByClassName("ss_score_balken")[0].setAttribute("data-value", "" + percent);
+                    document.getElementById("JS_ScaleScore").style.width = percent + "%";   //filling the scalescorebar
+                    document.getElementsByClassName("ss_score_balken")[0].setAttribute("data-value", "" + percent); //add data for animation
                     //Red/Green Icons füllen
-                    var item = document.getElementById('JS_Score');
+                    var item = document.getElementById('JS_Score');   //adding of right/wrong icons
                     var redicon = '<div class="ss_score_point bg-red animated flash" ></div>';
                     var greenicon = '<div class="ss_score_point bg-green" ></div>';
                     var length = sessionobject.countquestions;
                     var fragencount = JSON.parse(sessionStorage.getItem('rs_fragen'));
-                    for (var i = 0; i < fragencount.length; i++) {
+                    for (var i = 0; i < fragencount.length; i++) {    //loop right/wrong
                         if (fragencount[i] === false) {
                             item.innerHTML += redicon;
                         } else {
                             item.innerHTML += greenicon;
                         }
                     }
-                    /*
-                     var flickityConfig = {
-                     // options
-                     cellAlign: 'left',
-                     cellSelector: '.js-carousel-cell',
-                     contain: true,
-                     imagesLoaded: true,
-                     prevNextButtons: false,
-                     setGallerySize: true
-                     };
-                     var $carousel = $('.js-carousel').flickity(flickityConfig);
-                     slideshowNavi.init($carousel);
-                     */
-                    clicklistener();
+                    clicklistener();    //add eventlistener
                 });
                 break;
             case 4:
-                view.render("highscore", function () {
-                    clicklistener();
+                view.render("highscore", function () {  //case4: highscore
+                    clicklistener();    //add eventlistener
                 });
                 break;
             default:
-                view.render("quizoverview", function () {
-                    collapse.init();
+                view.render("quizoverview", function () { //case default: quizoverview
+                    collapse.init();    //on ready init collapse/flickity
                     var flickityConfig = {
                         // options
                         cellAlign: 'center',
@@ -93,20 +74,16 @@ $(function () {
                     };
                     var $carousel = $('.js-carousel').flickity(flickityConfig);
                     slideshowNavi.init($carousel);
-                    clicklistener();
+                    clicklistener();  //add evenlistener
                 });
                 break;
         }
-
-        //console.log("Bitte sessionStorage.setItem('view','id') in die Console eingeben. \n id info : \n 0 = default \n 1 = quizinfo \n 2 = quiz(undefined) \n 3 = quizend \n 4 = highscore(undefined)");
-
-
     }
 
     function clicklistener() {
-        var elements = document.querySelectorAll('.js-change-view');
+        var elements = document.querySelectorAll('.js-change-view');  //selector
         //Eventlistener zu jedem Link hinzufügen
-        for (i = 0; i < elements.length; i++) {
+        for (i = 0; i < elements.length; i++) {   //each element remove Eventlistener and then add Eventlistener
             var click_eventcheck = elements[i].getAttribute('events');
             if (click_eventcheck === null) {
                 elements[i].setAttribute('events', "true");
@@ -131,14 +108,14 @@ $(function () {
             } else {
                 sessionobject.quizID = click_quizid;
             }
-            sessionStorage.setItem('quizid', sessionobject.quizID);
+            sessionStorage.setItem('quizid', sessionobject.quizID); //set quizid for lateron data
             if (click_view !== sessionobject.view) {
                 sessionobject.view = click_view;
-                sessionStorage.setItem('view', sessionobject.view);
+                sessionStorage.setItem('view', sessionobject.view); //set sessionobject.view on chance
             }
-            viewSite();
+            viewSite();   //call viewsite function to get new view
         }
     }
 
-    viewSite();
+    viewSite(); //call viewsite on finished loading once to generate default site.
 });
