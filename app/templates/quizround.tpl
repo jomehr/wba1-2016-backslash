@@ -14,7 +14,7 @@
                         <g>
                             <title>Layer 1</title>
                             <circle id="circle" class="circle_animation" r="69.85699" cy="81" cx="81" stroke-width="12"
-                                    stroke="#e9c20c" fill="none" style="stroke-dashoffset:880px;"/>
+                                    stroke="#e9c20c" fill="none" />
                         </g>
                     </svg>
                 </div>
@@ -79,4 +79,4 @@
 </div>
 <script type="application/javascript" src="js/lib/timerScript.min.js"></script>
 <script type="application/javascript" src="js/quiz.class.js"></script>
-<script type="application/javascript" src="js/T12/script.js"></script>
+<script type="application/javascript" src="js/T12/round.js"></script>

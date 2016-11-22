@@ -9,9 +9,9 @@
         <!-- Dropdown sortieren -->
         <div class="col-sm-4">
             <div class="qo-wrapper-select-box">
-                <select id="js_sort" class="qo-select-box bg-white js_sort_text" title="Sortieren">
+                <select id="js_sort" class="qo-select-box bg-white js_sort" title="Sortieren">
                     <option value="datum">nach Erscheinungsdatum</option>
-                    <option value="alphabetisch">alphabetisch</option>
+                    <option value="alphabetisch">alphabetisch</option> 
                     <option value="beliebtheit">nach Beliebtheit</option>
                 </select>
             </div>
