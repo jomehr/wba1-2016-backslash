@@ -65,6 +65,7 @@ var view = {
         }
     },
     pre_quizoverview: function (callback) {
+      Quizobject = {};
       view.dat_QuizView(function(data){
         Quizobject.quizsuggestion = data; //copy object
 
@@ -74,6 +75,7 @@ var view = {
       });
     },
     pre_quizinfo: function (callback) {
+      Quizobject = {};
       view.dat_QuizViewByID(sessionobject.quizID,function(data){
         Quizobject.quizinfo = data;
         Quizobject.sessionobject = sessionobject;
@@ -84,6 +86,7 @@ var view = {
       });
     },
     pre_quizround: function (callback) {
+        Quizobject = {};
         view.dat_QuizByID(sessionobject.quizID,function(data){
           Quizobject.quiz = data;
           Quizobject.sessionobject = sessionobject;
@@ -95,6 +98,7 @@ var view = {
         });
     },
     pre_quizend: function (callback) {
+        Quizobject = {};
         fnc_reloadssobject(function (ready) {
             view.dat_QuizViewByID(sessionobject.quizID,function(data){
               Quizobject.datquiz = data;
@@ -144,20 +148,19 @@ var view = {
         });
     },
     pre_highscore: function (callback) {
-          view.dat_HighscoreByID(sessionobject.quizID, function(data) {
-            Quizobject = data;
-            Quizobject.sessionobject = sessionobject;
+      Quizobject = {};
+      view.dat_HighscoreByID(sessionobject.quizID, function(data) {
+        Quizobject = data;
+        Quizobject.sessionobject = sessionobject;
 
-            if (typeof callback == "function") {
+        if (typeof callback == "function") {
                 callback(Quizobject);
-            }
-          });
+        }
+      });
     },
     dat_QuizViewByID: function(quizID,callback){
-      console.log(quizID);
       getQuizViewByID(quizID);
       $(document).on("onQuizViewByID", function (event, data) {
-          console.log(data);
           if (typeof callback == "function") {
               callback(data);
           }
