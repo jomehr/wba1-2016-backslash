@@ -165,6 +165,20 @@ svg {
 
 }
 
+/* Answers - Background-Color */
+.answer--correct {
+  background-color: $color-green !important;
+}
+
+.answer--wrong {
+  background-color: $color-red !important;
+}
+
+.answer--correct span:last-child,
+.answer--wrong span:last-child {
+  background-color: transparent !important;
+}
+
 /*Fades / Slides*/
 
 .animated {
