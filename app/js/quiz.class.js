@@ -32,7 +32,7 @@ var quiz = {
 
     //Antwort prüfen
     checkAnswer: function (e) {
-        var indexAnswer = e.target.getAttribute('data-antwort');
+        var indexAnswer = this.getAttribute('data-antwort');
         var feedbackicons = document.querySelectorAll('.bg-mediumgrey');
         //Wurde die Frage richtig beantwortet?
         if (quiz.currentQuestion.antworten[indexAnswer].check) {
