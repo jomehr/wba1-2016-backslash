@@ -147,6 +147,7 @@ p {
 /*IMPRESSUM*/
 .p4 {
     font-family: "Noto Sans", sans-serif !important;
+	margin-bottom: 15px;
     text-align: left;
     line-height: 1.5;
     color: #504f48;
