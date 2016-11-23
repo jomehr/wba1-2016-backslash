@@ -1,3 +1,10 @@
+header {
+  .js-change-view {
+    //should fix logo anker not surrounding logo
+    display: inline-block;
+  }
+}
+
 #wa_desktop {
   position: relative;
   z-index: 20;

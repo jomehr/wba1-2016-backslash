@@ -13,27 +13,27 @@ var gtime = 0;
 
 $(function () {
     var username = sessionStorage.getItem('username');
-	var clickElements = document.querySelectorAll('.js-change-view');
+    var clickElements = document.querySelectorAll('.js-change-view');
     if (!username) {
-      sessionStorage.setItem('username', "unbekannt");
+        sessionStorage.setItem('username', "unbekannt");
     }
     if (sessionobject.view === undefined) {
         sessionobject.view = 0;
     } else {
         sessionobject.view = parseInt(sessionobject.view);
     }
-	view.init();
-	
-	// Klicklistener via Event Delgation initialisieren
-	document.querySelector("body").addEventListener("click", function (e) {
-		
-		//Haben wir auf ein Element geklickt und enthält das Element die Klasse 'js-change-view'
-		if (e.target && e.target.classList.contains('js-change-view')) {
-			handleClick(e);
-			
-		}
-	});
-	
+    view.init();
+
+    // Klicklistener via Event Delgation initialisieren
+    document.querySelector("body").addEventListener("click", function (e) {
+
+        //Haben wir auf ein Element geklickt und enthält das Element die Klasse 'js-change-view'
+        if (e.target && e.target.classList.contains('js-change-view')) {
+            handleClick(e);
+
+        }
+    });
+
     function viewSite() {
         switch (sessionobject.view) {
             case 1:
@@ -43,17 +43,31 @@ $(function () {
                 break;
             case 2:
                 view.render("quizround", function (quizrounddata) {
-                    quiz.startQuiz(quizrounddata);
-                    //hier muss noch eine art callback rein.
-                    //viewSite();
-
-                    $("#templatespaceholder").on("transitionend", function () {
-                        //console.log("sth");
+                    $.getScript("js/lib/timerScript.min.js", function () {
+                        //TODO: why do we need this
+                    });
+                    $.getScript("js/quiz.class.js", function () {
+                        quiz.startQuiz(quizrounddata);
+                    });
+                    $.getScript("js/T12/round.js", function () {
+                        //TODO: could start animation here
                     });
                 });
                 break;
             case 3:
                 view.render("quizend", function () {
+                    $.getScript("js/T05/slider.js", function () {
+
+                    });
+                    $.getScript("js/T05/script.js", function () {
+
+                    });
+                    $.getScript("js/T12/end.js", function () {
+
+                    });
+
+                    //TODO: check if all working
+
                     //Aktualisieren der richtig Falsch antworten & Scalebar füllen
                     var percent = Math.round((sessionobject.points / sessionobject.maxpoints) * 100);
                     document.getElementById("JS_ScaleScore").style.width = percent + "%";
@@ -80,18 +94,24 @@ $(function () {
                 break;
             default:
                 view.render("quizoverview", function () {
-                    collapse.init();
-                    var flickityConfig = {
-                        // options
-                        cellAlign: 'center',
-                        cellSelector: '.js-carousel-cell',
-                        contain: true,
-                        imagesLoaded: true,
-                        prevNextButtons: false,
-                        setGallerySize: true
-                    };
-                    var $carousel = $('.js-carousel').flickity(flickityConfig);
-                    slideshowNavi.init($carousel);
+                    $.getScript("js/T06/collapse.js", function () {
+                        collapse.init();
+                    });
+
+                    $.getScript("js/lib/flickity.pkgd.min.js", function () {
+                        var flickityConfig = {
+                            // options
+                            cellAlign: 'center',
+                            cellSelector: '.js-carousel-cell',
+                            contain: true,
+                            imagesLoaded: true,
+                            prevNextButtons: false,
+                            setGallerySize: true
+                        };
+                        var $carousel = $('.js-carousel').flickity(flickityConfig);
+                        slideshowNavi.init($carousel);
+                    });
+
                     sortonchange();
                 });
                 break;
@@ -100,28 +120,28 @@ $(function () {
         //console.log("Bitte sessionStorage.setItem('view','id') in die Console eingeben. \n id info : \n 0 = default \n 1 = quizinfo \n 2 = quiz(undefined) \n 3 = quizend \n 4 = highscore(undefined)");
     }
 
-	function handleClick(e) {
-		//Standardverhalten preventen
-		e.preventDefault();
-		if (document.getElementById("wa_Sidenav_mobil").getAttribute("data-navState") === "true") {
-			$("#nav-icon4").trigger("click");
-		}
+    function handleClick(e) {
+        //Standardverhalten preventen
+        e.preventDefault();
+        if (document.getElementById("wa_Sidenav_mobil").getAttribute("data-navState") === "true") {
+            $("#nav-icon4").trigger("click");
+        }
 
-		//data auslesen
-		var click_quizid = e.target.getAttribute('data-quizID');
-		var click_view = parseInt(e.target.getAttribute('data-view'));
-		if (click_quizid === null || click_quizid === undefined) {
-			sessionobject.quizID = 0;
-		} else {
-			sessionobject.quizID = click_quizid;
-		}
-		sessionStorage.setItem('quizid', sessionobject.quizID);
-		if (click_view !== sessionobject.view) {
-			sessionobject.view = click_view;
-			sessionStorage.setItem('view', sessionobject.view);
-		}
-		viewSite();
-	}	
+        //data auslesen
+        var click_quizid = e.target.getAttribute('data-quizID');
+        var click_view = parseInt(e.target.getAttribute('data-view'));
+        if (click_quizid === null || click_quizid === undefined) {
+            sessionobject.quizID = 0;
+        } else {
+            sessionobject.quizID = click_quizid;
+        }
+        sessionStorage.setItem('quizid', sessionobject.quizID);
+        if (click_view !== sessionobject.view) {
+            sessionobject.view = click_view;
+            sessionStorage.setItem('view', sessionobject.view);
+        }
+        viewSite();
+    }
 
     function sortonchange() {
         var elements = document.querySelectorAll('.js_sort');
@@ -140,21 +160,21 @@ $(function () {
             var sortoption = document.getElementById('js_sort').value;
             var searchString = document.getElementById('js_sort_text').value;
             switch (sortoption) {
-              case "beliebtheit":
-                sortoption = 2;
-                break;
-              case "alphabetisch":
-                sortoption = 1;
-                break;
-              case "datum":
-                sortoption = 0;
-                break;
-              default:
-                sortoption = "";
-                break;
+                case "beliebtheit":
+                    sortoption = 2;
+                    break;
+                case "alphabetisch":
+                    sortoption = 1;
+                    break;
+                case "datum":
+                    sortoption = 0;
+                    break;
+                default:
+                    sortoption = "";
+                    break;
             }
             getQuizView(10, searchString, sortoption);
-            $(document).on("onQuizView", function( event, data ) {
+            $(document).on("onQuizView", function (event, data) {
 
             });
         }

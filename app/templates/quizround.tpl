@@ -77,6 +77,3 @@
         </div>
     </div>
 </div>
-<script type="application/javascript" src="js/lib/timerScript.min.js"></script>
-<script type="application/javascript" src="js/quiz.class.js"></script>
-<script type="application/javascript" src="js/T12/round.js"></script>
