@@ -10,7 +10,6 @@ sessionobject = {
 //zeitvariable zum limit der suchleiste
 var gtime = 0;
 
-
 $(function () {
     var username = sessionStorage.getItem('username');
     var clickElements = document.querySelectorAll('.js-change-view');
@@ -37,16 +36,12 @@ $(function () {
     function viewSite() {
         switch (sessionobject.view) {
             case 1:
-                view.render("quizinfo", function () {
-
-                });
+                view.render("quizinfo");
                 break;
             case 2:
                 view.render("quizround", function (quizrounddata) {
-                    $.getScript("js/quiz.class.js", function () {
-                        quiz.startQuiz(quizrounddata);
-                    });
                     $.getScript("js/T12/round.js", function () {
+                        quiz.startQuiz(quizrounddata);
                         startTimer();
                     });
                 });
@@ -55,39 +50,31 @@ $(function () {
                 view.render("quizend", function () {
                     $.getScript("js/T05/slider.js", function () {
                         $.getScript("js/T05/script.js", function () {
-
+                            $.getScript("js/T12/end.js", function () {
+                                //Aktualisieren der richtig Falsch antworten & Scalebar füllen
+                                var percent = Math.round((sessionobject.points / sessionobject.maxpoints) * 100);
+                                document.getElementById("JS_ScaleScore").style.width = percent + "%";
+                                document.getElementsByClassName("ss_score_balken")[0].setAttribute("data-value", "" + percent);
+                                //Red/Green Icons füllen
+                                var item = document.getElementById('JS_Score');
+                                var redicon = '<div class="ss_score_point bg-red animated flash" ></div>';
+                                var greenicon = '<div class="ss_score_point bg-green" ></div>';
+                                var length = sessionobject.countquestions;
+                                var fragencount = JSON.parse(sessionStorage.getItem('rs_fragen'));
+                                for (var i = 0; i < fragencount.length; i++) {
+                                    if (fragencount[i] === false) {
+                                        item.innerHTML += redicon;
+                                    } else {
+                                        item.innerHTML += greenicon;
+                                    }
+                                }
+                            });
                         });
                     });
-
-                    $.getScript("js/T12/end.js", function () {
-
-                    });
-
-                    //TODO: check if all working
-
-                    //Aktualisieren der richtig Falsch antworten & Scalebar füllen
-                    var percent = Math.round((sessionobject.points / sessionobject.maxpoints) * 100);
-                    document.getElementById("JS_ScaleScore").style.width = percent + "%";
-                    document.getElementsByClassName("ss_score_balken")[0].setAttribute("data-value", "" + percent);
-                    //Red/Green Icons füllen
-                    var item = document.getElementById('JS_Score');
-                    var redicon = '<div class="ss_score_point bg-red animated flash" ></div>';
-                    var greenicon = '<div class="ss_score_point bg-green" ></div>';
-                    var length = sessionobject.countquestions;
-                    var fragencount = JSON.parse(sessionStorage.getItem('rs_fragen'));
-                    for (var i = 0; i < fragencount.length; i++) {
-                        if (fragencount[i] === false) {
-                            item.innerHTML += redicon;
-                        } else {
-                            item.innerHTML += greenicon;
-                        }
-                    }
                 });
                 break;
             case 4:
-                view.render("highscore", function () {
-
-                });
+                view.render("highscore");
                 break;
             default:
                 view.render("quizoverview", function () {
@@ -113,8 +100,6 @@ $(function () {
                 });
                 break;
         }
-
-        //console.log("Bitte sessionStorage.setItem('view','id') in die Console eingeben. \n id info : \n 0 = default \n 1 = quizinfo \n 2 = quiz(undefined) \n 3 = quizend \n 4 = highscore(undefined)");
     }
 
     function handleClick(e) {
