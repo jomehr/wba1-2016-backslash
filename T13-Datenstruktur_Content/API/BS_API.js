@@ -104,7 +104,7 @@ function getQuizView(anzahl, searchString, sort) {
 
             //Optionale Suche nach übergebenen Parameter "searchString"
             for (var i = 0; i < jsonData.length; i++) {
-                if (searchString != "" && jsonData[i].titel.indexOf(searchString) >= 0)
+                if(searchString != "" && jsonData[i].titel.toLowerCase().search(searchString) >= 0)
                 //Bei einem Fund wird dieses Quiz hinzugefuegt
                     quizArray.push(jsonData[i]);
                 else if (searchString == "")
@@ -115,9 +115,9 @@ function getQuizView(anzahl, searchString, sort) {
             if (sort == 0)
                 sortJSON(quizArray, "datum", false);
             else if (sort == 1)
-                sortJSON(jsonData, "titel", true);
+                sortJSON(quizArray, "titel", true);
             else if (sort == 2)
-                sortJSON(quizArray, "spielzahl", true);
+                sortJSON(quizArray, "spielzahl", false);
             else
                 sortJSON(quizArray, "datum", false);
             //Zuschneidung des Arrays auf die angefragte Groesse
@@ -146,94 +146,84 @@ function getQuizViewByID(quizID) {
     json_request.send();
 }
 
+var jsonHighsorePosition = "";
 //Holt 2 Position über und unter den angegebenen Punkten
-function getHighscorePositions(quizID, user, punkte) {
-    var highscoreData = baseURL + extHighscore;
+function getHighscorePositions(quizID, user, punkte, searchString = ""){
+    var highscoreData = baseURL + "/highscore.json";
     var json_request = new XMLHttpRequest();
 
-    json_request.onreadystatechange = function () {
-        if (json_request.readyState == 4 && json_request.status === 200) {
-            var jsonData = JSON.parse(json_request.responseText);
+    json_request.onreadystatechange = function(){
+        if(json_request.readyState == 4 && json_request.status === 200 ){
+			if(jsonHighsorePosition == "") {
+				var jsonData = JSON.parse(json_request.responseText);
+				jsonHighsorePosition = jsonData;
+			}	
+			else
+				var jsonData = jsonHighsorePosition;
             var hs = jsonData[quizID];
             var highscoreArray = [];
             var done = true;
             var i = 0;
-
-            while (done) {
-                if (i < hs.highscore.length) {
-                    //Abfrage ob die übergebenen Punkte groesser gleich der momentan ausgewaehlten sind
-                    if (hs.highscore[i].punktzahl <= punkte) {
-                        //Spezialfall wenn Position 1 ist: es werden vier positionen unter dem user hinzugefuegt
-                        if (hs.highscore[i].position == 1) {
-                            highscoreArray.push({position: 1, name: user, punktzahl: punkte});
-                            for (var j = 0; j < 4; j++) {
-                                highscoreArray.push({
-                                    position: (hs.highscore[i + j].position) + 1,
-                                    name: hs.highscore[i + j].name,
-                                    punktzahl: hs.highscore[i + j].punktzahl
-                                });
-                            }
-                        }
-                        //Spezialfall wenn Position 2 ist: es werden 3 positionen unter dem user hinzugefuegt und eine darueber
-                        else if (hs.highscore[i].position == 2) {
-                            highscoreArray.push(hs.highscore[i - 1]);
-                            highscoreArray.push({position: 2, name: user, punktzahl: punkte});
-                            for (var j = 0; j < 3; j++) {
-                                highscoreArray.push({
-                                    position: (hs.highscore[i + j].position) + 1,
-                                    name: hs.highscore[i + j].name,
-                                    punktzahl: hs.highscore[i + j].punktzahl
-                                });
-                            }
-                        }
-                        //Normalfall: es werden zwei positionen unter dem user hinzugefuegt und zwei darueber
-                        else if (hs.highscore[i].position < hs.highscore.length) {
-                            for (var j = 0; j < 2; j++) {
-                                highscoreArray.push(hs.highscore[i - 2 + j]);
-                            }
-                            highscoreArray.push({position: i + 1, name: user, punktzahl: punkte});
-                            for (var j = 0; j < 2; j++) {
-                                highscoreArray.push({
-                                    position: (hs.highscore[i + j].position) + 1,
-                                    name: hs.highscore[i + j].name,
-                                    punktzahl: hs.highscore[i + j].punktzahl
-                                });
-                            }
-                        }
-                        //Spezialfall wenn Position n-1 ist: es werden drei positionen ueber dem user hinzugefuegt und eine darunter
-                        else if (hs.highscore[i].position == hs.highscore.length) {
-                            for (var j = 0; j < 3; j++) {
-                                highscoreArray.push(hs.highscore[i - 3 + j]);
-                            }
-                            highscoreArray.push({position: i + 1, name: user, punktzahl: punkte});
-                            highscoreArray.push({
-                                position: (hs.highscore[i].position) + 1,
-                                name: hs.highscore[i].name,
-                                punktzahl: hs.highscore[i].punktzahl
-                            });
-                        }
-                        var jsonOut = ({highscore: highscoreArray});
-                        //Wenn die Suche erledigt ist wird es auf false gesetzt
-                        done = false;
-                    }
-                }
-                else {
-                    //Spezialfall wenn Position die Highscorelistlaenge ueberschreitet
-                    for (var j = 0; j < 4; j++) {
-                        highscoreArray.push(hs.highscore[i - 4 + j]);
-                    }
-                    highscoreArray.push({position: i + 1, name: user, punktzahl: punkte});
-                    var jsonOut = ({highscore: highscoreArray});
-                    done = false;
-                }
-                i++;
-            }
-
-            $(document).trigger("onHighscorePositions", [jsonOut]);
-        }
-    };
-    json_request.open("GET", highscoreData, true);
-    json_request.send();
+            if(searchString == "") {
+				while(done){
+					if(i<hs.highscore.length){
+						//Abfrage ob die übergebenen Punkte groesser gleich der momentan ausgewaehlten sind
+						if(hs.highscore[i].punktzahl <= punkte){
+							//Spezialfall wenn Position 1 ist: es werden vier positionen unter dem user hinzugefuegt
+							if(hs.highscore[i].position == 1){
+								highscoreArray.push({position: 1, name: user, punktzahl: punkte});
+								for(var j=0;j<4;j++){highscoreArray.push({position: (hs.highscore[i+j].position)+1,
+																		  name: hs.highscore[i+j].name,
+																		  punktzahl: hs.highscore[i+j].punktzahl});}
+							}
+							//Spezialfall wenn Position 2 ist: es werden 3 positionen unter dem user hinzugefuegt und eine darueber
+							else if(hs.highscore[i].position == 2){
+								highscoreArray.push(hs.highscore[i-1]);
+								highscoreArray.push({position: 2, name: user, punktzahl: punkte});
+								for(var j=0;j<3;j++){highscoreArray.push({position: (hs.highscore[i+j].position)+1,
+																		  name: hs.highscore[i+j].name,
+																		  punktzahl: hs.highscore[i+j].punktzahl});}
+							}
+							//Normalfall: es werden zwei positionen unter dem user hinzugefuegt und zwei darueber
+							else if(hs.highscore[i].position < hs.highscore.length){
+								for(var j=0;j<2;j++){highscoreArray.push(hs.highscore[i-2+j]);}
+								highscoreArray.push({position: i+1, name: user, punktzahl: punkte});
+								for(var j=0;j<2;j++){highscoreArray.push({position: (hs.highscore[i+j].position)+1,
+																		  name: hs.highscore[i+j].name,
+																		  punktzahl: hs.highscore[i+j].punktzahl});}
+							}
+							//Spezialfall wenn Position n-1 ist: es werden drei positionen ueber dem user hinzugefuegt und eine darunter
+							else if(hs.highscore[i].position == hs.highscore.length){
+								for(var j=0;j<3;j++){highscoreArray.push(hs.highscore[i-3+j]);}
+								highscoreArray.push({position: i+1, name: user, punktzahl: punkte});
+								highscoreArray.push({position: (hs.highscore[i].position)+1,
+													 name: hs.highscore[i].name,
+													 punktzahl: hs.highscore[i].punktzahl});
+							}                    
+						var jsonOut = ({highscore: highscoreArray});
+						//Wenn die Suche erledigt ist wird es auf false gesetzt
+						done = false;
+						}
+					}
+					else{
+						//Spezialfall wenn Position die Highscorelistlaenge ueberschreitet
+						for(var j=0;j<4;j++){highscoreArray.push(hs.highscore[i-4+j]);}
+						highscoreArray.push({position: i+1, name: user, punktzahl: punkte});
+						var jsonOut = ({highscore: highscoreArray});
+						done = false;
+					}
+					i++;
+				}
+			}
+			else {
+				jsonOut = hs.highscore.filter(function(hs){
+					return hs.name.toLowerCase().search(searchString.toLowerCase()) > -1 ? true : false;
+				});
+			}
+            $( document ).trigger( "onHighscorePositions", [ jsonOut ] );
+        }};
+json_request.open("GET", highscoreData,true );
+json_request.send();
 }
 
 //Zusaetzliche Funktionen fuer die Bearbeitung
