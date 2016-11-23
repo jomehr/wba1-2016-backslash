@@ -43,14 +43,11 @@ $(function () {
                 break;
             case 2:
                 view.render("quizround", function (quizrounddata) {
-                    $.getScript("js/lib/timerScript.min.js", function () {
-                        //TODO: why do we need this
-                    });
                     $.getScript("js/quiz.class.js", function () {
                         quiz.startQuiz(quizrounddata);
                     });
                     $.getScript("js/T12/round.js", function () {
-                        //TODO: could start animation here
+                        startTimer();
                     });
                 });
                 break;
