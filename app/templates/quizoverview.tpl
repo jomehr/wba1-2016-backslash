@@ -180,7 +180,7 @@
 
                 <!-- Headline -->
                 <div class="col-sm-8">
-                    <h2 class="qo-subheadline -withoutmargin">Das Stadion Quizz</h2>
+                    <h2 class="qo-subheadline -withoutmargin">EffZeh</h2>
                 </div>
                 <div class="col-sm-4 _hidden-xs ">
                     <p class="qo-infos"><strong>67</strong> mal gespielt</p>
@@ -238,7 +238,7 @@
 
                 <!-- Headline -->
                 <div class="col-sm-8">
-                    <h2 class="qo-subheadline -withoutmargin">Das Stadion Quizz</h2>
+                    <h2 class="qo-subheadline -withoutmargin">Verrückte Bälle rollen weit</h2>
                 </div>
                 <div class="col-sm-4 _hidden-xs ">
                     <p class="qo-infos"><strong>67</strong> mal gespielt</p>
