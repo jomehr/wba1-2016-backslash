@@ -72,7 +72,7 @@
     </header>
     {{#each quizes}}
     <!--  Sliderelement  -->
-    <div class="ss_slider_content row">
+    <div class="ss_slider_content row animated fadeInShort">
         <!--  linke Seite vom Slider  -->
         <div class="col-md-4">
             <h2>{{this.titel}}</h2>

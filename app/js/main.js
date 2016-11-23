@@ -54,11 +54,11 @@ $(function () {
             case 3:
                 view.render("quizend", function () {
                     $.getScript("js/T05/slider.js", function () {
+                        $.getScript("js/T05/script.js", function () {
 
+                        });
                     });
-                    $.getScript("js/T05/script.js", function () {
 
-                    });
                     $.getScript("js/T12/end.js", function () {
 
                     });

@@ -57,8 +57,8 @@ function changeAnswerButtonColor(e) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    console.log("sth");
+    /*console.log("sth");
     document.querySelectorAll('[data-antwort]').forEach(function (elem) {
         elem.addEventListener('click', changeAnswerButtonColor);
-    });
+    });*/
 });
