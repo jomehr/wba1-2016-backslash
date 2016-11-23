@@ -32,26 +32,22 @@
                 <div class="qr-answers font-secondary">
                     <button class="qr-fg-black bg-lightgrey fg-black">
                         <span class="qr-short bg-yellow">A</span>
-                        <span class="qr-long bg-lightgrey js-answer"
-                              onclick=""></span>
+                        <span class="qr-long bg-lightgrey js-answer"></span>
                     </button>
 
                     <button class="qr-fg-black bg-lightgrey fg-black">
                         <span class="qr-short bg-yellow">B</span>
-                        <span class="qr-long bg-lightgrey js-answer"
-                              onclick=""></span>
+                        <span class="qr-long bg-lightgrey js-answer"></span>
                     </button>
 
                     <button class="qr-fg-black bg-lightgrey fg-black">
                         <span class="qr-short bg-yellow">C</span>
-                        <span class="qr-long bg-lightgrey js-answer"
-                              onclick=""></span>
+                        <span class="qr-long bg-lightgrey js-answer"></span>
                     </button>
 
                     <button class="qr-fg-black bg-lightgrey fg-black">
                         <span class="qr-short bg-yellow">D</span>
-                        <span class="qr-long bg-lightgrey js-answer"
-                              onclick=""></span>
+                        <span class="qr-long bg-lightgrey js-answer"></span>
                     </button>
                 </div>
 

@@ -32,7 +32,7 @@ var quiz = {
 
     //Antwort prüfen
     checkAnswer: function (e) {
-        var indexAnswer = e.target.getAttribute('data-antwort');
+        var indexAnswer = this.getAttribute('data-antwort');
         var feedbackicons = document.querySelectorAll('.bg-mediumgrey');
         //Wurde die Frage richtig beantwortet?
         if (quiz.currentQuestion.antworten[indexAnswer].check) {
@@ -75,7 +75,7 @@ var quiz = {
             for (var i = 0; i < answerButtons.length; i++) {
 
                 //Ausgabe der Antwort Buttons in zufälliger Reihenfolge
-                answerButtons[i].setAttribute("data-antwort", arr[i]);
+                answerButtons[i].parentNode.setAttribute("data-antwort", arr[i]);
                 answerButtons[i].innerHTML = quiz.currentQuestion.antworten[arr[i]].text;
             }
 
@@ -139,7 +139,7 @@ var quiz = {
         //Eventlistener für Antwortbuttons setzen
         var answerButtons = document.querySelectorAll('.js-answer');
         for (var i = 0; i < answerButtons.length; i++) {
-            answerButtons[i].addEventListener('click', quiz.checkAnswer);
+            answerButtons[i].parentNode.addEventListener('click', quiz.checkAnswer);
         }
 
         //Frage und Antworten anzeigen
