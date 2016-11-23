@@ -49,12 +49,12 @@ p.qr-text {
 
 /*Flex-Ansicht um Schrift in der Antwort vertikal zu zentrieren*/
 .qr-answers button {
-    padding: 0px 0px 0px 0px;
-    height: 50px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  padding: 0;
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
 }
 
 .qr-answers button:hover {
@@ -62,22 +62,31 @@ p.qr-text {
 }
 
 .qr-answers button span {
-    height: 100%;
+    /*height: 100%;*/
     float: left;
     position: relative;
 }
 
 /*Design der Boxen mit den Answer-Keys*/
 .qr-answers button .qr-short {
-    width: 50px;
-    font-size: 30px;
-    line-height: 1.7;
+  width: 50px;
+  font-size: 30px;
+  /*line-height: 1.7;*/
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
 }
 
 /*Design der Boxen mit den Antworten*/
 .qr-answers button .qr-long {
-    font-size: 18px;
-    width: calc(100% - 50px);
+  font-size: 18px;
+  width: calc(100% - 50px);
+  padding: 10px;
+  min-height: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 /*Schriftfarbe in Antwort wird übergeben, da durch Teamkürzel die vordifinierte Klasse überschrieben wird*/
@@ -124,90 +133,129 @@ p.qr-text {
 
 /*Erster Breakpoint - Antwort-Boxen werden vergrößert*/
 @media screen and (max-width: 818px) {
-    .qr-answers button {
-        height: 100px;
-        width: 100%;
-    }
+  .qr-answers button {
+    /*height: 100px;*/
+    width: 100%;
+  }
 
-    .qr-answers button .qr-short {
-        width: 50px;
-        font-size: 30px;
-        line-height: 3.3;
-    }
+  .qr-answers button .qr-short {
+    width: 50px;
+    font-size: 30px;
+    /*line-height: 3.3;*/
+  }
 
-    .qr-answers button .qr-long {
-        font-size: 18px;
-        width: calc(100% - 50px);
-        line-height: 1.7;
-        padding: 0px 10px 0px 10px;
-    }
+  .qr-answers button .qr-long {
+    font-size: 18px;
+    width: calc(100% - 50px);
+    line-height: 1.7;
+    padding: 0 10px 0 10px;
+  }
 
-    .qr-answers button:hover {
-        background-color: #f8f5e4;
-    }
+  .qr-timer, .qr-question {
+    padding: 0;
+  }
 }
 
 /*Zweiter Breakpoint - Feedbacck-Icons werden verkleinert*/
 @media screen and (max-width: 538px) {
-    .qr-answer_icons {
-        width: auto;
-        height: 20px;
-        margin: 0 auto;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        text-align: center;
-    }
+  .qr-answer_icons {
+    width: auto;
+    height: 20px;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
 
-    .qr-answer_icon {
-        width: 20px;
-        height: 20px;
-        display: inline-block;
-        margin-right: 10px;
-        border-radius: 25px;
-    }
+  .qr-answer_icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 25px;
+  }
 
-    .qr-answer_icon_last {
-        width: 20px;
-        height: 20px;
-        display: inline-block;
-        border-radius: 25px;
-    }
+  .qr-answer_icon_last {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 25px;
+  }
 }
 
 /*Dritter Breakpoint - Feedbacck-Icons werden verkleinert, Schrift wird verkleinert*/
 @media screen and (max-width: 414px) {
-    .qr-answer_icons {
-        width: auto;
-        height: 16px;
-        margin: 0 auto;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        text-align: center;
+  .qr-answer_icons {
+    width: auto;
+    height: 16px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+
+  .qr-answer_icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 25px;
+  }
+
+  .qr-answer_icon_last {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border-radius: 25px;
+  }
+
+  .qr-answers button .qr-long {
+    font-size: 14px;
+    width: calc(100% - 50px);
+    line-height: 1.5;
+  }
+
+  .qr-button {
+    padding-top: 30px;
+  }
+
+  .qr-button button {
+    display: table-cell;
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .qr-mobile-body {
+    .background {
+      top: 0;
     }
 
-    .qr-answer_icon {
-        width: 16px;
-        height: 16px;
-        display: inline-block;
-        margin-right: 5px;
-        border-radius: 25px;
+    .wa_header_mobil {
+      display: none;
     }
 
-    .qr-answer_icon_last {
-        width: 16px;
-        height: 16px;
-        display: inline-block;
-        border-radius: 25px;
+    #templatespaceholder {
+      margin-top: -40px;
     }
+  }
 
-    .qr-answers button .qr-long {
-        font-size: 11px;
-        width: calc(100% - 50px);
-        line-height: 2.8;
-    }
+  .qr-timer .qr-timer-item {
+    margin-bottom: -20px;
+    margin-top: -20px;
+    transform: scale(0.5);
+  }
+}
 
-    .qr-button button {
-        display: table-cell;
-        width: 200px;
-    }
+.answer--correct {
+  background-color: #4ac725 !important;
+}
+
+.answer--wrong {
+  background-color: #cb0727 !important;
+}
+
+.answer--correct span:last-child,
+.answer--wrong span:last-child {
+  background-color: transparent !important;
 }
