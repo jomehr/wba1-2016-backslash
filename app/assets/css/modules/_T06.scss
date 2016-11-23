@@ -75,6 +75,8 @@ $grid-gutter-width: 15px;
 
 .qo-image {
   width: 100%;
+  margin: 0 0 $grid-gutter-width 0;
+
 }
 
 /* Bugfix - Höhe von Eingabefeldern und Dropdowns
@@ -184,7 +186,6 @@ $grid-gutter-width: 15px;
   &.-active {
     transition: all 0.5s;
     background-color: #f8f5e4;
-    padding-bottom: $grid-gutter-width;
 
   }
 }
@@ -198,8 +199,8 @@ $grid-gutter-width: 15px;
     bottom: 0;
     left: 0;
     right: 0;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0 0 $grid-gutter-width 0;
+
   }
   .qo-counter {
     text-align: right;
