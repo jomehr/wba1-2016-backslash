@@ -64,7 +64,7 @@
     <section class="parallaxHeader">
         <div class="headerLine">
 
-            <div id="menuF" class="default">
+            <div id="menuF" class="fixed bg-transparent">
                 <div class="container">
                     <div class="row">
 
@@ -602,21 +602,40 @@
 
 		var $menu = $("#menuF");
 
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > 100 && $menu.hasClass("default")) {
-				$menu.fadeOut('fast', function () {
-					$(this).removeClass("default")
-						.addClass("fixed transbg")
-						.fadeIn('fast');
-				});
-			} else if ($(this).scrollTop() <= 100 && $menu.hasClass("fixed")) {
-				$menu.fadeOut('fast', function () {
-					$(this).removeClass("fixed transbg")
-						.addClass("default")
-						.fadeIn('fast');
-				});
+//		$(window).scroll(function () {
+//			if ($(this).scrollTop() > 100 && $menu.hasClass("default")) {
+//				$menu.fadeOut('fast', function () {
+//					$(this).removeClass("default")
+//						.addClass("fixed transbg")
+//						.fadeIn('fast');
+//				});
+//			} else if ($(this).scrollTop() <= 100 && $menu.hasClass("fixed")) {
+//				$menu.fadeOut('fast', function () {
+//					$(this).removeClass("fixed transbg")
+//						.addClass("default")
+//						.fadeIn('fast');
+//				});
+//			}
+//		});
+		
+		
+	var scrollTimeout;  // global for any pending scrollTimeout
+	$(window).scroll(function () {
+		if (scrollTimeout) {
+			// clear the timeout, if one is pending
+			clearTimeout(scrollTimeout);
+			scrollTimeout = null;
+		}
+		scrollTimeout = setTimeout(scrollHandler, 100);
+	});
+	scrollHandler = function () {
+			if ($(this).scrollTop() > 100 && $menu.hasClass("menu-top")) {
+				$menu.removeClass("menu-top");
 			}
-		});
+			else if ($(this).scrollTop() <= 100) {
+				$menu.addClass("menu-top");
+			}
+		};
 	});
 	//jQuery
 	/*menu*/
@@ -627,8 +646,9 @@
 		var rangeTop = 200;
 		var rangeBottom = 500;
 		$('.navmenu').find('a').each(function () {
-			contentTop.push($($(this).attr('href')).offset().top);
-			contentBottom.push($($(this).attr('href')).offset().top + $($(this).attr('href')).height());
+			//Auskommentiert, da Operationen Fehler werfen
+			//contentTop.push($($(this).attr('href')).offset().top);
+			//contentBottom.push($($(this).attr('href')).offset().top + $($(this).attr('href')).height());
 		})
 		$.each(contentTop, function (i) {
 			if (winTop > contentTop[i] - rangeTop && winTop < contentBottom[i] - rangeBottom) {

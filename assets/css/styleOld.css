@@ -110,7 +110,9 @@ body {
 }
 
 #LogoSize {
-    min-height: 60px;
+	height: 40px;
+	transition: height 0.2s;
+/*    min-height: 60px;*/
 }
 
 /*MENU*/
@@ -169,7 +171,7 @@ body {
 #menu {
 / / margin-top: 33 px;
     float: right;
-    padding-top: 35px;
+    padding-top: 22px;
 }
 
 #menu li a {
@@ -205,9 +207,20 @@ body {
     display: none;
 }
 
+#menuF {
+	background-color: rgba(0, 0, 0, 0.85);
+	transition: background-color 0.2s;
+}
+
+#menuF.menu-top {
+	background-color: rgba(0, 0, 0, 0);
+}
+#menuF.menu-top #LogoSize { 
+	height: 80px;
+}
+
 /*MEDIA SCREEN 991px*/
 @media screen and (max-width: 991px) {
-
     .news p {
         text-align: center;
     }
@@ -229,10 +242,12 @@ body {
         display: none !important;
     }
 
+/*
     .fixed {
         opacity: 0;
     / / display: none;
     }
+*/
 
     .slicknav_menu {
         display: block;
@@ -1142,5 +1157,5 @@ body {
     position: fixed;
     padding-bottom: 10px;
     width: 100%;
-    background-color: #000000 !important;
+/*    background-color: #000000 !important;*/
 }
