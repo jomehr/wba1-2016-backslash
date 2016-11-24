@@ -33,8 +33,8 @@ var quiz = {
 
     //Antwort prüfen
     checkAnswer: function (e) {
-        if (!this.quizBlocked) {
-            this.quizBlocked = true;
+        if (!quiz.quizBlocked) {
+            quiz.quizBlocked = true;
 
             var indexAnswer = this.getAttribute('data-antwort');
             var feedbackicons = document.querySelectorAll('.bg-mediumgrey');
@@ -58,7 +58,7 @@ var quiz = {
     //Nächste Frage abrufen
     nextQuestion: function (firstQuestion) {
         $("body").addClass("qr-mobile-body");
-        this.quizBlocked = false;
+        quiz.quizBlocked = false;
 
         if (!firstQuestion) {
             // Hintergrundfarben der Antwortbuttons bei jeder neuen Frage zurücksetzen
@@ -94,7 +94,7 @@ var quiz = {
             //Counter clearen
             clearInterval(quiz.interval);
 
-            var counter = this.quizDuration;
+            var counter = quiz.quizDuration;
 
             //Counter herunterzählen
             quiz.interval = setInterval(function () {
@@ -124,6 +124,7 @@ var quiz = {
 
     //Quiz starten
     startQuiz: function (data) {
+        quiz.init();
 
         //Fragen kommen via data
         Quizobject = data;
@@ -184,5 +185,27 @@ var quiz = {
         sessionStorage.setItem('time_needed', gesamtZeitSek);
         //Weiterleiten auf Quizende
         document.getElementById('quiz_beenden').click();
+    },
+
+    init: function () {
+        quiz.correctAnswersNumber = null;
+        quiz.countCorrectAnswers = [false, false, false, false, false, false, false, false, false, false];
+        quiz.counter = null;
+        quiz.indexCurrentQuestion = null;
+        quiz.interval = null;
+        quiz.numberOfQuestions = null;
+        quiz.questions = null;
+        quiz.quizBlocked = false;
+        quiz.quizDuration = 15;
+        quiz.startTime = null;
+
+        sessionStorage.setItem('points', 0);
+        sessionStorage.setItem('maxpoints', "1000");
+        sessionStorage.setItem('correctanswers', quiz.correctAnswersNumber);
+        sessionStorage.setItem('amountquestions', quiz.numberOfQuestions);
+        sessionStorage.setItem('rs_fragen', JSON.stringify(quiz.countCorrectAnswers));
+        sessionStorage.setItem('time_needed', 0);
+
+
     }
 };
