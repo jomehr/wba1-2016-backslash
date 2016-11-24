@@ -33,6 +33,7 @@ var quiz = {
 
     //Antwort prüfen
     checkAnswer: function (e) {
+      console.log(e);
         if (!quiz.quizBlocked) {
             quiz.quizBlocked = true;
 
@@ -125,7 +126,6 @@ var quiz = {
     //Quiz starten
     startQuiz: function (data) {
         quiz.init();
-
         //Fragen kommen via data
         Quizobject = data;
         //QuizID aus URL holen
@@ -163,19 +163,15 @@ var quiz = {
         var duration = (currentTime - quiz.startTime) / 1000;
         //Quiz counter stoppen
         var gesamtZeitSek = parseFloat(duration, 10).toFixed(3);
-        var maxMultiplikator = 1.0;
-        var aktMultiplikator = 0;
-        if (gesamtZeitSek <= 30) {
-            aktMultiplikator = 1.0;
-        }
-        else if (gesamtZeitSek >= 80) {
-            aktMultiplikator = 0.5;
-        }
-        else {
-            aktMultiplikator = maxMultiplikator - (gesamtZeitSek * 0.01);
+        var maxpunktzahl= quiz.correctAnswersNumber*100;
+        var minpunktzahl = maxpunktzahl-100;
+        var endpunktzahl = parseInt(maxpunktzahl - gesamtZeitSek + 50);  //20 sekunden animationen timer +30 sekunde für volle punkte
+        if(endpunktzahl > maxpunktzahl) {
+          endpunktzahl = maxpunktzahl;
+        } else if (endpunktzahl < minpunktzahl) {
+          endpunktzahl = minpunktzahl;
         }
 
-        var endpunktzahl = parseInt(quiz.correctAnswersNumber * 100 * aktMultiplikator);
         sessionStorage.setItem('points', endpunktzahl);
         sessionStorage.setItem('maxpoints', "1000");
         sessionStorage.setItem('correctanswers', quiz.correctAnswersNumber);
