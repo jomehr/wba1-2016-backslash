@@ -205,7 +205,5 @@ var quiz = {
         sessionStorage.setItem('amountquestions', quiz.numberOfQuestions);
         sessionStorage.setItem('rs_fragen', JSON.stringify(quiz.countCorrectAnswers));
         sessionStorage.setItem('time_needed', 0);
-
-
     }
 };
