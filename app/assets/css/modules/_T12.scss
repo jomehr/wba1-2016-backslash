@@ -177,6 +177,10 @@ svg {
   background-color: transparent !important;
 }
 
+.answer--wrong span:last-child {
+  color: white;
+}
+
 /*Fades / Slides*/
 
 .animated {
