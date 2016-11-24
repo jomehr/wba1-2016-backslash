@@ -42,7 +42,8 @@ $(function () {
                 view.render("quizround", function (quizrounddata) {
                     $.getScript("js/T12/round.js", function () {
                         quiz.startQuiz(quizrounddata);
-                        startTimer();
+                        QuizRound.startTimer();
+                        QuizRound.bindAnswerClickListener();
                     });
                 });
                 break;

@@ -43,12 +43,22 @@ var quiz = {
         } else {
             feedbackicons[0].className = "qr-answer_icon bg-red";
         }
-        quiz.nextQuestion();
+
+        clearInterval(quiz.interval);
+        quiz.interval = null;
+        QuizRound.pauseTimer();
+        setTimeout(quiz.nextQuestion, 2000);
     },
 
     //Nächste Frage abrufen
-    nextQuestion: function () {
+    nextQuestion: function (firstQuestion) {
         $("body").addClass("qr-mobile-body");
+
+        if(!firstQuestion) {
+            // Hintergrundfarben der Antwortbuttons bei jeder neuen Frage zurücksetzen
+            QuizRound.resetAnswerButtonColor();
+            QuizRound.startTimer();
+        }
 
         //Haben wir noch eine Frage?
         if (quiz.indexCurrentQuestion < quiz.numberOfQuestions) {
@@ -79,25 +89,23 @@ var quiz = {
                 answerButtons[i].innerHTML = quiz.currentQuestion.antworten[arr[i]].text;
             }
 
-            //Counter initialisieren
-            var counter = base.quizDuration;
-
-            quiz.counter.innerHTML = counter;
-
             //Counter clearen
             clearInterval(quiz.interval);
+
+            var counter = base.quizDuration;
 
             //Counter herunterzählen
             quiz.interval = setInterval(function () {
                 counter--;
-                quiz.counter.innerHTML = counter;
 
                 //Ist der Counter abgelaufen?
                 if (counter === 0) {
                     //Nächste Frage anzeigen
-                    quiz.nextQuestion();
-                    var feedbackicons = document.querySelectorAll('.bg-mediumgrey');
-                    feedbackicons[0].className = "qr-answer_icon bg-red";
+                    setTimeout(function() {
+                        quiz.nextQuestion();
+                        var feedbackicons = document.querySelectorAll('.bg-mediumgrey');
+                        feedbackicons[0].className = "qr-answer_icon bg-red";
+                    }, 1000);
                 }
             }, 1000);
 
@@ -107,6 +115,7 @@ var quiz = {
 
             //Quizrunde beenden
             clearInterval(quiz.interval);
+            quiz.interval = null;
             quiz.endQuiz();
         }
     },
@@ -134,7 +143,6 @@ var quiz = {
         }
 
         quiz.startTime = Date.now();
-        quiz.counter = document.querySelector('.js-counter');
 
         //Eventlistener für Antwortbuttons setzen
         var answerButtons = document.querySelectorAll('.js-answer');
@@ -143,7 +151,7 @@ var quiz = {
         }
 
         //Frage und Antworten anzeigen
-        quiz.nextQuestion();
+        quiz.nextQuestion(true);
 
     },
 
@@ -151,7 +159,6 @@ var quiz = {
         var currentTime = Date.now();
         var duration = (currentTime - quiz.startTime) / 1000;
         //Quiz counter stoppen
-        quiz.counter.innerHTML = 0;
         var gesamtZeitSek = parseFloat(duration, 10).toFixed(3);
         var maxMultiplikator = 1.0;
         var aktMultiplikator = 0;

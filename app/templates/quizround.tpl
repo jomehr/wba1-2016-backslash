@@ -13,8 +13,7 @@
                     <svg width="160" height="160">
                         <g>
                             <title>Layer 1</title>
-                            <circle id="circle" class="circle_animation" r="69.85699" cy="81" cx="81" stroke-width="12"
-                                    stroke="#e9c20c" fill="none" />
+                            <circle id="circle" class="circle_animation" r="69.85699" cy="81" cx="81" stroke-width="12" stroke="#e9c20c" fill="none" />
                         </g>
                     </svg>
                 </div>
