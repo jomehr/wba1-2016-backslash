@@ -153,6 +153,7 @@ var view = {
                                     Quizobject.quizes = nQuizObject;
                                     Quizobject.quizes = Quizobject.quizes.slice(0, 4);
                                     $.extend(Quizobject.datquiz, sessionobject);
+
                                     if (typeof callback == "function" && doCallback) {
                                         doCallback = false;
                                         callback(Quizobject);

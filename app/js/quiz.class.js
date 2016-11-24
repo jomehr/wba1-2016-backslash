@@ -1,60 +1,66 @@
 var Quizobject = {};
-//Basis Configs
-var base = {
-    quizDuration: 15
-};
 
 var quiz = {
+    //Anzahl korrekter Antworten
+    correctAnswersNumber: null,
 
     //Anzahl der richtig beantworteten Fragen
     countCorrectAnswers: [false, false, false, false, false, false, false, false, false, false],
 
-    correctAnswersNumber: null,
-
-    //Anzahl der Fragen
-    numberOfQuestions: null,
+    //Timer
+    counter: null,
 
     //Aktuelle Frage
     indexCurrentQuestion: null,
 
+    //Reference Interval
+    interval: null,
+
+    //Anzahl der Fragen
+    numberOfQuestions: null,
+
     //JSON mit Fragen
     questions: null,
+
+    //Blocks quiz between two questions
+    quizBlocked: false,
+
+    //Zeit pro Frage (in Sek.)
+    quizDuration: 15,
 
     //Startzeit
     startTime: null,
 
-    //Reference Interval
-    interval: null,
-
-    //Timer
-    counter: null,
-
-
     //Antwort prüfen
     checkAnswer: function (e) {
-        var indexAnswer = this.getAttribute('data-antwort');
-        var feedbackicons = document.querySelectorAll('.bg-mediumgrey');
-        //Wurde die Frage richtig beantwortet?
-        if (quiz.currentQuestion.antworten[indexAnswer].check) {
-            //quiz.countCorrectAnswers[indexAnswer]++;
-            quiz.countCorrectAnswers[quiz.indexCurrentQuestion - 1] = true;
-            quiz.correctAnswersNumber++;
-            feedbackicons[0].className = "qr-answer_icon bg-green";
-        } else {
-            feedbackicons[0].className = "qr-answer_icon bg-red";
-        }
+        if (!this.quizBlocked) {
+            this.quizBlocked = true;
 
-        clearInterval(quiz.interval);
-        quiz.interval = null;
-        QuizRound.pauseTimer();
-        setTimeout(quiz.nextQuestion, 2000);
+            var indexAnswer = this.getAttribute('data-antwort');
+            var feedbackicons = document.querySelectorAll('.bg-mediumgrey');
+            //Wurde die Frage richtig beantwortet?
+            if (quiz.currentQuestion.antworten[indexAnswer].check) {
+                //quiz.countCorrectAnswers[indexAnswer]++;
+                quiz.countCorrectAnswers[quiz.indexCurrentQuestion - 1] = true;
+                quiz.correctAnswersNumber++;
+                feedbackicons[0].className = "qr-answer_icon bg-green";
+            } else {
+                feedbackicons[0].className = "qr-answer_icon bg-red";
+            }
+
+            clearInterval(quiz.interval);
+            quiz.interval = null;
+            QuizRound.pauseTimer();
+            setTimeout(quiz.nextQuestion, 2000);
+        }
     },
 
     //Nächste Frage abrufen
     nextQuestion: function (firstQuestion) {
         $("body").addClass("qr-mobile-body");
+        this.quizBlocked = false;
 
-        if(!firstQuestion) {
+        if (!firstQuestion) {
             // Hintergrundfarben der Antwortbuttons bei jeder neuen Frage zurücksetzen
             QuizRound.resetAnswerButtonColor();
             QuizRound.startTimer();
@@ -62,10 +68,6 @@ var quiz = {
 
         //Haben wir noch eine Frage?
         if (quiz.indexCurrentQuestion < quiz.numberOfQuestions) {
-            /*document.querySelectorAll('[data-antwort]').forEach(function (elem) {
-                elem.addEventListener('click', changeAnswerButtonColor);
-            });*/
-
             //Aktuelle Frage und Antworten aus JSON holen
             quiz.currentQuestion = quiz.questions[quiz.indexCurrentQuestion];
             //Aktuelle Frage in HTML schreiben
@@ -92,7 +94,7 @@ var quiz = {
             //Counter clearen
             clearInterval(quiz.interval);
 
-            var counter = base.quizDuration;
+            var counter = this.quizDuration;
 
             //Counter herunterzählen
             quiz.interval = setInterval(function () {
@@ -101,7 +103,7 @@ var quiz = {
                 //Ist der Counter abgelaufen?
                 if (counter === 0) {
                     //Nächste Frage anzeigen
-                    setTimeout(function() {
+                    setTimeout(function () {
                         quiz.nextQuestion();
                         var feedbackicons = document.querySelectorAll('.bg-mediumgrey');
                         feedbackicons[0].className = "qr-answer_icon bg-red";

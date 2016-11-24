@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     function frame() {
         /* Übergabe der Data_Value nach score */
-        if (document.getElementById("myScore") !== undefined) {
+        if (document.getElementById("myScore") !== undefined && document.getElementById("myScore") !== null) {
             var score = document.getElementById("myScore").getAttribute("data-value");
             if (width >= score) {
                 clearInterval(id);

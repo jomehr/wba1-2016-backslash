@@ -1,13 +1,11 @@
-
-
 var QuizRound = {
 
     counterElement: null,
 
     timeInterval: null,
 
-    startTimer: function() {
-        if(this.counterElement === null) {
+    startTimer: function () {
+        if (this.counterElement === null) {
             this.counterElement = document.querySelector('.js-counter');
         }
 
@@ -15,7 +13,7 @@ var QuizRound = {
         this.timerInterval = null;
 
         var that = this,
-            time = base.quizDuration,
+            time = quiz.quizDuration,
             timeOffset = time,
             initialOffset = 440;
 
@@ -25,7 +23,7 @@ var QuizRound = {
         $circle_animation.css('stroke-dashoffset', 0);
 
         function calcAndUpdate(firstTime) {
-            if(this.timerInterval === null && firstTime !== true)
+            if (this.timerInterval === null && firstTime !== true)
                 return;
 
             var offsetTemp = initialOffset - (time * initialOffset / timeOffset);
@@ -33,7 +31,7 @@ var QuizRound = {
 
             that.counterElement.innerHTML = time;
 
-            if(time > timeOffset - 2)
+            if (time > timeOffset - 2)
                 $circle_animation.css('transition', 'all 1s linear');
 
             if (time === -1) {
@@ -48,12 +46,12 @@ var QuizRound = {
         calcAndUpdate(true);
     },
 
-    pauseTimer: function() {
+    pauseTimer: function () {
         clearInterval(this.timerInterval);
         this.timerInterval = null;
     },
 
-    changeAnswerButtonColor: function() {
+    changeAnswerButtonColor: function () {
         var answerElements = Array.prototype.slice.call(document.querySelectorAll('.js-answer'));
 
         answerElements.forEach(function (elem) {
@@ -71,7 +69,7 @@ var QuizRound = {
     },
 
 
-    resetAnswerButtonColor: function() {
+    resetAnswerButtonColor: function () {
         var answerElements = Array.prototype.slice.call(document.querySelectorAll('.js-answer'));
 
         answerElements.forEach(function (elem) {
@@ -85,11 +83,11 @@ var QuizRound = {
     },
 
 
-    bindAnswerClickListener: function() {
+    bindAnswerClickListener: function () {
         var that = this;
 
         var answerElements = Array.prototype.slice.call(document.querySelectorAll('.js-answer'));
-        answerElements.forEach(function(elem) {
+        answerElements.forEach(function (elem) {
             elem.parentNode.addEventListener('click', that.changeAnswerButtonColor);
         })
     }
