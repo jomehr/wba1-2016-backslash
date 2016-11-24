@@ -93,6 +93,8 @@ var view = {
         });
     },
     pre_quizround: function (callback) {
+        var doCallback = true;
+
         Quizobject = {};
         prefstate = 2;
         view.dat_QuizByID(sessionobject.quizID, function (data) {
@@ -103,7 +105,8 @@ var view = {
                 view.dat_QuizViewByID(sessionobject.quizID, function (data) {
                   if(prefstate === 2) {
                     Quizobject.quiz.titel = data.titel;
-                    if (typeof callback == "function") {
+                    if (typeof callback == "function" && doCallback) {
+                        doCallback = false;
                         callback(Quizobject);
                     }
                   }
@@ -112,9 +115,10 @@ var view = {
         });
     },
     pre_quizend: function (callback) {
+        var doCallback = true;
+
         Quizobject = {};
         prefstate = 3;
-        var doCallback = true;
         fnc_reloadssobject(function (ready) {
             view.dat_QuizViewByID(sessionobject.quizID, function (data) {
                 if (prefstate === 3) {

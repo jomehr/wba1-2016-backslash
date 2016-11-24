@@ -33,7 +33,6 @@ var quiz = {
 
     //Antwort prüfen
     checkAnswer: function (e) {
-      console.log(e);
         if (!quiz.quizBlocked) {
             quiz.quizBlocked = true;
 
@@ -100,15 +99,16 @@ var quiz = {
             //Counter herunterzählen
             quiz.interval = setInterval(function () {
                 counter--;
-
                 //Ist der Counter abgelaufen?
                 if (counter === 0) {
+
                     //Nächste Frage anzeigen
-                    setTimeout(function () {
-                        quiz.nextQuestion();
+                    clearInterval(quiz.interval);
+                    quiz.interval = null;
+                    QuizRound.pauseTimer();
+                    setTimeout(quiz.nextQuestion, 2000);
                         var feedbackicons = document.querySelectorAll('.bg-mediumgrey');
                         feedbackicons[0].className = "qr-answer_icon bg-red";
-                    }, 1000);
                 }
             }, 1000);
 
@@ -162,6 +162,7 @@ var quiz = {
         var currentTime = Date.now();
         var duration = (currentTime - quiz.startTime) / 1000;
         //Quiz counter stoppen
+        counter = 0;
         var gesamtZeitSek = parseFloat(duration, 10).toFixed(3);
         var maxpunktzahl= quiz.correctAnswersNumber*100;
         var minpunktzahl = maxpunktzahl-100;
@@ -179,6 +180,11 @@ var quiz = {
         sessionStorage.setItem('view', '3');
         sessionStorage.setItem('rs_fragen', JSON.stringify(quiz.countCorrectAnswers));
         sessionStorage.setItem('time_needed', gesamtZeitSek);
+
+
+
+
+
         //Weiterleiten auf Quizende
         document.getElementById('quiz_beenden').click();
     },
