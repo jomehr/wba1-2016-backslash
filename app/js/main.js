@@ -25,15 +25,13 @@ $(function () {
 
     // Klicklistener via Event Delgation initialisieren
     document.querySelector("body").addEventListener("click", function (e) {
-
         //Haben wir auf ein Element geklickt und enthält das Element die Klasse 'js-change-view'
         if (e.target && e.target.classList.contains('js-change-view')) {
             handleClick(e);
-
         }
     });
 
-    function viewSite() {
+    function oldViewSite() {
         switch (sessionobject.view) {
             case 1:
                 view.render("quizinfo");
@@ -42,8 +40,7 @@ $(function () {
                 view.render("quizround", function (quizrounddata) {
                     $.getScript("js/T12/round.js", function () {
                         quiz.startQuiz(quizrounddata);
-                        QuizRound.startTimer();
-                        QuizRound.bindAnswerClickListener();
+                        startTimer();
                     });
                 });
                 break;
@@ -103,6 +100,64 @@ $(function () {
         }
     }
 
+    function viewSite() {
+        switch (sessionobject.view) {
+            case 1:
+                view.render("quizinfo");
+                break;
+            case 2:
+                view.render("quizround", function (quizrounddata) {
+                    quiz.startQuiz(quizrounddata);
+                    QuizRound.startTimer();
+                    QuizRound.bindAnswerClickListener();
+                });
+                break;
+            case 3:
+                view.render("quizend", function () {
+                    //Aktualisieren der richtig Falsch antworten & Scalebar füllen
+                    var percent = Math.round((sessionobject.points / sessionobject.maxpoints) * 100);
+                    document.getElementById("JS_ScaleScore").style.width = percent + "%";
+                    document.getElementsByClassName("ss_score_balken")[0].setAttribute("data-value", "" + percent);
+                    //Red/Green Icons füllen
+                    var item = document.getElementById('JS_Score');
+                    var redicon = '<div class="ss_score_point bg-red animated flash" ></div>';
+                    var greenicon = '<div class="ss_score_point bg-green" ></div>';
+                    var length = sessionobject.countquestions;
+                    var fragencount = JSON.parse(sessionStorage.getItem('rs_fragen'));
+                    for (var i = 0; i < fragencount.length; i++) {
+                        if (fragencount[i] === false) {
+                            item.innerHTML += redicon;
+                        } else {
+                            item.innerHTML += greenicon;
+                        }
+                    }
+                });
+                break;
+            case 4:
+                view.render("highscore");
+                break;
+            default:
+                view.render("quizoverview", function () {
+                    collapse.init();
+
+                    var flickityConfig = {
+                        // options
+                        cellAlign: 'center',
+                        cellSelector: '.js-carousel-cell',
+                        contain: true,
+                        imagesLoaded: true,
+                        prevNextButtons: false,
+                        setGallerySize: true
+                    };
+                    var $carousel = $('.js-carousel').flickity(flickityConfig);
+                    slideshowNavi.init($carousel);
+
+                    sortonchange();
+                });
+                break;
+        }
+    }
+
     function handleClick(e) {
         //Standardverhalten preventen
         e.preventDefault();
@@ -136,7 +191,6 @@ $(function () {
                 elements[i].removeEventListener('change', handleSort);
                 elements[i].addEventListener('change', handleSort);
             }
-
         }
 
         function handleSort(e) {

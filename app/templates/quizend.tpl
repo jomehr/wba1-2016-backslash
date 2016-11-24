@@ -103,3 +103,7 @@
         </div>
     </div>
 </section>
+
+<script type="application/javascript" src="js/T05/slider.js"></script>
+<script type="application/javascript" src="js/T05/script.js"></script>
+<script type="application/javascript" src="js/T12/end.js"></script>
