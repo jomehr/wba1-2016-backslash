@@ -100,10 +100,14 @@ var view = {
                 Quizobject.quiz = data;
                 Quizobject.sessionobject = sessionobject;
                 Quizobject.quiz.titel = "Quiztitel"; //TODO: get from API
-
-                if (typeof callback == "function") {
-                    callback(Quizobject);
-                }
+                view.dat_QuizViewByID(sessionobject.quizID, function (data) {
+                  if(prefstate === 2) {
+                    Quizobject.quiz.titel = data.titel;
+                    if (typeof callback == "function") {
+                        callback(Quizobject);
+                    }
+                  }
+                });
             }
         });
     },
