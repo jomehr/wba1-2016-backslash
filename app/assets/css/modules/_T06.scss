@@ -1,14 +1,6 @@
-/* Variablen
-============================================================*/
-
-//Breakpoint für Tablet-Ansicht
 $screen-sm-min: 768px;
 $grid-gutter-width: 15px;
 
-/* Helper
-============================================================*/
-
-//Zeigt Element nur bei Breakpoint SM an
 ._visible-xs-block {
   display: block;
   @media(min-width: $screen-sm-min) {
@@ -16,7 +8,6 @@ $grid-gutter-width: 15px;
   }
 }
 
-//Blendet Element bei Breakpoint SM aus
 ._hidden-xs {
   display: none !important;
   @media(min-width: $screen-sm-min) {
@@ -24,7 +15,6 @@ $grid-gutter-width: 15px;
   }
 }
 
-//Setzt zwei Spalten in einer Row auf gleiche Höhe bei Breakpoint SM
 .row._same-height-sm {
   @media(min-width: $screen-sm-min) {
     display: flex;
@@ -35,7 +25,6 @@ $grid-gutter-width: 15px;
   }
 }
 
-//Setzt zwei Spalten in einer Row auf gleiche Höhe bei Breakpoint XS
 .row._same-height-xs {
   @media(max-width: $screen-sm-min - 1) {
     display: flex;
@@ -45,9 +34,6 @@ $grid-gutter-width: 15px;
     }
   }
 }
-
-/* Components und Elements
-============================================================*/
 
 .qo-box-last-played {
   padding-bottom: 80px;
@@ -212,9 +198,6 @@ $grid-gutter-width: 15px;
   .qo-author {
     margin-top: $grid-gutter-width;
   }
-  .qo-time {
-    //margin-top: $grid-gutter-width*2;
-  }
   .qo-points {
     background-color: #504f48; //ok, general
     color: white;
@@ -241,7 +224,7 @@ $grid-gutter-width: 15px;
     color: black;
     text-decoration: none;
   }
-  
+
   .qo-arrow {
     display: inline-block;
     padding-top: 2px;
@@ -255,8 +238,6 @@ $grid-gutter-width: 15px;
   }
 }
 
-/* Styles für Flickity
-============================================================*/
 .js-carousel-cell {
   box-sizing: content-box;
   height: auto;
@@ -273,7 +254,6 @@ $grid-gutter-width: 15px;
   }
 }
 
-//Vor- und Zurueck-Schalflaechen neben den Punkten
 .flickity-page-dots .button-item {
   margin: 0 20px !important;
 }
