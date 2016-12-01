@@ -10,7 +10,7 @@ body {
 
 .background {
     width: 100%;
-    height: 500px;
+    height: 600px;
     background-image: url(img/background.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -45,7 +45,7 @@ body {
 }
 
 .wa_header a {
-    font-family: Oswald;
+    font-family: Oswald, sans-serif;
     text-decoration: none;
     color: rgba(255, 255, 255, 1);
 }
@@ -67,6 +67,10 @@ body {
     list-style: none;
 }
 
+.wa_login li:first-child {
+    border-right: 1px solid white;
+}
+
 .wa_login a {
     font-size: 20px;
     padding: 2px;
@@ -74,10 +78,9 @@ body {
 
 #wa_Navigation2 {
     /*Durchsichtiger Hintergrund, also der Untere Teil des Footers */
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
     width: 100%;
-    margin-top: 0px;
+    margin-top: 0;
     height: 40px;
     padding-left: 15px;
 }
@@ -98,12 +101,12 @@ body {
 }
 
 .wa_menue a {
-    font-family: Oswald;
+    font-family: Oswald, sans-serif;
     color: rgba(255, 255, 255, 1);
+    text-decoration: none;
 }
 
 .wa_menue a:hover {
-    text-decoration: none;
     color: rgba(255, 255, 255, 1);
 }
 
@@ -113,7 +116,7 @@ body {
     color: white;
     padding: 10px;
     font-size: 20px;
-    font-family: Oswald;
+    font-family: Oswald, sans-serif;
 }
 
 .wa_footer {
@@ -128,9 +131,17 @@ body {
 .wa_copyright {
     /* Copyright Text im Footer*/
     color: rgba(255, 255, 255, 1);
-    font-family: Oswald;
+    font-family: Oswald, sans-serif;
     text-align: center;
     margin-top: 40px;
+}
+
+.wa_login a:hover {
+    color: #e9c20c;
+}
+
+.wa_menue a:hover {
+    color: #e9c20c;
 }
 
 @media screen and (max-width:768px) {
@@ -150,25 +161,26 @@ body {
         height: 64px;
         position: fixed;
         top: 0;
+        z-index: 20;
     }
     .wa_Button_mobil {
         color: rgba(255, 255, 255, 1);
         font-size: 35px;
         cursor: pointer;
         float: left;
-        margin-left: 20px;
         margin-top: 14px;
+        margin-left: 20px;
     }
     .wa_logo {
         height: 50px;
         display: block;
-        margin-left: 50%;
+        margin-left: 45%;
     }
     .wa_sidenav_mobil {
         position: fixed;
         overflow-x: hidden;
         z-index: 1;
-        padding-top: 60px;
+        padding-top: 20px;
         background-color: rgba(0, 0, 0, 0.8);
         margin-top: 64px;
         line-height: 1.7;
@@ -182,6 +194,7 @@ body {
         font-size: 25px;
         text-align: left;
         margin-left: -10px;
+        text-decoration: none;
     }
     .wa_sidenav_mobil .wa_closebtn_mobil {
         text-decoration: none;
@@ -196,7 +209,7 @@ body {
         margin-left: 0px;
     }
     .wa_sidenav_mobil a:hover {
-        color: white;
+        color: #e9c20c;
         text-decoration: none;
     }
     .wa_footer {
