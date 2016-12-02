@@ -1,3 +1,5 @@
+/*styleOld.css - alte css übernommen vom Template*/
+/*teilweise von T15 bearbeitet und aufgeräumt*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -9,8 +11,6 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
     outline: none !important;
 }
-
-/*TEMPLATE CSS - TEILWEISE VON T15 BEARBEITET UND AUFGERÄUMT*/
 
 html {
     background: #fff;
@@ -322,23 +322,9 @@ body {
     background: url(../images/sliderL.png) no-repeat;
 }
 
-.project {
-    margin-top: 12px;
+.downloads {
+    margin-top: 31px;
     text-align: center;
-}
-
-.project2 {
-    margin-top: 12px;
-    text-align: center;
-}
-
-.project p {
-    font-family: "Noto Sans", sans-serif;
-    font-size: 13px;
-    font-weight: 300;
-    margin-top: 16px;
-    line-height: 23px;
-    color: #504f48;
 }
 
 .cBusiness {

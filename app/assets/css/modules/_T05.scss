@@ -154,7 +154,6 @@
   margin-top: 8px;
 }
 
-/* MOBIL ANPASSUNGEN */
 @media only screen and (min-width: 992px) {
   .ss_slider_content .ss_slider_text {
     height: 170px;
@@ -185,14 +184,12 @@
   }
 }
 
-/* Internet Explorer und Edge anpassungen */
 @supports (-ms-accelerator:true) {
   .ss_scoreboard table {
     font-family: "Oswald", sans-serif; //ok, special
   }
 }
 
-/* old inline styles */
 .ss_slider h2 {
   text-align: center;
 }

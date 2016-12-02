@@ -1,3 +1,4 @@
+/*style.css erstellt von T15*/
 @charset "UTF-8";
 @import url(bootstrap.min.css);
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i|Oswald:300,400,700");
@@ -18,7 +19,7 @@ ol, ul {
     list-style: none;
 }
 
-/*fonts*/
+/*FONTS*/
 html * {
     font-family: "Noto Sans", sans-serif;
 }
@@ -58,6 +59,17 @@ h1 {
     color: #ffffff;
     border-bottom: 4px solid #e9c20c;
     margin: 0 0 !important;
+}
+
+/*MEDIA SCREEN 580px*/
+@media screen and (max-width: 580px) {
+    h1 {
+        font-size: 45px;
+        text-align: left;
+        color: #ffffff;
+        border-bottom: 4px solid #e9c20c;
+        margin: 0 0 !important;
+    }
 }
 
 h2 {
@@ -154,6 +166,7 @@ p {
     font-size: 14px !important;
 }
 
+/*PICTURES*/
 /*Parallax Effekt*/
 .parallax {
     background: url(../images/weedBackground.jpg) 100%;
@@ -175,10 +188,8 @@ p {
 
 .desktop-device .parallaxHeader {
 	background-attachment: fixed;
-	background-size: cover;
-	
+	background-size: cover;	
 }
-
 
 .image-wrapper {
     max-width: 100%;
@@ -202,7 +213,8 @@ p {
     margin-top: -75px;
 }
 
-/*Kauf Button Start*/
+/*BUTTONS*/
+/*Start Button*/
 .cBtn .start {
     padding: 25px;
     padding-right: 50px;
@@ -221,6 +233,13 @@ p {
 
 .cBtn .start:hover {
     background: #e9c20c;
+}
+
+/*MEDIA SCREEN 580px*/
+@media screen and (max-width: 580px) {
+    .cBtn .start {
+        margin-top: 180px;
+    }
 }
 
 /*Kauf Button*/
@@ -261,13 +280,56 @@ p {
     color: #e9c20c;
 }
 
+/*HEADER*/
+.navmenu {
+    text-align: center;
+}
+
+/*CONTENT*/
+.downloads {
+    margin-top: 31px;
+    text-align: center;
+}
+
+.downloads p {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    margin-top: 16px;
+    line-height: 23px;
+    color: #504f48;
+}
+
+.spieler {
+    margin-top: 31px;
+    text-align: center;
+}
+
+.spieler p {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    margin-top: 16px;
+    line-height: 23px;
+    color: #504f48;
+}
+
+.bewertungen {
+    margin-top: 12px;
+    text-align: center;
+}
+
 /*MEDIA SCREEN 991px*/
 @media screen and (max-width: 991px) {
-    .project {
+    .downloads {
+        margin-top: 55px;
+    }
+    
+    .spieler {
         margin-top: 55px;
     }
 
-    .project2 {
+    .bewertungen {
         margin-bottom: 30px
     }
 
@@ -276,9 +338,18 @@ p {
     }
 }
 
+.spielrow {
+    text-align: center;
+    padding-top: 80px;
+}
+
+.whitewindow {
+    margin-top: -80px;
+}
+
 /*ICONS*/
 .Des .fa-heart {
-/ / margin-left: - 14 px;
+    margin-left: - 14 px;
     background: url(../images/cir.png) no-repeat;
     padding: 26px;
     font-size: 24px;
@@ -305,19 +376,19 @@ p {
 }
 
 .Des h4 {
-/ / margin-left: - 19 px;
+    margin-left: - 19 px;
 }
 
 .Ver h4 {
-/ / margin-left: 0;
+    margin-left: 0;
 }
 
 .Fully h4 {
-/ / margin-left: 20 px;
+    margin-left: 20 px;
 }
 
 .fa-tablet {
-/ / margin-left: 20 px;
+    margin-left: 20 px;
     width: 73px;
     background: url(../images/cir.png) no-repeat;
     padding: 26px;
@@ -337,6 +408,29 @@ p {
     .fa-tablet {
         margin-top: 30px
     }
+}
+
+.expandbutton {
+    text-align: center;
+    margin-bottom: -90px;
+    z-index: 10;
+}
+
+.createquiz {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.holrow {
+    text-align: center;
+    padding-top: 170px;
+}
+
+/*FOOTER*/
+
+.contactrow {
+    text-align: center;
+    margin-top: 40px;
 }
 
 /*SOCIAL MEDIA*/
@@ -495,27 +589,18 @@ p {
     box-shadow: none;
 }
 
+/*down menu*/
+/*MEDIA SCREEN 991px*/
+@media screen and (max-width: 991px) {
+    .downMenuMarg {
+        margin-top: 40px;
+    }
+}
+
 #copy {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 25px;
-}
-
-/*MEDIA SCREEN 580px*/
-@media screen and (max-width: 580px) {
-
-    h1 {
-        font-size: 45px;
-        text-align: left;
-        color: #ffffff;
-        border-bottom: 4px solid #e9c20c;
-        margin: 0 0 !important;
-    }
-
-    /*Kauf Button Start*/
-    .cBtn .start {
-        margin-top: 220px;
-    }
 }
 
 /*IMPRESSUM*/
@@ -528,61 +613,10 @@ p {
     margin-bottom: 50px;
 }
 
+/*IMPRESSUM*/
 /*MEDIA SCREEN 580px*/
 @media screen and (max-width: 580px) {
     #iContent {
         margin-left: auto
     }
-}
-
-/*MEDIA SCREEN 991px*/
-@media screen and (max-width: 991px) {
-    .downMenuMarg {
-        margin-top: 40px;
-    }
-}
-
-/*PADDINGS AND MARGINS*/
-.whitewindow {
-    margin-top: -80px;
-}
-
-.expandbutton {
-    text-align: center;
-    margin-bottom: -90px;
-    z-index: 10;
-}
-
-.contactrow {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.spielrow {
-    text-align: center;
-    padding-top: 80px;
-}
-
-.holrow {
-    text-align: center;
-    padding-top: 170px;
-}
-
-.navmenu {
-    text-align: center;
-}
-
-.createquiz {
-    text-align: center;
-    padding-top: 10px;
-}
-
-/*PASSWORT.html*/
-#input form {
-    width: 150px;
-    margin: auto;
-}
-
-.pwbody {
-    padding-top: 200px;
 }
