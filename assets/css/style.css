@@ -49,11 +49,9 @@ html * {
     font-weight: 700;
 }
 
-h1, h2, h3, h5, h6, h7 {
-    font-family: "Oswald", sans-serif !important;
-}
 
 h1 {
+    font-family: "Oswald", sans-serif;
     font-size: 80px;
     text-align: left;
     color: #ffffff;
@@ -64,6 +62,7 @@ h1 {
 /*MEDIA SCREEN 580px*/
 @media screen and (max-width: 580px) {
     h1 {
+        font-family: "Oswald", sans-serif;
         font-size: 45px;
         text-align: left;
         color: #ffffff;
@@ -72,98 +71,79 @@ h1 {
     }
 }
 
-h2 {
-    font-size: 50px;
-    text-align: center;
-    color: #504f48;
-!important;
-}
-
-h3 {
-    font-size: 35px;
-    text-align: center;
-    color: #504f48;
-    margin: 10px;
-!important;
-}
-
-h3 a[name] {
+.headline {
+    font-family: "Oswald", sans-serif;
     display: block;
-    height: 110px;
-    color: transparent;
-}
-
-h3 [id] {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-h4 {
-    font-family: "Noto Sans", sans-serif !important;
-    font-size: 25px;
-    text-align: center;
-    color: #504f48;
-    margin: 10px;
-!important;
-}
-
-h5 {
     font-size: 35px;
     text-align: center;
-    color: #ffffff;
     margin: 10px;
-!important;
 }
 
-h6 {
-    font-size: 25px;
-    text-align: center;
-    color: #ffffff;
-    margin: 10px;
-!important;
-}
-
-/*IMPRESSUM*/
-.h7 {
+.impressumheadline {
+    font-family: "Oswald", sans-serif;
     font-size: 35px;
     text-align: left;
     color: #504f48;
     margin-top: 10px;
-!important;
 }
 
-p {
+.subline {
+    font-family: "Noto Sans", sans-serif !important;
+    font-size: 25px;
+    text-align: center;
+    margin: 10px;
+    display: block;
+    padding-bottom: 5px;
+}
+
+.sublineOswald {
+    font-family: "Oswald", sans-serif;
+    font-size: 25px;
+    text-align: center;
+    margin: 10px;
+    display: block;
+}
+
+.dark {
+    color: #504f48;
+}
+
+/*MEDIA SCREEN 991px*/
+@media screen and (max-width: 991px) {
+
+    .headlinepadding {
+        padding-top: 25px;
+    }
+}
+
+.white {
+    color: #ffffff;
+}
+
+.p {
     font-family: "Noto Sans", sans-serif !important;
     text-align: center;
     line-height: 1.5;
-    color: #504f48;
-    font-size: 14px !important;
+    font-size: 16px !important;
+    display: block;
 }
 
 .p2 {
     font-family: "Noto Sans", sans-serif !important;
     text-align: center;
     line-height: 1.5;
-    color: #ffffff;
     font-size: 20px !important;
-}
-
-.p3 {
-    font-family: "Noto Sans", sans-serif !important;
-    text-align: center;
-    line-height: 1.5;
-    color: #ffffff;
-    font-size: 14px !important;
+    display: block;
 }
 
 /*IMPRESSUM*/
-.p4 {
+.p3 {
     font-family: "Noto Sans", sans-serif !important;
 	margin-bottom: 15px;
     text-align: left;
     line-height: 1.5;
-    color: #504f48;
-    font-size: 14px !important;
+    font-size: 16px !important;
+    display: block;
 }
 
 /*PICTURES*/
@@ -250,6 +230,10 @@ p {
     background: #cb0727;
 }
 
+.cBtn ul{
+    margin-left:0px;
+}
+
 .cBtn .buy a {
     font-size: 18px;
     text-align: center;
@@ -278,6 +262,17 @@ p {
     border: none;
     outline: none;
     color: #e9c20c;
+}
+
+.anchor{
+    display: block;
+    position: relative;
+    top: -70px;
+    visibility: hidden;
+}
+
+.padding{
+    padding-top: 40px;
 }
 
 /*HEADER*/
@@ -314,9 +309,19 @@ p {
     color: #504f48;
 }
 
-.bewertungen {
-    margin-top: 12px;
+.countfont {
+    font-size: 50px;
     text-align: center;
+    color: #504f48;
+}
+
+.countcontent {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 25px;
+    text-align: center;
+    color: #504f48;
+    margin-top: 10px;
+    display: block;
 }
 
 /*MEDIA SCREEN 991px*/
@@ -341,10 +346,6 @@ p {
 .spielrow {
     text-align: center;
     padding-top: 80px;
-}
-
-.whitewindow {
-    margin-top: -80px;
 }
 
 /*ICONS*/
@@ -419,6 +420,10 @@ p {
 .createquiz {
     text-align: center;
     padding-top: 10px;
+}
+
+.minisocial{
+    padding-top: 5px;
 }
 
 .holrow {

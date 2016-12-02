@@ -327,10 +327,6 @@ body {
     text-align: center;
 }
 
-.cBusiness {
-    margin-top: 60px;
-}
-
 .centPic {
     margin-top: 30px;
     text-align: center;
@@ -1037,6 +1033,7 @@ body {
 }
 
 .downMenu li a {
+    font-size: 16px;
     padding: 8px;
     text-decoration: none;
     font-weight: 300;
