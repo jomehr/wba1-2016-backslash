@@ -2,12 +2,17 @@
 <html lang="de">
 
 <head>
+    <title>Fubuizz</title>
     <meta charset=UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link href="../../T09-CSS/style.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="WebApp_Rahmen_Tablet.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fubuizz</title>
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script type="text/javascript" src="../../T12_AnimationUebergaenge/final/scripts.js"></script>
+    <link href="../../T12_AnimationUebergaenge/final/animate.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -21,8 +26,7 @@
                 <!-- Dieses Div enthält das Login oben rechts-->
                 <nav class="wa_login">
                     <ul>
-                        <li><a href="#">Login</a></li>
-                        <li><a>|</a></li>
+                        <li><a href="#">Login </a></li>
                         <li><a href="#">Registrierung</a></li>
                     </ul>
                 </nav>
@@ -46,7 +50,9 @@
         <div id="wa_Sidenav_mobil" class="wa_sidenav_mobil font-secondary font-light">
             <!--Inhalt vom Sidenav-->
             <ul>
-                <li><a href="javascript:void(0)" class="wa_closebtn_mobil" onclick="closeNav()">&times;</a></li>
+                <li>
+                    <a href="javascript:void(0)" class="wa_closebtn_mobil" onclick="closeNav()"></a>
+                </li>
                 <!--Einbindung des Close Buttons mit Funktion-->
                 <li><a href="#">Übersicht</a></li>
                 <li><a href="#">Highscoreliste</a></li>
@@ -55,11 +61,26 @@
                 <li><a href="#">Einstellungen</a></li>
                 <li><a href="#">Login | Registrierung</a></li>
             </ul>
-        </div> <span class="wa_Button_mobil" onclick="openNav()">&#9776;</span>
+
+        </div> <span id="nav-icon4" class="wa_Button_mobil" onclick="openNav()">
+			<span></span>
+        <span></span>
+        <span></span>
+        </span>
+        <!-- Script ist auch ausgelagert in T12_AnimationUebergaenge/final/scripts.js macht aber Probleme-->
+        <script>
+            $(document).ready(function () {
+                $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function () {
+                    $(this).toggleClass('open');
+                });
+            });
+        </script>
+        <!--</div> <span class="wa_Button_mobil" onclick="openNav()">&#9776;</span>-->
         <!--Button zum öffnen der Sidenav-->
         <!--Javascriptfunktion Open und Close Button--><img src="img/Logo_Fubuizz.png" class="wa_logo" alt="Fubuizz_Logo_Mobile"> </header>
-    <div class="background">
-    </div>
+
+    <body class="background"></body>
+
     <!-- Beginn des Foooters -->
     <footer class="wa_footer">
         <!-- Das footer Element wird in der Klasse definiert -->
@@ -67,4 +88,5 @@
         <div class="wa_copyright"> © 2016 - Fubuizz </div>
     </footer>
 </body>
+
 </html>

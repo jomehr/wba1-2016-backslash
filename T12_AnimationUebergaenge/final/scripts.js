@@ -1,14 +1,22 @@
-var time = 15; /* how long the timer runs for */
-var initialOffset = '440';
-var i = 1;
-var interval = setInterval(function() {
-    $('.circle_animation').css('stroke-dashoffset', initialOffset-((-(time+i))*(initialOffset/time)));
-    $('.qr-timer-item').text(15-i);
-    if (i == time) {
-        clearInterval(interval);
-    }
-    i++;  
-}, 1000);
+$(document).ready(function(){
+	$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
+		$(this).toggleClass('open');
+	});
+});
+
+$(document).ready(function(){
+	var time = 15; /* how long the timer runs for */
+	var initialOffset = '440';
+	var i = 1;
+	var interval = setInterval(function() {
+		$('.circle_animation').css('stroke-dashoffset', initialOffset-((-(time+i))*(initialOffset/time)));
+		$('.qr-timer-item').text(15-i);
+		if (i == time) {
+			clearInterval(interval);
+		}
+		i++;  
+	}, 1000);
+});
 
 $(document).ready(function(){		 
 	var elem = document.getElementById("myBar");
@@ -32,14 +40,7 @@ $(document).ready(function(){
 	window.setTimeout(move,1000);
 });
 
-$(document).ready(function(){
-	$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
-		$(this).toggleClass('open');
-	});
-});
-
-
-/* Jorge H. F. Pereira did new one 
+/* Jorge H. F. Pereira did new one for dynamic live version */
 function changeAnswerButtonColor(n) {
 	switch(n){
 		case "wrongAnswer1":
