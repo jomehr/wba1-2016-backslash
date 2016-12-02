@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Fubuizz Dokumentation</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="language" content="deutsch, de">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="assets/ico/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/ico/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="assets/ico/manifest.json">
+    <link rel="mask-icon" href="assets/ico/safari-pinned-tab.svg" color="#e9c20c">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <meta name="msapplication-config" content="assets/ico/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta name="description"
+          content="Fubuizz ist das einzige Fußball-Quiz von Fans für Fans. Erstelle eigene Quizze oder passe es farblich deinem Lieblingsverein an. Spiele es jetzt kostenlos.">
+    <meta name="keywords"
+          content="quiz, fußball quiz, fußball fragen, kostenlos spielen, gratis spielen, fußballspiel, fußball, fußballverein, online quiz, bundesliga, weltmeisterschaft">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel='stylesheet' id='camera-css' href='assets/css/camera.css' type='text/css' media='all'>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/slicknav.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styleOld.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/doku_style.css">
+
+    <script type="text/javascript" src="assets/js/jquery-1.8.3.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/jquery.mobile.customized.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="assets/js/camera.min.js"></script>
+    <script type="text/javascript" src="assets/js/myscript.js"></script>
+    <script src="assets/js/sorting.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.isotope.js" type="text/javascript"></script>
+    <script type="text/javascript" src="assets/js/jquery.nav.js"></script>
+
+    <script>
+        jQuery(function () {
+            jQuery('#camera_wrap_1').camera({
+                transPeriod: 500,
+                time: 3000,
+                height: '490px',
+                thumbnails: false,
+                pagination: true,
+                playPause: false,
+                loader: false,
+                navigation: false,
+                hover: false
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+<!--home start-->
+<div id="home">
+    <section class="parallaxHeader">
+        <div class="headerLine">
+
+            <div id="menuF" class="fixed menu-top">
+                <div class="container">
+                    <div class="row">
+
+                        <!--fubuizz logo-->
+                        <div class="logo col-md-2">
+                            <div>
+                                <a href="http://wba1-backslash.christiannoss.de">
+                                    <img src="assets/images/LogoFubuizz.svg" alt="Fubuizz Logo" id="LogoSize">
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--menue-->
+                        <div class="col-md-10">
+                            <div class="navmenu">
+                                <ul id="menu">
+                                    <li><a href="http://wba1-backslash.christiannoss.de" class="smoothScroll">Home</a></li>
+									<li><a href="#iverzeichnis" class="smoothScroll">Inhaltsverzeichnis</a></li>
+                                    <li><a href="#einleitung" class="smoothScroll">Einleitung</a></li>
+                                    <li><a href="#hauptteil" class="smoothScroll">Hauptteil</a></li>
+                                    <li><a href="#schluss" class="smoothScroll">Schluss</a></li>
+                                    <li class="last"><a href="#anhang" class="smoothScroll">Anhang</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--menue punkt 1 - landingpage-aufriss-->
+            <div class="container">
+                <div class="row wrap">
+                    <div class="col-md-12 gallery">
+                        <!-- #camera_wrap_1 -->
+                        <div class="camera_wrap camera_white_skin" id="camera_wrap_1">
+
+                            <div data-thumb="" data-src="assets/images/slides/blank.gif">
+                                <div class="img-responsive camera_caption fadeFromBottom">
+                                    <h1>Backslash<br> Projektdokumentation</h1>
+                                </div>
+                                <div class="cBtn ">
+                                    <div class="col-md-12 cBtnhead">
+                                        <ul>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-thumb="" data-src="assets/images/slides/blank.gif">
+                                <div class="img-responsive camera_caption fadeFromBottom">
+                                    <h1>WBA1<br> Wintersemester 2016/2017 </h1>
+                                </div>
+                                <div class="cBtn">
+                                    <div class="col-md-12 cBtnhead">
+                                        <ul>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-thumb="" data-src="assets/images/slides/blank.gif">
+                                <div class="img-responsive camera_caption fadeFromBottom">
+                                    <h1>Daniel Spelten<br>Dominik Bieber</h1>
+                                </div>
+                                <div class="cBtn">
+                                    <div class="col-md-12 cBtnhead">
+                                        <ul>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--menue punkt 1 - landingpage-aufriss ENDE-->
+
+        </div>
+    </section>
+
+
+    <!--INHALTSVERZEICHNIS-->
+    <div class="container">
+        <div class="row">
+<div class="article">
+		<div class="header" id="iverzeichnis"><h6>Inhaltsverzeichnis</h6></div>
+		
+		<div class="navmenu">
+		<div class="inhaltsverzeichnis">
+		<h7>Einleitung</h7>
+<ul>
+    <li><a href="#auftrag" class="smoothScroll">Auftrag</a></li>
+    <li><a href="#zielsetzung" class="smoothScroll">Zielsetzung</a></li>
+    <li><a href="#arbeitspakete" class="smoothScroll">Arbeitspakete</a></li>
+</ul>
+<h7>Hauptteil</h7>
+<ul>    
+    <li><a href="#projektmanagement" class="smoothScroll">Projektmanagement</a></li>
+    <li><a href="#milestones" class="smoothScroll">Milestones</a></li>
+    <li><a href="#statischescreens" class="smoothScroll">Statische Screens</a></li>
+    <li><a href="#umsetzung" class="smoothScroll">Umsetzung</a></li>
+    <li><a href="#vereinheitlichen" class="smoothScroll">HTML vereinheitlichen und zusammenführen</a></li>
+    <li><a href="#templating" class="smoothScroll">Templating</a></li>
+        <ul>
+            <li><a href="#ueberblicktemplates" class="smoothScroll">Überblick des Templates</a></li>
+            <li><a href="#funktionsweisetemplates" class="smoothScroll">Funktionsweise des Templates</a></li>
+        </ul>
+    <li><a href="#css" class="smoothScroll">CSS</a></li>
+        <ul>
+            <li><a href="#praeprozessoren" class="smoothScroll">Präprozessoren</a></li>
+            <li><a href="#grid" class="smoothScroll">Grid-System</a></li>
+        </ul>
+    <li><a href="#javascript" class="smoothScroll">JavaScript</a></li>
+        <ul>
+            <li><a href="#json" class="smoothScroll">JSON</a></li>
+            <li><a href="#ablaufplan" class="smoothScroll">Ablaufplan</a></li>
+        </ul>
+    <li><a href="#markt" class="smoothScroll">Anwendung auf den Markt bringen</a></li>
+        <ul>
+            <li><a href="#onepager" class="smoothScroll">One-Pager</a></li>
+            <li><a href="#seo" class="smoothScroll">Search Engine Optimization</a></li>
+            <li><a href="#socialmedia" class="smoothScroll">Social Media</a></li>
+        </ul>
+</ul>
+<h7>Schluss</h7>
+<ul>
+    <li><a href="#fazit" class="smoothScroll">Fazit</a></li>
+</ul>
+<h7>Anhang</h7>
+<ul>
+    <li><a href="#abkuerzung" class="smoothScroll">Abkürzungsverzeichnis</a></li>
+</ul>
+</div>
+</div>
+</div></div></div>
+
+<section class="parallax">
+    <div class="line3">
+        <div class="container">
+            <div id="project1"></div>
+            <div class="row Ama">
+                <div class="col-md-12 spielrow">
+                    <h5>Projektdokumentation</h5>
+                    <span class="p2">Webbasierte Anwendungen 1, WS 16/17</span>
+                    <div class="cBtn">
+                        <div class="col-md-12 cBtn1">
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+		
+		<div class="article"><div class="row"><div class="container">
+		
+		
+		
+
+		<div class="header" id="einleitung"><h6>Einleitung</h6></div>
+        <div class="header" id="auftrag"><h7>Auftrag</h7></div>
+        <div class="text">
+            <p>Diese Dokumentation und das nachfolgende Projekt wurden im Rahmen der Veranstaltung “Webbasierte Anwendungen 1” im Wintersemester 2016/2017 für Medieninformatiker und Medieninformatikerinnen an der TH Köln als studentisches Projekt erstellt.
+			Innerhalb von sieben Kalenderwochen sollte ein Design-Entwurf, welcher zuvor in einer anderen Veranstaltung erarbeitet wurde, technisch umgesetzt werden.
+			Zur Versionierung und zur Realisierung wurde GitHub benutzt.</p>
+		</div>
+		
+		<div class="header" id="zielsetzung"><h7>Zielsetzung</h7></div>
+		<div class="text">
+		<p>Das Ziel war es innerhalb von sieben Wochen eine lauffähige Version des Produktes auf den Markt zu bringen. Alle Screens sollten mit Hilfe von HTML und CSS eine genaue Umsetzung des Entwurfes wiederspiegeln. Es musste mindestens ein Quiz gespielt werden können, was durch dynamischen Content mittels JSON Dateien gelingt. Es sollten außerdem OpenSource Frameworks genutzt werden, um ein leichtes und einheitliches Grundgerüst zu haben. Um neue Nutzer zu werben war ein One-Pager vorgesehen, der wie auch alle anderen Screens, auf einem Webserver liegt und für jedermann im Internet erreichbar ist.</p> 
+        </div>
+
+		<div class="header" id="arbeitspakete"><h7>Arbeitspakete</h7></div>
+		<div class="text">
+		<p>Um den Workflow zu optimieren, waren die Arbeiten auf mehrere Arbeitspakete aufgeteilt.
+			Diese wurden vom Projektmanagement koordiniert, welches in Zusammenarbeit mit den CEOs, die Formulierung und Einhaltung von Milestones überprüft hat. Das Verfassen dieser Projektdokumentation lag ebenfalls im Aufgabenbereich.
+			Um eine Basis zu haben, auf der man aufbauen kann, wurden statische Screens erstellt, die einheitliche CSS Vorgaben und Grafiken nutzen, welche von anderen Teams zur Verfügung gestellt wurden.
+			Weitere Teams kümmerten sich mit Hilfe von JavaScript um die Funktionen, die eine dynamische Darstellung des Inhalts ermöglichen. Weiterhin, werden auch Animationen genutzt, um Interaktionen benutzerfreundlicher darstellen zu können.</p>
+			Der eigentliche Inhalt, also die Quizze mit den dazugehörigen Fragen und Antworten, wurden ebenfalls von einem anderen Team bereitgestellt.
+			Die Arbeiten der gesamten Arbeitsgruppen zu bündeln und am Ende zusammenzuführen war die Aufgabe einer weiteren Fachgruppe. Diese diente außerdem als Ansprechpartner bei Fragen bezüglich der HTML-Struktur.
+			Zu guter Letzt gab es einige Teams, die nicht direkt mit dem Aufbau der Anwendung betraut waren. So gab es den Support, welcher Kenntnisse in sämtlichen Anwendungsbereichen aufweist und anderen Mitarbeitern bei Fragen weitergehende Hilfe leistete. Des Weiteren erstellte ein Team, über ein Framework eine Landing-Page, die mit Hilfe von Markt-Analysen und SEO, auf die Anwendung aufmerksam machen sollte.
+			Zu guter Letzt wurde sich mit den Datenschutzrechtlichen Bestimmungen befasst, die für die Anwendung im Internet gelten.</p>
+		</div>
+		
+		<div class="header" id="hauptteil"><h6>Hauptteil</h6></div>
+		<div class="header" id="projektmanagement"><h7>Projektmanagement</h7></div>
+		<div class="text">
+			<p>Das Projektmanagement war für die Organisation und Kommunikation zuständig. Zusätzlich zu den Issues auf GitHub wurden die Plattformen Slack, Trello und Skype genutzt.</p>
+			<p>Zu Beginn wurden die Milestones festgelegt, um einen groben Überblick über die kommenden Aufgaben und Wochen zu bekommen. Da es einige Aufgabenbereiche gab, die aufeinander aufbauten, mussten bindende Fristen festgelegt werden, um unnötigen Leerlauf zu vermeiden und den Arbeitsablauf zu optimieren.
+			Gleich zu Beginn der Projektarbeit wurden die einzelnen Erwartungen der Gruppen geklärt, um Probleme frühzeitig zu erkennen und um zu sondieren, welches Ergebnis erreicht werden kann. Auch in den folgenden Veranstaltungen wurde “Management by walking around” betrieben, welches mit Hilfe der Plattform “Trello” organisiert wurde.</p>
+			<p>Trello ist eine Projektmanagementsoftware auf der Listen für die einzelnen Arbeitsgruppen erstellt wurden, die die Organisation im gesamten Projekt vereinfachten. Durch den direkten Kontakt zu jedem Mitarbeiter der Company, konnten wir auch während der Arbeitsphase Unklarheiten schnellstmöglich beseitigen.</p>
+			<p>Um die Kommunikation - auch außerhalb des Veranstaltungstages aufrecht zuerhalten, wurde “Slack” als Kurzmitteilungsdienst benutzt.
+			Um Fehlinterpretationen bei Arbeitsaufträgen bei denen mehrere Teams involviert waren, wurden Telefon-Konferenzen über die Software “Skype” gehalten.</p>
+		</div>
+		
+		<div class="header" id="milestones"><h7>Milestones</h7></div>
+		<div class="text">
+			<p>Um eine strukturierte Übersicht über den Verlauf des Projektes zu haben, wurde ein externes Projektmanagement Tool genutzt. Da dieses speziell für die Visualisierung von Milestones entwickelt wurde, konnte der Projektverlauf dort grafisch übersichtlich dargestellt werden.</p>
+			<a href="https://x.it94.de/124NlFs.png"><img src="https://x.it94.de/124NlFs.png"style="max-width:50%;"></a>
+
+		</div>
+
+		<div class="header" id="statischescreens"><h7>Statische Screens</h7></div>
+		<div class="text">
+			<p>Es wurden verschiedene statische Screens erstellt, die voneinander unabhängig sind und als Basis der folgenden Entwicklung dienen.</p>
+			<p>Damit nicht jede statische Seite ihren eigenen Header und Footer implementieren muss, wurde dies auf auf ein eigenes Team verlagert. So konnte bei der späteren Zusammenführung, der Rahmen auf alle weiteren Screens angewandt werden und das Gesamtbild der Anwendung blieb einheitlich. In dem aktuellen Prototypen kann man dort über “Login | Registrierung” bereits seinen Benutzernamen anpassen.
+			<p>Außerdem gelangt man über die Navigationsleiste auf jeden Screen der Anwendung und die eigenständige Landing-Page. </p>
+			<p>Angefangen mit der Quizübersichts-Seite, wo die Möglichkeit besteht verschiedene Quizze auszuwählen, nach ihnen zu suchen oder diese nach Erscheinungsdatum, Beliebtheit oder Alphabet zu sortieren. Zusätzlich erhält man zu jedem Quiz einen kurzen Teasertext mit Bild, man kann einsehen, wie oft dieses bereits gespielt wurde, wann es erstellt wurde und wer es erstellt hat. Im unteren Bereich befinden sich drei zufällig ausgewählte Quizze, die den Nutzer ebenfalls interessieren könnten.</p>
+			<p>Sollte man sich für ein Quiz entschieden haben, gelangt man auf den Quiz-Startscreen, auf dem das Teaserbild nun etwas größer erscheint. Jetzt hat der Benutzer die Gelegenheit wieder zur Quizübersichts-Seite zu gelangen, sich den Highscore für das ausgewählte Quiz anzeigen zu lassen oder die Quizrunde zu starten.</p>
+			Die Quizrunde selbst ist auf das wesentlichste beschränkt. So wird unter dem Titel des Quizzes ein Timer angezeigt, welcher die verbleibende Zeit anzeigt. Unter diesem steht die Frage und die vier Antwortmöglichkeiten. Über dem Button, der die Quizrunde beendet, ist eine Anzeige, die dem Benutzer visualisiert, welche Fragen er richtig und welche er falsch beantwortet hat.</p>
+
+
+			<p>Sobald alle Fragen beantwortet wurden oder die Zeit abgelaufen ist, gelangt der Benutzer auf die Quizende-Seite. Dort wird neben der erreichten Punkte, auch eine Scorebar angezeigt, die die erreichte Punktzahl im Vergleich zur maximal erreichbaren darstellt. Zusätzlich sieht man einen Ausschnitt aus dem Highscore, in dem man mit seiner Punktzahl eingeordnet wird. Des Weiteren stehen dem Nutzer nun wieder die Auswahlmöglichkeiten, zurück zur Quizübersichts-Seite zu gelangen den kompletten Highscore zu diesem Quiz aufzurufen oder das Quiz erneut zu spielen. Auch hier sieht man im unteren Bereich vier zufällige Quizze.</p>
+			<p>Zu guter Letzt gibt es einen Highscore-Screen, auf dem die Ergebnisse für jedes Quiz festgehalten werden. Wie bei der Quizübersichts-Seite, besteht auch hier die Möglichkeit, die Liste zu sortieren oder nach einem Wort zu suchen. Außerdem, kann man vom Highscore direkt das Quiz starten oder zurück auf die Übersichtsseite gelangen.</p>
+		</div>
+		
+		<div class="header" id="umsetzung"><h7>Umsetzung</h7></div>
+		<div class="text">
+			<p>Das gegebene Design-Mockup muss technisch umgesetzt werden. Dies beschränkt sich nicht allein auf das Markup, also HTML und CSS. Auch die Funktionen des Quiz müssen mithilfe von JavaScript umgesetzt werden.<p>
+			<p>Die Landingpage soll als One-Pager zukünftige Benutzer auf die App aufmerksam machen. Des Weiteren wird, eine Quizübersicht benötigt, auf der sämtliche Quizze die gespielt werden können, mit weiteren Informationen aufgelistet werden. Hat der Nutzer sich für ein Quiz entschieden, kommt er auf eine Zwischenseite, über die er weitere Informationen zum jeweiligen Quiz erhält.</p>
+			<p>Durch einen Klick auf “Jetzt spielen!” gelangt er in das von ihm gewählte Quiz. Es bleiben nun 15 Sekunden um die Frage mit Hilfe von vier Antwortmöglichkeiten zu lösen. Zehn Fragen gilt es insgesamt zu beantworten.</p>
+			<p>Nach beenden des Quiz landet man auf der Zusammenfassung der Ergebnisse. Dort erhält der Nutzer Informationen darüber, welche Fragen er richtig und falsch beantwortet hat und wie viele Punkte erreicht wurden. Außerdem wird er in den Highscore eingetragen und erfährt so seine derzeitige Platzierung.</p>
+			</div>
+		
+		<div class="header" id="vereinheitlichen"><h7>HTML vereinheitlichen und zusammenführen</h7></div>
+		<div class="text">
+			<p>Die sechs statischen Screens wurden von verschiedenen Mitarbeitern entwickelt. Dadurch gibt es auf Grund des persönliches Schreibstils leichte Unterschiede beim HTML-Code. Um die Unterschiede von Beginn an so klein wie möglich zu halten, hat die Arbeitsgruppe mit dem Auftrag HTML vereinheitlichen, von Beginn an einen groben Aufbau der einzelnen Seiten vorgegeben.</p>
+			<p>Um am Ende nicht viele verschiedenen Seiten zu haben, mussten die Seiten im Anschluss zusammengeführt werden.</p>
+			<p>Zusätzlich wurde die dynamische Darstellung des Inhalts mit Hilfe von Templating optimiert. </p>
+		</div>
+		
+		<div class="header" id="templating"><h7>Templating</h7></div>
+		<div class="text">
+			<p>Ein Template ist eine Vorlage oder Schablone für ein Dokument, welches mit Inhalt gefüllt werden kann. Im Bereich der Webentwicklung sind es Elemente des HTML-Codes, welche in wiederverwendbarer also dynamischer Form bereitgestellt werden.</p>
+			<p>Templates werden benutzt, wenn man häufig wiederverwendete Daten vom HTML-Code entkoppeln will. So kann man diese einfacher aktualisieren ohne ständig den Code ändern zu müssen. Wir haben uns entschieden für unser Projekt die Template Engine handlebars.js zu verwenden.</p>
+			<p>Handlebars ist eine Erweiterung von der moustache.js. Moustache erlaubt dem Nutzer häufig wiederverwendete Elemente im HTML-Code mit einem eindeutigem Tag (z.B <code>{{vorname}}</code>, <code>{{nachname}}</code>) zu kennzeichnen. Diese Tags können nun dynamisch mit Inhalt befüllt werden.</p>
+			<p>Der wohl bedeutendste Unterschied zwischen den Beiden ist die ausgebaute Logik in handlebars. Damit sind die sogenannten "Helfer" wie z.B. <code>{{#each}}</code> oder <code>{{#if}}</code> gemeint. Der Helfer <code>{{#each}}</code> kann beispielsweise das Template über eine Liste iterieren, während <code>{{#if}}</code>, je nachdem ob das Argument true oder false ist, das Template mit unterschiedlichen Werten füllt.</p>
+			<p>Die Vorteile eines solchen Templates sind die einfache Nutzung und Lesbarkeit der Tags und die Möglichkeit, dass ein Tag mehrere Werte annehmen kann.
+			Nachteile von Handlebars sind die komplexe Implementierung und längere Ladezeiten, wenn viele Templates eingebaut werden.</p>
+		</div>
+		<div class="header" id="ueberblicktemplates"><h8>Überblick des Templates</h8></div>
+		<div class="subtext">
+			<p>Im Fall unserer Website werden die JSONS und Templates auf dem Server von GitHub gelagert. Sie werden vom Client mit Hilfe von AJAX vom Server angefordert. AJAX erlaubt,dass die Templates bzw. Daten asynchron vom Server geladen werden können. Dadurch werden diese ohne neuen Seitenaufruf aktualisiert.
+			Da AJAX-Aufrufe an sich relativ aufwendig sind, wurde die JQuery Library eingebunden, um das AJAX einfacher verwenden zu können.</p>
+			<p>Die Templates benötigen spezifische Daten aus den JSONS. Diese werden mit Hilfe von einer selbstgeschriebenen API vom Server angefordert.
+			Die Programmlogik verarbeitet die Daten, die mit Hilfe der API bezogen werden und füllt die Templates mit diesen.</p>
+			<img src="https://x.it94.de/126msmn.PNG">
+			<p>Beim Aufruf der Seite fordert die Programmlogik durch AJAX ein Template an. Falls das Template eine <code>pre_Function</code> besitzt werden über die API die Daten angefordert. Die API sendet ein XMLHttpRequest vom Typ GET an den Server. Zudem spezifiziert sie mit verschiedenen Funktionen welche Daten genau angefordert werden sollen und parsed diese anschließend. Falls es keine <code>pre_Function</code> gibt, wird ein leeres Template erzeugt. </p>
+		</div>
+		<div class="header" id="funktionsweisetemplates"><h8>Funktionsweise des Templates</h8></div>
+		<div class="subtext">
+			<p> Im Folgenden wird die Funktionsweise anhand von einem Diagramm und Code-Beispielen gezeigt. </p>
+			<img src="https://x.it94.de/12nTBfd.PNG">
+				<p>1. Beim Aufruf der Seite wird in der <code>main.js</code> die Funktion <code>viewSite</code> aufgerufen. Diese besteht aus einem switch-case für die unterschiedlichen Ansichten der Webseite. Standardmäßig wird die Quizübersicht mit view.render angezeigt.</p><br>
+
+
+				<p>2. Aus der <code>view.class.js</code> wird die Methode render aufgerufen. Hierbei wird erst überprüft, ob die zu rendernde Seite eine <code>pre_Function</code> besitzt.</p><br>
+
+
+				<p>3. Im Anschluss werden dann die nötigen Daten über die API abgerufen.</p><br>
+
+
+				<p>4. Nachdem die <code>pre_Function</code> der Quizübersicht mit einem Callback geladen wurde, wird das Template mit <code>get Templatefile</code> aufgerufen. Die Funktion callback teilt view-Funktion mit, wann das Template vollständig geladen wurde.</p><br>
+
+
+				<p>5. Eine Template-Datei beinhaltet HTML sowie handlebar-Tags. Diese werden mit den Daten aus den verschiedenen JSONS gefüllt. Die Daten in einer JSON Datei können in unserem Fall Daten zu einem speziellen Quiz stehen. Templates werden immer zwischen dem Header und Footer eingefügt.</p><br>
+
+
+				<p>6. Nach dem Befüllen des Templates wird dieses wieder durch eine Callback Funktion an die <code>main.js</code> übergeben und der Kreislauf beginnt von vorne, sobald eine neue Ansicht gerendert wird.</p>
+				<p>Außerdem werden in der <code>main.js</code> die restlichen benötigten Scripte wie <i> collapse </i> und <i> flickety </i> aktiviert.</p>
+		</div>
+		
+		<div class="header" id="css"><h7>CSS</h7></div>
+		<div class="text">
+			<p>Um die Kaskade von CSS richtig ausnutzen zu können, gibt es eine sogenannte <code>reset.css</code> da jeder Browser ein eigenes vordefiniertes Stylesheet besitzt, kann es zu Problemen bei der einheitlichen Darstellung kommen. Die <code>reset.css</code> entfernt diese Vorgaben, damit bei der späteren Implementierung der eigenen Basicstyles die Darstellung in jedem Browser gleich ist.</p>
+
+
+			<p>Da Überschneidungen bei der Benennung von Elementen vermieden werden müssen, wurden die folgenden Namenskonventionen, für die statischen Seiten festgelegt:<p>
+
+
+			<ul>
+				<li>TEAM > KEY</li>
+				<li>T02-StatWebApp > wa</li>
+				<li>T03-StatHighscore > hs</li>
+				<li>T04-StatQuizrunde > qr</li>
+				<li>T05-StatSchlusscreen > fs</li>
+				<li>T06-StatQuizuebersicht > qo</li>
+				<li>T07-StatStartscreen > st</li>
+			</ul>
+
+		
+		
+		</div>
+		
+		<div class="header" id="praeprozessoren"><h8>Präprozessoren</h8></div>
+		<div class="subtext">
+			<p>Um einige Vorteile wie Variablen und Funktionen in der Sprache CSS nutzen zu können gibt es CSS Präprozessoren. Diese müssen aber immer erst zu CSS kompiliert werden um vom Browser verstanden werden zu können. Gerade bei größeren Projekten lohnt sich der Einsatz von Präprozessoren da diese vor allem die Wartbarkeit des Codes erhöhen.</p>
+			<p>Für die Erstellung der Basic Styles und die Zusammenführung aller Gruppen, wurde der CSS Präprozessor SASS verwendet. <i> SASS </i> steht für <b>S</b> yntactically <b>A</b>wesome <b>S</b>tyle</b>s</b>heets und betont damit schon im Namen den Fokus auf eine bessere und sinnvollere Syntax. So wird durch verschachtelte Regeln ermöglicht, dass man nicht dieselben Selektoren ständig wiederholen muss.</p>
+			<p>Des Weiteren ermöglichen Variablen die zentrale Definition von z.B. Farben und Schriften. Der Verzicht auf Kommata und geschwungene Klammern setzt ordentliches Einrücken voraus und sorgt so für sauberen Code. </p>
+			<p>Für die Zusammenführung der Teams ist es außerdem praktisch, dass es Imports externer Dateien gibt, die dann aber nicht einzeln kompiliert werden, sondern am Ende in einer Datei landen, die dann sogar noch automatisch minifiziert werden kann. Das vereinfacht die Einbindung im finalen Produkt, auch wenn es Probleme bei gleichnamigen Selektoren geben kann, daher die Benennung der Klassen.</p>
+			<p>Für die Kompilierung benötigt man eine Bibliothek wie z.B. <i> LibSass</i>. Zuerst verwendeten wir diese in einem Ruby Wrapper in Kombination mit einem File Watcher in der IDE <i>PhpStorm</i>. Die Vorteile der sehr schnellen und einfachen Einrichtung wurden allerdings überwogen von dem Problem, dass Änderungen in eingebundenen Dateien nicht erkannt werden und daher ein Speichern der Hauptdatei bei jeder Änderung notwendig wurde.</p>
+		</div>
+		
+		<div class="header" id="grid"><h8>Grid-System</h8></div>
+		<div class="subtext">
+			<p>Um ein Responsive Design auf allen Endgeräten sicher zu stellen, wurde sich für ein Grid-System entschieden. Um Zeit zu sparen, wurde auf eine aufwendige Eigenentwicklung verzichtet. Stattdessen wurde das Grid-System von Bootstrap übernommen. Es ist eines der am weit verbreitetsten und setzt auf ein übliches 12-Spalten-Layout.</p>
+			<p>Durch die hohe Verbreitung und sehr gute Dokumentation dieses Systems, ist eine hohe Wart- und Erweiterbarkeit gegeben.</p>
+		</div>
+		
+		<div class="header" id="javascript"><h7>JavaScript</h7></div>
+		<div class="text">
+			<p>Da in der finalen Version mehrere Screens des Contents dynamisch dargestellt werden, benötigt man JavaScript. Es wurde der Weg eingeschlagen das ganze mit Hilfe einer API zu realisieren, die sich die Datensätze für die dazugehörigen Screens zieht. </p>
+		</div>
+		
+		<div class="header" id="json"><h8>JSON</h8></div>
+		<div class="subtext">
+			<p>JSONs werden zur Übertragung und zum Speichern von strukturierten Daten eingesetzt, es dient als Datenformat bei der Serialisierung. Häufig gesehen bei Webanwendungen oder mobilen Apps die einen Transfer von Daten zwischen dem Client und dem Server brauchen. Da in diesem Projekt nur Clientseitig gearbeitet wird, benötigt man lediglich JavaScript und Ajax welches mit Hilfe des Frameworks jQuery eingebunden wurde. </p>
+			<img src="https://x.it94.de/12IUzR5.png">
+		</div>
+		
+		<div class="header" id="ablaufplan"><h8>Ablaufplan</h8></div>
+		<div class="subtext">
+			<p>Wenn ein Quiz gestartet wurde, wird der Fragenzähler von null auf eins gesetzt. Im gleichen Zug wird die Frage mit den dazugehörigen Antworten sichtbar. Oberhalb, zentral über der Frage, wird ein Timer von fünfzehn Sekunden angezeigt, der wie eine Uhr aussieht und gegen dem Uhrzeigersinn abläuft. Dieser bekommt bei jeder neuen Frage einen reset. Sollte die Frage nicht innerhalb der Zeit beantwortet werden, gilt die Frage als falsch beantwortet und die nächste Frage wird eingeblendet. Sollte die Frage aber innerhalb des Zeitfensters beantwortet werden, so wird diese auf Korrektheit überprüft. Ist die Antwort richtig, wird der Punktezähler erhöht.</p>
+			<p>Das ganze Läuft in einer Schleife, die die Bedingung setzt, insgesamt zehnmal durchlaufen zu werden sprich: Es gilt zehn Fragen zu beantworten. Der Zähler wird also bei jedem Durchlauf um eins erhöht. Wird der zehnte Durchlauf gestartet ist das Quiz beendet und man gelangt auf die Quizende-Seite.</p>
+			<a href="https://x.it94.de/12JBny9.png"><img src="https://x.it94.de/12JBny9.png" style="max-width:50%"></a>
+			
+			
+		</div>
+		
+		<div class="header" id="markt"><h7>Anwendung auf den Markt bringen</h7></div>
+		<div class="text">
+			<p>Das Ziel einer Anwendung liegt meist darin, möglichst viele Anwender zu erreichen. Um dieses Ziel zu verfolgen, bestand ein Arbeitspaket nur darin, eine Technik zu erarbeiten, um das Produkt, möglichst erfolgreich auf den Markt zu bringen. Auf die verschiedenen Methoden, die dabei erarbeitet wurden, wird nun im folgenden Eingegangen.</p>
+		</div>
+		
+		
+		<div class="header" id="onepager"><h8>One-Pager</h8>
+		<div class="subtext">
+			<p>Ein One-Pager komprimiert sämtliche Informationen, die für den Benutzer wichtig sind auf eine Seite. Auf Unterseiten wird komplett verzichtet. Da der Platz somit begrenzt ist und der Besucher der Seite nicht von der Menge an Informationen erschlagen werden soll, ist es wichtig, dass der Inhalt auf das wichtigste reduziert wird. Um den Besucher abzuholen, muss der Fokus auf den Kern der Anwendung gesetzt werden.</p>
+			<p>Auf “Fubuizz” wird dies bewerkstelligt, indem ein Gefühl von Fußball vermittelt wird. Die Seite unterstützt somit visuell den Slogan “Von Fans für Fans”. Weiterhin animieren die “Call to Action”-Buttons dazu, die Anwendung auszuprobieren.</p>
+		</div>
+		
+		<div class="header" id="seo"><h8>Search Engine Optimization</h8></div>
+		<div class="subtext">
+			<p>Damit Besucher überhaupt erst auf den One-Pager kommen, wurde sich ebenfalls mit SEO beschäftigt. Die sogenannte Suchmaschinenoptimierung, sorgt dafür, dass eine Seite, nach Eingabe bestimmter Suchbegriffe auf einer Suchmaschine, möglichst weit oben steht. </p>
+			<p>Die Suchmaschinenoptimierung ist ein sehr komplexes Thema. Eine aussagekräftige URL und eine klare, übersichtliche Linkstruktur, sind nur zwei wenige Beispiele, wie man sein Ranking innerhalb einer Suchmaschine verbessern kann. Auf weitere Beispiele wurde, auf Grund der Komplexität der gesamten Materie, an dieser Stelle verzichtet.</p>
+		</div>
+		
+		<div class="header" id="socialmedia"><h8>Social Media</h8></div>
+		<div class="subtext">
+			<p>Eine weitere Möglichkeit, das eigene Produkt oder die eigene Seite zu vermarkten, sind die sozialen Netzwerke. 
+			Twitter und Facebook sind nur zwei der Bekanntesten Vertreter im Social Media Bereich.</p>
+			<p>Die Vorteile dieser Medien liegen klar auf der Hand: Eine hohe Reichweite, sorgt für eine schnelle Verbreitung im Netz. Diese kann durch einen Ausbau der Präsenz, Reputation und der Beziehungen, zu einer Erweiterung des eigenen Kundenstammes führen.</p>
+			<p>Da Soziale Netzwerke zu einem der wichtigsten Bestandteile des Internets geworden sind können Unternehmen sich aktiv beteiligen und so zusätzlich mit dem Kunden in Kontakt treten. Des Weiteren dient dies auch zur Imagepflege um den Kundenstamm auf eventuelle Neuerungen, Angebote oder Aktionen aufmerksam zu machen.</p>
+		</div>
+		
+		<div class="header" id="schluss"><h6>Schluss</h6></div>
+		<div class="header" id="fazit"><h7>Fazit</h7></div>
+		<div class="text">
+			<p>Wir erhielten durch die Zusammenarbeit mit den Teamkollegen einen guten Überblick in das Geschehen. Als Projektmanagement waren wir für die gesamte Organisation und Kommunikation zuständig, wobei wir die beiden CEOs Volker und Jorge tatkräftig unterstützen konnten.</p>
+			<p>Dadurch, dass die Kenntnisse der jeweiligen Teams sehr unterschiedlich waren, hat man viel Zeit daran verloren, sich das fehlende Wissen anzueignen, um an dem Projekt produktiv mitarbeiten zu können. 
+			Des Weiteren merkte man zum Teil die Einstellungen die von einigen Mitarbeitern an den Tag gelegt wurde. Fehlende Anwesenheit, Desinteresse  oder zu spät kommen brachten zusätzliche Verzögerungen und auch schlechtes Arbeitsklima.</p>
+			<p>Zusätzlich wurde vom Projektmanagement Deadlines für Aufgaben gesetzt um den Terminplan einzuhalten. Auch hier merkte man, dass man das Projekt mit dem echten Berufsleben widerspiegeln kann, da teilweise Fristen nicht eingehalten wurden und somit Mitarbeiter auf Ergebnisse von anderen warten mussten um mit ihrer eigentlichen Arbeit anfangen zu können. Aber genau für diese Gründe wurden Milestone für das laufende Projekt entwickelt und optimiert um einen kleinen Puffer zu besitzen und den Terminplan einhalten zu können. Somit konnten wir alle geforderten Anforderungen unter Beachtung der Restriktionen im vollen Umfang umgesetzten.</p> 
+			<p>Um den Puffer nicht gänzlich zu verlieren hat jedes Team Hausaufgaben mitbekommen, dies bestärkte zusätzlich den Teamgeist. So wurden auch beim Briefing erbrachte Leistungen gelobt.
+			Der deutliche Mehraufwand von einigen Experten, hat zusätzlich dafür gesorgt, dass wir nun an dieser Stelle stehen.</p>
+			Im Ausblick auf die Zukunft gehen wir mit überwiegend positiven Gefühlen aus dem <p>Projekt heraus, selbstverständlich konnten wir einige Erfahrungen und Erkenntnisse sammeln. Da dies unser erstes studentisches Projekt in dieser Größenordnung war, gingen wir erst einmal mit gedämpften Erwartungen in die Projektarbeit.</p>
+			<p>Zu Beginn haben wir jeden einzelnen Mitarbeiter und jede einzelne Mitarbeiterin nach ihren Erwartungen gefragt, um zu kalkulieren wohin sich das Projekt bewegen könnte. Die Mehrheit hatte das Ziel die bestmöglichste Lösung zu erarbeiten.
+			Auch wir selbst wollten besser als die zwei konkurrierenden Companys sein. Somit haben wir jeden erdenklichen Weg eingeschlagen die Motivation, die Kommunikation und die Leistung in den gesamten Teams hochzufahren. Demnach ist es uns gelungen das beste Ergebnis zu erzielen. Aus diesem Grund sei gesagt: Man sollte Studenten niemals unterschätzen!</p>
+
+		</div>
+		
+		
+		
+		
+
+    </div>
+        </div>
+    </div>
+</div>
+<!--home start ENDE-->
+
+
+<!--menue punkt 2 - ueber fubuizz-->
+<!--<div class="container">
+    <div class="row">
+        <div class="col-md-12 cBusiness whitewindow">
+            <h3 class="sprung_id"><a name="ueber_fubuizz">&nbsp;</a>Über Fubuizz</h3>
+            <p>Fubuizz ist ein Fußball-Quiz von Fans für Fans. <br>
+                Ob im Stadion, unterwegs oder gemütlich zu Hause: Du kannst Fubuizz überall und jeder Zeit spielen.<br>
+                Stelle dich und dein Fußball-Wissen unter Beweis und messe dich mit Gleichgesinnten!</p>
+        </div>
+    </div>
+</div>-->
+
+
+<!--menue punkt 2 - ueber fubuizz ENDE-->
+
+<section class="parallax">
+    <div class="line7">
+        <div class="container">
+            <div class="col-md-12 holrow">
+                <h5>Diese Projektdokumentation wurde erstellt von</h5>
+                <span class="p2">Daniel Spielten | Dominik Bieber</span>
+            </div>
+            <div class="cBtn">
+                <div class="col-md-12 cBtn1">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--footer-->
+<footer>
+    <div class="lineBlack">
+        <div class="container">
+
+
+            `
+            <!--menue punkt 6 - kontakt-->
+            <div id="kontakt">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 contactrow">
+                            <div class="header" id="anhang"><h5>Anhang</h8></div>
+                            <span class="p3" id="abkuerzung">Abkürzungsverzeichnis</span>
+                        </div>
+                        <div class="soc col-md-12">
+                            <ul>
+                                <!--<li class="soc2 socIn"><a target="_blank" href="https://www.facebook.com"></a></li>
+                                <li class="soc3 socIn"><a target="_blank" href="https://www.twitter.com"></a></li>
+                                <li class="soc5 socIn"><a target="_blank" href="https://www.tumblr.com"></a></li>
+                                <li class="soc6 socIn"><a target="_blank" href="https://www.youtube.com"></a></li>
+                                <li class="soc7 socIn"><a target="_blank" href="https://plus.google.com"></a></li>-->
+								<li><p>AJAX  = <b>A</b>synchronous <b>J</b>ava<b>S</b>cript and <b>X</b>ML</p></li>
+								<li><p>API = <b>A</b>pplication <b>P</b>rogramming <b>I</b>nterface</p></li>
+								<li><p>CEO = <b>C</b>hief <b>E</b>xecutive <b>O</b>fficer</p></li>
+								<li><p>CSS = <b>C</b>ascading <b>S</b>tyle <b>S</b>heets</p></li>
+								<li><p>HTML = <b>H</b>ypertext <b>M</b>arkup <b>L</b>anguage</p></li>
+								<li><p>JSON = <b>J</b>ava<b>S</b>cript <b>O</b>bject <b>N</b>otation</p></li>
+								<li><p>SASS = <b>S</b>yntactically <b>A</b>wesome <b>S</b>tyle<b>s</b>heets</p></li>
+								<li><p>SEO = <b>S</b>earch <b>E</b>ngine <b>O</b>ptimization</p></li>
+								<li><p>XML = E<b>x</b>tensible <b>M</b>arkup <b>L</b>anguage</p></li>
+								
+								
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--menue punkt 6 - kontakt ENDE-->
+
+
+            <!--menue-->
+            <div class="container">
+                <div class="col-md-4 downMenuMarg">
+                    <ul id="downMenuL" class="downMenu">
+                        <li class="active"><a href="http://wba1-backslash.christiannoss.de" class="smoothScroll">Home</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <div id="downMenuC">
+                        <ul class="downMenu">
+                            <li><a href="#einleitung" class="smoothScroll">Einleitung</a></li>
+                            <li><a href="#hauptteil" class="smoothScroll">Hauptteil</a></li>
+							<li><a href="#schluss" class="smoothScroll">Schluss</a></li>
+                            <li class="last"><a href="#anhang" class="smoothScroll">Anhang</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <ul id="downMenuR" class="downMenu">
+                        <!--li><a href="#features">Features</a></li-->
+                        <li class="active"><a href="impressum.html">Impressum</a></li>
+                        <li><a href="javascript:void(0)">Datenschutz</a></li>
+                        <li class="active"><a href="dokumentation.html">Dokumentation</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!--copyright-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12" id="copy">
+                        <span class="p3">Copyright &copy; 2016 Fubuizz</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer ENDE-->
+
+
+<script src="assets/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.slicknav.js"></script>
+<script type="text/javascript" src="assets/js/smoothscroll.js"></script>
+<script type="text/javascript" src="assets/js/helper.js"></script>
+
+<script>
+	$(document).ready(function () {
+		jQuery('#menu').slicknav();
+		
+		//Device abfragen
+		media.device.refreshValue();
+		
+		//Befinden wir uns auf deinem Desktop Device?
+		if(media.device.value === media.device.DESKTOP )
+			document.body.classList.add('desktop-device');
+		else
+			//Befinden wir uns auf einem mobilen Device?
+			document.body.classList.add('mobile-device');
+		
+
+		$(".bhide").click(function () {
+			$(".hideObj").slideDown();
+			$(this).hide(); //.attr()
+			return false;
+		});
+		$(".bhide2").click(function () {
+			$(".container.hideObj2").slideDown();
+			$(this).hide(); // .attr()
+			return false;
+		});
+
+		$('.heart').mouseover(function () {
+			$(this).find('i').removeClass('fa-heart-o').addClass('fa-heart');
+		}).mouseout(function () {
+			$(this).find('i').removeClass('fa-heart').addClass('fa-heart-o');
+		});
+
+		function sdf_FTS(_number, _decimal, _separator) {
+			var decimal = (typeof (_decimal) != 'undefined') ? _decimal : 2;
+			var separator = (typeof (_separator) != 'undefined') ? _separator : '';
+			var r = parseFloat(_number)
+			var exp10 = Math.pow(10, decimal);
+			r = Math.round(r * exp10) / exp10;
+			rr = Number(r).toFixed(decimal).toString().split('.');
+			b = rr[0].replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g, "\$1" + separator);
+			r = (rr[1] ? b + '.' + rr[1] : b);
+			return r;
+		}
+
+		setTimeout(function () {
+			$('#counter').text('0');
+			$('#counter1').text('0');
+			$('#counter2').text('0');
+			setInterval(function () {
+
+				var curval = parseInt($('#counter').text());
+				var curval1 = parseInt($('#counter1').text().replace(' ', ''));
+				var curval2 = parseInt($('#counter2').text());
+				if (curval <= 707) {
+					$('#counter').text(curval + 1);
+				}
+				if (curval1 <= 12280) {
+					$('#counter1').text(sdf_FTS((curval1 + 20), 0, ' '));
+				}
+				if (curval2 <= 245) {
+					$('#counter2').text(curval2 + 1);
+				}
+			}, 2);
+
+		}, 500);
+
+		var $menu = $("#menuF");
+
+//		$(window).scroll(function () {
+//			if ($(this).scrollTop() > 100 && $menu.hasClass("default")) {
+//				$menu.fadeOut('fast', function () {
+//					$(this).removeClass("default")
+//						.addClass("fixed transbg")
+//						.fadeIn('fast');
+//				});
+//			} else if ($(this).scrollTop() <= 100 && $menu.hasClass("fixed")) {
+//				$menu.fadeOut('fast', function () {
+//					$(this).removeClass("fixed transbg")
+//						.addClass("default")
+//						.fadeIn('fast');
+//				});
+//			}
+//		});
+		
+		
+	var scrollTimeout;  // global for any pending scrollTimeout
+	$(window).scroll(function () {
+		if (scrollTimeout) {
+			// clear the timeout, if one is pending
+			clearTimeout(scrollTimeout);
+			scrollTimeout = null;
+		}
+		scrollTimeout = setTimeout(scrollHandler, 100);
+	});
+	scrollHandler = function () {
+			if ($(this).scrollTop() > 100 && $menu.hasClass("menu-top")) {
+				$menu.removeClass("menu-top");
+			}
+			else if ($(this).scrollTop() <= 100) {
+				$menu.addClass("menu-top");
+			}
+		};
+	});
+	//jQuery
+	/*menu*/
+	function calculateScroll() {
+		var contentTop = [];
+		var contentBottom = [];
+		var winTop = $(window).scrollTop();
+		var rangeTop = 200;
+		var rangeBottom = 500;
+		$('.navmenu').find('a').each(function () {
+			//Auskommentiert, da Operationen Fehler werfen
+			//contentTop.push($($(this).attr('href')).offset().top);
+			//contentBottom.push($($(this).attr('href')).offset().top + $($(this).attr('href')).height());
+		})
+		$.each(contentTop, function (i) {
+			if (winTop > contentTop[i] - rangeTop && winTop < contentBottom[i] - rangeBottom) {
+				$('.navmenu li')
+					.removeClass('active')
+					.eq(i).addClass('active');
+			}
+		})
+	};
+
+	$(document).ready(function () {
+		calculateScroll();
+
+		var timer;
+		$(window).scroll(function () {
+			if (timer) {
+				window.clearTimeout(timer);
+			}
+
+			//Scroll Funktion verzögern
+			timer = window.setTimeout(function () {
+				// actual callback
+				calculateScroll();
+			}, 100);
+		});
+		$('.navmenu ul li a').click(function () {
+			$('html, body').animate({
+				scrollTop: $(this.hash).offset().top - 80
+			}, 800);
+			return false;
+		});
+	});
+	jQuery(document).ready(function () {
+		jQuery(".pretty a[rel^='prettyPhoto']").prettyPhoto({
+			animation_speed: 'normal',
+			theme: 'light_square',
+			slideshow: 3000,
+			autoplay_slideshow: true,
+			social_tools: ''
+		});
+
+	});
+</script>
+</body>
+
+</html>
