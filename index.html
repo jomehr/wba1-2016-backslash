@@ -1,5 +1,5 @@
-<!--*index.html erstellt von T15*-->
 <!DOCTYPE html>
+<!--index.html erstellt von T15-->
 <html lang="de">
 <head>
     <title>Fubuizz Fussball Quiz</title>
@@ -88,7 +88,7 @@
 
 
                 <!--menue punkt 1 - landingpage-aufriss-->
-                <div class="container">
+                <div class="container padding">
                     <div class="row wrap">
                         <div class="col-md-12 gallery">
                             <!-- #camera_wrap_1 -->
@@ -132,7 +132,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -147,12 +146,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 downloads">
-                    <h2 id="counter">0</h2>
-                    <h4>Gesamte Downloads</h4>
+                    <span class="countfont" id="counter">0</span>
+                    <span class="countcontent">Gesamte Downloads</span>
                 </div>
                 <div class="col-md-4 spieler">
-                    <h2 id="counter1">0</h2>
-                    <h4>Aktuelle Spieler</h4>
+                    <span class="countfont" id="counter1">0</span>
+                    <span class="countcontent">Aktuelle Spieler</span>
                 </div>
                 <div class="col-md-4 bar">
                     <div class="progB chart" data-percent="96" data-animate="3500">
@@ -162,9 +161,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bewertungen">
-                        <h4>Positive Bewertungen</h4>
-                    </div>
+                    <span class="countcontent">Positive Bewertungen</span>
                 </div>
             </div>
         </div>
@@ -175,13 +172,14 @@
 
 <!--menue punkt 2 - ueber fubuizz-->
 <section>
-    <div class="container">
+    <div id="ueber_fubuizz" class="anchor"></div>
+    <div class="container padding">
         <div class="row">
-            <div class="col-md-12 cBusiness whitewindow">
-                <h3 class="sprung_id"><a name="ueber_fubuizz">&nbsp;</a>Über Fubuizz</h3>
-                <p>Fubuizz ist ein Fußball-Quiz von Fans für Fans. <br>
+            <div class="col-md-12">
+                <span class="headline dark headlinepadding smoothScroll">Über Fubuizz</span>
+                <span class="p dark">Fubuizz ist ein Fußball-Quiz von Fans für Fans. <br>
                     Ob im Stadion, unterwegs oder gemütlich zu Hause: Du kannst Fubuizz überall und jeder Zeit spielen.<br>
-                    Stelle dich und dein Fußball-Wissen unter Beweis und messe dich mit Gleichgesinnten!</p>
+                    Stelle dich und dein Fußball-Wissen unter Beweis und messe dich mit Gleichgesinnten!</span>
             </div>
         </div>
     </div>
@@ -203,18 +201,18 @@
                     <div class="row Fresh">
                         <div class="col-md-4 Des">
                             <i class="fa fa-heart"></i>
-                            <h6>Von Fans für Fans</h6>
-                            <span class="p2">Immer aktuell! Volle Leidenschaft! Pure Unterhaltung!</span>
+                            <span class="sublineOswald white">Von Fans für Fans</span>
+                            <span class="p2 white">Immer aktuell! Volle Leidenschaft! Pure Unterhaltung!</span>
                         </div>
                         <div class="col-md-4 Ver">
                             <i class="fa fa-cog"></i>
-                            <h6>Anpassungsfähig</h6>
-                            <span class="p2">Benutze deine Vereinsfarben!</span>
+                            <span class="sublineOswald white">Anpassungsfähig</span>
+                            <span class="p2 white">Benutze deine Vereinsfarben!</span>
                         </div>
                         <div class="col-md-4 Fully">
                             <i class="fa fa-tablet"></i>
-                            <h6>Vollkommen Responsive</h6>
-                            <span class="p2">Spielbar auf allen Geräten!</span>
+                            <span class="sublineOswald white">Vollkommen Responsive</span>
+                            <span class="p2 white">Spielbar auf allen Geräten!</span>
                         </div>
                     </div>
                 </div>
@@ -227,10 +225,11 @@
 
 <!--menue punkt 3 - spielregeln & funktionen-->
 <section>
+    <div id="spielregeln_und_funktionen" class="anchor"></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12 cBusiness whitewindow">
-                <h3 class="sprung_id"><a name="spielregeln_und_funktionen">&nbsp;</a>Spielregeln & Funktionen</h3>
+            <div class="col-md-12">
+                <span class="headline dark headlinepadding smoothScroll">Spielregeln & Funktionen</span>
             </div>
         </div>
     </div>
@@ -238,9 +237,9 @@
     <div class="container">
         <div class="row news">
             <div class="col-md-offset-2 col-md-8">
-                <h4>Quizübersicht</h4>
-                <p>Suche dir unter der großen Auswahl an Quizzen ganz einfach ein Quiz aus indem du die Sortiermöglichkeit
-                    nach neusten Quizzen, Beliebtheit oder nach alphabetischer Reihenfolge nutzt.</p>
+                <span class="subline dark">Quizübersicht</span>
+                <span class="p dark">Suche dir unter der großen Auswahl an Quizzen ganz einfach ein Quiz aus indem du die Sortiermöglichkeit
+                    nach neusten Quizzen, Beliebtheit oder nach alphabetischer Reihenfolge nutzt.</span>
                 <img class="img-responsive picsGall full-width" alt="quizuebersicht"
                      src="assets/images/picNews/quizuebersicht.jpg"/>
             </div>
@@ -250,10 +249,10 @@
     <div class="container">
         <div class="row news">
             <div class="col-md-offset-2 col-md-8">
-                <h4>Quizrunde</h4>
-                <p>Stelle dein Fußball-Wissen unter Beweis indem du während der vorgegebener Zeit 10 Fragen beantwortest.
-                    Sofort erhältst du ein Feedback, ob deine Lösung die Richtige war.</p>
-                <img class="img-responsive picsGall full-width" alt="quizzrunde" src="assets/images/picNews/quizzrunde.jpg"/>
+                <span class="subline dark">Quizrunde</span>
+                <span class="p dark">Stelle dein Fußball-Wissen unter Beweis indem du während der vorgegebener Zeit 10 Fragen beantwortest.
+                    Sofort erhältst du ein Feedback, ob deine Lösung die Richtige war.</span>
+                <img class="img-responsive picsGall full-width" alt="quizrunde" src="assets/images/picNews/quizrunde.jpg"/>
             </div>
         </div>
     </div>
@@ -263,9 +262,9 @@
         <div class="container">
             <div class="row news">
                 <div class="col-md-offset-2 col-md-8">
-                    <h4>Quiz Ende</h4>
-                    <p>Am Ende eines jeden Quiz warten weitere interessante Fußballinformationen auf dich.</p>
-                    <img class="img-responsive picsGall full-width" alt="quizzende" src="assets/images/picNews/quizzende.jpg"/>
+                    <span class="subline dark">Quiz Ende</span>
+                    <span class="p dark">Am Ende eines jeden Quiz warten weitere interessante Fußballinformationen auf dich.</span>
+                    <img class="img-responsive picsGall full-width" alt="quizende" src="assets/images/picNews/quizende.jpg"/>
                 </div>
             </div>
         </div>
@@ -273,9 +272,9 @@
         <div class="container">
             <div class="row news">
                 <div class="col-md-offset-2 col-md-8">
-                    <h4>Highscore</h4>
-                    <p>Schau dir jederzeit deinen Platz in der Highscoreliste eines jeden Quiz an und spiele dich an die
-                        Spitze!</p>
+                    <span class="subline dark">Highscore</span>
+                    <span class="p dark">Schau dir jederzeit deinen Platz in der Highscoreliste eines jeden Quiz an und spiele dich an die
+                        Spitze!</span>
                     <img class="img-responsive picsGall full-width" alt="highscore" src="assets/images/picNews/highscore.jpg"/>
                 </div>
             </div>
@@ -301,8 +300,8 @@
                 <div id="project1"></div>
                 <div class="row Ama">
                     <div class="col-md-12 spielrow">
-                        <h5>Spiel jetzt mit!</h5>
-                        <span class="p2">Einfach klicken</span>
+                        <span class="headline white">Spiel jetzt mit!</span>
+                        <span class="p2 white">Einfach klicken</span>
                         <div class="cBtn">
                             <div class="col-md-12 cBtn1">
                                 <ul>
@@ -321,13 +320,14 @@
 
 <!--menue punkt 4 - dein verein-->
 <section>
+    <div id="dein_verein" class="anchor"></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12 cBusiness whitewindow">
-                <h3 class="sprung_id"><a name="dein_verein">&nbsp;</a>Dein Verein</h3>
-                <p>Passe Fubuizz individuell deinem Fußballverein an und spiele mit deinen Fußballfreunden.
+            <div class="col-md-12">
+                <span class="headline dark headlinepadding smoothScroll">Dein Verein</span>
+                <span class="p dark">Passe Fubuizz individuell deinem Fußballverein an und spiele mit deinen Fußballfreunden.
                     <br>Ganz einfach Vereinsfarben wählen und los geht's.
-                    <br>Führe deinen Lieblingsverein zum Sieg!</p>
+                    <br>Führe deinen Lieblingsverein zum Sieg!</span>
             </div>
         </div>
     </div>
@@ -357,8 +357,8 @@
                 <div class="row Ama">
                     <div class="col-md-12 createquiz">
                         <span id="projects"></span>
-                        <h5>Quiz erstellen</h5>
-                        <span class="p2">Erstelle ganz einfach dein eigenes Fußball-Quiz um Freunde und andere zu testen.<br><br>
+                        <span class="headline white">Quiz erstellen</span>
+                        <span class="p2 white">Erstelle ganz einfach dein eigenes Fußball-Quiz um Freunde und andere zu testen.<br><br>
                                     So einfach geht's:<br>
                                     1. Verfasse die Fragen und Antworten<br>
                                     2. Gestalte dein persönliches Thema<br>
@@ -375,11 +375,12 @@
 
 <!--menue punkt 5 - ueber uns-->
 <section>
+    <div id="ueber_uns" class="anchor"></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12 whitewindow">
-                <h3 class="sprung_id"><a name="ueber_uns">&nbsp;</a>Über uns</h3>
-                <p>Wir sind ein Standup-Unternehmen mit dem Wunsch dir das beste Fußball-Quiz zu bieten. <br> Dabei ist uns Leidenschaft, Individualität und Unterhaltung das Wichtigste.</p>
+            <div class="col-md-12">
+                <span class="headline dark headlinepadding smoothScroll">Über uns</span>
+                <span class="p dark">Wir sind ein Standup-Unternehmen mit dem Wunsch dir das beste Fußball-Quiz zu bieten. <br> Dabei ist uns Leidenschaft, Individualität und Unterhaltung das Wichtigste.</span>
             </div>
         </div>
     </div>
@@ -388,9 +389,9 @@
 
             <div class="col-md-4 b1">
                 <img class="img-responsive" alt="noss Image" src="assets/images/picTeam/noss.png">
-                <h4>Christian Noss</h4>
-                <p>Project Manager & Art Director</p>
-                <ul>
+                <span class="p dark">Christian Noss</span>
+                <span class="p dark">Project Manager & Art Director</span>
+                <ul class="minisocial">
                     <li><a target="_blank" href="https://github.com/cnoss"><i class="fa fa-facebook-square"></i></a></li>
                     <li><a target="_blank" href="https://github.com/cnoss"><i class="fa fa-pinterest"></i></a></li>
                     <li><a target="_blank" href="https://github.com/cnoss"><i class="fa fa-twitter"></i></a></li>
@@ -400,9 +401,9 @@
 
             <div class="col-md-4">
                 <img class="img-responsive" alt="schaefer Image" src="assets/images/picTeam/schaefer.png">
-                <h4>Volker Schaefer</h4>
-                <p>Developer</p>
-                <ul>
+                <span class="p dark">Volker Schaefer</span>
+                <span class="p dark">Developer</span>
+                <ul class="minisocial">
                     <li><a target="_blank" href="https://github.com/vschaefer"><i class="fa fa-facebook-square"></i></a></li>
                     <li><a target="_blank" href="https://github.com/vschaefer"><i class="fa fa-pinterest"></i></a></li>
                     <li><a target="_blank" href="https://github.com/vschaefer"><i class="fa fa-twitter"></i></a></li>
@@ -412,9 +413,9 @@
 
             <div class="col-md-4 b3">
                 <img class="img-responsive" alt="pereira Image" src="assets/images/picTeam/pereira.png">
-                <h4>Jorge H. F. Pereira</h4>
-                <p>SEO</p>
-                <ul>
+                <span class="p dark">Jorge H. F. Pereira</span>
+                <span class="p dark">SEO</span>
+                <ul class="minisocial">
                     <li><a target="_blank" href="https://github.com/jhfpereira"><i class="fa fa-facebook-square"></i></a></li>
                     <li><a target="_blank" href="https://github.com/jhfpereira"><i class="fa fa-pinterest"></i></a></li>
                     <li><a target="_blank" href="https://github.com/jhfpereira"><i class="fa fa-twitter"></i></a></li>
@@ -423,7 +424,7 @@
             </div>
         </div>
     </div>
-<section>
+</section>
 <!--menue punkt 5 - ueber uns ENDE-->
 
 
@@ -433,8 +434,8 @@
         <div class="line7">
             <div class="container">
                 <div class="col-md-12 holrow">
-                    <h5>Hol dir jetzt Fubuizz</h5>
-                    <span class="p2">Einfach App runterladen, anmelden und los geht's!</span>
+                    <span class="headline white">Hol dir jetzt Fubuizz</span>
+                    <span class="p2 white">Einfach App runterladen, anmelden und los geht's!</span>
                 </div>
                 <div class="cBtn">
                     <div class="col-md-12 cBtn1">
@@ -451,16 +452,15 @@
 
 <!--footer-->
 <footer>
+    <div id="kontakt" class="anchor"></div>
     <div class="lineBlack">
         <div class="container">
      `
             <!--menue punkt 6 - kontakt-->
-            <div id="kontakt">
-                <div class="container">
-                    <div class="row">
+                <div class="container row">
                         <div class="col-md-12 contactrow">
-                            <h5>Kontakt</h5>
-                            <span class="p3">Du hast Fragen oder Anregungen? <br> Besuche uns auch auf unseren Social Media Plattformen und chatte mit Freunde und Gleichgesinnten.</span>
+                            <span class="headline white smoothScroll">Kontakt</span>
+                            <span class="p white">Du hast Fragen oder Anregungen? <br> Besuche uns auch auf unseren Social Media Plattformen und chatte mit Freunde und Gleichgesinnten.</span>
                         </div>
                         <div class="soc col-md-12">
                             <ul>
@@ -471,9 +471,7 @@
                                 <li class="soc7 socIn"><a target="_blank" href="https://plus.google.com"></a></li>
                             </ul>
                         </div>
-                    </div>
                 </div>
-            </div>
             <!--menue punkt 6 - kontakt ENDE-->
 
             <!--down menue-->
@@ -499,7 +497,7 @@
                         <!--li><a href="#features">Features</a></li-->
                         <li class="active"><a href="impressum.html">Impressum</a></li>
                         <li><a href="javascript:void(0)">Datenschutz</a></li>
-                        <li><a href="dokumentation.html">Dokumentation</a></li>
+                        <li><a href="javascript:void(0)">Dokumentation</a></li>
                     </ul>
                 </div>
             </div>
@@ -508,7 +506,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12" id="copy">
-                        <span class="p3">Copyright &copy; 2016 Fubuizz</span>
+                        <span class="p white">Copyright &copy; 2016 Fubuizz</span>
                     </div>
                 </div>
             </div>
